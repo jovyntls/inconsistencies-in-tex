@@ -9,7 +9,7 @@ def get_request(url, LOGGER):
     if response.status_code != 200:
         # Print the response content (JSON, XML, HTML, etc.)
         raise RuntimeError("[get_request]: http response not 200")
-    LOGGER.log(Log_level.DEBUG, f"[get_request] success: {url}")
+    LOGGER.log(Log_level.DEBUG, f"get_request: (success) {url}")
     return response
 
 """Get the content from a URL using xpath"""
@@ -50,6 +50,7 @@ def main(num_files, DOWNLOAD_FOLDER, LOGGER):
     # get the links to download
     url = 'https://arxiv.org/list/cs.IT/2308?skip=0&show=' + str(num_files)
     list_of_papers = get_content_from_page(url, '//*[@id="dlpage"]/dl', LOGGER)
+    LOGGER.log(Log_level.INFO, f'starting download:\n\tfrom {url}\n\tto {DOWNLOAD_FOLDER}')
     download_links = {}
     for list_item in list_of_papers:
         res = list_item_to_download_links(list_item)
@@ -61,7 +62,7 @@ def main(num_files, DOWNLOAD_FOLDER, LOGGER):
     for arxiv_id, link in download_links.items():
         download_from_url_and_save(link, DOWNLOAD_FOLDER, arxiv_id, LOGGER)
 
-    LOGGER.log(Log_level.INFO, f'downloaded {len(download_links)} in {DOWNLOAD_FOLDER}')
+    LOGGER.log(Log_level.INFO, f'downloaded: {len(download_links)} papers')
     arxiv_ids = list(download_links.keys())
     LOGGER.log(Log_level.DEBUG, arxiv_ids)
 

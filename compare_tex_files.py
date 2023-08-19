@@ -23,14 +23,6 @@ def find_entrypoint_file(files):
             if match: return file
     return None
 
-def log_run_tex_engine_result(proc, arxiv_id, tex_engine, LOGGER):
-    if proc.returncode == 0:
-        LOGGER.log(Log_level.DEBUG, f'compile_tex: {arxiv_id} completed for [{tex_engine}]')
-    else:
-        LOGGER.log(Log_level.WARN, f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
-        # if proc.stdout: LOGGER.log(Log_level.WARN, f'\tstdout:{proc.stdout}') 
-        # if proc.stderr: LOGGER.log(Log_level.WARN, f'\tstderr:{proc.stderr}') 
-
 def create_output_and_log_dirs(COMPILED_FOLDER, arxiv_id):
     output_folder = os.path.join(COMPILED_FOLDER, arxiv_id)
     logs_folder = os.path.join(output_folder, 'logs')
@@ -47,46 +39,44 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, TEX_ENGINES, 
             stderr_file = os.path.join(logs_folder, f'{arxiv_id}_{tex_engine}.err')
             with open(stdout_file, 'w') as stdout, open(stderr_file, 'w') as stderr:
                 proc = subprocess.run(run_command + [tex_file], timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
-                log_run_tex_engine_result(proc, arxiv_id, tex_engine, LOGGER)
+                LOGGER.log(Log_level.DEBUG, f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
                 rets[tex_engine] = proc
-        except subprocess.CalledProcessError as e:
-            LOGGER.log(Log_level.ERROR, f"compile_tex: CalledProcessError for {arxiv_id} [{tex_engine}]")
-            print(e)
-        except subprocess.TimeoutExpired as e:
+        except subprocess.TimeoutExpired:
             LOGGER.log(Log_level.ERROR, f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets
 
-def compare_engine_outputs(rets, output_folder, arxiv_id, TEX_ENGINES, LOGGER):
+def compare_engine_outputs(rets, COMPILED_FOLDER, DIFFS_FOLDER, arxiv_id, TEX_ENGINES, LOGGER):
     def get_diff_command(e1, e2):
         def output_filename(engine, arxiv_id):
-            return os.path.join(output_folder, f'{arxiv_id}_{engine}.pdf')
-        diff_output = os.path.join(output_folder, f'diff_{arxiv_id}_{e1}_{e2}.pdf')
-        return ['diff-pdf', f'--output-diff={diff_output}', output_filename(e1, arxiv_id), output_filename(e2, arxiv_id)] 
+            return os.path.join(os.path.join(COMPILED_FOLDER, arxiv_id), f'{arxiv_id}_{engine}.pdf')
+        diff_output = os.path.join(DIFFS_FOLDER, f'diff_{arxiv_id}_{e1}_{e2}.pdf')
+        return ['diff-pdf', f'--output-diff={diff_output}', '-smg', '--dpi=100', '--per-page-pixel-tolerance=2000', output_filename(e1, arxiv_id), output_filename(e2, arxiv_id)] 
 
+    # returns bool of whether they match
     def diff_engines(e1, e2):
         try:
-            proc = subprocess.run(get_diff_command(e1, e2))
-            if proc.returncode == 1:
-                LOGGER.log(Log_level.INFO, f"diff-pdf: {arxiv_id} diffs found for [{e1}] <> [{e2}]")
-            else:
-                LOGGER.log(Log_level.DEBUG, f"[{arxiv_id}] no diffs for [{e1}] <> [{e2}]")
+            subprocess.run(get_diff_command(e1, e2), check=True)
+            LOGGER.log(Log_level.DEBUG, f"[{arxiv_id}] no diffs for [{e1}] <> [{e2}]")
+            return True
         except subprocess.CalledProcessError as e:
-            LOGGER.log(Log_level.ERROR, f"diff-pdf: {arxiv_id} failed for {e1} <> {e2}")
-            print(e)
+            LOGGER.log(Log_level.DEBUG, f"diff-pdf: [{arxiv_id}] ret={e.returncode} for [{e1}] <> [{e2}]")
+            return False
 
-    if sum([x.returncode for x in rets.values()]) == 0:
-        LOGGER.log(Log_level.INFO, f'success: {arxiv_id} all tex engines compiled')
-        engines = list(TEX_ENGINES.keys())
-        cmp_engine = engines.pop()
-        for tex_engine in engines:
-            diff_engines(cmp_engine, tex_engine)
-    else:
+    if sum([x.returncode for x in rets.values()]) != 0:
         res = '\t'.join([f'{k}={v.returncode}' for k, v in rets.items()])
-        LOGGER.log(Log_level.WARN, 'some compile failures:' + f'[{arxiv_id}]' )
-        LOGGER.log(Log_level.WARN, '\t' + res)
-    return
+        LOGGER.log(Log_level.WARN, 'compile failures: ' + f'[{arxiv_id}]' + '\t' + res)
+    engines = list(TEX_ENGINES.keys())
+    cmp_engine = engines.pop()
+    unequal_comparisons = 0
+    for tex_engine in engines:
+        pdfs_equal = diff_engines(cmp_engine, tex_engine)
+        if not pdfs_equal: unequal_comparisons += 1
+    return unequal_comparisons
 
-def main(EXTRACTED_FOLDER, COMPILED_FOLDER, LOGGER):
+def main(EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, LOGGER):
+    overall_equal_pdfs = []
+    overall_diff_pdfs = []
+    LOGGER.log(Log_level.INFO, f'compiling tex files...')
     for arxiv_id in os.listdir(EXTRACTED_FOLDER):
         folder_path = os.path.join(EXTRACTED_FOLDER, arxiv_id)
         output_folder, logs_folder = create_output_and_log_dirs(COMPILED_FOLDER, arxiv_id)
@@ -110,7 +100,7 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, LOGGER):
                 '-interaction=nonstopmode',
                 '-output-format=pdf',
                 f'-jobname={arxiv_id}_xelatex',
-                f'--output-directory={output_folder}'
+                f'-output-directory={output_folder}'
             ]
         }
         # try to find a tex file
@@ -123,5 +113,10 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, LOGGER):
             # run the tex engines
             rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, TEX_ENGINES, LOGGER)
             # compare the output pdfs
-            compare_engine_outputs(rets, output_folder, arxiv_id, TEX_ENGINES, LOGGER)
+            unequal_comparisons = compare_engine_outputs(rets, COMPILED_FOLDER, DIFFS_FOLDER, arxiv_id, TEX_ENGINES, LOGGER)
+            if unequal_comparisons == 0: overall_equal_pdfs.append(arxiv_id) 
+            else: overall_diff_pdfs.append(arxiv_id)
             break
+    eqs, diffs = len(overall_equal_pdfs), len(overall_diff_pdfs)
+    LOGGER.log(Log_level.INFO, f'compared outputs for {eqs + diffs} papers: {diffs} papers were found with diffs')
+    LOGGER.log(Log_level.INFO, f'diffs: {overall_diff_pdfs}')
