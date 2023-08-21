@@ -38,8 +38,13 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, TEX_ENGINES, 
             stdout_file = os.path.join(logs_folder, f'{arxiv_id}_{tex_engine}.out')
             stderr_file = os.path.join(logs_folder, f'{arxiv_id}_{tex_engine}.err')
             with open(stdout_file, 'w') as stdout, open(stderr_file, 'w') as stderr:
-                proc = subprocess.run(run_command + [tex_file], timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
-                LOGGER.log(Log_level.DEBUG, f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                cmd = run_command + [tex_file]
+                proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
+                LOGGER.log(Log_level.DEBUG, f'compile_tex (1): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                if proc.returncode == 0:
+                    # compile twice
+                    proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
+                    LOGGER.log(Log_level.DEBUG, f'compile_tex (2): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
                 rets[tex_engine] = proc
         except subprocess.TimeoutExpired:
             LOGGER.log(Log_level.ERROR, f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
