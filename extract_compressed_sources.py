@@ -1,7 +1,7 @@
 import subprocess
 import os
 import shutil
-from logger import Log_level
+from utils.logger import Log_level
 
 def unzip_with_tar(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
     # create a folder for the output

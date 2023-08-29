@@ -1,5 +1,5 @@
-from logger import Log_level
-import tex_engine_utils
+from utils.logger import Log_level
+from utils import tex_engine_utils
 import os
 import subprocess
 

@@ -1,7 +1,7 @@
 import requests
 from lxml import html
 import os
-from logger import Log_level
+from utils.logger import Log_level
 
 """Send a get request and ensure RESPONSE=200"""
 def get_request(url, LOGGER):

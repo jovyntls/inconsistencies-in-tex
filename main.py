@@ -1,8 +1,8 @@
 import os
 import pandas as pd
 
-from logger import Logger, Log_level
-import tex_engine_utils
+from utils.logger import Logger, Log_level
+from utils import tex_engine_utils
 
 import get_tex_files
 import extract_compressed_sources
