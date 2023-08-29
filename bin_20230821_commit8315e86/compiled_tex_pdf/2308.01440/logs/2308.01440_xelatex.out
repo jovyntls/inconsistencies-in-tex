@@ -1,0 +1,976 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+-- This is a 10 point document.
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/xetex.def))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/xebabel.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/nil.ldf))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tabulary/tabulary.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty))
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+
+Package epstopdf Warning: Drivers other than `pdftex' and `luatex' are not supp
+orted.
+
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/balance.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/soul/soul.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+(|extractbb --version))
+No file 2308.01440_xelatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd)
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Citation `KarGerJafICC2023' on page 1 undefined on input line 75
+.
+
+(./00_Abstract.tex
+Underfull \hbox (badness 2865) in paragraph at lines 1--7
+\T1/ptm/b/n/9 algorithms for multiple system-level performance metrics,
+) (./01_Introduction.tex
+
+LaTeX Warning: Citation `GerGarAza2022' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `wu20205g' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `UAVfire2022' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `SaeAlnAlo2020' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `FotQiaDin2019' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `ZenGuvZha2020' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `SaaBenMoz2020' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `NamChaKim17' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `CDHJGC20' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `GerGarGal2018' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation `ZenLyuZha2019' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation `NguAmoWig2018' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Citation `GarGerLop2019' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `KanMezLoz2021' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `DanGarGer2020' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `CDALHJTWC22' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `GerLopBen2022' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `KimKimRyu2022' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `MozLinHay2021' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `BenGerLop2022' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `GerGarAza2022' on page 1 undefined on input line 12.
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 10--13
+[]\T1/ptm/m/n/10 Achieving fly-and-connect capabilities faces important
+
+Underfull \hbox (badness 2261) in paragraph at lines 10--13
+\T1/ptm/m/n/10 BSs. This interference results in UAVs experiencing a
+
+Underfull \hbox (badness 2680) in paragraph at lines 10--13
+\T1/ptm/m/n/10 hinders the correct decoding of critical command and
+
+Underfull \hbox (badness 2213) in paragraph at lines 10--13
+\T1/ptm/m/n/10 also up in the air, by re-engineering the deployments
+
+LaTeX Warning: Citation `CheJaaYan2020' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Citation `BhuGuvDai2021' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `fig:illustration' on page 1 undefined on input line 1
+5.
+
+
+LaTeX Warning: Citation `BulGuv2018' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `ChaSaaBet2018' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `EsrGanGes2020' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `BayTheCac2021' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `MaeChoGuv2021' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `ChoGuvSaa2021' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `SinBhaOzt2021' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `BerLopGes2022' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `BerLopPio2023' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `azari2019cellular' on page 1 undefined on input line 2
+0.
+
+
+LaTeX Warning: Citation `AzaGerGar2020' on page 1 undefined on input line 20.
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 14--21
+\T1/ptm/m/n/10 to guarantee connectivity at every 3D space location.
+[1]
+
+LaTeX Warning: Citation `GuoJaf2016' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `cortes2005spatially' on page 2 undefined on input line
+ 27.
+
+
+LaTeX Warning: Citation `guo2018source' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `ingle2011energy' on page 2 undefined on input line 27.
+
+
+
+LaTeX Warning: Citation `guo2019movement' on page 2 undefined on input line 27.
+
+
+
+LaTeX Warning: Citation `cortes2004coverage' on page 2 undefined on input line 
+27.
+
+
+LaTeX Warning: Citation `karimi2020energy' on page 2 undefined on input line 27
+.
+
+
+LaTeX Warning: Citation `tang2019three' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `karimi2021energy' on page 2 undefined on input line 27
+.
+
+
+LaTeX Warning: Citation `wang2006movement' on page 2 undefined on input line 27
+.
+
+
+LaTeX Warning: Citation `9086619' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `8519749' on page 2 undefined on input line 27.
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 29--30
+\T1/ptm/m/n/10 develop optimization algorithms for three system-level
+
+Underfull \hbox (badness 6592) in paragraph at lines 31--33
+[]\T1/ptm/m/n/10 To illustrate the effectiveness of our mathematical
+
+Underfull \hbox (badness 4060) in paragraph at lines 36--38
+\T1/ptm/m/n/10 of BSs operating at maximum power, while the
+
+Underfull \hbox (badness 3302) in paragraph at lines 38--40
+\T1/ptm/m/n/10 only a marginal reduction in ground performance
+) (./02_SystemModel.tex
+
+LaTeX Warning: Reference `fig:illustration' on page 2 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 2 undefined on input line 20.
+
+[2]
+
+LaTeX Warning: Reference `case-study' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 3 undefined on input line 47.
+
+) (./03_RSS.tex
+
+LaTeX Warning: Reference `RSS-objective-function' on page 3 undefined on input 
+line 15.
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 18--19
+[]\T1/ptm/b/n/10 Remark 1. []\T1/ptm/m/it/10 Due to the absence of interference
+ from
+
+Underfull \hbox (badness 3579) in paragraph at lines 18--19
+\T1/ptm/m/it/10 powers $\OML/cmm/b/it/10 ^^Z$ \T1/ptm/m/it/10 always reduces to
+ allocating the maximum
+
+LaTeX Warning: Reference `RSS-dBm' on page 3 undefined on input line 22.
+
+
+LaTeX Warning: Citation `lloyd1982least' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation `gray1998quantization' on page 3 undefined on input lin
+e 31.
+
+
+LaTeX Warning: Citation `boots2009spatial' on page 3 undefined on input line 31
+.
+
+
+LaTeX Warning: Citation `du1999centroidal' on page 3 undefined on input line 31
+.
+
+[3]
+
+LaTeX Warning: Reference `RSS-objective-function' on page 4 undefined on input 
+line 56.
+
+
+LaTeX Warning: Citation `GuoJaf2016' on page 4 undefined on input line 56.
+
+
+LaTeX Warning: Reference `optimal-V' on page 4 undefined on input line 68.
+
+
+LaTeX Warning: Reference `rss-grad-eq' on page 4 undefined on input line 68.
+
+
+LaTeX Warning: Reference `BS_VAT_Algorithm' on page 4 undefined on input line 6
+8.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning' on page 4 undefined on inp
+ut line 90.
+
+
+LaTeX Warning: Reference `eqn:derivativePhidBm' on page 4 undefined on input li
+ne 90.
+
+
+LaTeX Warning: Reference `optimal-V' on page 4 undefined on input line 98.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning' on page 4 undefined on inp
+ut line 98.
+
+
+LaTeX Warning: Citation `goodfellow2016deep' on page 4 undefined on input line 
+98.
+
+) (./04_SINR.tex
+
+LaTeX Warning: Reference `RSS-Chapter' on page 4 undefined on input line 6.
+
+
+LaTeX Warning: Reference `RSS-dBm' on page 4 undefined on input line 6.
+
+
+LaTeX Warning: Reference `SINR-objective-constraint' on page 4 undefined on inp
+ut line 15.
+
+[4]
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 30.
+
+
+
+LaTeX Warning: Reference `Appendix_A' on page 5 undefined on input line 30.
+
+
+LaTeX Warning: Reference `SINR-objective' on page 5 undefined on input line 35.
+
+
+
+LaTeX Warning: Reference `rss-grad-eq' on page 5 undefined on input line 42.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR-equation' on page 5 undefined 
+on input line 42.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 5 undef
+ined on input line 42.
+
+
+LaTeX Warning: Reference `Appendix_A' on page 5 undefined on input line 42.
+
+
+LaTeX Warning: Citation `GuoJaf2016' on page 5 undefined on input line 42.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR-equation' on page 5 undefined 
+on input line 50.
+
+
+LaTeX Warning: Reference `eqn:derivativePhi-SINR' on page 5 undefined on input 
+line 50.
+
+
+LaTeX Warning: Reference `eqn:SINR_dB' on page 5 undefined on input line 50.
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 49--51
+\T1/ptm/m/n/10 Eq. ([]) is then derived via straightforward algebraic
+
+LaTeX Warning: Reference `SINR-objective' on page 5 undefined on input line 55.
+
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 5 undefined o
+n input line 62.
+
+
+LaTeX Warning: Reference `Appendix_B' on page 5 undefined on input line 62.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 66.
+
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 5 undefined on input 
+line 66.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 5 undefined o
+n input line 66.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 71.
+
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 5 undefined on input 
+line 71.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 5 undefined o
+n input line 71.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 5 undefined on input lin
+e 72.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 5 undefined on input lin
+e 72.
+
+
+LaTeX Warning: Reference `SINR-objective-constraint' on page 5 undefined on inp
+ut line 72.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 5 undefined o
+n input line 109.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR-equation' on page 5 undefined 
+on input line 109.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-equation' on page 5 un
+defined on input line 109.
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 117--118
+[]\T1/ptm/b/n/10 Proposition 7. []\T1/ptm/m/it/10 The Max-SINR-PA-VAT algorithm
+ is an
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 5 undefined o
+n input line 120.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 120
+.
+
+
+LaTeX Warning: Reference `BS-VAT-convergence' on page 5 undefined on input line
+ 120.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 5 undefined on input lin
+e 120.
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 120--121
+[]\T1/ptm/m/it/10 Proof.  \T1/ptm/m/n/10 The Max-SINR-PA-VAT algorithm iterativ
+ely
+
+Underfull \hbox (badness 2050) in paragraph at lines 120--121
+\T1/ptm/m/n/10 methods, respectively, will not result in a decrease in
+
+LaTeX Warning: Citation `nikbakht2020unsupervised' on page 5 undefined on input
+ line 122.
+
+[5]
+
+LaTeX Warning: Reference `max-product-objective' on page 6 undefined on input l
+ine 149.
+
+
+LaTeX Warning: Reference `SINR-objective' on page 6 undefined on input line 149
+.
+
+
+LaTeX Warning: Reference `max-product-objective' on page 6 undefined on input l
+ine 151.
+
+
+LaTeX Warning: Reference `SINR-objective' on page 6 undefined on input line 151
+.
+
+
+LaTeX Warning: Reference `max-product-objective' on page 6 undefined on input l
+ine 159.
+
+
+LaTeX Warning: Reference `max-product-objective-constraint' on page 6 undefined
+ on input line 159.
+
+
+LaTeX Warning: Reference `SINR-Algorithm' on page 6 undefined on input line 159
+.
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 159--160
+ \T1/ptm/m/it/10 2) Optimal Configuration: [][] \T1/ptm/m/n/10 The iterative pr
+ocess for
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 6 undef
+ined on input line 169.
+
+
+LaTeX Warning: Reference `Appendix_A' on page 6 undefined on input line 169.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 6 undefined on input line 169
+.
+
+
+LaTeX Warning: Reference `gradient-theta-MP-equation' on page 6 undefined on in
+put line 177.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 6 undefined on input 
+line 194.
+
+
+LaTeX Warning: Reference `gradient-MP-power' on page 6 undefined on input line 
+203.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 6 undefined o
+n input line 230.
+
+
+LaTeX Warning: Reference `MP-optimal-cell' on page 6 undefined on input line 23
+7.
+
+
+LaTeX Warning: Reference `gradient-theta-MP' on page 6 undefined on input line 
+237.
+
+
+LaTeX Warning: Reference `gradient-formula-MP-power' on page 6 undefined on inp
+ut line 237.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-MP' on page 6 undefined on 
+input line 241.
+
+
+LaTeX Warning: Reference `gradient-theta-MP' on page 6 undefined on input line 
+242.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+[]\T1/ptm/m/n/10 Calculate the gradient $\OMS/cmsy/m/n/10 r[]\OT1/cmr/m/n/10 ^^
+H[]$ \T1/ptm/m/n/10 according to
+
+LaTeX Warning: Reference `gradient-formula-MP-power' on page 6 undefined on inp
+ut line 243.
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 243--244
+[]\T1/ptm/m/n/10 Compute the gradient vector $\OMS/cmsy/m/n/10 r[]\OT1/cmr/m/n/
+10 ^^H[]$ \T1/ptm/m/n/10 according to
+
+Underfull \hbox (badness 1377) in paragraph at lines 243--244
+\T1/ptm/m/n/10 algorithm to optimize $\OML/cmm/b/it/10 ^^Z$ \T1/ptm/m/n/10 with
+in the confined space
+
+LaTeX Warning: Reference `BS-PA-VAT-convergence' on page 6 undefined on input l
+ine 252.
+
+[6]
+Underfull \hbox (badness 2495) in paragraph at lines 281--282
+ \T1/ptm/m/it/10 2) Optimal Configuration: [][] \T1/ptm/m/n/10 As before, we de
+rive the
+
+Underfull \hbox (badness 2189) in paragraph at lines 281--282
+\T1/ptm/m/n/10 necessary optimality conditions for each variable while
+
+Underfull \hbox (badness 2495) in paragraph at lines 281--282
+\T1/ptm/m/n/10 holding the other two variables fixed to optimize the
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 7 undef
+ined on input line 290.
+
+
+LaTeX Warning: Reference `Appendix_A' on page 7 undefined on input line 290.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 7 undefined on input line 290
+.
+
+
+LaTeX Warning: Reference `gradient-vector-theta-SM-equation' on page 7 undefine
+d on input line 337.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 7 undefined on input 
+line 348.
+
+
+LaTeX Warning: Reference `gradient-SM-wrt-power-equation' on page 7 undefined o
+n input line 356.
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 356--362
+\T1/ptm/m/it/10 of the next page, where $[][]$, $[][]$, and $\OML/cmm/m/it/10 V
+[]$ \T1/ptm/m/it/10 are
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 7 undefined o
+n input line 363.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SM-performance' on page 7 u
+ndefined on input line 369.
+
+
+LaTeX Warning: Reference `gradient-vector-theta-SM' on page 7 undefined on inpu
+t line 369.
+
+
+LaTeX Warning: Reference `gradient-SM-wrt-power' on page 7 undefined on input l
+ine 369.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 7 undefined on input lin
+e 369.
+
+
+LaTeX Warning: Reference `BS-PA-VAT-convergence' on page 7 undefined on input l
+ine 376.
+
+) (./05_CaseStudy.tex
+Underfull \hbox (badness 1360) in paragraph at lines 4--5
+[]\T1/ptm/m/n/10 To evaluate the effectiveness and performance of the
+
+Underfull \hbox (badness 3396) in paragraph at lines 4--5
+\T1/ptm/m/n/10 using a practical case study. The subsequent sections
+
+LaTeX Warning: Reference `TWC-Normal-Size-UAV' on page 7 undefined on input lin
+e 11.
+
+[7]
+
+LaTeX Warning: Reference `TWC-Normal-Size-GUE' on page 8 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-UAV' on page 8 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 8 undefined on input line 20.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 8 undefined on input line 20.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 44.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 44.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 47.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 47.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 50.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 50.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 53.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 53.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 56.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 56.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 59.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 59.
+
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 75--76
+ [][] 
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 79--81
+ [][] 
+
+LaTeX Warning: Reference `TWC-RSS-Optimal-Theta' on page 8 undefined on input l
+ine 87.
+
+
+LaTeX Warning: Reference `TWC-MP-010-Optimal-Theta' on page 8 undefined on inpu
+t line 87.
+
+
+LaTeX Warning: Reference `TWC-RSS-Optimal-Theta' on page 8 undefined on input l
+ine 89.
+
+[8]
+
+LaTeX Warning: Reference `TWC-SINR-Optimal-Power' on page 9 undefined on input 
+line 96.
+
+
+LaTeX Warning: Reference `TWC-MP-010-Optimal-Power' on page 9 undefined on inpu
+t line 96.
+
+
+LaTeX Warning: Reference `TWC-Cell-Partitionings' on page 9 undefined on input 
+line 97.
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-GUE' on page 9 undefined on input lin
+e 98.
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-UAV' on page 9 undefined on input lin
+e 98.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-GUE' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-UAV' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-GUE' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-GUE' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-UAV' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Very-Large-Size-GUE' on page 9 undefined on input
+ line 98.
+
+
+LaTeX Warning: Reference `TWC-Very-Large-Size-UAV' on page 9 undefined on input
+ line 98.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 104--105
+ [][] 
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 108--110
+ [][] 
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 122--123
+ [][] 
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 126--127
+ [][] 
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 130--132
+ [][] 
+
+LaTeX Warning: Reference `TWC-RSS-CDF-Plot' on page 9 undefined on input line 1
+43.
+
+
+LaTeX Warning: Reference `TWC-RSS-CDF-Plot' on page 9 undefined on input line 1
+43.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+ \T1/ptm/m/it/10 3) Performance Improvement: [][] \T1/ptm/m/n/10 Fig. [] shows 
+the
+
+Underfull \vbox (badness 10000) has occurred while \output is active [9]
+
+LaTeX Warning: Reference `TWC-MP-010-CDF-Plot' on page 10 undefined on input li
+ne 145.
+
+
+LaTeX Warning: Reference `TWC-MP-010-CDF-Plot' on page 10 undefined on input li
+ne 145.
+
+
+LaTeX Warning: Reference `Experimental-Results' on page 10 undefined on input l
+ine 192.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 10 undefined on input line 193.
+
+
+LaTeX Warning: Reference `a_q_values' on page 10 undefined on input line 193.
+
+
+LaTeX Warning: Reference `b_q_values' on page 10 undefined on input line 193.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 10 undefined on input line 196.
+
+
+LaTeX Warning: Reference `eqn:Pathloss' on page 10 undefined on input line 214.
+
+
+[10]
+
+LaTeX Warning: Reference `TWC-SINR-CDF-Plot-Prob-LoS' on page 11 undefined on i
+nput line 229.
+
+
+LaTeX Warning: Reference `Resulting-performance-improvement' on page 11 undefin
+ed on input line 229.
+
+) (./06_Conclusion.tex
+Underfull \hbox (badness 3019) in paragraph at lines 4--6
+\T1/ptm/m/n/10 a mathematical framework for optimizing antenna tilts
+
+Underfull \hbox (badness 1789) in paragraph at lines 4--6
+\T1/ptm/m/n/10 and challenging to design, were shown to significantly
+) (./07_Appendix.tex
+Underfull \hbox (badness 1484) in paragraph at lines 7--1
+\T1/ptm/m/n/10 aligning more closely with the objectives of real-world
+
+Underfull \hbox (badness 1838) in paragraph at lines 7--1
+\T1/ptm/m/n/10 in optimizing cellular networks for UAV corridors and
+
+Underfull \hbox (badness 1442) in paragraph at lines 7--1
+\T1/ptm/m/n/10 addressing emerging challenges in air-to-ground wireless
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 11 undefined on input line 2.
+
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 11 undefined 
+on input line 4.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 11 unde
+fined on input line 4.
+
+
+Underfull \vbox (badness 3068) has occurred while \output is active [11]
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 12 undefined 
+on input line 21.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 12 unde
+fined on input line 21.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 12 undefined 
+on input line 25.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 12 undefined on input
+ line 43.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-equation' on page 12 u
+ndefined on input line 48.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-proof-eq1' on page 12 
+undefined on input line 48.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-proof-eq2' on page 12 
+undefined on input line 48.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-proof-eq3' on page 12 
+undefined on input line 48.
+
+)
+No file 2308.01440_xelatex.bbl.
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[12] [13]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.01440/2308.01440_xelatex.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.01440/2308.01440_xelatex.pdf (13 pages).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.01440/2308.01440_xelatex.log.

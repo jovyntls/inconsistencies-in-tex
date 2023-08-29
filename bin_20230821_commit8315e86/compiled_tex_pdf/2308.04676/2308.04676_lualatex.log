@@ -1,0 +1,1071 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2021.12.5)  20 AUG 2023 02:14
+ restricted system commands enabled.
+**cc.tex
+(./cc.tex
+LaTeX2e <2020-10-01> patch level 4
+Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
+Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/Users/jovyntan/Library/texlive/202
+1/texmf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
+olved path "/usr/local/texlive/2021/texmf-dist/tex/luatex/luaotfload/fontloader-
+2021-01-07.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/Users/jovyntan/Library/texlive/202
+1/texmf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /Users/jovyntan/Library/texliv
+e/2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count183
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count184
+\leftroot@=\count185
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count186
+\DOTSCASE@=\count187
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count188
+\c@MaxMatrixCols=\count189
+\dotsspace@=\muskip16
+\c@parentequation=\count190
+\dspbrk@lvl=\count191
+\tag@help=\toks17
+\row@=\count192
+\column@=\count193
+\maxfields@=\count194
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks26
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks27
+\minaw@=\dimen148
+\bigaw@=\dimen149
+\minCDarrowwidth=\dimen150
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup7
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen151
+\ar@mcellbox=\box49
+\extrarowheight=\dimen152
+\NC@list=\toks28
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box50
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen153
+\c@nlinenum=\count195
+\TeXr@lab=\toks29
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup8
+\symboldletters=\mathgroup9
+\symboldsymbols=\mathgroup10
+\symboldlasy=\mathgroup11
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/extpfeil/extpfeil.sty
+Package: extpfeil 2009/10/31 v0.4 Extensible Pfeile (PE)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks30
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count196
+\calc@Bcount=\count197
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count198
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count199
+\l_MT_multwidth_dim=\dimen156
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen157
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen158
+\l_MT_above_intertext_sep=\dimen159
+\l_MT_below_intertext_sep=\dimen160
+\l_MT_above_shortintertext_sep=\dimen161
+\l_MT_below_shortintertext_sep=\dimen162
+\xmathstrut@box=\box51
+\xmathstrut@dim=\dimen163
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup12
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+)
+\Gin@req@height=\dimen164
+\Gin@req@width=\dimen165
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks31
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen166
+\Hy@linkcounter=\count266
+\Hy@pagecounter=\count267
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count268
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count269
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen167
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count270
+\Field@Width=\dimen168
+\Fld@charsize=\dimen169
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count271
+\c@Item=\count272
+\c@Hfootnote=\count273
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2021-02-27 v7.00k Hyperref driver for luaTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count274
+\c@bookmark@seq@number=\count275
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip61
+) (/usr/local/texlive/2021/texmf-dist/tex/plain/amsfonts/cyracc.def)
+\c@thm=\count276
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2021-03-18 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box52
+)
+No file 2308.04676_lualatex.aux.
+
+\openout1 = 2308.04676_lualatex.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
+4.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count278
+\scratchdimen=\dimen170
+\scratchbox=\box53
+\nofMPsegments=\count279
+\nofMParguments=\count280
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count281
+\MPscratchDim=\dimen171
+\MPnumerator=\count282
+\makeMPintoPDFobject=\count283
+\everyMPtoPDFconversion=\toks33
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 64.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count284
+)
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
+\@outlinefile=\write3
+
+\openout3 = 2308.04676_lualatex.out
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 74
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 74
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 7
+4.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 76.
+
+
+LaTeX Warning: Citation `MG' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `CC1' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `SN' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `TY' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `ZZ' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `TS' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `AJ' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `LZ' on page 1 undefined on input line 86.
+
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `JAD' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `JAD' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PK' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `YL2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `CY2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `AR' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PK' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SW' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `LT' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `KM' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SP5' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PS2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PS2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PS2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `XC' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `YJ' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `ZG' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `KL' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SD1' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SD2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `FP' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `WS' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SW2' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP2' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP3' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `GG1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `LT1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `TY1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `DS' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `AA' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `YL' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `GG' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP4' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `RA' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SB' on page 2 undefined on input line 93.
+
+[2]
+
+LaTeX Warning: Citation `PS2' on page 3 undefined on input line 95.
+
+[3]
+
+LaTeX Warning: Citation `SN' on page 4 undefined on input line 145.
+
+
+LaTeX Warning: Citation `FL' on page 4 undefined on input line 149.
+
+[4]
+
+LaTeX Warning: Citation `CC' on page 5 undefined on input line 159.
+
+
+LaTeX Warning: Citation `CC3' on page 5 undefined on input line 163.
+
+[5]
+
+LaTeX Warning: Reference `5' on page 6 undefined on input line 190.
+
+
+LaTeX Warning: Citation `CY' on page 6 undefined on input line 197.
+
+[6]
+
+LaTeX Warning: Citation `CY' on page 7 undefined on input line 208.
+
+
+Overfull \hbox (1.06877pt too wide) in paragraph at lines 216--216
+[][]\TU/lmr/bx/n/10.95 Lemma 3.5. []\TU/lmr/m/it/10.95 Let $[][]\OML/cmm/m/it/1
+0.95 ; [][]; []  ; [][]$ \TU/lmr/m/it/10.95 be the se-quences cor-re-spond-ing 
+to EBFs $\OML/cmm/m/it/10.95 x[]; x[]; []  ; x[]$\TU/lmr/m/it/10.95 ,
+ []
+
+
+Overfull \hbox (5.16269pt too wide) detected at line 216
+\OML/cmm/m/it/10.95 u[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 u[] \OT1/cm
+r/m/n/10.95 = (\OML/cmm/m/it/10.95 a[]i[] \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/1
+0.95 a[]i[] \OMS/cmsy/m/n/10.95  [] \OML/cmm/m/it/10.95 a[]i[]\OT1/cmr/m/n/10.
+95 ) \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]i[] \OM
+S/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 a[]i[] \OMS/cmsy/m/n/10.95  [] \OML/cmm
+/m/it/10.95 a[]i[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.9
+5 a[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 i[] \OMS/cmsy/m/n/10.95 ^^@ \OML/c
+mm/m/it/10.95 i[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95
+ a[]t\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 q\OT1/cmr/m/n/10.95 )\OML/cmm/m/
+it/10.95 ;
+ []
+
+
+LaTeX Warning: Reference `thm1' on page 7 undefined on input line 217.
+
+
+LaTeX Warning: Reference `2' on page 7 undefined on input line 217.
+
+[7]
+
+LaTeX Warning: Reference `lem1' on page 8 undefined on input line 252.
+
+[8]
+
+LaTeX Warning: Reference `5' on page 9 undefined on input line 274.
+
+
+LaTeX Warning: Reference `lem2' on page 9 undefined on input line 281.
+
+[9]
+
+LaTeX Warning: Reference `lem3' on page 10 undefined on input line 302.
+
+
+LaTeX Warning: Reference `thm1' on page 10 undefined on input line 307.
+
+
+LaTeX Warning: Citation `SW' on page 10 undefined on input line 307.
+
+
+LaTeX Warning: Reference `thm1' on page 10 undefined on input line 312.
+
+[10]
+
+LaTeX Warning: Reference `thm1' on page 11 undefined on input line 332.
+
+[11]
+
+LaTeX Warning: Reference `thm1' on page 12 undefined on input line 341.
+
+
+LaTeX Warning: Reference `8' on page 12 undefined on input line 364.
+
+[12]
+
+LaTeX Warning: Reference `8' on page 13 undefined on input line 384.
+
+[13]
+
+LaTeX Warning: Reference `8' on page 14 undefined on input line 396.
+
+
+Overfull \hbox (2.67531pt too wide) in paragraph at lines 396--396
+\TU/lmr/m/n/10.95 where $\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
+/10.95 x\OT1/cmr/m/n/10.95 ) = [][] [][] \OML/cmm/m/it/10.95 a[]x[]x[] \OT1/cmr
+/m/n/10.95 + [][] [][] \OML/cmm/m/it/10.95 h[]x[] \OT1/cmr/m/n/10.95 + \OML/cmm
+/m/it/10.95 h[]$ \TU/lmr/m/n/10.95 with $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.
+95 I[]; I[]; []  ; I[]\OMS/cmsy/m/n/10.95 g$
+ []
+
+
+LaTeX Warning: Reference `15' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Reference `4' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Reference `4' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Reference `8' on page 14 undefined on input line 409.
+
+[14]
+
+LaTeX Warning: Reference `4' on page 15 undefined on input line 412.
+
+
+LaTeX Warning: Reference `Figure1' on page 15 undefined on input line 439.
+
+
+LaTeX Warning: Reference `Figure2' on page 15 undefined on input line 439.
+
+<Figure1.png, id=110, 526.96875pt x 395.22656pt>
+File: Figure1.png Graphic file (type png)
+<use Figure1.png>
+Package luatex.def Info: Figure1.png  used on input line 446.
+(luatex.def)             Requested size: 228.95616pt x 228.95415pt.
+
+Overfull \hbox (20.82042pt too wide) in paragraph at lines 446--447
+ [][] 
+ []
+
+<Figure2.png, id=111, 526.96875pt x 395.22656pt>
+File: Figure2.png Graphic file (type png)
+<use Figure2.png>
+Package luatex.def Info: Figure2.png  used on input line 452.
+(luatex.def)             Requested size: 228.95616pt x 228.95415pt.
+
+Overfull \hbox (20.82042pt too wide) in paragraph at lines 452--453
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `AR' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SW' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SW' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `LT' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `KM' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SP5' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `PS2' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SD1' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SD2' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `YJ' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `ZG' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `KL' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SB' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Reference `thm1' on page 15 undefined on input line 483.
+
+
+Overfull \hbox (14.71852pt too wide) in paragraph at lines 483--483
+ [][] 
+ []
+
+[15<./Figure1.png><./Figure2.png>]
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 493.
+
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 494.
+
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 495.
+
+
+LaTeX Warning: Citation `WS' on page 16 undefined on input line 496.
+
+
+LaTeX Warning: Citation `SP3' on page 16 undefined on input line 498.
+
+
+LaTeX Warning: Citation `SP3' on page 16 undefined on input line 499.
+
+
+LaTeX Warning: Citation `SP2' on page 16 undefined on input line 500.
+
+
+LaTeX Warning: Citation `SP1' on page 16 undefined on input line 501.
+
+
+LaTeX Warning: Citation `GG1' on page 16 undefined on input line 504.
+
+
+LaTeX Warning: Citation `GG1' on page 16 undefined on input line 505.
+
+
+LaTeX Warning: Citation `DS' on page 16 undefined on input line 506.
+
+
+LaTeX Warning: Citation `DS' on page 16 undefined on input line 507.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 508.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 509.
+
+
+LaTeX Warning: Citation `GG' on page 16 undefined on input line 511.
+
+
+LaTeX Warning: Citation `SP4' on page 16 undefined on input line 512.
+
+
+LaTeX Warning: Citation `RA' on page 16 undefined on input line 515.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 516.
+
+
+LaTeX Warning: Reference `4' on page 16 undefined on input line 517.
+
+
+Overfull \hbox (13.91118pt too wide) in paragraph at lines 491--520
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `AR' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SW' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `LT' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `KM' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SP5' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `PS2' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SD1' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SD2' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `ZG' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `YJ' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `KL' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SP3' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SP2' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SP1' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `WS' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `GG1' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `GG' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SP4' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `RA' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `DS' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `PS2' on page 16 undefined on input line 535.
+
+[16] [17] [18] [19]
+Underfull \hbox (badness 1721) in paragraph at lines 597--598
+[]\TU/lmr/m/n/10.95 Sarkar P., Ma-jhi S., and Liu Z.: Pseudo-Boolean func-tions for op-ti-mal Z-
+ []
+
+[20] [21]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.04676/2308.04676_lualatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `2308.04676_lualatex.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 11573 strings out of 478531
+ 125007,552014 words of node,token memory allocated
+ 702 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 46 attribute, 59 glue_spec
+, 46 attribute_list, 1 write nodes
+   avail lists: 2:2307,3:798,4:64,5:602,6:255,7:10376,8:88,9:2427,10:16,11:514
+ 30917 multiletter control sequences out of 65536+600000
+ 149 fonts using 11514015 bytes
+ 71i,14n,71p,1240b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-bold.otf><
+/usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bolditalic
+.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-ital
+ic.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono9-regu
+lar.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman9-re
+gular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-
+regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman
+10-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmro
+man10-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmro
+man8-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lm
+roman12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm
+/lmroman12-bold.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+mextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on 2308.04676_lualatex.pdf (21 pages, 368793 bytes).
+
+PDF statistics: 335 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
+ 100 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

@@ -1,0 +1,598 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./cc.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amscd.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/extpfeil/extpfeil.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2021/texmf-dist/tex/plain/amsfonts/cyracc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file 2308.04676_pdflatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+LaTeX Warning: Citation `MG' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `CC1' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `SN' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `TY' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `ZZ' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `TS' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `AJ' on page 1 undefined on input line 86.
+
+
+LaTeX Warning: Citation `LZ' on page 1 undefined on input line 86.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `JAD' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `JAD' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PK' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `YL2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `CY2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `AR' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PK' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SW' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `LT' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `KM' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SP5' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PS2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PS2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `PS2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `XC' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `YJ' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `ZG' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `KL' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SD1' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `SD2' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `FP' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `WS' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SW2' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP2' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP3' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `GG1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `LT1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `TY1' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `DS' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `AA' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `YL' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `GG' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SP4' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `RA' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `SB' on page 2 undefined on input line 93.
+
+[2]
+
+LaTeX Warning: Citation `PS2' on page 3 undefined on input line 95.
+
+[3]
+
+LaTeX Warning: Citation `SN' on page 4 undefined on input line 145.
+
+
+LaTeX Warning: Citation `FL' on page 4 undefined on input line 149.
+
+[4]
+
+LaTeX Warning: Citation `CC' on page 5 undefined on input line 159.
+
+
+LaTeX Warning: Citation `CC3' on page 5 undefined on input line 163.
+
+[5]
+
+LaTeX Warning: Reference `5' on page 6 undefined on input line 190.
+
+
+LaTeX Warning: Citation `CY' on page 6 undefined on input line 197.
+
+[6]
+
+LaTeX Warning: Citation `CY' on page 7 undefined on input line 208.
+
+
+Overfull \hbox (2.54129pt too wide) in paragraph at lines 216--216
+[][]\OT1/cmr/bx/n/10.95 Lemma 3.5. []\OT1/cmr/m/it/10.95 Let $[][]\OML/cmm/m/it
+/10.95 ; [][]; []  ; [][]$ \OT1/cmr/m/it/10.95 be the se-quences cor-re-spond-i
+ng to EBFs $\OML/cmm/m/it/10.95 x[]; x[]; []  ; x[]$\OT1/cmr/m/it/10.95 ,
+
+Overfull \hbox (5.16269pt too wide) detected at line 216
+\OML/cmm/m/it/10.95 u[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 u[] \OT1/cm
+r/m/n/10.95 = (\OML/cmm/m/it/10.95 a[]i[] \OMS/cmsy/m/n/10.95 ^^H \OML/cmm/m/it
+/10.95 a[]i[] \OMS/cmsy/m/n/10.95 ^^H [] \OML/cmm/m/it/10.95 a[]i[]\OT1/cmr/m/n
+/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]i[]
+ \OMS/cmsy/m/n/10.95 ^^H \OML/cmm/m/it/10.95 a[]i[] \OMS/cmsy/m/n/10.95 ^^H [] 
+\OML/cmm/m/it/10.95 a[]i[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Q \OML/cmm
+/m/it/10.95 a[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 i[] \OMS/cmsy/m/n/10.95 
+^^@ \OML/cmm/m/it/10.95 i[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Q \OML/cm
+m/m/it/10.95 a[]t\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 q\OT1/cmr/m/n/10.95 
+)\OML/cmm/m/it/10.95 ;
+
+LaTeX Warning: Reference `thm1' on page 7 undefined on input line 217.
+
+
+LaTeX Warning: Reference `2' on page 7 undefined on input line 217.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd) [7]
+
+LaTeX Warning: Reference `lem1' on page 8 undefined on input line 252.
+
+[8]
+
+LaTeX Warning: Reference `5' on page 9 undefined on input line 274.
+
+
+LaTeX Warning: Reference `lem2' on page 9 undefined on input line 281.
+
+[9]
+
+LaTeX Warning: Reference `lem3' on page 10 undefined on input line 302.
+
+
+LaTeX Warning: Reference `thm1' on page 10 undefined on input line 307.
+
+
+LaTeX Warning: Citation `SW' on page 10 undefined on input line 307.
+
+
+LaTeX Warning: Reference `thm1' on page 10 undefined on input line 312.
+
+[10]
+
+LaTeX Warning: Reference `thm1' on page 11 undefined on input line 332.
+
+[11]
+
+LaTeX Warning: Reference `thm1' on page 12 undefined on input line 341.
+
+
+LaTeX Warning: Reference `8' on page 12 undefined on input line 364.
+
+
+Overfull \hbox (2.89111pt too wide) in paragraph at lines 366--367
+[][]\OT1/cmr/bx/n/10.95 Theorem 4.2. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/1
+0.95 m$\OT1/cmr/m/it/10.95 , $\OML/cmm/m/it/10.95 d$\OT1/cmr/m/it/10.95 , $\OML
+/cmm/m/it/10.95 v$ \OT1/cmr/m/it/10.95 be pos-i-tive in-te-gers with $\OML/cmm/
+m/it/10.95 d \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 
+^^@ \OML/cmm/m/it/10.95 v$ \OT1/cmr/m/it/10.95 and $\OML/cmm/m/it/10.95 v < m$\
+OT1/cmr/m/it/10.95 . Let $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 I[]; I[]; []
+  ; I[]\OMS/cmsy/m/n/10.95 g$
+[12]
+
+LaTeX Warning: Reference `8' on page 13 undefined on input line 384.
+
+[13]
+
+LaTeX Warning: Reference `8' on page 14 undefined on input line 396.
+
+
+Overfull \hbox (2.68027pt too wide) in paragraph at lines 396--396
+\OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/i
+t/10.95 x\OT1/cmr/m/n/10.95 ) = [][] [][] \OML/cmm/m/it/10.95 a[]x[]x[] \OT1/cm
+r/m/n/10.95 + [][] [][] \OML/cmm/m/it/10.95 h[]x[] \OT1/cmr/m/n/10.95 + \OML/cm
+m/m/it/10.95 h[]$ \OT1/cmr/m/n/10.95 with $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/1
+0.95 I[]; I[]; []  ; I[]\OMS/cmsy/m/n/10.95 g$
+
+LaTeX Warning: Reference `15' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Reference `4' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Reference `4' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Reference `8' on page 14 undefined on input line 409.
+
+[14]
+
+LaTeX Warning: Reference `4' on page 15 undefined on input line 412.
+
+
+LaTeX Warning: Reference `Figure1' on page 15 undefined on input line 439.
+
+
+LaTeX Warning: Reference `Figure2' on page 15 undefined on input line 439.
+
+
+Overfull \hbox (20.82042pt too wide) in paragraph at lines 446--447
+ [][] 
+
+Overfull \hbox (20.82042pt too wide) in paragraph at lines 452--453
+ [][] 
+
+LaTeX Warning: Citation `AR' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SW' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SW' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `LT' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `KM' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SP5' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `PS2' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SD1' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SD2' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `YJ' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `ZG' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `KL' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Citation `SB' on page 15 undefined on input line 483.
+
+
+LaTeX Warning: Reference `thm1' on page 15 undefined on input line 483.
+
+
+Overfull \hbox (14.71852pt too wide) in paragraph at lines 483--483
+ [][] 
+[15 <./Figure1.png (PNG copy)> <./Figure2.png (PNG copy)>]
+Overfull \hbox (3.68184pt too wide) in paragraph at lines 492--492
+ []|\OT1/cmr/m/n/6 Optimal| 
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 493.
+
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 494.
+
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 495.
+
+
+LaTeX Warning: Citation `WS' on page 16 undefined on input line 496.
+
+
+LaTeX Warning: Citation `SP3' on page 16 undefined on input line 498.
+
+
+LaTeX Warning: Citation `SP3' on page 16 undefined on input line 499.
+
+
+LaTeX Warning: Citation `SP2' on page 16 undefined on input line 500.
+
+
+LaTeX Warning: Citation `SP1' on page 16 undefined on input line 501.
+
+
+LaTeX Warning: Citation `GG1' on page 16 undefined on input line 504.
+
+
+LaTeX Warning: Citation `GG1' on page 16 undefined on input line 505.
+
+
+LaTeX Warning: Citation `DS' on page 16 undefined on input line 506.
+
+
+LaTeX Warning: Citation `DS' on page 16 undefined on input line 507.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 508.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 509.
+
+
+LaTeX Warning: Citation `GG' on page 16 undefined on input line 511.
+
+
+LaTeX Warning: Citation `SP4' on page 16 undefined on input line 512.
+
+
+LaTeX Warning: Citation `RA' on page 16 undefined on input line 515.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 516.
+
+
+LaTeX Warning: Reference `4' on page 16 undefined on input line 517.
+
+
+Overfull \hbox (5.62627pt too wide) in paragraph at lines 517--517
+ []|\OT1/cmr/m/n/6 Theorem 
+
+Overfull \hbox (13.91118pt too wide) in paragraph at lines 491--520
+ [][] 
+
+LaTeX Warning: Citation `AR' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SW' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `LT' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `KM' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SP5' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `PS2' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SD1' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SD2' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `ZG' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `YJ' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `KL' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 525.
+
+
+LaTeX Warning: Citation `SP3' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SP2' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SP1' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `WS' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `XC' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `GG1' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `GG' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SP4' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `RA' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `AA' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `DS' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `SB' on page 16 undefined on input line 528.
+
+
+LaTeX Warning: Citation `PS2' on page 16 undefined on input line 535.
+
+[16] [17] [18] [19]
+Underfull \hbox (badness 1748) in paragraph at lines 597--598
+[]\OT1/cmr/m/n/10.95 Sarkar P., Ma-jhi S., and Liu Z.: Pseudo-Boolean func-tion
+s for op-ti-mal Z-
+[20] [21]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.04676/2308.04676_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `2308.04676_pdflatex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2021/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/cm-super/sfrm0600.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/c
+m-super/sfrm0800.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-
+super/sfrm1095.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.04676/2308.04676_pdflatex.pdf (21 pages, 426879
+ bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.04676/2308.04676_pdflatex.log.

@@ -1,0 +1,363 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size11.clo))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/xebabel.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/fullpage.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/upref.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thmtools.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thm-patch.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/parseargs.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thm-kv.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/aliasctr.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thm-listof.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thm-restate.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/thmtools/thm-amsthm.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+(|extractbb --version))
+No file 2308.02889_xelatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (./macro.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd)
+
+LaTeX Warning: Citation `Panteleev&Kalachev:stoc2022' on page 1 undefined on in
+put line 43.
+
+
+LaTeX Warning: Citation `Dinur:stoc2022' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation `Dinur:decoders' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation `Leverrier:focs2022' on page 1 undefined on input line 
+43.
+
+
+LaTeX Warning: Citation `Leverrier:qldpcdecoder:2023' on page 1 undefined on in
+put line 43.
+
+
+LaTeX Warning: Citation `Leverrier:2023' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation `Gu:stoc2023:qpdpc-decoder' on page 1 undefined on inpu
+t line 43.
+
+
+LaTeX Warning: Citation `Dinur:stoc2022' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation `Lin2022:losslessLTC' on page 1 undefined on input line
+ 43.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation `Dinur:decoders' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation `Dinur:stoc2022' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Panteleev&Kalachev:stoc2022' on page 1 undefined on in
+put line 46.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Dinur:decoders' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 1 undefined on input line 54.
+
+[1]
+
+LaTeX Warning: Citation `PK2022robust' on page 2 undefined on input line 65.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 2 undefined on input line 75.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 2 undefined on input line 82.
+
+[2]
+
+LaTeX Warning: Reference `eqn:prob' on page 3 undefined on input line 112.
+
+
+LaTeX Warning: Citation `Lin-func-prop' on page 3 undefined on input line 114.
+
+
+LaTeX Warning: Citation `Lin-func-prop' on page 3 undefined on input line 121.
+
+
+LaTeX Warning: Citation `Lin-func-prop' on page 3 undefined on input line 123.
+
+
+LaTeX Warning: Citation `Lin-func-prop' on page 3 undefined on input line 123.
+
+
+LaTeX Warning: Reference `lemma:robust-combine' on page 3 undefined on input li
+ne 126.
+
+[3]
+
+LaTeX Warning: Citation `Dinur:stoc2022' on page 4 undefined on input line 130.
+
+
+
+LaTeX Warning: Reference `app:robust=agreement' on page 4 undefined on input li
+ne 153.
+
+
+LaTeX Warning: Citation `Dinur:stoc2022' on page 4 undefined on input line 153.
+
+
+
+LaTeX Warning: Reference `lemma:robust=agreement' on page 4 undefined on input 
+line 154.
+
+
+LaTeX Warning: Reference `th:main' on page 4 undefined on input line 172.
+
+
+LaTeX Warning: Reference `th:main' on page 4 undefined on input line 173.
+
+
+LaTeX Warning: Reference `prop:main' on page 4 undefined on input line 173.
+
+[4] [5]
+
+LaTeX Warning: Reference `eqn:a-is-codeword' on page 6 undefined on input line 
+230.
+
+
+LaTeX Warning: Reference `eqn:a'-is-codeword' on page 6 undefined on input line
+ 244.
+
+
+LaTeX Warning: Reference `eqn:a-is-codeword' on page 6 undefined on input line 
+244.
+
+
+LaTeX Warning: Reference `lemma:sum-check' on page 6 undefined on input line 24
+4.
+
+[6]
+
+LaTeX Warning: Reference `lemma:not-expanding' on page 7 undefined on input lin
+e 251.
+
+
+LaTeX Warning: Citation `Polishchuk:1994' on page 7 undefined on input line 253
+.
+
+
+LaTeX Warning: Citation `Polishchuk:1994' on page 7 undefined on input line 255
+.
+
+
+LaTeX Warning: Citation `book:AlgCodes' on page 7 undefined on input line 262.
+
+
+LaTeX Warning: Citation `Polishchuk:1994' on page 7 undefined on input line 263
+.
+
+
+LaTeX Warning: Citation `Polishchuk:1994' on page 7 undefined on input line 269
+.
+
+[7]
+
+LaTeX Warning: Reference `eqn:CxC-robust' on page 8 undefined on input line 291
+.
+
+
+LaTeX Warning: Reference `th:RS-robust' on page 8 undefined on input line 293.
+
+
+LaTeX Warning: Reference `eqn:CxC-robust' on page 8 undefined on input line 295
+.
+
+
+LaTeX Warning: Citation `Chiesa2020:hyperplane-robust' on page 8 undefined on i
+nput line 325.
+
+
+LaTeX Warning: Reference `lemma:robust-combine' on page 8 undefined on input li
+ne 329.
+
+
+LaTeX Warning: Reference `eqn:hp-robust' on page 8 undefined on input line 329.
+
+
+
+LaTeX Warning: Reference `th:main' on page 8 undefined on input line 334.
+
+
+LaTeX Warning: Reference `prop:main' on page 8 undefined on input line 334.
+
+[8]
+
+LaTeX Warning: Reference `lemma:not-expanding' on page 9 undefined on input lin
+e 337.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 9 undefined on input line 337.
+
+
+LaTeX Warning: Reference `lemma:robust-Tm1' on page 9 undefined on input line 3
+41.
+
+
+LaTeX Warning: Reference `col:RS-robust' on page 9 undefined on input line 342.
+
+
+
+LaTeX Warning: Reference `lemma:robust-Tm1' on page 9 undefined on input line 3
+42.
+
+
+LaTeX Warning: Reference `col:RS-robust' on page 9 undefined on input line 342.
+
+
+
+LaTeX Warning: Reference `lemma:robust=agreement' on page 9 undefined on input 
+line 348.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 9 undefined on input line 356.
+
+
+LaTeX Warning: Citation `PK2022robust' on page 9 undefined on input line 357.
+
+
+LaTeX Warning: Citation `Dinur:stoc2022' on page 9 undefined on input line 358.
+
+
+
+LaTeX Warning: Reference `lemma:robust-Tm1' on page 9 undefined on input line 3
+62.
+
+No file 2308.02889_xelatex.bbl.
+
+LaTeX Warning: Reference `lemma:robust=agreement' on page 9 undefined on input 
+line 379.
+
+[9]
+Overfull \hbox (2.12268pt too wide) in paragraph at lines 383--384
+[]\TU/lmr/bx/n/10.95 1. Agreement testability implies robust testability. \TU/l
+mr/m/n/10.95 Consider arbitrary $\OML/cmm/m/it/10.95 x \OMS/cmsy/m/n/10.95 2 \U
+/msb/m/n/10.95 F[]$\TU/lmr/m/n/10.95 .
+
+LaTeX Warning: Reference `eqn:cI0-J' on page 10 undefined on input line 411.
+
+
+LaTeX Warning: Reference `eqn:cI0-c' on page 10 undefined on input line 411.
+
+[10]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02889/2308.02889_xelatex.aux
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02889/macro.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `2308.02889_xelatex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.02889/2308.02889_xelatex.pdf (10 pages).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.02889/2308.02889_xelatex.log.

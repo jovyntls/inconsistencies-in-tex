@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+    \draw[very thick] (2, 1) rectangle (4, 1.7);
+    \draw[very thick] (2, -0.35) rectangle (4, 0.35);
+    \draw[very thick] (2, -1.7) rectangle (4, -1);
+    \node at (3, 1.35) {\small Decoder 1};
+    \node at (3, 0) {\small Decoder 2};
+    \node at (3, -1.35) {\small Decoder 3};
+
+    \draw[very thick, ->, -latex] (1.3, 1.35) -- (2, 1.35);
+    \draw[very thick, ->, -latex] (1.3, 0) -- (2, 0);
+    \draw[very thick, ->, -latex] (1.3, -1.35) -- (2, -1.35);
+    \node at (1, 1.35) {$ y_1 $};
+    \node at (1, 0) {$ y_2 $};
+    \node at (1, -1.35) {$ y_3 $};
+							
+    \draw[very thick, ->, -latex] (4, 1.35) -- (4.7, 1.35);
+    \draw[very thick, ->, -latex] (4, 0) -- (4.7, 0);
+    \draw[very thick, ->, -latex] (4, -1.35) -- (4.7, -1.35);
+    \node at (5, 1.35) {$ \hat{u}_1 $};
+    \node at (5, 0) {$ \hat{u}_2 $};
+    \node at (5, -1.35) {$ \hat{u}_3 $};
+
+    \draw[very thick, <->, dashed, -latex] (2.8, 0.35) -- (2.8, 1);
+    \draw[very thick, <->, dashed, -latex] (2.8, -0.35) -- (2.8, -1);
+    \draw[very thick, <->, dashed, -latex] (3.9, .95) .. controls (4.5, 0.8) and (4.5, -0.8) .. (3.9, -0.95);
+    \node at (2,0.65) [align=right,font=\scriptsize]{Information\\ exchange};
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+xelatex: unrecognized option `-output-format=pdf'
+
+xdvipdfmx:fatal: Image inclusion failed for "flattened_t_distr.eps".
+
+No output PDF file written.

@@ -1,0 +1,112 @@
+\documentclass[conference]{IEEEtran}
+%\documentclass[journal,12pt,onecolumn]{IEEEtran}
+
+\ifCLASSOPTIONonecolumn
+\usepackage{setspace}
+%\doublespacing
+\setstretch{1.50}
+\fi
+
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{placeins}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{psfig}
+\usepackage{multirow}
+\usepackage{steinmetz} % For the phase symbol with the \phase{} command
+\usepackage{tabularx}
+\setlength{\extrarowheight}{1.5pt}
+
+% Nested comments
+\newcommand{\mycomment}[1]{%
+}%
+\usepackage{environ}
+\NewEnviron{nestedcomment}{\mycomment{\BODY}}
+% Enables nested comments: \begin{nestedcomment} \begin{comment} \end{comment} \begin{nestedcomment} \end{nestedcomment} \end{nestedcomment}
+
+%\newcommand{\rev}[1]{{\color{blue}#1}}
+%\usepackage{xcolor}
+%\renewcommand{\theequation}{\Roman{equation}}
+%\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%   T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage[font=small,labelfont=bf]{caption}
+% Changes the word Table appear not in caps in table captions
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makecaption}
+  {\scshape}
+  {}
+  {}
+  {}
+\makeatother
+\def\tablename{Table}
+\renewcommand{\thetable}{\arabic{table}} %Changes Table numbering from roman to arabic
+
+% Use urltilde in .bib file
+\def\urltilde{\kern -.15em\lower .7ex\hbox{\~{}}\kern .04em}
+
+\begin{document}
+\title{Comments on ``A Linear Time Algorithm for the Optimal Discrete IRS Beamforming"
+%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
+%should not be used}
+\thanks{The authors are with the Center for Pervasive Communications and Computing (CPCC), Department of Electrical Engineering and Computer Science,
+University of California, Irvine.}
+\thanks{This work is partially supported by NSF grant 2030029.}
+\thanks{This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible.}
+%\thanks{This work was partially presented at the International Conference on Computing, Networking, and Communications (ICNC) 2023 and the IEEE International Conference on Communications (ICC) 2023.}
+}
+
+\ifCLASSOPTIONonecolumn
+\author{\IEEEauthorblockN{Dogan Kutay Pekcan, %{\em Student Member, IEEE}}\\
+}
+\IEEEauthorblockA{\textrm{CPCC, Department of EECS} \\
+\textrm{University of California, Irvine, CA, USA}\\
+dpekcan@uci.edu\\[7mm]}
+\and
+\IEEEauthorblockN{ Ender Ayanoglu, {\em Fellow, IEEE}}\\
+\IEEEauthorblockA{\textrm{CPCC, Department of EECS} \\
+\textrm{University of California, Irvine, CA, USA}
+ \\ayanoglu@uci.edu}}
+\else
+\author{\IEEEauthorblockN{Dogan Kutay Pekcan}
+\IEEEauthorblockN{Ender Ayanoglu, {\em Fellow, IEEE}}
+}
+\fi
+
+\maketitle
+
+\begin{abstract}
+Comments on \cite{b1} are provided. Updated necessary and sufficient conditions for its Lemma~1 are given.
+Consequently, an updated Algorithm~1 is provided with full specification. Simulation results with improved
+performance over the implementation of Algorithm~1 are provided.
+\end{abstract}
+\begin{IEEEkeywords}
+Intelligent reflective surface (IRS), reconfigurable intelligent surface (RIS), discrete beamforming for IRS/RIS.
+\end{IEEEkeywords}
+
+\input{introduction}
+\input{statements}
+\input{algorithm}
+\input{results}
+
+%\clearpage\newpage
+
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+\end{document}
+
+
+
+

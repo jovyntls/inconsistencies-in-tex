@@ -1,0 +1,178 @@
+\appendices
+\section{Proof of Proposition \ref{optimal-V-SINR}}\label{Appendix_A}
+
+The equivalence between Eqs. (\ref{optimal-cell-partitioning-SINR}) and  (\ref{optimal-cell-partitioning-SINR-proof}) is shown on top of the next page, where
+\begin{figure*}[t!]
+\begin{align}\label{optimal-cell-partitioning-SINR-proof}
+    V_n^*(\bm{\Theta}, \bm{\rho}) &= \big\{\bm{q} \in Q \mid \mathtt{SINR_{dBm}^{(n)}}(\bm{q}; \bm{\Theta}, \bm{\rho}) \geq \mathtt{SINR_{dBm}^{(k)}}(\bm{q}; \bm{\Theta}, \bm{\rho}), \quad \textrm{ for all } 1 \leq k \leq N \big\} \\
+    &= \left\{\bm{q} \in Q \,\middle\vert\,  \frac{\mathtt{RSS^{(n)}_{lin}} (\bm{q}; \theta_n, \rho_n)}{\sum\limits_{j\neq n}^{} \mathtt{RSS^{(j)}_{lin}} (\bm{q}; \theta_j, \rho_j) + \sigma^2} \geq \frac{\mathtt{RSS^{(k)}_{lin}} (\bm{q}; \theta_k, \rho_k)}{\sum\limits_{j\neq k}^{} \mathtt{RSS^{(j)}_{lin}} (\bm{q}; \theta_j, \rho_j) + \sigma^2}, \textrm{ } \forall \textrm{ } 1 \leq k \leq N \right\} \nonumber\\
+    &= \left\{\bm{q} \in Q \,\middle\vert\, \frac{\mathtt{RSS^{(n)}_{lin}} (\bm{q}; \theta_n, \rho_n)}{\Gamma - \mathtt{RSS^{(n)}_{lin}} (\bm{q}; \theta_n, \rho_n)} \geq \frac{\mathtt{RSS^{(k)}_{lin}} (\bm{q}; \theta_k, \rho_k)}{\Gamma - \mathtt{RSS^{(k)}_{lin}} (\bm{q}; \theta_k, \rho_k)}, \quad \textrm{ for all } 1 \leq k \leq N \right\} \nonumber \\ 
+    &= \big\{\bm{q} \in Q \mid \mathtt{RSS_{lin}^{(n)}}(\bm{q}; \theta_n, \rho_n) \geq \mathtt{RSS_{lin}^{(k)}}(\bm{q}; \theta_k, \rho_k), \quad \textrm{ for all } 1 \leq k \leq N \big\} \nonumber \\
+    &= \big\{\bm{q} \in Q \mid \mathtt{RSS_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) \geq \mathtt{RSS_{dBm}^{(k)}}(\bm{q}; \theta_k, \rho_k), \quad \textrm{ for all } 1 \leq k \leq N \big\}.\nonumber
+\end{align}
+\end{figure*}
+$\Gamma = \sum_{j=1}^{N} \mathtt{RSS^{(j)}_{lin}} (\bm{q}; \theta_j, \rho_j) + \sigma^2$ and $._{\mathtt{lin}}$ denotes linear units (as opposed to $\mathtt{dBm}$). %Thus, Eqs. (\ref{optimal-cell-partitioning-SINR}) and (\ref{optimal-cell-partitioning-SINR-proof}) are equivalent. 
+For any arbitrary cell partitioning $\bm{W} = (W_1, \cdots, W_N)$, we can write:
+\begin{align}
+    &\Phi_{\mathtt{SINR}}(\bm{W},\mathbf{\Theta}, \bm{\rho}) = \sum_{n=1}^{N} \int_{W_n} \mathtt{SINR_{dB}^{(n)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q} \\ &\leq \sum_{n=1}^{N} \int_{W_n} \max_k \Big[\mathtt{SINR_{dB}^{(k)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho})\Big] \lambda(\bm{q}) d\bm{q} \nonumber\\
+    &=\int_Q \! \max_k \! \Big[\mathtt{SINR_{dB}^{(k)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho})\Big] \lambda(\bm{q}) d\bm{q} \nonumber\\&=\sum_{n=1}^{N} \! \int_{V_n^*} \! \max_k \! \Big[\mathtt{SINR_{dB}^{(k)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}))\Big] \lambda(\bm{q}) d\bm{q} \nonumber\\&
+    \stackrel{(\text{a})}{=} \sum_{n=1}^{N} \int_{V_n^*} \mathtt{SINR_{dB}^{(n)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q} = \Phi_{\mathtt{SINR}}(\bm{V}^*, \mathbf{\Theta}, \bm{\rho}),\nonumber
+\end{align}
+where (a) follows from the definition of $V_n^*$ in Eq. (\ref{optimal-cell-partitioning-SINR}) and its equivalency to Eq. (\ref{optimal-cell-partitioning-SINR-proof}), and the proof is complete. $\hfill\blacksquare$
+
+
+
+\section{Proof of Proposition \ref{sinr-power-allocation-gradient}}\label{Appendix_B}
+
+First, we derive the partial derivative of the SINR w.r.t. the BS transmission power $\rho_n$:
+\begin{align}
+    &\frac{\partial \mathtt{SINR_{dB}^{(n)}}(\bm{q};\bm{\Theta},\bm{\rho})}{\partial \rho_n} = \frac{\partial 10 \log_{10}\bigg(\frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n)}{\sum_{j\neq n}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^2 }\bigg) }{\partial \rho_n} \nonumber\\
+    &= 10 \log_{10}(e)  
+    \times \frac{\bigg(\frac{\sum_{j\neq n}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^2 }{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n)}\bigg)}{\sum_{j\neq n}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^2} \nonumber \\ & \times \frac{\partial 10^{\frac{\mathtt{RSS_{dBm}^{(n)}}(\bm{q};\theta_n,\rho_n)}{10}} }{\partial \rho_n} 
+    = \frac{10 \log_{10}(e)}{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n)} \times 10^{\frac{\mathtt{RSS_{dBm}^{(n)}}(\bm{q};\theta_n,\rho_n)}{10}} \nonumber\\& \times \frac{\ln(10)}{10} \times \frac{\partial \mathtt{RSS_{dBm}^{(n)}}(\bm{q};\theta_n,\rho_n)}{\partial \rho_n} 
+    = 1, \label{sinr-power-allocation-gradient-proof-eq1}
+\end{align}
+and for $i\neq n$, we have:
+\begin{align}
+    &\frac{\partial \mathtt{SINR_{dB}^{(i)}}(\bm{q};\bm{\Theta},\bm{\rho})}{\partial \rho_n} = \frac{\partial 10 \log_{10}\bigg(\frac{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)}{\sum_{j\neq i}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^2 }\bigg) }{\partial \rho_n} \nonumber\\&
+    = -10 \log_{10}(e) \times \bigg(\frac{\sum_{j\neq i}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^2 }{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)}\bigg) \nonumber \\&
+    \times \frac{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i) \times \mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n) \times \frac{\ln(10)}{10}  }{\Big[\sum_{j\neq i}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^2 \Big]^2} \nonumber\\& \times \frac{\partial \mathtt{RSS_{dBm}^{(n)}}(\bm{q};\theta_n,\rho_n)}{\partial \rho_n} 
+    = - \frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n)}{\sum_{j\neq i}\mathtt{RSS_{lin}^{(j)}}(\bm{q};\theta_j,\rho_j) + \sigma^{2} } \nonumber\\&
+    = - \frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n) \times \mathtt{SINR_{lin}^{(i)}}(\bm{q};\bm{\Theta},\bm{\rho})}{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)}. \label{sinr-power-allocation-gradient-proof-eq2}
+\end{align}
+Similar to the proof of Proposition \ref{gradient-equation-SINR}, the partial derivative component corresponding to the integral over the boundary of regions will sum to zero. Hence, we have:
+\begin{equation}\label{sinr-power-allocation-gradient-proof-eq3}
+    \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta}, \bm{\rho})}{\partial \rho_n} = 
+    \sum_{i=1}^{N} \int_{V_i(\mathbf{\Theta}, \bm{\rho})} \!\!\!\!\frac{\partial \mathtt{SINR_{dB}^{(i)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \rho_n}  \lambda(\bm{q})d\bm{q}.
+\end{equation}
+Eq. (\ref{sinr-power-allocation-gradient-equation}) then follows from substitution of Eqs. (\ref{sinr-power-allocation-gradient-proof-eq1}) and (\ref{sinr-power-allocation-gradient-proof-eq2}) into Eq. (\ref{sinr-power-allocation-gradient-proof-eq3}). $\hfill\blacksquare$
+
+
+\begin{comment}
+\section{Proof of Proposition \ref{gradient-theta-MP}}\label{Appendix_C}
+
+Following the reasoning used in the proof of Proposition \ref{rss-grad-eq}, %the partial derivative of $\Phi_{{\sf MP}}$ w.r.t. $\theta_n$ reduces to calculating the partial derivative of the integrand, i.e., $\gamma_{{\sf MP}}$. Hence, 
+we have:
+\begin{equation}\label{partial-MP-theta-eq1}
+    \frac{\partial \Phi_{{\sf MP}}}{\partial \theta_n} = \sum_{i=1}^{N} \int_{V_i} \frac{\partial \gamma_{{\sf MP}}^{(i)} }{\partial \theta_n} \lambda(\bm{q})d\bm{q}.
+\end{equation}
+From the chain rule, it can be deduced that for $i = n$:
+\begin{align}\label{eqn:derivative_gammaMP}
+    \frac{\partial \gamma_{\sf MP}^{(n)}}{\partial \theta_n} &=  
+    \frac{\partial \gamma_{\sf MP}^{(n)} }{\partial \SINR^{(n)}_{\text{lin}}} \cdot
+    \frac{\partial \SINR^{(n)}_{\text{lin}}}{\partial \theta_n} \nonumber\\
+    &  =
+    \frac{\SINR^{(n)}_{\text{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right)}{\left[\SINR^{(n)}_{\text{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(n)}_{\text{lin}} + \nu \right) \right] } , 
+\end{align}
+and for $i \neq n$, we have:
+\begin{align}\label{eqn:derivative_gammaMP_cross}
+    &\frac{\partial \gamma_{\sf MP}^{(i)} }{\partial \theta_n} =    
+    \frac{\partial \gamma_{\sf MP}^{(i)} }{\partial \SINR^{(i)}_{\text{lin}}} \cdot
+    \frac{\partial \SINR^{(i)}_{\text{lin}}}{\partial \theta_n} \nonumber\\
+    &  = 
+    \frac{\left[ -\frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot \frac{{\left[\SINR^{(i)}_{\text{lin}}\right]^2} \cdot \RSS^{(n)}_{\text{lin}} }{\RSS^{(i)}_{\text{lin}} } \right]}{\left[\SINR^{(i)}_{\text{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(i)}_{\text{lin}} + \nu \right) \right] } \cdot   \nonumber\\
+    & =
+    \frac{\SINR^{(i)}_{\text{lin}}\cdot \left[ -\frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot {\frac{\RSS^{(n)}_{\text{lin}} }{\sum_{j\neq i}^{} \RSS^{(j)}_{\text{lin}}  + \sigma^2_{\text{lin}}}} \right] }{\left[\SINR^{(i)}_{\text{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(i)}_{\text{lin}} + \nu \right) \right] }.
+\end{align}
+Eq. (\ref{gradient-theta-MP-equation}) is then derived by substituting Eqs. (\ref{eqn:derivative_gammaMP}) and (\ref{eqn:derivative_gammaMP_cross}) into Eq. (\ref{partial-MP-theta-eq1}).  $\hfill\blacksquare$
+\end{comment}
+
+\begin{comment}
+\section{Proof of Proposition \ref{gradient-formula-MP-power}}\label{Appendix_D}
+
+As before, we have:
+\begin{equation}\label{partial-MP-power-eq1}
+    \frac{\partial \Phi_{{\sf MP}}}{\partial \rho_n} = \sum_{i=1}^{N} \int_{V_i} \frac{\partial \gamma_{{\sf MP}}^{(i)} }{\partial \rho_n} \lambda(\bm{q})d\bm{q}.
+\end{equation}
+Following the chain rule, the partial derivative $\frac{\partial \gamma_{{\sf MP}}^{(i)} }{\partial \rho_n}$ for $i = n$ can be calculated as:
+\begin{align}\label{eqn:derivative_gammaMP_rho}
+    \frac{\partial \gamma_{\sf MP}^{(n)} }{\partial \rho_n} &=
+    \frac{\partial \gamma_{\sf MP}^{(n)} }{\partial \SINR^{(n)}_{\text{lin}}} \cdot
+    \frac{\partial \SINR^{(n)}_{\text{lin}}}{\partial \rho_n} \nonumber\\
+    & =
+    \frac{\SINR^{(n)}_{\text{lin}} \cdot \frac{\log 10}{10}}{\left[\SINR^{(n)}_{\text{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(n)}_{\text{lin}} + \nu \right) \right] }, 
+\end{align}
+and for $i \neq n$, we have:
+\begin{align}\label{eqn:derivative_gammaMP_cross_rho}
+    \frac{\partial \gamma_{\sf MP}^{(i)} }{\partial \rho_n} &=  
+    \frac{\partial \gamma_{\sf MP}^{(i)} }{\partial \SINR^{(i)}_{\text{lin}}} \cdot
+    \frac{\partial \SINR^{(i)}_{\text{lin}}}{\partial \rho_n} \nonumber\\
+    & =
+    \frac{ 
+    \left[-\frac{1}{10}\log 10 \left[ \SINR^{(i)}_{\text{lin}} \right]^2 \cdot \frac{\RSS^{(n)}_{\text{lin}}}{\RSS^{(i)}_{\text{lin}}}
+    \right]}{\left[\SINR^{(i)}_{\text{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(i)}_{\text{lin}} + \nu \right) \right] }.
+\end{align}
+Eq. (\ref{gradient-MP-power}) is then obtained by substituting Eqs. (\ref{eqn:derivative_gammaMP_rho}) and (\ref{eqn:derivative_gammaMP_cross_rho}) into Eq. (\ref{partial-MP-power-eq1}) and using the fact that $V_i = \Big[\bigcup_{1\leq u\leq N_U} V_i\cap Q_u  \Big] \bigcup \Big[ V_i\cap Q_G \Big] $.  $\hfill\blacksquare$
+\end{comment}
+
+\begin{comment}
+\section{Proof of Proposition \ref{gradient-vector-theta-SM}}\label{Appendix_E}
+
+Similar to the proof of Proposition \ref{rss-grad-eq}, we have:
+\begin{align}
+    \frac{\partial \Phi_{{\sf SM}}}{\partial \theta_n} &= \sum_{i=1}^{N}\int_{V_i} \frac{\partial}{\partial \theta_n} \gamma_{{\sf SM}}^{(i)}(\bm{q}; \bm{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}  \nonumber\\&= \sum_{i=1}^{N}\Bigg [ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u} \frac{\partial}{\partial \theta_n} \gamma_{{\sf SM}}^{(i)}(\bm{q}; \bm{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q} \nonumber\\&\qquad\qquad + \int_{V_i \cap Q_G} \frac{\partial}{\partial \theta_n} \gamma_{{\sf SM}}^{(i)}(\bm{q}; \bm{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}  \Bigg ]. \label{SM-Partial_derivative-expanded}
+\end{align}
+The partial derivative of $\gamma_{{\sf SM}}$ w.r.t. the SINR can be calculated as:
+\begin{align}
+    \frac{\partial \gamma_{\sf SM}}{\partial \SINR_{\text{lin}}} &= 
+    - \exp \! \left[ \frac{\alpha}{(\SINR_{\text{lin}} + \nu )^{\xi}}\right] \cdot \alpha \cdot \frac{\partial \frac{1}{\left(\SINR_{\text{lin}} + \nu\right)^{\xi}}}{\partial \SINR_{\text{lin}}}  \nonumber\\
+    & =
+    \frac{\alpha \xi}{\left(\SINR_{\text{lin}} + \nu\right)^{\xi+1}} 
+    \cdot \exp \! \left[ \frac{\alpha}{(\SINR_{\text{lin}} + \nu )^{\xi}}\right].
+    \label{eqn:derivative_gammaSM_SINRlin}
+\end{align}
+Now, the partial derivative of the $\gamma_{{\sf SM}}^{(i)}$ w.r.t. $\theta_n$ for $i = n$ is given by:
+\begin{align}\label{eqn:derivative_gammaSM}
+    &\frac{\partial \gamma_{\sf SM}^{(n)} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n} = 
+    \frac{\partial \gamma_{\sf SM}^{(n)} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \SINR^{(n)}_{\text{lin}}(\bm{q}; \mathbf{\Theta}, \bm{\rho})} \cdot
+    \frac{\partial \SINR^{(n)}_{\text{lin}}(\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n} \\
+    &  = 
+    \frac{\alpha \, \xi}{\left(\SINR^{(n)}_{\text{lin}} + \nu\right)^{\xi+1}} 
+    \times \exp \! \left[ \frac{\alpha}{(\SINR^{(n)}_{\text{lin}} + \nu )^{\xi}}\right] \nonumber\\& \times  \SINR^{(n)}_{\text{lin}} \times \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \times \left(\theta_{n,\bm{q}} - \theta_n \right).     \nonumber
+\end{align}    
+For $i \neq n$, the partial derivative of $\gamma_{{\sf SM}}^{(i)}$ w.r.t. $\theta_n$ is as follows:
+\begin{align}
+    &\frac{\partial \gamma_{\sf SM}^{(i)} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n} =  \nonumber 
+    \frac{\partial \gamma_{\sf SM}^{(i)} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \SINR^{(i)}_{\text{lin}}(\bm{q}; \mathbf{\Theta}, \bm{\rho})} \times
+    \frac{\partial \SINR^{(i)}_{\text{lin}}(\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n} \nonumber\\
+    &  =
+    \frac{\alpha \, \xi}{\left(\SINR^{(i)}_{\text{lin}} + \nu\right)^{\xi+1}} 
+    \times \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\text{lin}} + \nu )^{\xi}}\right] \times \nonumber\\
+    &  \left[ -\frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \times \left(\theta_{n,\bm{q}} - \theta_n \right) \times \frac{{\left[\SINR^{(i)}_{\text{lin}}\right]^2} \times \RSS^{(n)}_{\text{lin}} }{\RSS^{(i)}_{\text{lin}} } \right] \nonumber\\
+    &  =
+    \frac{\alpha \, \xi \, \SINR^{(i)}_{\text{lin}}}{\left(\SINR^{(i)}_{\text{lin}} + \nu\right)^{\xi+1}} 
+    \times \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\text{lin}} + \nu )^{\xi}}\right] \times \nonumber\\
+    &  \left[ -\frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \times \left(\theta_{n,\bm{q}} - \theta_n \right) \times {\frac{\RSS^{(n)}_{\text{lin}} }{\sum_{j\neq i}^{} \RSS^{(j)}_{\text{lin}} + \sigma^2_{\text{lin}}}} \right].
+    \label{eqn:derivative_gammaSM_cross}
+\end{align}
+By substituting the above expressions for $\frac{\partial \gamma_{\sf SM}^{(n)} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n}$ and $\frac{\partial \gamma_{\sf SM}^{(i)} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n}$ into Eq. (\ref{SM-Partial_derivative-expanded}), one can obtain Eq. (\ref{gradient-vector-theta-SM-equation}) and the proof is complete. $\hfill\blacksquare$
+\end{comment}
+
+\begin{comment}
+\section{Proof of Proposition \ref{gradient-SM-wrt-power}}\label{Appendix_F}
+
+Following the similar reasoning as in the previous proposition, we can write:
+\begin{align}
+    \frac{\partial \Phi_{{\sf SM}}}{\partial \rho_n} &= \sum_{i=1}^{N}\int_{V_i} \frac{\partial}{\partial \rho_n} \gamma_{{\sf SM}}^{(i)}(\bm{q}; \bm{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}  \nonumber\\&= \sum_{i=1}^{N}\Bigg [ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u} \frac{\partial}{\partial \rho_n} \gamma_{{\sf SM}}^{(i)}(\bm{q}; \bm{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q} \nonumber\\&\qquad\qquad + \int_{V_i \cap Q_G} \frac{\partial}{\partial \rho_n} \gamma_{{\sf SM}}^{(i)}(\bm{q}; \bm{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}  \Bigg ]. \label{SM-Partial_derivative-power-expanded}
+\end{align}
+For $i = n$, the partial derivative $\frac{\partial \gamma_{\textrm{SM}}^{(i)}}{\partial \rho_n}$ is given by:
+\begin{align}
+ \frac{\partial \gamma_{\textrm{SM}}^{(n)}}{\partial \rho_n} &= - e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu \big)^\xi}} \cdot \frac{-\alpha\xi \cdot \frac{\partial \mathtt{SINR_{\mathtt{lin}}^{(n)}}}{\partial \rho_n}  }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} 
+ \nonumber\\&= \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} \cdot \frac{\partial \mathtt{SINR_{\mathtt{dBm}}^{(n)}}}{\partial \rho_n} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu \big)^\xi}} \nonumber\\&
+ = \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu \big)^\xi}},\label{SM-power-derivative-part1}
+\end{align}
+and for $i \neq n$, the partial derivative $\frac{\partial \gamma_{\textrm{SM}}^{(n)}}{\partial \rho_n}$ can be calculated as:
+\begin{align}
+ \frac{\partial \gamma_{\textrm{SM}}^{(i)}}{\partial \rho_n} &= \frac{\partial}{\partial \rho_n}\bigg[ - e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}  \bigg] 
+ \nonumber\\&= - e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}} \cdot \frac{-\alpha\xi \cdot \frac{\partial \mathtt{SINR_{\mathtt{lin}}^{(i)}}}{\partial \rho_n}  }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}} \nonumber\\&
+ = \frac{\alpha\xi\cdot \mathtt{SINR_{\mathtt{lin}}^{(i)}} \cdot \frac{\ln(10)}{10}\cdot \frac{\partial \mathtt{SINR_{\mathtt{dBm}}^{(i)}} }{\partial \rho_n}   }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}} \nonumber\\&
+ = \frac{\alpha\xi\cdot \mathtt{SINR_{\mathtt{lin}}^{(i)}} \cdot \frac{\ln(10)}{10}\cdot \frac{-\mathtt{RSS_{\mathtt{lin}}^{(n)}} \cdot \mathtt{SINR_{\mathtt{lin}}^{(i)}}}{\mathtt{RSS_{\mathtt{lin}}^{(i)}}}   }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}} \nonumber\\&
+ = \frac{-\alpha\xi\cdot \big[\mathtt{SINR_{\mathtt{lin}}^{(i)}} \big]^2 \cdot \frac{\ln(10)}{10}\cdot \mathtt{RSS_{\mathtt{lin}}^{(n)}}    }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}\cdot \mathtt{RSS_{\mathtt{lin}}^{(i)}}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}.\label{SM-power-derivative-part2}
+\end{align}
+Eq. (\ref{gradient-SM-wrt-power-equation}) then follows by substituting Eqs. (\ref{SM-power-derivative-part1}) and (\ref{SM-power-derivative-part2}) into Eq. (\ref{SM-Partial_derivative-power-expanded}). $\hfill\blacksquare$
+\end{comment}

@@ -1,0 +1,71 @@
+\begin{figure}[t]
+\centering
+\captionsetup{justification=centering}
+\resizebox{0.8\linewidth}{!}{
+\begin{tikzpicture}[auto, thick, node distance=2cm, >=triangle 45]
+\draw
+    node [sum1, minimum size = 1.2cm, fill=green!30] (blk1) {$W_0$}
+    node [sum1, minimum size = 1.2cm, fill=blue!30,right = 1.6 cm of blk1] (blk2) {$W_1$}
+    node [sum1, minimum size = 1.2cm, fill=green!30,right = 1.6 cm of blk2] (blk3) {$W_2$}
+    node [sum1, minimum size = 1.2cm, fill=blue!30,right = 1.6 cm of blk3] (blk4) {$W_3$}
+    node [sum1, minimum size = 1.2cm, fill=green!30,right = 1.6 cm of blk4] (blk5) {$W_4$}
+
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.4 cm of blk1] (blk11) {$\bfA_0$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk11] (blk12) {$\bfA_1$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk12] (blk13) {$\bfA_2$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk13] (blk14) {$\bfA_3$}
+    node [block,  minimum width = 2.2cm, fill=green!30,below = 0.0005 cm of blk14] (blk19) {$c_0 \bfA_4 + c_1 \bfA_9$}
+    node [block,  minimum width = 2.2cm, fill=orange!50,below = 0.2 cm of blk19] (blk15) {$r_0 \bfB_0 + r_1 \bfB_1$}
+
+%    node [block,  minimum width = 2.1cm, fill=orange!50,below = 0.2 cm of blk19] (blk15) {$\sum\limits_{i=0}^1 \bfR_B^{(0,i)} \bfB_i$}
+
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.4 cm of blk2] (blk21) {$\bfA_2$}
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.0005 cm of blk21] (blk22) {$\bfA_3$}
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.0005 cm of blk22] (blk23) {$\bfA_4$}
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.0005 cm of blk23] (blk24) {$\bfA_5$}
+    node [block,  minimum width = 2.2cm, fill=blue!30,below = 0.0005 cm of blk24] (blk29) {$c_2 \bfA_6 + c_3 \bfA_1$}
+    node [block,  minimum width = 2.2cm, fill=mycolor2!30,below = 0.2 cm of blk29] (blk25) {$r_2 \bfB_0 + r_3 \bfB_1$}
+    %node [block,  minimum width = 2.1cm, fill=mycolor2!30,below = 0.2 cm of blk29] (blk25) {$\sum\limits_{i=0}^1 \bfR_B^{(1,i)} \bfB_i$}
+
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.4 cm of blk3] (blk31) {$\bfA_4$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk31] (blk32) {$\bfA_5$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk32] (blk33) {$\bfA_6$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk33] (blk34) {$\bfA_7$}
+    node [block, minimum width = 2.2cm, fill=green!30,below = 0.0005 cm of blk34] (blk39) {$c_4 \bfA_8 + c_5 \bfA_3$}
+    node [block,  minimum width = 2.2cm,fill=orange!50,below = 0.2 cm of blk39] (blk35) {$r_4 \bfB_0 + r_5 \bfB_1$}
+    %node [block,  minimum width = 2.1cm,fill=orange!50,below = 0.2 cm of blk39] (blk35) {$\sum\limits_{i=0}^1 \bfR_B^{(2,i)} \bfB_i$}
+
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.4 cm of blk4] (blk41) {$\bfA_6$}
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.0005 cm of blk41] (blk42) {$\bfA_7$}
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.0005 cm of blk42] (blk43) {$\bfA_8$}
+    node [block, minimum width = 2.5cm, fill=blue!30,below = 0.0005 cm of blk43] (blk44) {$\bfA_9$}
+    node [block, minimum width = 2.2cm, fill=blue!30,below = 0.0005 cm of blk44] (blk49) {$c_6 \bfA_0 + c_7 \bfA_5$}
+    node [block,  minimum width = 2.2cm, fill=mycolor2!30,below = 0.2 cm of blk49] (blk45) {$r_6 \bfB_0 + r_7 \bfB_1$}
+    %node [block,  minimum width = 2.1cm, fill=mycolor2!30,below = 0.2 cm of blk49] (blk45) {$\sum\limits_{i=0}^1 \bfR_B^{(3,i)} \bfB_i$}
+
+
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.4 cm of blk5] (blk51) {$\bfA_8$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk51] (blk52) {$\bfA_9$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk52] (blk53) {$\bfA_0$}
+    node [block, minimum width = 2.5cm, fill=green!30,below = 0.0005 cm of blk53] (blk54) {$\bfA_1$}
+    node [block,  minimum width = 2.2cm,fill=green!30,below = 0.0005 cm of blk54] (blk59) {$c_8 \bfA_2 + c_9 \bfA_7$}  
+    node [block,  minimum width = 2.2cm,fill=orange!30,below = 0.2 cm of blk59] (blk55) {$r_8 \bfB_0 + r_9 \bfB_1$}
+    %node [block,  minimum width = 2.1cm,fill=orange!30,below = 0.2 cm of blk59] (blk55) {$\sum\limits_{i=0}^1 \bfR_B^{(4,i)} \bfB_i$}
+
+
+    ;
+
+\draw[->](blk1) -- node{} (blk11);
+\draw[->](blk2) -- node{} (blk21);
+\draw[->](blk3) -- node{} (blk31);
+\draw[->](blk4) -- node{} (blk41);
+\draw[->](blk5) -- node{} (blk51);
+
+\end{tikzpicture}
+}
+\centering
+\caption{\small Matrices $\bfA$ and $\bfB$ are partitioned into $ten$ and $two$ block columns, respectively. Each worker is assigned four uncoded-coded and one coded-coded block-products. The coefficients $r_i$'s and $c_i$'s are chosen i.i.d. at random from a continuous distribution.}
+
+\label{modopt_matmat}
+\end{figure} 
+

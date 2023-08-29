@@ -1,0 +1,292 @@
+\begin{thebibliography}{10}
+
+\bibitem{alfarano2022linear}
+G.~N. Alfarano, M.~Borello, A.~Neri, and A.~Ravagnani.
+\newblock Linear cutting blocking sets and minimal codes in the rank metric.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 192:105658, 2022.
+
+\bibitem{alfarano2021sum}
+G.~N. Alfarano, F.~J. Lobillo, A.~Neri, and A.~Wachter-Zeh.
+\newblock Sum-rank product codes and bounds on the minimum distance.
+\newblock {\em Finite Fields and Their Applications}, 80:102013, 2022.
+
+\bibitem{bartoli2021evasive}
+D.~Bartoli, B.~Csajb{\'o}k, G.~Marino, and R.~Trombetti.
+\newblock Evasive subspaces.
+\newblock {\em Journal of Combinatorial Designs}, 2021.
+
+\bibitem{bartoli2018maximum}
+D.~Bartoli, M.~Giulietti, G.~Marino, and O.~Polverino.
+\newblock Maximum scattered linear sets and complete caps in {G}alois spaces.
+\newblock {\em Combinatorica}, 38(2):255--278, 2018.
+
+\bibitem{beelen2017twisted}
+P.~Beelen, S.~Puchinger, and J.~R. n{\'e}~Nielsen.
+\newblock Twisted reed-solomon codes.
+\newblock In {\em 2017 IEEE International Symposium on Information Theory
+  (ISIT)}, pages 336--340. IEEE, 2017.
+
+\bibitem{blokhuis2000scattered}
+A.~Blokhuis and M.~Lavrauw.
+\newblock Scattered spaces with respect to a spread in {PG}$(n,q)$.
+\newblock {\em Geometriae Dedicata}, 81(1):231--243, 2000.
+
+\bibitem{borello2023geometric}
+M.~Borello and F.~Zullo.
+\newblock Geometric dual and sum-rank minimal codes.
+\newblock {\em in preparation}, 2023.
+
+\bibitem{byrne2021fundamental}
+E.~Byrne, H.~Gluesing-Luerssen, and A.~Ravagnani.
+\newblock Fundamental properties of sum-rank-metric codes.
+\newblock {\em IEEE Transactions on Information Theory}, 2021.
+
+\bibitem{calderbank1986geometry}
+R.~Calderbank and W.~M. Kantor.
+\newblock The geometry of two-weight codes.
+\newblock {\em Bulletin of the London Mathematical Society}, 18(2):97--122,
+  1986.
+
+\bibitem{csajbok2017maximum}
+B.~Csajb{\'o}k, G.~Marino, O.~Polverino, and F.~Zullo.
+\newblock Maximum scattered linear sets and {MRD}-codes.
+\newblock {\em Journal of Algebraic Combinatorics}, 46(3):517--531, 2017.
+
+\bibitem{csajbok2021generalising}
+B.~Csajb{\'o}k, G.~Marino, O.~Polverino, and F.~Zullo.
+\newblock Generalising the scattered property of subspaces.
+\newblock {\em Combinatorica}, 41(2):237--262, 2021.
+
+\bibitem{dvir2012subspace}
+Z.~Dvir and S.~Lovett.
+\newblock Subspace evasive sets.
+\newblock In {\em Proceedings of the forty-fourth annual ACM symposium on
+  Theory of computing}, pages 351--358, 2012.
+
+\bibitem{gruica2022generalised}
+A.~Gruica, A.~Ravagnani, J.~Sheekey, and F.~Zullo.
+\newblock Generalised scattered subspaces.
+\newblock {\em arXiv preprint arXiv:2207.01027}, 2022.
+
+\bibitem{guruswami2011linear}
+V.~Guruswami.
+\newblock Linear-algebraic list decoding of folded {R}eed-{S}olomon codes.
+\newblock In {\em 2011 IEEE 26th Annual Conference on Computational
+  Complexity}, pages 77--85. IEEE, 2011.
+
+\bibitem{guruswami2016explicit}
+V.~Guruswami and S.~Kopparty.
+\newblock Explicit subspace designs.
+\newblock {\em Combinatorica}, 36(2):161--185, 2016.
+
+\bibitem{guruswami2021lossless}
+V.~Guruswami, N.~Resch, and C.~Xing.
+\newblock Lossless dimension expanders via linearized polynomials and subspace
+  designs.
+\newblock {\em Combinatorica}, pages 1--35, 2021.
+
+\bibitem{guruswami2017optimal}
+V.~Guruswami and C.~Xing.
+\newblock Optimal rate list decoding over bounded alphabets using
+  algebraic-geometric codes.
+\newblock {\em ACM Journal of the ACM (JACM)}, 69(2):1--48, 2022.
+
+\bibitem{helleseth1977weight}
+T.~Helleseth, T.~Kl{\o}ve, and J.~Mykkeltveit.
+\newblock The weight distribution of irreducible cyclic codes with block
+  lengths $n_l ((q^l- 1) n)$.
+\newblock {\em Discrete Mathematics}, 18(2):179--211, 1977.
+
+\bibitem{hirschfeld1998projective}
+J.~Hirschfeld.
+\newblock {\em Projective geometries over finite fields. Oxford mathematical
+  monographs}.
+\newblock Oxford University Press New York, 1998.
+
+\bibitem{kurihara2015relative}
+J.~Kurihara, R.~Matsumoto, and T.~Uyematsu.
+\newblock Relative generalized rank weight of linear codes and its applications
+  to network coding.
+\newblock {\em IEEE Transactions On information theory}, 61(7):3912--3936,
+  2015.
+
+\bibitem{lavrauw2011fq}
+M.~Lavrauw, G.~Marino, O.~Polverino, and R.~Trombetti.
+\newblock Fq-pseudoreguli of $\mathrm{PG}(3, q^3)$ and scattered semifields of
+  order $q^6$.
+\newblock {\em Finite Fields and Their Applications}, 17(3):225--239, 2011.
+
+\bibitem{lavrauw2011finite}
+M.~Lavrauw and O.~Polverino.
+\newblock Finite semifields.
+\newblock {\em Current research topics in Galois Geometry}, pages 131--160,
+  2011.
+
+\bibitem{lavrauw2013scattered}
+M.~Lavrauw and G.~Van~de Voorde.
+\newblock Scattered linear sets and pseudoreguli.
+\newblock {\em The electronic journal of combinatorics}, 2013.
+
+\bibitem{lavrauw2015field}
+M.~Lavrauw and G.~Van~de Voorde.
+\newblock Field reduction and linear sets in finite geometry.
+\newblock {\em Topics in finite fields}, 632:271--293, 2015.
+
+\bibitem{leroy1995pseudolinear}
+A.~Leroy.
+\newblock {Pseudolinear transformations and evaluation in Ore extensions}.
+\newblock {\em Bulletin of the Belgian Mathematical Society - Simon Stevin},
+  2(3):321 -- 347, 1995.
+
+\bibitem{lunardon2017mrd}
+G.~Lunardon.
+\newblock {MRD}-codes and linear sets.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 149:1--20, 2017.
+
+\bibitem{lunardon2014maximum}
+G.~Lunardon, G.~Marino, O.~Polverino, and R.~Trombetti.
+\newblock Maximum scattered linear sets of pseudoregulus type and the segre
+  variety $\mathcal{S}_{n,n}$.
+\newblock {\em Journal of Algebraic Combinatorics}, 39(4):807--831, 2014.
+
+\bibitem{lunardon2018generalized}
+G.~Lunardon, R.~Trombetti, and Y.~Zhou.
+\newblock Generalized twisted {G}abidulin codes.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 159:79--106, 2018.
+
+\bibitem{luo2005some}
+Y.~Luo, C.~Mitrpant, A.~H. Vinck, and K.~Chen.
+\newblock Some new characters on the wire-tap channel of type ii.
+\newblock {\em IEEE Transactions on information theory}, 51(3):1222--1229,
+  2005.
+
+\bibitem{marino2022evasive}
+G.~Marino, A.~Neri, and R.~Trombetti.
+\newblock Evasive subspaces, generalized rank weights and near {MRD} codes.
+\newblock {\em arXiv preprint arXiv:2204.11791}, 2022.
+
+\bibitem{marino2007fq}
+G.~Marino, O.~Polverino, and R.~Trombetti.
+\newblock On $\mathbb{F}_q$-linear sets of {PG}$(3,q^3)$ and semifields.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 114(5):769--788,
+  2007.
+
+\bibitem{marino2011towards}
+G.~Marino, O.~Polverino, and R.~Trombetti.
+\newblock Towards the classification of rank 2 semifields 6-dimensional over
+  their center.
+\newblock {\em Designs, Codes and Cryptography}, 61(1):11--29, 2011.
+
+\bibitem{Martinez2018skew}
+U.~Mart{\'\i}nez-Pe{\~n}as.
+\newblock Skew and linearized {R}eed–{S}olomon codes and maximum sum rank
+  distance codes over any division ring.
+\newblock {\em Journal of Algebra}, 504:587--612, 2018.
+
+\bibitem{martinez2019theory}
+U.~Mart{\'\i}nez-Pe{\~n}as.
+\newblock Theory of supports for linear codes endowed with the sum-rank metric.
+\newblock {\em Designs, Codes and Cryptography}, 87(10):2295--2320, 2019.
+
+\bibitem{martinezpenas2021hamming}
+U.~Mart{\'\i}nez-Pe{\~n}as.
+\newblock Hamming and simplex codes for the sum-rank metric.
+\newblock {\em Designs, Codes and Cryptography}, 88(8):1521--1539, 2020.
+
+\bibitem{martinez2022survey}
+U.~Martínez-Peñas, M.~Shehadeh, and F.~R. Kschischang.
+\newblock Codes in the sum-rank metric: Fundamentals and applications.
+\newblock {\em Foundations and Trends® in Communications and Information
+  Theory}, 19(5):814--1031, 2022.
+
+\bibitem{neri2022twisted}
+A.~Neri.
+\newblock Twisted linearized reed-solomon codes: A skew polynomial framework.
+\newblock {\em Journal of Algebra}, 609:792--839, 2022.
+
+\bibitem{neri2023geometry}
+A.~Neri, P.~Santonastaso, and F.~Zullo.
+\newblock The geometry of one-weight codes in the sum-rank metric.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 194:105703, 2023.
+
+\bibitem{oggier2012existence}
+F.~Oggier and A.~Sboui.
+\newblock On the existence of generalized rank weights.
+\newblock In {\em 2012 International Symposium on Information Theory and its
+  Applications}, pages 406--410. IEEE, 2012.
+
+\bibitem{ore1933theory}
+O.~Ore.
+\newblock Theory of non-commutative polynomials.
+\newblock {\em Annals of Mathematics}, 34(3):480--508, 1933.
+
+\bibitem{ott2021bounds}
+C.~Ott, S.~Puchinger, and M.~Bossert.
+\newblock Bounds and genericity of sum-rank-metric codes.
+\newblock {\em 2021 XVII International Symposium" Problems of Redundancy in
+  Information and Control Systems"(REDUNDANCY)}, pages 119--124, 2021.
+
+\bibitem{polverino2010linear}
+O.~Polverino.
+\newblock Linear sets in finite projective spaces.
+\newblock {\em Discrete Mathematics}, 310(22):3096--3107, 2010.
+
+\bibitem{polverino2020connections}
+O.~Polverino and F.~Zullo.
+\newblock Connections between scattered linear sets and {MRD}-codes.
+\newblock {\em Bulletin of the Institute of Combinatorics and its
+  Applications}, 89:46--74, 2020.
+
+\bibitem{pudlak2004pseudorandom}
+P.~Pudl{\'a}k and V.~R{\"o}dl.
+\newblock Pseudorandom sets and explicit constructions of {R}amsey graphs.
+\newblock {\em Quaderni di Matematica}, 13:327 -- 346, 2004.
+
+\bibitem{Randrianarisoa2020ageometric}
+T.~H. Randrianarisoa.
+\newblock A geometric approach to rank metric codes and a classification of
+  constant weight codes.
+\newblock {\em Designs, Codes and Cryptography}, 88:1331–1348, 2020.
+
+\bibitem{santonastaso2022subspace}
+P.~Santonastaso and F.~Zullo.
+\newblock On subspace designs.
+\newblock {\em To appear in EMS Surveys in Mathematical Sciences}, 2023.
+
+\bibitem{sheekey2016new}
+J.~Sheekey.
+\newblock A new family of linear maximum rank distance codes.
+\newblock {\em Advances in Mathematics of Communications}, 10(3):475, 2016.
+
+\bibitem{sheekeysurvey}
+J.~Sheekey.
+\newblock {MRD} codes: constructions and connections.
+\newblock {\em Combinatorics and Finite Fields: Difference Sets, Polynomials,
+  Pseudorandomness and Applications}, 23, 2019.
+
+\bibitem{sheekeyVdV}
+J.~Sheekey and G.~Van~de Voorde.
+\newblock Rank-metric codes, linear sets, and their duality.
+\newblock {\em Designs, Codes and Cryptography}, 88:655--675, 2020.
+
+\bibitem{taylor1992geometry}
+D.~E. Taylor.
+\newblock {\em The geometry of the classical groups}, volume~9.
+\newblock Heldermann Verlag, 1992.
+
+\bibitem{vladut2007algebraic}
+S.~Vladut, D.~Nogin, and M.~Tsfasman.
+\newblock Algebraic geometric codes: basic notions, 2007.
+
+\bibitem{wei1991generalized}
+V.~K. Wei.
+\newblock Generalized hamming weights for linear codes.
+\newblock {\em IEEE Transactions on information theory}, 37(5):1412--1418,
+  1991.
+
+\bibitem{zini2021scattered}
+G.~Zini and F.~Zullo.
+\newblock Scattered subspaces and related codes.
+\newblock {\em Designs, Codes and Cryptography}, pages 1--21, 2021.
+
+\end{thebibliography}

@@ -1,0 +1,37 @@
+starting download:
+	from https://arxiv.org/list/cs.IT/2308?skip=0&show=50
+	to /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/arxiv_tars
+downloaded: 50 papers
+extracting files...
+tar: Can't parse line 1
+tar: Error exit delayed from previous errors.
+tar: Can't parse line 1
+tar: Error exit delayed from previous errors.
+tar: Can't parse line 1386
+tar: Error exit delayed from previous errors.
+50 files extracted. 	0 failures: []
+compiling tex files...
+compile failures: [2308.00362]	pdflatex=0	lualatex=1	xelatex=1
+compile failures: [2308.04331]	pdflatex=1	lualatex=1	xelatex=1
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.04331/2308.04331_xelatex.pdf: No such file or directory
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.04331/2308.04331_xelatex.pdf: No such file or directory
+compile failures: [2308.03016]	pdflatex=1	lualatex=1	xelatex=1
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.03016/2308.03016_xelatex.pdf: No such file or directory
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.03016/2308.03016_xelatex.pdf: No such file or directory
+compile failures: [2308.02394]	pdflatex=1	lualatex=1	xelatex=1
+compile failures: [2308.02131]	pdflatex=0	lualatex=1	xelatex=1
+compile failures: [2308.01802]	pdflatex=0	lualatex=0	xelatex=1
+compile failures: [2308.01249]	pdflatex=0	lualatex=1	xelatex=1
+compile_tex: timed out for 2308.03065 [lualatex]
+compile_tex: timed out for 2308.03065 [xelatex]
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.03065/2308.03065_xelatex.pdf: No such file or directory
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.03065/2308.03065_xelatex.pdf: No such file or directory
+compile failures: [2308.04003]	pdflatex=0	lualatex=1	xelatex=0
+compile failures: [2308.01781]	pdflatex=0	lualatex=1	xelatex=0
+compile failures: [2308.04185]	pdflatex=0	lualatex=0	xelatex=-13
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.04185/2308.04185_xelatex.pdf: PDF document is damaged
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.04185/2308.04185_xelatex.pdf: PDF document is damaged
+compile failures: [2308.02644]	pdflatex=0	lualatex=1	xelatex=1
+Error opening /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compiled_tex_pdf/2308.02644/2308.02644_lualatex.pdf: PDF document is damaged
+compared outputs for 50 papers: 50 papers were found with diffs
+diffs: ['2308.00362', '2308.02696', '2308.04796', '2308.03547', '2308.02298', '2308.01440', '2308.04331', '2308.01227', '2308.02140', '2308.03004', '2308.00642', '2308.04675', '2308.03016', '2308.00499', '2308.00406', '2308.03042', '2308.02394', '2308.02304', '2308.00695', '2308.02131', '2308.00407', '2308.00543', '2308.01802', '2308.02676', '2308.02284', '2308.00378', '2308.00506', '2308.01249', '2308.04304', '2308.03518', '2308.02892', '2308.02295', '2308.03096', '2308.03065', '2308.04676', '2308.02324', '2308.01515', '2308.04837', '2308.04237', '2308.04003', '2308.02135', '2308.01781', '2308.04185', '2308.02286', '2308.03556', '2308.01033', '2308.02673', '2308.02889', '2308.01092', '2308.02644']

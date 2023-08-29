@@ -1,0 +1,157 @@
+\definecolor{TDMAcolor}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{PIMAcolor}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{GFEOcolor}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{sGFEOcolor}{rgb}{0.3,0.08,0.09}%
+\pgfplotsset{every tick label/.append style={font=\footnotesize}}
+
+\begin{tikzpicture}
+
+\begin{axis}[%
+    width=\fwidth,
+    height=\fheight,
+    at={(0\fwidth,0\fheight)},
+    scale only axis,
+    ylabel style={font=\normalsize},
+    xlabel style={font=\normalsize},
+    xmin=0.01,
+    xmax=0.5,
+    xlabel style={font=\color{white!15!black}},
+    xlabel={Packet Generation Rate  $\Lambda$ [pkt/slot]},
+    ymin=0.2,
+    ymax=0.91,
+    yminorticks=true,
+    ylabel style={font=\color{white!15!black}},
+    ylabel={Avg. Frame Efficiency $\bar{\eta}$},
+    axis background/.style={fill=white},
+    xmajorgrids,
+    ymajorgrids,
+    legend style={at={(0.48, 0.02)}, legend columns = 2, anchor=south west, legend cell align=left, align=left, font=\footnotesize, draw=white!15!black}
+]
+
+\addplot [color=TDMAcolor, very thick, mark size=2.0pt, mark=o, mark options={solid, TDMAcolor}]
+  table[row sep=crcr]{%
+  0.01	0.203503649635036\\
+0.0644444444444444	0.22759226096422\\
+0.118888888888889	0.253445420965484\\
+0.173333333333333	0.282163424881981\\
+0.227777777777778	0.314428929466522\\
+0.282222222222222	0.348883889946355\\
+0.336666666666667	0.386471235893199\\
+0.391111111111111	0.428058756074917\\
+0.445555555555556	0.471581036430237\\
+0.5	0.517524688109464\\
+};
+\addlegendentry{TDMA}
+
+\addplot [color=PIMAcolor, very thick, mark size=2.0pt, mark=x, mark options={solid, PIMAcolor}]
+  table[row sep=crcr]{%
+  0.01	0.909099783646055\\
+0.0644444444444444	0.90614299502672\\
+0.118888888888889	0.903063592214821\\
+0.173333333333333	0.897202299109906\\
+0.227777777777778	0.890025162014186\\
+0.282222222222222	0.881348520366154\\
+0.336666666666667	0.869484919598562\\
+0.391111111111111	0.856509641621457\\
+0.445555555555556	0.836743244470565\\
+0.5	0.816969632170478\\
+};
+\addlegendentry{PIMA}
+
+\addplot [color=GFEOcolor, very thick, mark size=2.0pt, mark=star, mark options={solid, GFEOcolor}]
+  table[row sep=crcr]{%
+0.01	0.909090909090989\\
+0.0644444444444444	0.906966854351758\\
+0.118888888888889	0.90714772870157\\
+0.173333333333333	0.902394594332535\\
+0.227777777777778	0.898903753953413\\
+0.282222222222222	0.893858388894202\\
+0.336666666666667	0.883506214602496\\
+0.391111111111111	0.874187401764232\\
+0.445555555555556	0.865528455855568\\
+0.5	0.851797885216885\\
+};
+\addlegendentry{GFEO}
+
+\addplot [color=sGFEOcolor, very thick, mark size=2.0pt, mark=diamond, mark options={solid, sGFEOcolor}]
+  table[row sep=crcr]{%
+0.01	0.909090909090988\\
+0.0644444444444444	0.906966854351758\\
+0.118888888888889	0.905998633544456\\
+0.173333333333333	0.903974052045644\\
+0.227777777777778	0.89759865121331\\
+0.282222222222222	0.890666444826062\\
+0.336666666666667	0.880285324201327\\
+0.391111111111111	0.870792452861302\\
+0.445555555555556	0.858094216850975\\
+0.5	0.84541622542432\\
+};
+\addlegendentry{S-GFEO}
+
+\end{axis}
+
+\begin{axis}[%
+width=0.52\fwidth,
+height=0.34\fwidth,
+at={(0.1\fwidth,0.25\fwidth)},
+scale only axis,
+xmin=0.1,
+xmax=0.5,
+xlabel style={font=\color{white!15!black}},
+ymin=0.81,
+ymax=0.91,
+xtick={0.1, 0.2, 0.3, 0.4, 0.5},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids
+]
+
+\addplot [color=PIMAcolor, very thick, mark size=2.0pt, mark=x, mark options={solid, PIMAcolor}]
+  table[row sep=crcr]{%
+  0.01	0.909099783646055\\
+0.0644444444444444	0.90614299502672\\
+0.118888888888889	0.903063592214821\\
+0.173333333333333	0.897202299109906\\
+0.227777777777778	0.890025162014186\\
+0.282222222222222	0.881348520366154\\
+0.336666666666667	0.869484919598562\\
+0.391111111111111	0.856509641621457\\
+0.445555555555556	0.836743244470565\\
+0.5	0.816969632170478\\
+};
+\addlegendentry{PIMA}
+
+\addplot [color=GFEOcolor, very thick, mark size=2.0pt, mark=star, mark options={solid, GFEOcolor}]
+  table[row sep=crcr]{%
+0.01	0.909090909090989\\
+0.0644444444444444	0.906966854351758\\
+0.118888888888889	0.90714772870157\\
+0.173333333333333	0.902394594332535\\
+0.227777777777778	0.898903753953413\\
+0.282222222222222	0.893858388894202\\
+0.336666666666667	0.883506214602496\\
+0.391111111111111	0.874187401764232\\
+0.445555555555556	0.865528455855568\\
+0.5	0.851797885216885\\
+};
+\addlegendentry{GFEO}
+
+\addplot [color=sGFEOcolor, very thick, mark size=2.0pt, mark=diamond, mark options={solid, sGFEOcolor}]
+  table[row sep=crcr]{%
+0.01	0.909090909089883\\
+0.0644444444444444	0.907172182216927\\
+0.118888888888889	0.904629141119359\\
+0.173333333333333	0.900047841880943\\
+0.227777777777778	0.895836429542401\\
+0.282222222222222	0.890676461074109\\
+0.336666666666667	0.881419767033108\\
+0.391111111111111	0.87253346961074\\
+0.445555555555556	0.859155354265282\\
+0.5	0.843160957413455\\
+};
+\addlegendentry{S-GFEO} 
+
+\legend{}
+\end{axis}
+
+\end{tikzpicture}

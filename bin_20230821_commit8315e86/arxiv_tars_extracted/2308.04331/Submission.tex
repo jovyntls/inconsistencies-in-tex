@@ -1,0 +1,507 @@
+%\documentclass[draftcls,onecolumn]{IEEEtran}
+%\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+\documentclass[conference]{IEEEtran}
+% \IEEEoverridecommandlockouts                              
+% \overrideIEEEmargins   
+
+\ifCLASSINFOpdf
+\else
+\fi
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs,pifont} % for professional tables
+
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+
+%\usepackage{hyperref}
+
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning}
+\usepackage{tikz}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+\usepackage{amsmath,bm,times}
+\usetikzlibrary{calc}
+\usepackage{dsfont}
+\usepackage{cuted}
+\usepackage{caption}
+\newcommand\dsone{\mathds{1}}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\usepackage{amsthm}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{arydshln}
+\usepackage{cite}
+\usepackage{multirow}
+\usepackage{calc}
+\usepackage{blkarray}
+\usepackage{url}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{construction}{Construction Scheme}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+\usepackage{graphicx}
+\usepackage{dblfloatfix}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{blindtext, graphicx, amsfonts,
+	amssymb,multirow,epstopdf}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\threevdots}{%
+  \vbox{\baselineskip1ex\lineskiplimit0pt%
+  \hbox{.}\hbox{.}\hbox{.}}}
+\newcommand{\hG}{\hat{G}}
+\newcommand{\hV}{\hat{V}}
+\newcommand{\hE}{\hat{E}}
+\newcommand{\hht}{\hat{t}}
+\newcommand{\hhs}{\hat{s}}
+\newcommand\bovermat[2]{%
+    \makebox[0pt][l]{$\smash{\overbrace{\phantom{%
+                    \begin{matrix}#2\end{matrix}}}^{\text{#1}}}$}#2}
+
+\newcommand\undermat[2]{% http://tex.stackexchange.com/a/102468/5764
+  \makebox[0pt][l]{$\smash{\underbrace{\phantom{%
+    \begin{matrix}#2\end{matrix}}}_{\text{$#1$}}}$}#2}
+\setcounter{MaxMatrixCols}{20}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\bfU}{\mathbf{U}}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfb}{\mathbf{b}}
+\newcommand{\bfy}{\mathbf{y}}
+\newcommand{\bfr}{\mathbf{r}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\newcommand{\bfD}{\mathbf{D}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfV}{\mathbf{V}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfW}{\mathbf{W}}
+\newcommand{\bfA}{\mathbf{A}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfg}{\mathbf{g}}
+\newcommand{\bfu}{\mathbf{u}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfw}{\mathbf{w}}
+\newcommand{\bfc}{\mathbf{c}}
+\newcommand{\bfB}{\mathbf{B}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfz}{\mathbf{z}}
+\newcommand{\bfM}{\mathbf{M}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfL}{\mathbf{L}}
+\newcommand{\bfv}{\mathbf{v}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfe}{\mathbf{e}}
+\newcommand{\anindya}[1]{\marginpar{+}{\bf Anindya's remark}: {\em #1}}
+\newcommand{\aditya}[1]{\marginpar{+}{\bf Aditya's remark}: {\em #1}}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{Preserving Sparsity and Privacy in Straggler-Resilient Distributed Matrix Computations}
+
+\definecolor{mygr}{rgb}{0.6,0.4,0.0}
+\definecolor{my1color}{rgb}{0.6,0.4,0.0}
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.45000,0.62500,0.19800}%
+\tikzset{
+block/.style    = {draw, thick, rectangle, minimum height = 2em, minimum width = 2em},
+sum/.style      = {draw, circle, node distance = 1cm},
+sum1/.style      = {draw, circle, minimum size = 1.1 cm},
+input/.style    = {coordinate},
+output/.style   = {coordinate},
+}
+
+\author{\IEEEauthorblockN{Anindya Bijoy Das\IEEEauthorrefmark{1}, Aditya Ramamoorthy\IEEEauthorrefmark{2}, David J. Love\IEEEauthorrefmark{1}, Christopher G. Brinton\IEEEauthorrefmark{1}} 
+\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering, Purdue University, West Lafayette, IN 47907 USA\\
+\IEEEauthorrefmark{2}Department of Electrical and Computer Engineering, Iowa State University, Ames, IA 50010 USA\\
+\texttt{das207@purdue.edu, adityar@iastate.edu, djlove@purdue.edu, cgb@purdue.edu}
+}
+
+}
+
+
+
+
+\IEEEtitleabstractindextext{%
+
+\begin{abstract}
+% Straggler nodes pose a well-known challenge in distributed matrix computations as they can slow down computation and communication speeds. To overcome this issue, a common approach is to integrate maximum distance separable (MDS) codes into distributed matrix computations, providing resilience against a specific number of stragglers. However, the drawback of MDS codes is that they allocate dense linear combinations of submatrices to worker nodes, potentially eliminating the inherent sparsity of the input matrix if there is any. 
+
+% In this study, first we find a lower bound on the weight (the number of submatrices to be combined to obtain coded submatrices) to provide the resilience to the optimal number of stragglers (for given number of nodes and their storage constraints). Next we propose a distributed matrix computation scheme which meets that exact lower bound on the weight of the coding. 
+% %Furthermore, compared to recent sparse matrix computation methods, our technique significantly improves computational efficiency when searching for an appropriate set of random coefficients to ensure numerical stability. 
+% We also address the concern of privacy leakage in scenarios where the worker nodes are honest but curious. While traditional private matrix computation methods introduce dense random matrices to the encoded submatrices, which compromises sparsity and increases worker computation time, our method offers a controllable trade-off between worker computation time and the privacy constraint for sparse input matrices. Numerical experiments conducted in Amazon Web Services (AWS) validate our assertions regarding straggler mitigation and computation speed for sparse matrices.
+
+Existing approaches to distributed matrix computations involve allocating coded combinations of submatrices to worker nodes, to build resilience to stragglers and/or enhance privacy. In this study, we consider the challenge of preserving input sparsity in such approaches to retain the associated computational efficiency enhancements. First, we find a lower bound on the weight of coding, i.e., the number of submatrices to be combined to obtain coded submatrices to provide the resilience to the maximum possible number of stragglers (for given number of nodes and their storage constraints). Next we propose a distributed matrix computation scheme which meets this exact lower bound on the weight of the coding. Further, we develop controllable trade-off between worker computation time and the privacy constraint for sparse input matrices in settings where the worker nodes are honest but curious. Numerical experiments conducted in Amazon Web Services (AWS) validate our assertions regarding straggler mitigation and computation speed for sparse matrices.
+\end{abstract}
+
+\begin{IEEEkeywords}
+ Distributed computing, MDS Codes, Stragglers, Sparsity, Privacy.
+ \end{IEEEkeywords}
+}
+
+\maketitle
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+%\blfootnote{This work was supported in part by the National Science Foundation (NSF) under Grant CCF-1910840 and CCF-2115200.}
+\section{Introduction}
+\label{sec:intro}
+Computing platforms are constantly stressed to meet the growing demands of end users for data processing. The increasing complexity of data tasks, such as deep neural network AI/ML models, and the sheer volumes of data to be processed, continue to hinder scalability. 
+
+Matrix computations serve as the fundamental building blocks for many data processing tasks in AI/ML and optimization. As data sizes increase, these computations involve high-dimensional matrices, requiring larger runtimes with all else constant. The underlying concept behind distributed computation is to break down the entire operation into smaller tasks and distribute them across multiple worker nodes. However, in these distributed systems, the overall execution time of a job can be significantly affected by slower or failed worker nodes, commonly known as ``stragglers'' \cite{ramamoorthyDTMag20}. %These stragglers can hinder the overall performance and pose challenges to achieving optimal results in distributed matrix computations.
+
+Recently, a number of coding theory techniques \cite{lee2018speeding, das2019random, dutta2016short, yu2017polynomial, c3les, yu2020straggler, tandon2017gradient, dasunifiedtreatment,  9513242, das2023jsait_submitted, 8849468, 8919859} have been proposed to mitigate the effect of stragglers. A simple example is presented in \cite{lee2018speeding} to illustrate a technique for computing $\bfA^T \bfx$ using three workers. The technique involves partitioning the matrix $\bfA$ into two block-columns, denoted as $\bfA = [\bfA_0 | \bfA_1]$. The workers are then assigned specific tasks: one computes $\bfA_0^T \bfx$, another computes $\bfA_1^T \bfx$, and the third computes $(\bfA_0 + \bfA_1)^T \bfx$. Each worker then handles only half of the computational load, the system can recover $\bfA^T \bfx$ if any two out of the three workers return their results. This means that the system is resilient to the failure or delay of one straggler. In general, the recovery threshold is an important metric defined as the minimum number of workers ($\tau$) required to complete their tasks, enabling the recovery of $\bfA^T \bfx$ from any subset of $\tau$ worker nodes. 
+
+While there are several works that achieve the optimal recovery threshold \cite{yu2017polynomial, 8849468, 8919859, das2019random} for given number of nodes and storage constraints, they possess certain limitations. Real-world datasets, utilized in various domains such as optimization, deep learning, power systems, computational fluid dynamics etc. often consist of sparse matrices. An efficient exploitation of this sparsity can significantly decrease the overall time required for matrix computations \cite{wang2018coded}. However, techniques based on MDS codes \cite{yu2017polynomial, 8849468, 8919859, das2019random} construct dense linear combinations of submatrices; this eliminates the inherent sparsity in the matrix structure. As a consequence, the computation speed of worker nodes can be severely reduced. In this work, one of our objectives is to develop approaches that combine a relatively small number of submatrices while maintaining an optimal recovery threshold.
+
+Another significant issue in distributed computation is the information leakage of the associated ``input'' matrix \cite{tandon2018secure, aliasgari2020private, hollanti2022secure, yu2021entangled}. The assumption is that the input matrix $\bfA$ is known to the central node, but the assigned smaller tasks should involve a protection against information leakage at the worker nodes. Several works \cite{tandon2018secure, aliasgari2020private, hollanti2022secure} propose adding random matrices to the linear combinations of submatrices introduced by MDS codes with the goal of reducing the mutual information between the assigned encoded submatrices and the original matrix $\bfA$. This is again problematic for sparse matrices since the addition of dense random matrices can destroy the sparsity. Thus, we also aim to develop codes that optimize the trade-off between privacy and efficiency.
+
+In this work, first we formulate the problem (Sec. \ref{sec:probform}) and find a lower bound on the number of submatrices to be combined (Sec. \ref{sec:opt_weight}) for coded submatrices that will provide resilience to the maximum number of stragglers in a given system. Next, we develop a novel approach for distributed matrix-vector multiplication (Sec. \ref{sec:prop_approach}) which meets that lower bound, maximizing sparsity preservation while providing resilience to the maximum number of stragglers. Our proposed approach involves a computationally efficient process to find a ``good'' set of random coefficients that make the system numerically stable. Our approach also addresses the privacy issue through a controllable trade-off between privacy leakage and worker computation time for sparse input matrices (Sec. \ref{sec:private}). Finally, we carry out experiments on an Amazon Web Services (AWS) which verify the effectiveness of our proposed methodology compared with baseline approaches in terms of different time, stability, and privacy metrics (Sec. \ref{sec:numexp}). 
+
+\section{Problem Formulation}
+\label{sec:probform}
+In this work, we examine a distributed system comprising $n$ worker nodes. The primary objective of this system is to calculate the product $\bfA^T \bfx$, where $\bfA \in \mathbb{R}^{t \times r}$ represents a sparse matrix and $\bfx \in \mathbb{R}^{t}$ denotes a vector. It is assumed that the workers are identical in terms of their memory capacity and computational speed. Specifically, each worker can store $\gamma_A = \frac{1}{k_A}$ fraction of the whole matrix $\bfA$, and also, the entire vector $\bfx$. In practical situations, stragglers may arise due to variations in computational speed or failures experienced by certain assigned workers at specific times \cite{das2019random}.
+
+In line with previous approaches, our initial step involves partitioning matrix $\bfA$ into $k_A$ distinct block-columns. Subsequently, we will distribute to each worker node a random linear combination of certain block-columns from $\bfA$ along with the vector $\bfx$. Nevertheless, as discussed in Sec. \ref{sec:intro}, assigning dense linear combinations could lead to the loss of inherent sparsity in the corresponding matrices. To avoid this issue, our goal is to allocate linear combinations involving a smaller number of submatrices \cite{dasunifiedtreatment, das2023distributedisit}. In order to quantify this approach, we introduce the concept of ``weight'' for the encoded submatrices. This measure serves as a crucial metric when dealing with sparse matrices in distributed computations.
+
+\begin{definition}
+\label{def:weight}
+We define the ``weight'' $(\omega_A)$ of the submatrix encoding procedure as the number of submatrices that are linearly combined to obtain each encoded submatrix. We assume homogeneous weights of the encoded submatrices across the worker nodes, i.e., every node will be assigned linear combinations of the same number of uncoded submatrices.
+\end{definition}
+
+Thus, our goal is to obtain the optimal recovery threshold ($\tau = k_A$) while maintaining $\omega_A$ (for the assigned encoded submatrices) as low as possible. We also consider the privacy implications of our approach assuming that the worker nodes are honest but curious.
+
+\section{Minimum Weight of Coding}
+\label{sec:opt_weight}
+We consider a coded matrix-vector multiplication scheme with homogeneous weight, $\omega_A$, where matrix $\bfA$ is partitioned into $k_A$ disjoint block-columns, $\bfA_0, \bfA_1, \bfA_2, \dots, \bfA_{k_A - 1}$. Now we state the following proposition which provides a lower bound on $\omega_A$ for any coded matrix-vector multiplication scheme with resilience to $s = n - k_A$ stragglers.
+
+\begin{proposition}
+\label{prop:lowerbound}
+Consider a coded matrix-vector multiplication scheme aiming at resilience to $s = n - k_A$ stragglers out of $n$ total nodes each of which can store $1/k_A$ fraction of matrix $\bfA$. Any scheme that partitions $\bfA$ into $k_A$ disjoint block-columns has to maintain a minimum homogeneous weight $\lceil{\frac{(n-s)(s+1)}{n}}\rceil$.
+\end{proposition}
+\begin{proof}
+Since the scheme aims at resilience to {\it any} $s$ stragglers, any scheme needs to ensure the presence of any $\bfA_i$ (where $i = 0, 1, \dots, k_A - 1$) in at least $s+1$ different nodes. In other words, $\bfA_i$ has to participate within the encoded submatrices in at least $s+1$ different nodes. Now, we assume homogeneous weight $\omega_A$, i. e., each of these $n$ nodes is assigned a linear combination of $\omega_A$ uncoded submatrices from $\bfA$. Thus, we can say $n \; \omega_A \geq k_A (s+1)$, hence,
+\begin{align*}
+\omega_A \geq {\frac{(n-s)(s+1)}{n}}.
+\end{align*} Thus, the minimum homogeneous weight, $\hat{\omega}_A = \Bigl\lceil{\frac{(n-s)(s+1)}{n}}\Bigr\rceil$.
+\end{proof}
+
+Now we state the following corollary (of Proposition \ref{prop:lowerbound}) which considers different values of $k_A$ in terms of $s$, and provides the corresponding optimal weights for coded sparse matrix-vector multiplication.
+
+\begin{corollary} 
+\label{cor:lowerbounds}
+Consider the same setting as Prop. \ref{prop:lowerbound} for coded matrix-vector multiplication. Now, 
+\begin{itemize}
+    \item (i) if $k_A > s^2$, then $\hat{\omega}_A = s + 1$.
+    \item (ii) if $s \leq k_A \leq s^2$, then $\ceil{\frac{s+1}{2}} \leq \hat{\omega}_A \leq s$.
+\end{itemize}
+\end{corollary}
+
+\begin{proof}
+Since $n = k_A + s$, from Prop. \ref{prop:lowerbound}, we have 
+\begin{align}
+\label{eq:omega_bound}
+    \hat{\omega}_A = \Bigl\lceil{\frac{k_A(s+1)}{k_A + s}}\Bigr\rceil = \Bigl\lceil{\frac{1 + s}{1 + \frac{s}{k_A}}}\Bigr\rceil ;
+\end{align}hence, $\hat{\omega}_A$ is a non-decreasing function of $k_A$ for fixed $s$. 
+
+\noindent {\bf Part (i):} When $k_A > s^2$, we have $\frac{s}{k_A} < \frac{1}{s}$, and $\frac{1 + s}{1 + \frac{s}{k_A}} > \frac{1 + s}{1 + \frac{1}{s}} = s$. Thus, from \eqref{eq:omega_bound}, $\hat{\omega}_A > s$. In addition, from \eqref{eq:omega_bound}, for any $s \geq 0$, we have $\hat{\omega}_A \leq s + 1$. Thus, we have $\hat{\omega}_A = s + 1$.
+
+\noindent {\bf Part (ii):} If $k_A = s^2$, from \eqref{eq:omega_bound}, we have $\hat{\omega}_A = s$. Similarly, if $k_A = s$, from \eqref{eq:omega_bound}, we have $\hat{\omega}_A = \ceil{\frac{s+1}{2}}$. Thus, the non-decreasing property of $\hat{\omega}_A$ in terms of $k_A$ concludes the proof.
+\end{proof}
+
+Now we describe a motivating example below where the encoding scheme meets the lower bound mentioned in Prop. \ref{prop:lowerbound}.
+
+\begin{example}
+\label{ex:toy_matvec}
+%\input{matrixvector_n_6_old}
+\input{matrixvector_n_6_new}
+Consider a toy system with $n = 6$ worker nodes each of which can store $1/4$ fraction of matrix $\bfA$. We partition matrix $\bfA$ into $k_A = 4$ disjoint block-columns, $\bfA_0, \bfA_1, \bfA_2, \bfA_3$. According to Prop. \ref{prop:lowerbound}, the optimal weight $\omega_A$ can be as low as $\Bigl\lceil\frac{k_A(s+1)}{k_A + s}\Bigr\rceil = 2$. Now, we observe that the way the jobs are assigned in Fig. \ref{matvec6_new} meets that lower bound, where random linear combinations of $\omega_A = 2$ submatrices are assigned to the nodes. It can be verified that this system has a recovery threshold $\tau = k_A = 4$, and thus, it is resilient to any $s = 2$ stragglers.
+\end{example}
+
+
+\section{Proposed Approach}
+\label{sec:prop_approach}
+
+In this section, we detail our overall approach for distributed matrix-vector multiplication which is outlined in Alg. \ref{Alg:New_matvec}. We partition matrix $\bfA$ into $k_A$ block columns, $\bfA_0, \bfA_1, \bfA_2, \dots, \bfA_{k_A - 1}$, and assign a random linear combination of $\omega_A$ (weight) submatrices of $\bfA$ to every worker node. We show that for given $n$ and $k_A$, our proposed approach provides resilience to maximum number of stragglers, $s = n - k_A$. In addition, our coding scheme maintains the minimum weight of coding as mentioned in Prop. \ref{prop:lowerbound}.
+
+Formally, we set $\omega_A = \Bigl\lceil{\frac{k_A(s+1)}{k_A + s}}\Bigr\rceil$, and assign a linear combination of $\bfA_i, \bfA_{i + 1}, \bfA_{i + 2}, \dots, \bfA_{i+\omega_A - 1} \, \left(\textrm{indices modulo} \, k_A \right)$ to worker node $W_i$, for $i = 0, 1, 2, \dots, k_A-1$, where the linear coefficients are chosen randomly from a continuous distribution. Next, we assign a random linear combination of $\bfA_{i\omega_A}, \bfA_{i\omega_A + 1}, \bfA_{i\omega_A + 2}, \dots, \bfA_{(i+1)\omega_A - 1} \, \left(\textrm{indices modulo} \, k_A \right)$ to worker node $W_{i}$, for $i = k_A, k_A + 1, \dots, n-1$. Note that every worker node also receives the vector $\bfx$. Once the fastest $\tau = k_A$ worker nodes finish and return their computation results, the central node decodes $\bfA^T \bfx$. Note that we assume $k_A \geq s$, i.e., at most {\it half} of the nodes may be stragglers.
+
+\begin{algorithm}[t]
+	\caption{Proposed scheme for distributed matrix-vector multiplication}
+	\label{Alg:New_matvec}
+   \SetKwInOut{Input}{Input}
+   \SetKwInOut{Output}{Output}
+   \vspace{0.1 in}
+   \Input{Matrix $\bfA$, vector $\bfx$, $n$-number of workers, $s$-number of stragglers, storage fraction $\gamma_A = \frac{1}{k_A}$, such that $k_A \geq s$.}
+   Partition $\bfA$ into $k_A$ disjoint block-columns\;
+   Set weight $\, \omega_A =\Bigl\lceil\frac{k_A(s+1)}{k_A + s}\Bigr\rceil$\;
+   \For{$i\gets 0$ \KwTo $n-1$}{
+   \eIf{$i < k_A$}
+   {
+   Define $T = \left\lbrace i, i+1, \dots, i + \omega_A - 1 \right\rbrace$ (reduced modulo $k_A$)\;
+   }
+   { 
+   Define $T = \left\lbrace i \omega_A, i \omega_A + 1, \dots, (i+1)\omega_A - 1 \right\rbrace$ (reduced modulo $k_A$)\;
+   }
+   Create a random vector $\bfr$ of length $k_A$ with entries  $r_{m}$, $0\leq m \leq k_A - 1$\;
+   Create a random linear combination of $\bfA_{q}$'s where $q \in T$, thus $\tilde{\bfA}_i = \sum\limits_{q \in T} r_{q} \bfA_q$\;
+   Assign encoded submatrix $\tilde{\bfA}_i$ and the vector $\bfx$ to worker node $W_i$\;
+   }
+   \Output{The central node recovers $\bfA^T \bfx$ from the returned results by the fastest $k_A$ nodes.}
+   \vspace{0.1 in}
+\end{algorithm}
+
+\subsection{Straggler Resilience Guarantee}
+Next we state the following lemma which would assist us to prove Theorem \ref{thm:matvec} which discusses straggler resilience of our proposed scheme.
+
+\begin{lemma}
+\label{lem:hall}
+Choose any $m \leq k_A$ worker nodes out of all $n$ nodes in the distributed system. Now, if we assign the jobs to the worker nodes according to Alg. \ref{Alg:New_matvec}, the total number of participating uncoded $\bfA$ submatrices within those $m$ worker nodes is lower bounded by $m$. 
+\end{lemma}
+
+\begin{proof}
+First we partition all $n$ worker nodes into {\it two} sets where the first set, $\calW_0$ includes the first $k_A$ nodes and the second set, $\calW_1$, includes the next $s$ worker nodes, i.e., we have 
+\begin{align*}
+    \calW_0 &= \left\lbrace W_0, W_1, W_2, \dots, W_{k_A - 1} \right\rbrace ; \\
+\textrm{and} \;\; \;  \calW_1 &= \left\lbrace W_{k_A}, W_{k_A+1}, \dots, W_{n-1}  \right\rbrace . 
+\end{align*} Thus, we have $|\calW_0| = k_A$ and $|\calW_1| = s \leq k_A$. Now, we choose any $m \leq k_A$ worker nodes, where we choose $m_0$ nodes from $\calW_0$ and $m_1$ nodes from $\calW_1$, so that $m = m_0 + m_1$. We denote set of the participating uncoded $\bfA$ submatrices within those nodes as $\calA_0$ and $\calA_1$, respectively. Hence, to prove the lemma, we need to show $|\calA_0 \cup \calA_1| \geq m$, for any $m \leq k_A$. 
+
+First, according to Alg. \ref{Alg:New_matvec}, we assign a random linear combination of $\bfA_i, \bfA_{i + 1}, \bfA_{i + 2}, \dots, \bfA_{i+\omega_A - 1} \, \left(\textrm{indices modulo} \, k_A \right)$ to worker node $W_i \in \calW_0$. Thus, the participating submatrices are assigned in a cyclic fashion \cite{das2020coded}, and the total number of participating submatrices within any $m_0$ nodes of $\calW_0$ is  
+\begin{align}
+\label{eq:m1}
+|\calA_0| \geq \min (m_0 + \omega_A - 1, k_A).
+\end{align} Next, we state the following claim for the number of participating submatrices in $\calW_1$, with the proof in Appendix \ref{app:proofclaim1}.
+
+\begin{claim}
+\label{clm:m1gw1}
+Choose any $m_1 \geq \omega_A$ nodes from $\calW_1$. The number of participating submatrices within these nodes, $|\calA_1| = k_A$. 
+\end{claim}
+
+
+Now, if $m_1 \leq \omega_A - 1$, from \eqref{eq:m1} we have 
+\begin{align*}
+    |\calA_0 \cup \calA_1| \geq |\calA_0| & =  \min (m_0 + \omega_A - 1, k_A) \\ 
+    & \geq  \min (m_0 + m_1, k_A) \geq m ,
+\end{align*} since $m = m_0 + m_1 \leq k_A$. And, if $m_1 \geq \omega_A$, from Claim \ref{clm:m1gw1} we can say,
+\begin{align*}
+    |\calA_0 \cup \calA_1| \geq |\calA_1| =  k_A \geq m,
+\end{align*} which concludes the proof of the lemma.
+\end{proof}
+
+\begin{example}
+Consider the same scenario in Example \ref{ex:toy_matvec}, where $k_A = 4$ and $s = 2$, therefore, $\calW_0 = \{W_0, W_1, W_2, W_3\}$ and $\calW_1 = \{ W_4, W_5 \}$. Now, choose $m = 3$ nodes, $W_0, W_1$ and $W_4$. Thus, $m_0 = 2$ and $m_1 = 1$. Now, from the figure, we have $\calA_0 = \{\bfA_0, \bfA_1, \bfA_2\}$ and $\calA_1 = \{\bfA_0, \bfA_1\}$. Hence, $|\calA_0 \cup \calA_1| = 3 \geq m$. Similar properties can be shown for any choice $m \leq k_A = 4$ different nodes.
+\end{example}
+
+Now we state the following theorem which provides the guarantee of resilience to maximum number of stragglers for given storage constraints.
+
+\begin{theorem}
+\label{thm:matvec}
+Assume that a system has $n$ worker nodes each of which can store $1/k_A$ fraction of matrix $\bfA$ and the whole vector $\bfx$ for the distributed matrix-vector multiplication $\mathbf{A}^T \mathbf{x}$. If we assign the jobs according to Alg. \ref{Alg:New_matvec}, we achieve resilience to $s = n - k_A$ stragglers.
+\end{theorem}
+
+\begin{proof}
+According to Alg. \ref{Alg:New_matvec}, first we partition matrix $\bfA$ into $k_A$ disjoint block-columns. Thus, to recover the matrix-vector product, $\bfA^T \bfx$, we need to decode all $k_A$ vector unknowns, $\bfA^T_0 \bfx, \bfA^T_1 \bfx, \bfA^T_2 \bfx, \dots, \bfA^T_{k_A - 1} \bfx$. We denote the set of these $k_A$ unknowns as $\calB$. Now we choose an arbitrary set of $k_A$ worker nodes each of which corresponds to an equation in terms of $\omega_A$ of those $k_A$ unknowns. Denoting the set of $k_A$ equations as $\calC$, we can say,  $|\calB| = |\calC| = k_A$. 
+
+\input{bipartite_2}
+Now we consider a bipartite graph $\calG = \calC \cup \calB$, where any vertex (equation) in $\calC$ is connected to some vertices (unknowns) in $\calB$ which participate in the corresponding equation. Thus, each vertex in $\calC$ has a neighborhood of cardinality $\omega_A$ in $\calB$. An example with $k_A = 5$ and $\omega_A = 3$ is shown in Fig. \ref{fig:hall_bipartite}. 
+
+Our goal is to show that there exists a perfect matching among the vertices of $\calC$ and $\calB$. To do so, we consider $\bar{\calC} \subseteq \calC$, where $|\bar{\calC}| = m \leq k_A$. Now, we denote the neighbourhood of $\bar{\calC}$  as $\calN (\bar{\calC}) \subseteq \calB$. Thus, according to Lemma \ref{lem:hall}, for any $m \leq k_A$, we can say that $|\calN (\bar{\calC})| \geq m$. So, according to Hall's marriage theorem \cite{marshall1986combinatorial}, we can say that there exists a perfect matching among the vertices of $\calC$ and $\calB$.
+
+Next we consider the largest matching where the vertex $c_i \in \calC$ is matched to the vertex $b_j \in \calB$, which indicates that $b_j$ participates in the equation corresponding to $c_i$. Now, considering $k_A$ equations and $k_A$ unknowns, we construct the $k_A \times k_A$ coding (or decoding) matrix $\bfH$ where row $i$ corresponds to the equation associated to $c_i$ where $b_j$ participates. We replace row $i$ of $\bfH$ by $\bfe_j$ where $\bfe_j$ is a unit row-vector of length $k_A$ with the $j$-th entry being $1$, and $0$ otherwise. Thus we have a $k_A \times k_A$ matrix where each row has only one non-zero entry which is $1$. In addition, since we have a perfect matching, $\bfH$ will have only one non-zero entry in every column. Thus, $\bfH$ is a permutation of the identity matrix, and therefore, $\bfH$ is full rank. Since the matrix is full rank for a choice of definite values, according to Schwartz-Zippel lemma \cite{schwartz1980fast}, the matrix continues to be full rank for random choices of non-zero entries. Thus, the central node can recover all $k_A$ unknowns from any set of $k_A$ worker nodes.
+\end{proof}
+
+\begin{example}
+\label{ex:12_3}
+\input{matrixvector_opt_n_12}
+Consider a system with $n = 12$ nodes each of which can store $1/9$-th fraction of matrix $\bfA$. We partition $\bfA$ as $\bfA_0, \bfA_1, \dots, \bfA_8$. According to Alg. \ref{Alg:New_matvec}, we set the weight $\omega_A = \Bigl\lceil\frac{k_A(s+1)}{k_A + s}\Bigr\rceil = 3$, and assign random linear combinations of $\omega_A$ submatrices to each node as shown in Fig. \ref{matvec12_opt}. It can be verified that $\bfA^T \bfx$ can be recovered from {\it any} $\tau = k_A = 9$ nodes, therefore, the scheme is resilient to {\it any} $s = 3$ stragglers.
+\end{example}
+
+\begin{remark}
+\label{rem:betterthanjsait}
+While our proposed approach meets the lower bound on the weight as mentioned in Prop. \ref{prop:lowerbound}, the approach in \cite{das2023jsait_submitted} assigns a weight $\min(s+1, k_A)$ which can often be higher than ours (e.g., Examples \ref{ex:toy_matvec} and \ref{ex:12_3}), and thus, may lead to reduction in worker computation speed. 
+\end{remark}
+
+\subsubsection{Computational Complexity for a Worker Node} 
+\label{sec:compcomplexity}
+In this work, we assume that the ``input'' matrix, $\bfA \in \mathbb{R}^{t \times r}$, is sparse, i.e., most of the entries of $\bfA$ are zero. Let us assume that the probability for any entry of $\bfA$ to be non-zero is $\mu$, where $\mu > 0$ is very small. According to Alg. \ref{Alg:New_matvec}, we combine $\omega_A$ submatrices (of size $t \times r/k_A$) to obtain the coded submatrices and assign them to the worker nodes. Hence, the probability for any entry of any coded submatrix to be non-zero is $1 - (1 - \mu)^{\omega_A}$ which can be approximated by $\omega_A \mu$. Thus, in our approach, the per worker node computational complexity is $\calO \left( \omega_A \mu \times  \frac{rt}{k_A} \right)$ where $\omega_A = \Bigl\lceil\frac{k_A(s+1)}{k_A + s}\Bigr\rceil$.
+
+On the other hand, the dense coded approaches \cite{yu2017polynomial,8849468, 8919859} combine $k_A$ submatrices for encoding, hence, their per worker node computational complexity is $\calO \left( k_A \mu \times  \frac{rt}{k_A} \right) = \calO \left( \mu \times  r t \right)$ which is $\frac{k_A}{\omega_A} \approx \frac{s + k_A}{ s + 1}$ times higher than that of ours. Moreover, the recent sparse matrix computations approach in \cite{das2023jsait_submitted} combines $s+1$ submatrices for encoding (when $s < k_A$). Thus, its corresponding computational complexity is $\calO \left( (s+1) \mu \times  \frac{rt}{k_A} \right)$; approximately $(1 + s/k)$ times higher than that of ours. We clarify this with the following example.
+
+\begin{example}
+Consider the same setting in Example \ref{ex:12_3} where $n = 12$, $k_A = 9$ and $s = 3$. In this scenario, the recent work \cite{das2023jsait_submitted} assigns random linear combinations of $\min(s+1, k_A) = 4$ submatrices to each node. Thus, our proposed approach enjoys a $25\%$ decrease in computational complexity, which could significantly enhance the overall computational speed.
+\end{example}
+
+% Consider a random sparse matrix $\bfA \in \mathbb{R}^{t \times r}$ where the probability that any entry is non-zero is $\eta$. The vector $\bfx \in \mathbb{R}^{t}$ can be dense. For any $s < k_A$, the weight of the assigned submatrices is $\omega_A = \textrm{min}(s+1, k_A) = s+1$. Thus in any encoded submatrix, the probability of any entry being non-zero is approximately $(s+1)\eta$, where $\eta$ is small. Therefore, the computational complexity for any worker node is $\calO \left( (s+1) \eta t \times \frac{r}{k_A} \right) = \calO \left((s + 1) \eta \times \frac{rt}{k_A} \right)$. On the other hand, in a dense coded approach  \cite{yu2017polynomial, 8849468} which assign linear combination of $k_A$ submatrices, the computational complexity is $\calO \left( k_A \eta \times \frac{r t}{k_A} \right) = \calO \left( \eta \times r t \right)$.  A very recent approach proposed in \cite{dasunifiedtreatment} can also deal with sparse matrices with a per worker node computational complexity $\calO \left((s + 1) \eta \times \frac{rt}{n} \right)$, slightly smaller than our proposed method. However, it assigns a number of uncoded submatrices to the worker nodes, hence the worker nodes can have exact information about the data matrix $\bfA$. Thus it does not address the security issue in distributed matrix computations. Our method can control the amount of information leakage as we discuss in Sec. \ref{sec:security}. 
+
+\subsubsection{Numerical Stability and Coefficient Determination Time}
+\label{sec:trialtime}
+In this section, we discuss the numerical stability of our proposed distributed matrix computations scheme. The condition number is widely regarded as a significant measure of numerical stability for such a system \cite{das2019random, 8849468, 8919859}. In the context of a system consisting of $n$ workers and $s$ stragglers, the worst-case condition number ($\kappa_{worst}$) is defined as the highest condition number among the decoding matrices when considering all possible combinations of $s$ stragglers. In methods involving random coding like ours, the idea is to generate random coefficients multiple (e.g., 20) times  and selecting the set of coefficients that results in the lowest $\kappa_{worst}$ among those trials.
+
+In our proposed method, we partition matrix $\bfA$ into $k_A$ disjoint block-columns, which underscores the necessity to recover $k_A$ vector unknowns. Consequently, in each attempt, we must determine the condition numbers of ${n \choose k_A}$ decoding matrices, each of size $k_A \times k_A$. This whole process has a total complexity of $\calO\left( {n \choose k_A} k_A^3\right)$. On the other hand, the recent sparse matrix computation techniques, such as sparsely coded straggler (SCS) optimal scheme discussed in \cite{das2020coded} or the class-based scheme discussed in \cite{dasunifiedtreatment} partition matrix $\bfA$ into $\Delta_A = \textrm{LCM}(n, k_A)$ block-columns. Thus, in each attempt, they need to ascertain the condition numbers of ${n \choose k_A}$ matrices, each of which has a size $\Delta_A \times \Delta_A$, resulting in a total complexity of $\calO\left( {n \choose k_A} \Delta_A^3\right)$. Since $\Delta_A$ can be considerably larger than $k_A$, those methods involve significantly more complexity compared to our proposed scheme. For instance, if we consider a scenario where $n$ and $k_A$ are co-prime, then $\Delta_A = n k_A$, and thus the complexity of the approaches presented in \cite{das2020coded, dasunifiedtreatment} is approximately $\calO\left( n^3 \right)$ times higher than our method.
+
+% In our proposed approach, since we partition $\bfA$ into $k_A$ block-columns, in every trial we need to determine ${n \choose k_A}$ condition numbers of $k_A \times k_A$ sized (decoding) matrices, which has a total complexity of $\calO\left( {n \choose k_A} k_A^3\right)$. On the other hand, the recent sparse matrix computation approaches in \cite{das2020coded, dasunifiedtreatment} partition matrix $\bfA$ into $\Delta_A = \textrm{LCM}(n, k_A)$ block-columns. Thus, in every trial, they need to determine ${n \choose k_A}$ condition numbers of $\Delta_A \times \Delta_A$ sized matrices which has a total complexity of $\calO\left( {n \choose k_A} \Delta_A^3\right)$. Since, $\Delta_A$ can be significantly larger than $k_A$, every trial involves considerably more complexity in comparison to ours. For example, consider a case where $n$ and $k_A$ are coprime. In that case $\Delta_A = n k_A$, and thus the complexity corresponding to the approaches \cite{das2020coded, dasunifiedtreatment} are around $\calO\left( n^3 \right)$ times higher than ours. 
+
+
+\subsection{Private Matrix-vector Multiplication}
+\label{sec:private}
+Now, we discuss how we can modify Alg. \ref{Alg:New_matvec} to add protection against information leakage of the ``input'' matrix $\bfA$ in the worker nodes, which we assume are honest but curious. The traditional idea developed in several private distributed computations approaches \cite{aliasgari2020private, tandon2018secure} is to add dense random matrices to the submatrices of the ``input'' matrix. While this can provide protection against information leakage up to certain levels, it substantially increases the number of non-zero entries in the encoded submatrices of an originally sparse input matrix, which can reduce the overall computation speed. %In this work, we investigate the trade-off between privacy leakage with the recovery threshold and the sparsity of the encoded matrices which can help to enhance the computation speed while maintaining a certain level of privacy. 
+
+In our scheme, we propose that the central node will generate a sparse matrix $\bfS \in \mathbb{F}^{t \times r/k_A}$ where the probability of any entry being non-zero is $\mu$. Next, the central node will add $\bfS$ to all the encoded submatrices to be assigned to the worker nodes according to Alg. \ref{Alg:New_matvec}. In other words, if the central node was supposed to send the encoded submatrix $\tilde{\bfA}_i$ to worker node $W_i$ according to Alg. \ref{Alg:New_matvec}, then for private sparse matrix computations, the central node will send $\bar{\bfA}_i = \tilde{\bfA}_i + \bfS$ to worker node $W_i$. The upcoming corollary proves that the central node can recover the final result, $\bfA^T \bfx$ from any $k_A + 1$ nodes (in a similar process as in Sec. \ref{sec:prop_approach}). Note that the central node sends the vector $\bfx$ to all $n$ nodes. The overall procedure for private matrix-vector multiplication is outlined in Alg. \ref{Alg:sec_matvec}.
+
+
+\begin{algorithm}[t]
+	\caption{Proposed scheme for Private distributed matrix-vector multiplication for non-colluding nodes}
+	\label{Alg:sec_matvec}
+   \SetKwInOut{Input}{Input}
+   \SetKwInOut{Output}{Output}
+   \Input{Matrix $\bfA \in \mathbb{F}^{t \times r}$, vector $\bfx \in \mathbb{F}^{t \times 1}$, $n$-number of nodes, storage fraction $\frac{1}{k_A}$, where $n > k_A$.}
+   Create a sparse random matrix $\bfS \in \mathbb{F}^{t \times r/k_A}$, where the probability of any entry to be non-zero is $\mu$\;
+   Create a random vector $\bfr$ of length $n$\;
+   \For{$i\gets 0$ \KwTo $n-1$}{
+   Create encoded submatrix $\tilde{\bfA}_i$ according to Alg. \ref{Alg:New_matvec}\;
+   Assign submatrix $\bar{\bfA}_i = \tilde{\bfA}_i + \bfr_i \bfS$ to worker $W_i$\;
+   Assign vector $\bfx$  to worker node $W_i$\;
+   }
+   \Output{The central node recovers $\bfA^T \bfx$ from the returned results by the fastest $k_A + 1$ nodes.}
+\end{algorithm}
+
+\begin{corollary}
+\label{cor:private}
+Assume that a system has $n$ worker nodes each of which can store $1/k_A$ fraction of matrix $\bfA$ for conducting private matrix-vector multiplication $\mathbf{A}^T \bfx$. If we assign the jobs according to Alg. \ref{Alg:sec_matvec} to achieve our desired level of protection against information leakage of $\bfA$, we achieve resilience to $s = n - (k_A+1)$ stragglers.    
+\end{corollary}
+
+\begin{proof}
+We prove the corollary in a similar fashion as we have proved Theorem \ref{thm:matvec}. Instead of $k_A$ vector unknowns, $\bfA^T_0 \bfx, \bfA^T_1 \bfx, \bfA^T_2 \bfx, \dots, \bfA^T_{k_A - 1} \bfx$, to recover $\bfA^T \bfx$, we have one more unknown, $\bfS^T \bfx$ involved in this process. Similar to the proof of Theorem \ref{thm:matvec}, we denote the set of these $k_A+1$ unknowns as $\calB$, and choose an arbitrary set of $k_A+1$ worker nodes each of which corresponds to an equation in terms of $\omega_A+1$ of those $k_A+1$ unknowns. Denoting the set of $k_A+1$ equations as $\calC$, we can say,  $|\calB| = |\calC| = k_A+1$. 
+
+We again consider a bipartite graph $\calG = \calC \cup \calB$, and claim that a perfect matching exists between the vertices in $\calC$ and $\calB$. The reason is that the new unknown $\bfS^T \bfx$ participates in every equation, hence, the size of the of neighborhood of $\bar{\calC} \in \calC$ will always increase by $1$ (as compared to Theorem \ref{thm:matvec}) when $|\bar{\calC}| = m \leq k_A$. Thus, for any $\bar{\calC}$, when $|\bar{\calC}| = m \leq k_A + 1$, the size of the neighborhood $|\calN(\bar{\calC})| \geq m$. This proves the perfect matching, and then, similar to the proof of Theorem \ref{thm:matvec}, using Schwartz-Zippel lemma \cite{schwartz1980fast}, we can prove the corollary.
+\end{proof}
+
+We consider a system of non-colluding worker nodes which are honest but curious. In this setting, in order to be private from an information-theoretic standpoint, the encoded matrices $\bar{\bfA}_i$ should not leak any information about the data matrix $\bfA$. In this regard, denote the mutual information of two random variables $X$ and $Y$ as $\calI(X, Y)$. A perfectly private scheme in our setting must satisfy the information-theoretic constraint, $\calI\left(\bar{\bfA}_i, \bfA \right) = 0$, for $i = 0, 1, \dots, n -1$. Denoting $\calH (X, Y)$  as the joint entropy of two random variables $X$ and $Y$, for our scheme we can write
+\begin{align*}
+    & \calI\left(\bar{\bfA}_i; \bfA \right)  =  \calI \left( \tilde{\bfA}_i + \bfS; \bfA \right) \nonumber \\ 
+    = & \calH\left( \tilde{\bfA}_i + \bfS\right) - \calH\left( \tilde{\bfA}_i + \bfS | \bfA \right)  = \calH\left( \tilde{\bfA}_i + \bfS\right) - \calH\left( \bfS | \bfA \right)
+\end{align*} Now, for small $\eta$, the number of non-zero entries in any $\tilde{\bfA}_i$ is approximately $\omega_A \eta \times \frac{rt}{k_A}$. Thus, we have
+\begin{align}
+\label{eq:sec}
+    & \; \calI\left(\bar{\bfA}_i; \bfA \right) \nonumber \\
+ \approx \; & \;{  \left( \omega_A\eta \; + \mu \; - \omega_A\eta \mu \;\right) \frac{rt}{k_A} \; log |\mathbb{F}|} - {\mu \; \frac{rt}{k_A} \; log |\mathbb{F}|} \nonumber \\
+ = \; & \; \omega_A\eta \left( 1 - \mu \right)\; \frac{rt}{k_A} \; log |\mathbb{F}|
+\end{align}
+Thus, $\calI\left(\bar{\bfA}_i, \bfA \right)$ decreases with the increase of $\mu$; if the central node uses a denser $\bfS$, the system will have more protection, at the expense of longer computation times due to sparsity being destroyed. The system will be fully protected if $\mu = 1$, in other words, when $\bfS$ is fully dense. 
+
+\begin{remark}
+A recent work \cite{xhemrishi2022distributed} also studied this privacy issue in sparse matrix computations for a different setting of distributed computation. In that setting, the worker nodes are partitioned into two non-communicating clusters, the untrusted cluster and the partly trusted cluster, and different number of tasks are assigned to different nodes. This objective is different than our focus on being resilient to the maximum number of stragglers.
+\end{remark}
+
+\input{num_exp_double.tex}
+
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+
+In this study, we devised a distributed scheme for multiplying large matrices by vectors, specifically designed for sparse input matrices. First we found a lower bound on the weight for the encoding of any scheme for the resilience to the maximum number of stragglers for given storage constraints. Our proposed straggler-optimal approach meets the lower bound and maintains the inherent sparsity of the input matrix $\bfA$ up to a certain extent. As a result, it substantially reduces both computation and communication delays compared to dense coded methods. We also explored the privacy aspect of sparse matrix computations when the nodes are honest but curious. We achieved a controllable balance between the preserved sparsity level and information leakage. Our claims were corroborated through numerical experiments conducted on an AWS cluster.
+
+A future direction can include developing schemes for sparse distributed matrix-matrix multiplication which meets the lower bound on the weight. Another direction may include developing sparsely coded schemes with protection against information leakage when the worker nodes can collude among them.
+
+
+\appendix
+\subsection{Proof of Claim \ref{clm:m1gw1}}
+\label{app:proofclaim1}
+\begin{proof}
+Consider the worker nodes in $\calW_1$. According to Alg. \ref{Alg:New_matvec}, we assign a linear combination of $\bfA_{i\omega_A}, \bfA_{i\omega_A + 1}, \bfA_{i\omega_A + 2}, \dots, \bfA_{(i+1)\omega_A - 1} \, \left(\textrm{indices modulo} \, k_A \right)$ to worker node $W_{i}$, for $i = k_A, k_A + 1, \dots, n-1$. Thus, the participating submatrices in worker node $W_{k_A}$ are $\bfA_0, \bfA_1, \dots, \bfA_{\omega_A - 1} \left(\textrm{indices reduced modulo} \, k_A \right)$. Similarly, the participating submatrices in $W_{k_A + 1}$ are $\bfA_{\omega_A}, \bfA_{\omega_A+1}, \dots, \bfA_{2\omega_A - 1} \left(\textrm{indices reduced modulo} \, k_A \right)$. In a consequence, $\omega_A$ number of submatrices participate in each of those $s$ worker nodes sequentially in an increasing order in terms of their indices (reduced modulo $k_A$). 
+
+Now, denote the number of appearances of any submatrix $\bfA_i$ within the nodes in $\calW_1$ by $\bfv_i \geq 0$. Thus, for any $0 \leq j, k \leq k_A - 1$, we have $ |\bfv_j  -  \bfv_k| \leq 1$, where $\sum_{i = 0}^{k_A - 1} \bfv_i = s \omega_A$. Thus, the average of these $\bfv_i$'s is $\rho = \frac{s \omega_A}{k_A}$. If $\rho$ is an integer, then $\bfv_i = \floor{\rho} = \rho$ for $i = 0, 1, 2, \dots, k_A - 1$, since for every pair of $j,k$, we have $|\bfv_j  -  \bfv_k| \leq 1$. Similarly, if $\rho$ is not an integer, then $\bfv_i \geq \floor{\rho}$. Thus, within all $s$ nodes of $\calW_1$, every submatrix participates in at least $\floor{\rho}$ times over $\floor{\rho}$ distinct nodes. In other words, any submatrix may not participate in at most $s - \floor{\rho}$ nodes within the nodes of $\calW_1$.
+
+First, consider the case, $k_A = s$. Here, every submatrix participates in $\floor{\rho} = \omega_A$ nodes, therefore, any submatrix does not participate in $s - \omega_A$ nodes. But, we choose any $m_1 \geq \omega_A$ nodes in $\calW_1$, where $\omega_A = \ceil{\frac{s+1}{2}}$, since $k_A = s$. Thus,
+\begin{align*}
+   2 \omega_A \geq s + 1 > s \;\; \textrm{which indicates that}, \;\; \omega_A > s - \omega_A.
+\end{align*}In addition, since $m_1 \geq \omega_A$, we claim that $m_1 > s - \omega_A$. Thus, every submatrix will participate at least once within those chosen $m_1$ nodes, hence $|\calA_1| = k_A$. 
+
+Next, consider the other case when  $k_A > s$. Again, since we choose any arbitrary $m_1 \geq \omega_A$ nodes in $\calW_1$, we are leaving $s - m_1$ nodes in $\calW_1$. But 
+\begin{align*}
+    s - m_1 \leq s - \omega_A < s - \floor{\rho}.
+\end{align*} The second inequality holds since $s < k_A$. Thus, every submatrix will participate at least once within those $m_1 \geq \omega_A$ nodes, hence $|\calA_1| = k_A$.
+\end{proof}
+
+%
+% @article{das2023jsait_submitted,
+%  title={Distributed Matrix Computations with Low-weight Encodings},
+%   author={Das, Anindya Bijoy and Ramamoorthy, Aditya and Love, David J and Brinton, Christopher G},
+%   year={preprint, 2023, [Online] Available: https://arxiv.org/abs/2301.12685}
+%}
+%
+
+% \subsection{App 1}
+% \label{App:1}
+
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{citations}
+\end{document}
+
+

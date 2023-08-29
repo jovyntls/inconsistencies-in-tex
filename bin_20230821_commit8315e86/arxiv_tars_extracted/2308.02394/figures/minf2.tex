@@ -1,0 +1,64 @@
+\tikzset{
+  branch/.style={fill,shape=circle,minimum size=4pt,inner sep=0pt},
+}
+
+\begin{tikzpicture}[circuit logic US,font=\normalsize,scale=2]
+
+  \node[xor gate] at (0, 0) (sign) {};
+
+  \node[shape=mux2, anchor=south, yscale=-1] (mout) at ($(sign.south)+(1.3,-0.4)$) {};
+  \draw[-] (sign.output -| mout.sel) node[branch] {} -- (mout.sel);
+  \node[anchor=west] (mouti0) at ($(mout.in0)+(-0.05, 0)$) {1};
+  \node[anchor=west] (mouti1) at ($(mout.in1)+(-0.05, 0)$) {0};
+  \node[not gate, anchor=west, scale=0.6] (nsign) at ($(sign.output)+(1.0,0)$) {};
+  \draw[-] (sign.output) -- (nsign.input);
+
+  \node[shape=mux2, anchor=south] (mamp) at (mout.in0 -| sign) {};
+  \node[anchor=west] (mampi0) at ($(mamp.in0)+(-0.05, 0)$) {0};
+  \node[anchor=west] (mampi1) at ($(mamp.in1)+(-0.05, 0)$) {1};
+  \node[not gate, scale=0.6] (namp) at ($(mamp.out)!0.5!(mout.in1)$) {};
+  \draw[-, very thick] (mamp.out) -- (namp.input) (namp.output) -- (mout.in1);
+  \draw[-, very thick] ($(mamp.out)!0.5!(namp.input)$) node[branch] {} |- (mout.in0);
+
+  \node[shape=mux2,yscale=-1] (maamp) at ($(mamp.in0)+(-1.0, 0)$) {};
+  \node[anchor=west] (maampi0) at ($(maamp.in0)+(-0.05, 0)$) {1};
+  \node[anchor=west] (maampi1) at ($(maamp.in1)+(-0.05, 0)$) {0};
+  \draw[-, very thick] (maamp.out) -- (mamp.in0);
+
+  \node[shape=mux2,anchor=south,yscale=-1] (mbamp) at ($(maamp.north)+(0, -0.3)$) {};
+  \node[anchor=west] (mbampi0) at ($(mbamp.in0)+(-0.05, 0)$) {1};
+  \node[anchor=west] (mbampi1) at ($(mbamp.in1)+(-0.05, 0)$) {0};
+
+  \node[circle,draw,anchor=south west] at ($(mbamp.out -| sign.input 1)+(0,0)$) (cmp) {$>$};
+  \draw[-] (cmp.east) -| (mamp.sel);
+  \node (aa) at ($(maamp.out)!0.5!(mamp.in0)$) {};
+  \draw[-,very thick] (aa.center) node[branch]{} |- (cmp.north west);
+  \draw[-,very thick] (mbamp.out) -- (cmp.south west);
+
+  \draw[-, very thick] ($(mbamp.out)!0.4!(cmp.south west)$) node[branch] {} |- (mamp.in1);
+
+  \node[anchor=west,align=center](inAa) at ($(maamp.in1)+(-1.8, 0)$) {$t_{a,2}$ \\[-0.3em]$t_{a,1}$\\[-0.3em]$t_{a,0}$};
+  \node[not gate, scale=0.6] (naamp) at ($(inAa.east)!0.6!(maamp.in1)$) {};
+  \draw[-, very thick] (inAa.east) -- (naamp.input) (naamp.output) -- (maamp.in1);
+  \draw[-, very thick] ($(inAa.east)!0.7!(naamp.input)$) node[branch] {} |- (maamp.in0);
+
+  \node[anchor=west,align=center](inBa) at (mbamp.in1 -| inAa.west) {$t_{b,2}$ \\[-0.3em]$t_{b,1}$ \\[-0.3em]$t_{b,0}$};
+  \node[not gate, scale=0.6] (nbamp) at ($(inBa.east)!0.6!(mbamp.in1)$) {};
+  \draw[-, very thick] (inBa.east) -- (nbamp.input) (nbamp.output) -- (mbamp.in1);
+  \draw[-, very thick] ($(inBa.east)!0.7!(nbamp.input)$) node[branch] {} |- (mbamp.in0);
+
+  \node[anchor=west](inAs) at ($(sign.input 1 -| inAa.west)+(-.3,0)$) {$t_{a,3}$};
+  \draw[-] (inAs.east) -- (sign.input 1);
+  \node(inBs) at (sign.input 2 -| inAs) {$t_{b,3}$};
+  \draw[-] (inBs.east) -- (sign.input 2);
+
+  \draw[-] (inAs -| maamp.sel) node[branch] {} -- (maamp.sel);
+  \node (bs) at ($(inBs.east)+(0.6, 0)$) {};
+  \draw[-] (bs.center) node[branch] {} |- ($(bs |- mout.out)+(0, -0.1)$) -| (mbamp.sel);
+
+  \node[anchor=west](outOs) at ($(nsign.output)+(0.2,0)$) {$t_{o,3}$};
+  \node[anchor=west, align=center](outOa) at (mout.out -| outOs.west) {$t_{o,2}$ \\[-0.3em]$t_{o,1}$ \\[-0.3em]$t_{o,0}$};
+    
+  \draw[-] (nsign.output) -- (outOs.west);
+  \draw[-,very thick] (mout.out) -- (outOa.west);
+\end{tikzpicture}

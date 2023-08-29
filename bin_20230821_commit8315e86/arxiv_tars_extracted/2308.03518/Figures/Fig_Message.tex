@@ -1,0 +1,48 @@
+\begin{figure}[!t]
+\centering
+ \begin{tikzpicture} 
+    \begin{axis}[
+        xlabel = {$N$},
+        ylabel = {MSE},
+        label style={font=\footnotesize},
+        width=0.48\textwidth,
+        height=5cm,
+        xmin=40, xmax=120,
+        ymin=1e-6, ymax=.5,
+        legend style={nodes={scale=0.65, transform shape}, at={(0.3,0.85)}}, 
+        ticklabel style = {font=\footnotesize},
+        %legend pos=west,
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed,
+        grid=both,
+        ymode = log,
+        grid style={line width=.1pt, draw=gray!10},
+        major grid style={line width=.2pt,draw=gray!30},
+    ]
+    \addplot[smooth,
+             thin,
+        color=chestnut,
+        %mark=star,
+        %mark options = {rotate = 180},
+        line width=0.9pt,
+        %mark size=3pt,
+        ]
+    table[x=N,y=x1]
+    {Data/Sim3.dat};
+\addplot[ smooth,
+             thin,
+        color=airforceblue,
+        %mark=star,
+        %mark options = {rotate = 180},
+        line width=0.9pt,
+        %mark size=3pt,
+        ]
+    table[x=N,y=x2]
+    {Data/Sim3.dat};
+    \legend{$\|\widehat{\bm{x}}_1 - \bm{x}_1\|_{2}$, $\|\widehat{\bm{x}}_2 - \bm{x}_2\|_{2}$};
+    \end{axis}
+\end{tikzpicture}
+  \caption{ Message recovery performance versus the number of samples $N$. Here, both transmitted signals have a message of size $4$, i.e.,  $M_1 = M_2= 4$. Moreover, we consider the number of channel multipath components as $P_1 = 5$ and $P_2 = 5$. }
+   \label{fig:Mas}
+\end{figure}

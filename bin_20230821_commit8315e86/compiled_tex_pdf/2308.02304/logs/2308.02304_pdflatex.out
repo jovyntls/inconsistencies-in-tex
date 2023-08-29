@@ -1,0 +1,546 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 12 point document.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psfrag/psfrag.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cases/cases.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithmic.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrtime.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlogo.sty))))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/stfloats.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tablefootnote/tablefootnote.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xifthen/xifthen.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/mathabx/mathabx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/mathabx/mathabx.dcl))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/capt-of/capt-of.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file 2308.02304_pdflatex.aux.
+-- Lines per column: 32 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Citation `mietzner2009multiple' on page 1 undefined on input lin
+e 57.
+
+
+LaTeX Warning: Citation `tsai2014power' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `xu2022robust' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `mietzner2009multiple' on page 1 undefined on input lin
+e 57.
+
+
+LaTeX Warning: Citation `sanayei2004antenna' on page 1 undefined on input line 
+58.
+
+[1
+Non-PDF special ignored!
+<special> header=psfrag.pro
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `huang2020holographic' on page 2 undefined on input lin
+e 62.
+
+
+LaTeX Warning: Citation `xu2020resource' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `huang2020holographic' on page 2 undefined on input lin
+e 62.
+
+
+LaTeX Warning: Citation `zhu2022modeling' on page 2 undefined on input line 64.
+
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `zhu2022modeling' on page 2 undefined on input line 64.
+
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 2 undefined on input line 64.
+
+[2]
+
+LaTeX Warning: Citation `ma2022mimo' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `zhuravlev2015experimental' on page 3 undefined on inpu
+t line 66.
+
+
+LaTeX Warning: Citation `basbug2017design' on page 3 undefined on input line 66
+.
+
+
+LaTeX Warning: Citation `basbug2017design' on page 3 undefined on input line 66
+.
+
+
+LaTeX Warning: Citation `zhu2022modeling' on page 3 undefined on input line 66.
+
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 3 undefined on input line 66.
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 3 undefined on input line 70.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 3 undefined on input line 70.
+
+[3]
+
+LaTeX Warning: Citation `ma2022mimo' on page 4 undefined on input line 88.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 4 undefined on input line 88.
+
+
+LaTeX Warning: Citation `zhuravlev2015experimental' on page 4 undefined on inpu
+t line 88.
+
+
+LaTeX Warning: Citation `basbug2017design' on page 4 undefined on input line 88
+.
+
+
+LaTeX Warning: Citation `basbug2017design' on page 4 undefined on input line 88
+.
+
+
+LaTeX Warning: Reference `fig:MA_system_model' on page 4 undefined on input lin
+e 88.
+
+[4 <./figures/MA_model_ver3.pdf>] [5] [6]
+
+LaTeX Warning: Reference `Ori_Problem' on page 7 undefined on input line 147.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 7 undefined on input line 147.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 7 undefined on input line 148.
+
+
+LaTeX Warning: Citation `geoffrion1972generalized' on page 7 undefined on input
+ line 151.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 7 undefined on input line 151.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 7 undefined on input line 151.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 7 undefined on input line 153.
+
+
+LaTeX Warning: Citation `geoffrion1972generalized' on page 7 undefined on input
+ line 153.
+
+
+LaTeX Warning: Citation `wu2023globally' on page 7 undefined on input line 153.
+
+
+[7]
+
+LaTeX Warning: Citation `6698281' on page 8 undefined on input line 169.
+
+
+LaTeX Warning: Reference `DC2' on page 8 undefined on input line 174.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 8 undefined on input line 182.
+
+
+LaTeX Warning: Citation `glover1974converting' on page 8 undefined on input lin
+e 182.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 8 undefined on input line 196.
+
+
+LaTeX Warning: Citation `luo2006introduction' on page 8 undefined on input line
+ 197.
+
+[8]
+
+LaTeX Warning: Citation `luo2006introduction' on page 9 undefined on input line
+ 216.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 9 undefined on input line 219.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 9 undefined on input line 230
+.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 9 undefined on input line 230
+.
+
+
+LaTeX Warning: Citation `geoffrion1972generalized' on page 9 undefined on input
+ line 230.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 9 undefined on input line 237
+.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 9 undefined on input line 237
+.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 9 undefined on input line 237
+.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 9 undefined on input line 237
+.
+
+[9]
+
+LaTeX Warning: Reference `Primal_problem' on page 10 undefined on input line 26
+1.
+
+
+LaTeX Warning: Citation `grant2008cvx' on page 10 undefined on input line 261.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 10 undefined on input line 26
+1.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 10 undefined on input line 26
+1.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 10 undefined on input line 26
+1.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 10 undefined on input line 26
+1.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 10 undefined on input line 28
+6.
+
+[10]
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+304.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+304.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 11 undefined on input line 30
+4.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+304.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+304.
+
+
+LaTeX Warning: Reference `Qi' on page 11 undefined on input line 311.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+311.
+
+
+LaTeX Warning: Citation `geoffrion1972generalized' on page 11 undefined on inpu
+t line 313.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 11 undefined on input line 32
+9.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+329.
+
+
+LaTeX Warning: Citation `geoffrion1972generalized' on page 11 undefined on inpu
+t line 329.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 11 undefined on input line 32
+9.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 11 undefined on input line 
+329.
+
+[11]
+
+LaTeX Warning: Reference `Primal_problem' on page 12 undefined on input line 37
+6.
+
+
+LaTeX Warning: Reference `Master_problem' on page 12 undefined on input line 37
+8.
+
+
+LaTeX Warning: Citation `grant2008cvx' on page 12 undefined on input line 378.
+
+
+LaTeX Warning: Reference `Master_problem' on page 12 undefined on input line 37
+8.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 12 undefined on input line 38
+0.
+
+
+LaTeX Warning: Reference `Master_problem' on page 12 undefined on input line 38
+0.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 12 undefined on input line 38
+0.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 12 undefined on input line 38
+0.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 12 undefined on input line 
+380.
+
+
+LaTeX Warning: Reference `Master_problem' on page 12 undefined on input line 38
+0.
+
+
+LaTeX Warning: Reference `Ori_Problem' on page 12 undefined on input line 380.
+
+
+LaTeX Warning: Citation `geoffrion1972generalized' on page 12 undefined on inpu
+t line 380.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 12 undefined on input line 38
+0.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 12 undefined on input line 38
+8.
+
+
+LaTeX Warning: Reference `Primal_problem' on page 12 undefined on input line 38
+9.
+
+
+LaTeX Warning: Reference `Largrangian_conf' on page 12 undefined on input line 
+391.
+
+
+LaTeX Warning: Reference `Reform_Problem' on page 12 undefined on input line 39
+2.
+
+
+LaTeX Warning: Reference `Feasible_problem' on page 12 undefined on input line 
+394.
+
+
+LaTeX Warning: Reference `Largrangian_feasible' on page 12 undefined on input l
+ine 395.
+
+
+LaTeX Warning: Reference `Master_problem' on page 12 undefined on input line 39
+8.
+
+[12]
+
+LaTeX Warning: Citation `ma2022mimo' on page 13 undefined on input line 405.
+
+
+LaTeX Warning: Citation `zhu2022modeling' on page 13 undefined on input line 40
+5.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 13 undefined on input line 405
+.
+
+
+LaTeX Warning: Citation `ma2022mimo' on page 13 undefined on input line 405.
+
+
+LaTeX Warning: Citation `zhu2022modeling' on page 13 undefined on input line 40
+5.
+
+
+LaTeX Warning: Citation `zhu2023movable' on page 13 undefined on input line 405
+.
+
+[13]
+
+LaTeX Warning: Citation `ma2022mimo' on page 14 undefined on input line 409.
+
+
+LaTeX Warning: Citation `zhu2022modeling' on page 14 undefined on input line 40
+9.
+
+[14]
+
+LaTeX Warning: Citation `zhuravlev2015experimental' on page 15 undefined on inp
+ut line 420.
+
+
+LaTeX Warning: Citation `xu2020resource' on page 15 undefined on input line 422
+.
+
+
+LaTeX Warning: Reference `fig:SINR' on page 15 undefined on input line 431.
+
+[15]
+
+LaTeX Warning: Reference `fig::Region' on page 16 undefined on input line 443.
+
+[16 <./figures/Tran_power_vs_SINR_MA_4_4_MIMO_FR_model-eps-converted-to.pdf>]
+No file 2308.02304_pdflatex.bbl.
+[17 <./figures/Tran_power_vs_Num_points_4_4_MIMO_FR_model-eps-converted-to.pdf>
+]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02304/2308.02304_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ){/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/mathabx-type1/matha12.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/mathabx-type1/matha6.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/mathabx-type1/matha8.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/mathabx-type1/matha9.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/mathabx-type1/mathb12.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/mathabx-type1/mathb9.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.02304/2308.02304_pdflatex.pdf (17 pages, 398516
+ bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.02304/2308.02304_pdflatex.log.

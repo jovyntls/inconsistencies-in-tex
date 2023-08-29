@@ -1,0 +1,1914 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021) 
+ restricted system commands enabled.
+(./macrodiversity.tex
+LaTeX2e <2020-10-01> patch level 4
+ L3 programming layer <2021-02-18> (./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+
+-- Using 210mm x 297mm (a4) paper.
+-- Using DVI output.
+-- This is a 10 point document.
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/bbm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/enumerate.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hluatex.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)
+No file 2308.02324_lualatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd)
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 60.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 60.
+
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty))
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 67.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 70.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 75.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 76.
+
+
+LaTeX Warning: Citation `keusgen2016shadowing' on page 1 undefined on input lin
+e 76.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 76.
+
+
+LaTeX Warning: Citation `rappaport2017fading' on page 1 undefined on input line
+ 76.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 76.
+
+
+LaTeX Warning: Citation `sundeep2018blockage' on page 1 undefined on input line
+ 76.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 76.
+
+
+LaTeX Warning: Citation `rappaport2015wideband' on page 1 undefined on input li
+ne 76.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 76.
+
+
+LaTeX Warning: Citation `song2020fully' on page 1 undefined on input line 76.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 76.
+
+
+LaTeX Warning: Citation `miretti2023little' on page 1 undefined on input line 7
+6.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `rappaport2019diversity' on page 1 undefined on input l
+ine 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `3gpp2020multiconnectivity' on page 1 undefined on inpu
+t line 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `qualcomm2021comp' on page 1 undefined on input line 79
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `ericsson2023concept' on page 1 undefined on input line
+ 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `jungnickel2019optical' on page 1 undefined on input li
+ne 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `skouroumounis2017base' on page 1 undefined on input li
+ne 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `giordani2018control' on page 1 undefined on input line
+ 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `gerasimenko2019capacity' on page 1 undefined on input 
+line 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `fettweis2019reliable' on page 1 undefined on input lin
+e 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 1 undefined on input li
+ne 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 1 undefined on input line
+ 79.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 79.
+
+
+LaTeX Warning: Citation `tolli2021blockage' on page 1 undefined on input line 7
+9.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 92.
+
+
+LaTeX Warning: Citation `gesbert2010multicell' on page 1 undefined on input lin
+e 92.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 92.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 1 undefined on input li
+ne 92.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 92.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 1 undefined on input line
+ 92.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 92.
+
+
+LaTeX Warning: Citation `tolli2021blockage' on page 1 undefined on input line 9
+2.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd) [1
+Non-PDF special ignored!{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}<./model.jpg>]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `demir2021foundations' on page 2 undefined on input lin
+e 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `alonzo2019energy' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `garcia2020energy' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `nguyen2022hybrid' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `guo2023energy' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `ismath2021deep' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `dasilva2023energy' on page 2 undefined on input line 9
+4.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `dandrea2021cell' on page 2 undefined on input line 94.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `zaher2022soft' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `pollin2021association' on page 2 undefined on input li
+ne 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `eryani2022self' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `ismath2021deep' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `wang2022joint' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `kamiwatari2022rf' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `femenias2019fronthaul' on page 2 undefined on input li
+ne 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `buzzi2022beam' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `guo2021hybrid' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `bennis2022cellfree' on page 2 undefined on input line 
+94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `yetis2021analog' on page 2 undefined on input line 94.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `femenias2022wideband' on page 2 undefined on input lin
+e 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `nguyen2022hybrid' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `feng2022weighted' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `zhang2020delay' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `pollin2021association' on page 2 undefined on input li
+ne 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `jafri2023cooperative' on page 2 undefined on input lin
+e 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `eryani2022self' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `ismath2021deep' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `wang2022joint' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `studer2022beam' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `kassam2022distributed' on page 2 undefined on input li
+ne 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `kim2023beam' on page 2 undefined on input line 94.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 94.
+
+
+LaTeX Warning: Citation `kamiwatari2022rf' on page 2 undefined on input line 94
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `femenias2019fronthaul' on page 2 undefined on input li
+ne 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `bennis2022cellfree' on page 2 undefined on input line 
+95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `wang2022joint' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `kassam2022distributed' on page 2 undefined on input li
+ne 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `dandrea2021cell' on page 2 undefined on input line 95.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `femenias2022wideband' on page 2 undefined on input lin
+e 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `bennis2022cellfree' on page 2 undefined on input line 
+95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `zaher2022soft' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `dasilva2023energy' on page 2 undefined on input line 9
+5.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `ismath2021deep' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `studer2022beam' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 2 undefined on input li
+ne 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `alonzo2019energy' on page 2 undefined on input line 95
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `femenias2019fronthaul' on page 2 undefined on input li
+ne 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `dandrea2021cell' on page 2 undefined on input line 95.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `buzzi2022beam' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `guo2021hybrid' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `bennis2022cellfree' on page 2 undefined on input line 
+95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `yetis2021analog' on page 2 undefined on input line 95.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `femenias2022wideband' on page 2 undefined on input lin
+e 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `nguyen2022hybrid' on page 2 undefined on input line 95
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `feng2022weighted' on page 2 undefined on input line 95
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `zhang2020delay' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `pollin2021association' on page 2 undefined on input li
+ne 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `jafri2023cooperative' on page 2 undefined on input lin
+e 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `guo2023energy' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `eryani2022self' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `ismath2021deep' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `wang2022joint' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `studer2022beam' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `kassam2022distributed' on page 2 undefined on input li
+ne 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `kim2023beam' on page 2 undefined on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 95.
+
+
+LaTeX Warning: Citation `kamiwatari2022rf' on page 2 undefined on input line 95
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 99.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 2 undefined on input li
+ne 99.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 99.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 99.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 99.
+
+
+LaTeX Warning: Citation `irmer2011coordinated' on page 2 undefined on input lin
+e 99.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 99.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 99.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 2 undefined on input li
+ne 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `dandrea2021cell' on page 2 undefined on input line 101
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `buzzi2022beam' on page 2 undefined on input line 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 2 undefined on input li
+ne 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `dandrea2021cell' on page 2 undefined on input line 101
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `buzzi2022beam' on page 2 undefined on input line 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `skouroumounis2017base' on page 2 undefined on input li
+ne 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `giordani2018control' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `gerasimenko2019capacity' on page 2 undefined on input 
+line 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 101.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 2 undefined on input line
+ 101.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 108.
+
+
+LaTeX Warning: Citation `dammann2002low' on page 2 undefined on input line 108.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 108.
+
+
+LaTeX Warning: Citation `alamouti1998' on page 2 undefined on input line 108.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 108.
+
+
+LaTeX Warning: Citation `cover1982asynchronous' on page 2 undefined on input li
+ne 108.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 108.
+
+
+LaTeX Warning: Citation `blackwell1960capacities' on page 2 undefined on input 
+line 108.
+
+[2]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 111.
+
+
+LaTeX Warning: Reference `sec:model' on page 3 undefined on input line 111.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 111.
+
+
+LaTeX Warning: Reference `sec:schemes' on page 3 undefined on input line 111.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 111.
+
+
+LaTeX Warning: Reference `sec:time' on page 3 undefined on input line 111.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 111.
+
+
+LaTeX Warning: Reference `sec:conclusion' on page 3 undefined on input line 111
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbmss.fd)
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 120.
+
+
+LaTeX Warning: Reference `fig:model' on page 3 undefined on input line 120.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 131.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 3 undefined on input li
+ne 131.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 131.
+
+
+LaTeX Warning: Citation `molish2022directionally' on page 3 undefined on input 
+line 131.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 131.
+
+
+LaTeX Warning: Citation `alper2023uniform' on page 3 undefined on input line 13
+1.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 131.
+
+
+LaTeX Warning: Citation `miretti2023little' on page 3 undefined on input line 1
+31.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 131.
+
+
+LaTeX Warning: Citation `miretti2023little' on page 3 undefined on input line 1
+31.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 132.
+
+
+LaTeX Warning: Citation `miretti2023little' on page 3 undefined on input line 1
+32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 133.
+
+
+LaTeX Warning: Citation `tolli2021blockage' on page 3 undefined on input line 1
+33.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 133.
+
+
+LaTeX Warning: Citation `rappaport2017fading' on page 3 undefined on input line
+ 133.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 133.
+
+
+LaTeX Warning: Citation `rappaport2019diversity' on page 3 undefined on input l
+ine 133.
+
+[3]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 134.
+
+
+LaTeX Warning: Citation `tuninetti2016coverage' on page 4 undefined on input li
+ne 134.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 135.
+
+
+LaTeX Warning: Reference `sec:time' on page 4 undefined on input line 135.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 153.
+
+
+LaTeX Warning: Citation `caire1999capacity' on page 4 undefined on input line 1
+53.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 171.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 191.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 191.
+
+
+LaTeX Warning: Reference `prop:C' on page 4 undefined on input line 191.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 197.
+
+
+LaTeX Warning: Reference `eq:C' on page 4 undefined on input line 197.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 197.
+
+
+LaTeX Warning: Reference `eq:tx_signal' on page 4 undefined on input line 197.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 197.
+
+
+LaTeX Warning: Citation `fettweis2020network' on page 4 undefined on input line
+ 197.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 197.
+
+
+LaTeX Warning: Reference `eq:C' on page 4 undefined on input line 197.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 197.
+
+
+LaTeX Warning: Reference `eq:C' on page 4 undefined on input line 197.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 197.
+
+
+LaTeX Warning: Citation `sesia2004incremental' on page 4 undefined on input lin
+e 197.
+
+[4]
+warning  (file C_vs_pB.pdf) (pdf inclusion): PDF inclusion: found PDF version '
+1.7', but at most version '1.5' allowed
+
+warning  (file C_vs_SNR.pdf) (pdf inclusion): PDF inclusion: found PDF version 
+'1.7', but at most version '1.5' allowed
+
+warning  (file C_vs_L.pdf) (pdf inclusion): PDF inclusion: found PDF version '1
+.7', but at most version '1.5' allowed
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 225.
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 232--233
+[]\TU/ptm/m/sc/10 The proof read-ily fol-lows by ob-serv-ing that
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 238.
+
+
+LaTeX Warning: Reference `fig:ccdf' on page 5 undefined on input line 238.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 238.
+
+
+LaTeX Warning: Reference `fig:capacity' on page 5 undefined on input line 238.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 277.
+
+
+LaTeX Warning: Reference `eq:tx_signal' on page 5 undefined on input line 277.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 289.
+
+
+LaTeX Warning: Reference `eq:tx_signal' on page 5 undefined on input line 289.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 295.
+
+
+LaTeX Warning: Reference `fig:R_erg' on page 5 undefined on input line 295.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 296.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 307.
+
+
+LaTeX Warning: Reference `app:monotonicity' on page 5 undefined on input line 3
+07.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 310.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 311.
+
+
+LaTeX Warning: Reference `eq:R_NCJT' on page 5 undefined on input line 311.
+
+[5<./ccdf.png>]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 319.
+
+
+LaTeX Warning: Reference `app:R_NCJT' on page 6 undefined on input line 319.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 327.
+
+
+LaTeX Warning: Reference `fig:R_out' on page 6 undefined on input line 327.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 327.
+
+
+LaTeX Warning: Reference `fig:R_erg' on page 6 undefined on input line 327.
+
+
+warning  (file ccdf_NCJT_phasediv.pdf) (pdf inclusion): PDF inclusion: found PD
+F version '1.7', but at most version '1.5' allowed
+
+warning  (file R_out_vs_pB.pdf) (pdf inclusion): PDF inclusion: found PDF versi
+on '1.7', but at most version '1.5' allowed
+
+warning  (file R_out_vs_SNR.pdf) (pdf inclusion): PDF inclusion: found PDF vers
+ion '1.7', but at most version '1.5' allowed
+
+warning  (file R_out_vs_L.pdf) (pdf inclusion): PDF inclusion: found PDF versio
+n '1.7', but at most version '1.5' allowed
+
+warning  (file R_erg_vs_pB.pdf) (pdf inclusion): PDF inclusion: found PDF versi
+on '1.7', but at most version '1.5' allowed
+
+warning  (file R_erg_vs_SNR.pdf) (pdf inclusion): PDF inclusion: found PDF vers
+ion '1.7', but at most version '1.5' allowed
+
+warning  (file R_erg_vs_L.pdf) (pdf inclusion): PDF inclusion: found PDF versio
+n '1.7', but at most version '1.5' allowed
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 363.
+
+
+LaTeX Warning: Citation `dammann2002low' on page 6 undefined on input line 363.
+
+
+[6<./C_vs_pB.pdf><./C_vs_SNR.pdf><./C_vs_L.pdf><./ccdf_NCJT_phasediv.pdf>]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 377.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 377.
+
+
+LaTeX Warning: Reference `eq:barR' on page 7 undefined on input line 377.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 384.
+
+
+LaTeX Warning: Reference `proof:lln' on page 7 undefined on input line 384.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 404.
+
+
+LaTeX Warning: Reference `fig:ccdf_NCJT_phasediv' on page 7 undefined on input 
+line 404.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 408.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 414.
+
+
+LaTeX Warning: Reference `prop:C_out' on page 7 undefined on input line 414.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 418.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 423.
+
+
+LaTeX Warning: Reference `fig:R_out' on page 7 undefined on input line 423.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 423.
+
+
+LaTeX Warning: Reference `fig:R_erg' on page 7 undefined on input line 423.
+
+[7<./R_out_vs_pB.pdf><./R_out_vs_SNR.pdf><./R_out_vs_L.pdf><./R_erg_vs_pB.pdf><
+./R_erg_vs_SNR.pdf><./R_erg_vs_L.pdf>]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 432.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 432.
+
+
+LaTeX Warning: Citation `dammann2002low' on page 8 undefined on input line 432.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 432.
+
+
+LaTeX Warning: Reference `eq:model_phase_div' on page 8 undefined on input line
+ 432.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 432.
+
+
+LaTeX Warning: Citation `dammann2002low' on page 8 undefined on input line 432.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 436.
+
+
+LaTeX Warning: Citation `alamouti1998' on page 8 undefined on input line 436.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 441.
+
+
+LaTeX Warning: Citation `tarok1999space' on page 8 undefined on input line 441.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 441.
+
+
+LaTeX Warning: Citation `papadias2003capacity' on page 8 undefined on input lin
+e 441.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 441.
+
+
+LaTeX Warning: Citation `hassibi2002linear' on page 8 undefined on input line 4
+41.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 451.
+
+
+LaTeX Warning: Reference `fig:R_erg' on page 8 undefined on input line 451.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 454.
+
+
+LaTeX Warning: Reference `eq:model_phase_div' on page 8 undefined on input line
+ 454.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 454.
+
+
+LaTeX Warning: Reference `eq:signal_phase_div' on page 8 undefined on input lin
+e 454.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 477.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [8]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 490.
+
+
+LaTeX Warning: Reference `prop:lln' on page 9 undefined on input line 490.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 492.
+
+
+LaTeX Warning: Reference `fig:R_out' on page 9 undefined on input line 492.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 492.
+
+
+LaTeX Warning: Reference `fig:R_erg' on page 9 undefined on input line 492.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 531.
+
+
+LaTeX Warning: Citation `cover1982asynchronous' on page 9 undefined on input li
+ne 531.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 531.
+
+
+LaTeX Warning: Citation `blackwell1960capacities' on page 9 undefined on input 
+line 531.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 531.
+
+
+LaTeX Warning: Reference `prop:C' on page 9 undefined on input line 531.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 539.
+
+
+LaTeX Warning: Reference `eq:C_worstcase_def' on page 9 undefined on input line
+ 539.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 540.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 541.
+
+
+LaTeX Warning: Reference `eq:C_worstcase_def' on page 9 undefined on input line
+ 541.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 551.
+
+
+LaTeX Warning: Reference `proof:C_worstcase' on page 9 undefined on input line 
+551.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 566.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 567.
+
+
+LaTeX Warning: Reference `eq:C_out_worstcase_def' on page 9 undefined on input 
+line 567.
+
+[9]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 580.
+
+
+LaTeX Warning: Reference `prop:C_worstcase' on page 10 undefined on input line 
+580.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 583.
+
+
+LaTeX Warning: Reference `prop:C_worstcase' on page 10 undefined on input line 
+583.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 583.
+
+
+LaTeX Warning: Reference `prop:C_out_worstcase' on page 10 undefined on input l
+ine 583.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 595.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 596.
+
+
+LaTeX Warning: Reference `eq:R_worstcase_def' on page 10 undefined on input lin
+e 596.
+
+
+Overfull \hbox (1.3843pt too wide) detected at line 599
+[]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 607.
+
+
+LaTeX Warning: Reference `proof:R_worstcase' on page 10 undefined on input line
+ 607.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 621.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 622.
+
+
+LaTeX Warning: Reference `eq:R_inst_asynch' on page 10 undefined on input line 
+622.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 633.
+
+
+LaTeX Warning: Reference `proof:hoeffding' on page 10 undefined on input line 6
+33.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 640.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 641.
+
+
+LaTeX Warning: Reference `eq:R_out_worstcase_def' on page 10 undefined on input
+ line 641.
+
+[10]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 661.
+
+
+LaTeX Warning: Reference `prop:R_worstcase' on page 11 undefined on input line 
+661.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 663.
+
+
+LaTeX Warning: Reference `sec:schemes' on page 11 undefined on input line 663.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 805.
+
+
+LaTeX Warning: Reference `prop:monotonicity' on page 11 undefined on input line
+ 805.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 808.
+
+
+Overfull \hbox (1.22635pt too wide) detected at line 827
+[][] [] [] \OML/cmm/m/it/10 d^^R \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Y [] [] ;
+  \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 c\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 < \OT
+1/cmr/m/n/10 1\OML/cmm/m/it/10 :
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 830.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 847.
+
+
+LaTeX Warning: Reference `lem:closedform' on page 11 undefined on input line 84
+7.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 847.
+
+
+LaTeX Warning: Reference `lem:monotone' on page 11 undefined on input line 847.
+
+
+[11]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 928.
+
+
+LaTeX Warning: Reference `prop:R_NCJT' on page 12 undefined on input line 928.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 940.
+
+
+LaTeX Warning: Reference `prop:monotonicity' on page 12 undefined on input line
+ 940.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 940.
+
+
+LaTeX Warning: Reference `prop:monotonicity' on page 12 undefined on input line
+ 940.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 958.
+
+
+LaTeX Warning: Reference `prop:monotonicity' on page 12 undefined on input line
+ 958.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 960.
+
+
+LaTeX Warning: Reference `prop:lln' on page 12 undefined on input line 960.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 973.
+
+
+LaTeX Warning: Reference `prop:C_worstcase' on page 12 undefined on input line 
+973.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 986.
+
+
+LaTeX Warning: Reference `lem:closedform' on page 12 undefined on input line 98
+6.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 986.
+
+
+LaTeX Warning: Reference `app:monotonicity' on page 12 undefined on input line 
+986.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 988.
+
+
+LaTeX Warning: Reference `prop:hoeffding' on page 12 undefined on input line 98
+8.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 995.
+
+
+LaTeX Warning: Citation `hoeffding1963' on page 12 undefined on input line 995.
+
+
+[12]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1001.
+
+
+LaTeX Warning: Reference `prop:R_worstcase' on page 13 undefined on input line 
+1001.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1009.
+
+
+LaTeX Warning: Reference `lem:closedform' on page 13 undefined on input line 10
+09.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1009.
+
+
+LaTeX Warning: Reference `lem:monotone' on page 13 undefined on input line 1009
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1009.
+
+
+LaTeX Warning: Reference `app:monotonicity' on page 13 undefined on input line 
+1009.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1009.
+
+
+LaTeX Warning: Reference `prop:C_worstcase' on page 13 undefined on input line 
+1009.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1009.
+
+
+LaTeX Warning: Reference `proof:C_worstcase' on page 13 undefined on input line
+ 1009.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1009.
+
+
+LaTeX Warning: Reference `prop:C_worstcase' on page 13 undefined on input line 
+1009.
+
+No file 2308.02324_lualatex.bbl.
+[13]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02324/2308.02324_lualatex.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+)
+(see the transcript file for additional information)
+ 806 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 69 attribute, 60 glue_spe
+c, 69 attribute_list, 1 write nodes
+   avail lists: 1:1,2:1271,3:366,4:40,5:1114,6:50,7:14923,8:71,9:2083,10:20,11:
+1361
+<</Users/jovyntan/Library/texlive/2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm
+ss10.600pk>><</Users/jovyntan/Library/texlive/2021/texmf-var/fonts/pk/ljfour/pu
+blic/bbm/bbmss8.525pk>></usr/local/texlive/2021/texmf-dist/fonts/opentype/publi
+c/lm/lmroman8-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/pu
+blic/lm/lmroman10-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentyp
+e/public/lm/lmroman9-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/open
+type/public/lm/lmroman12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/
+opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2021/texmf-dist/fo
+nts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb>
+Output written on 2308.02324_lualatex.pdf (13 pages, 633762 bytes).
+Transcript written on 2308.02324_lualatex.log.

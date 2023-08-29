@@ -1,0 +1,114 @@
+
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+%\usetikzlibrary{arrows,shapes, calc, fit, positioning}
+\usepackage{pgfplots,siunitx}
+\pgfplotsset{compat=newest}
+\pgfplotsset{width=7cm,compat=1.3}
+\usepackage{graphicx}
+\usepackage{algpseudocode}
+
+\pgfplotsset{compat=newest}%
+\usetikzlibrary{positioning,matrix,shapes.multipart,shapes.misc,spy}%
+
+\usetikzlibrary{spy}
+
+\interdisplaylinepenalty=2500%
+\definecolor{lines-1}{RGB}{228,26,28}
+\definecolor{lines-2}{RGB}{55,126,184}
+\definecolor{lines-3}{RGB}{77,175,74}
+\definecolor{lines-4}{RGB}{152,78,163}
+\definecolor{lines-5}{RGB}{255,127,0}
+\definecolor{lines-6}{RGB}{153,153,153}
+\definecolor{lines-7}{RGB}{166,86,40}
+\definecolor{lines-8}{RGB}{247,129,191}
+\definecolor{lines-9}{RGB}{255,255,51}
+\pgfplotscreateplotcyclelist{myCycleList}{
+	color=lines-1,semithick,mark=o,mark size=2,mark repeat=1\\%
+	color=lines-2,semithick,mark=star,mark size=3,mark repeat=1\\%
+	color=lines-3,semithick,mark=square,mark size=2,mark repeat=1\\%
+	color=lines-4,semithick,mark=diamond,mark size=3,mark repeat=1\\%
+	color=lines-5,semithick,mark=triangle,mark size=3,mark repeat=1\\%
+	color=lines-6,semithick,mark=Mercedes star,mark size=3,mark repeat=1\\%
+	color=lines-7,semithick,mark=|,mark size=3,mark repeat=1\\%
+	color=lines-8,semithick,mark=x,mark size=3,mark repeat=1\\%
+}
+\pgfplotsset{
+	compat=1.14,
+	%	compat=newest,
+	width =.9\columnwidth, 
+	height=.72\columnwidth,
+	%trim axis left,trim axis right,
+	%every axis/.append style={
+	ylabel absolute, ylabel style={yshift=0.2cm},
+	xlabel absolute, xlabel style={xshift=0.2cm},
+%	x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+%	y label style={at={(axis description cs:-0.12,.5)},anchor=south},
+	label style={font=\normalsize},
+	tick label style={font=\scriptsize},
+	legend style={font=\footnotesize,cells={align=left}},
+	grid=both,
+	minor grid style={dotted},
+}
+
+
+\begin{document}
+
+    \begin{tikzpicture}
+    \begin{axis}[
+    		xmin=32.4,
+    		xmax=35.5,
+    		%xticklabels={$1/1$,$5/89$,$9/321$,$13/761$,$17/1281$,$21/4785$},
+    		%xtick={0,5,10,15,20},
+    		ymin=-0.1, ymax=1,
+    		xlabel={SNR},
+    		ylabel={MI [bits/2D-symbol]},
+    		ylabel style={at={(axis description cs:0.03,0.5)}, anchor=north},
+    		cycle list name=myCycleList,
+    	    legend pos=north west,
+    		legend cell align=left,
+    		legend style={fill=white, fill opacity=0.4, draw opacity=1,text opacity=1},
+    		ylabel style={yshift=.5cm},
+    		xlabel style={xshift=-.05cm},
+    		height =0.6\linewidth,
+    		width=.9\linewidth,
+    	]
+    	\addplot+[lines-1,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I1,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_1$}
+    		\addplot+[lines-2,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I2,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_2$}
+    		\addplot+[lines-3,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I3,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_3$}
+    	\addplot+[lines-4,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I4,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_4$}
+     \addplot+[lines-5,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I5,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_5$}
+     \addplot+[lines-6,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I6,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_6$}
+     \addplot+[lines-7,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I7,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_7$}
+     \addplot+[lines-8,line width=1pt,mark=none] table[
+    		x expr=\thisrowno{0}+10.7918,
+    		y=I8,
+    	] {./figures/MI/conditional.txt};\addlegendentry{$I_8$}
+\addplot+[dashed,black,mark=none] coordinates {(34.7918,0) (34.7918,1)};
+     
+    \end{axis}
+    \end{tikzpicture}
+
+\end{document}

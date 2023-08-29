@@ -1,0 +1,392 @@
+\begin{thebibliography}{10}
+
+\bibitem{keusgen2016shadowing}
+R.~J. Weiler, M.~Peter, W.~Keusgen, K.~Sakaguchi, and F.~Undi,
+\newblock ``Environment induced shadowing of urban millimeter-wave access
+  links,''
+\newblock {\em IEEE Wireless Communications Letters}, vol. 5, no. 4, pp.
+  440--443, Apr. 2016.
+
+\bibitem{rappaport2017fading}
+G.~R. MacCartney, T.~S. Rappaport, and S.~Rangan,
+\newblock ``Rapid fading due to human blockage in pedestrian crowds at {5G}
+  millimeter-wave frequencies,''
+\newblock in {\em GLOBECOM 2017 - 2017 IEEE Global Communications Conference},
+  2017, pp. 1--7.
+
+\bibitem{sundeep2018blockage}
+C.~Slezak, V.~Semkin, S.~Andreev, Y.~Koucheryavy, and S.~Rangan,
+\newblock ``Empirical effects of dynamic human-body blockage in 60 {GHz}
+  communications,''
+\newblock {\em IEEE Communications Magazine}, vol. 56, no. 12, pp. 60--66, Dec.
+  2018.
+
+\bibitem{rappaport2015wideband}
+T.~S. Rappaport, G.~R. MacCartney, M.~K. Samimi, and S.~Sun,
+\newblock ``Wideband millimeter-wave propagation measurements and channel
+  models for future wireless communication system design,''
+\newblock {\em IEEE Transactions on Communications}, vol. 63, no. 9, pp.
+  3029--3056, Sept. 2015.
+
+\bibitem{song2020fully}
+X.~Song, T.~Kühne, and G.~Caire,
+\newblock ``Fully-/partially-connected hybrid beamforming architectures for
+  mmwave {MU-MIMO},''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 19, no. 3,
+  pp. 1754--1769, 2020.
+
+\bibitem{miretti2023little}
+L.~Miretti, T.~K{\"u}hne, A.~Schultze, W.~Keusgen, G.~Caire, M.~Peter,
+  S.~Sta{\'n}czak, and T.~Eichler,
+\newblock ``Little or no equalization is needed in energy-efficient sub-{TH}z
+  mobile access,''
+\newblock {\em IEEE Communications Magazine}, 2023,
+\newblock To appear. [Online] arXiv:2210.05806.
+
+\bibitem{rappaport2019diversity}
+G.~R. MacCartney and T.~S. Rappaport,
+\newblock ``Millimeter-wave base station diversity for {5G} coordinated
+  multipoint {(CoMP)} applications,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 18, no. 7,
+  pp. 3395--3410, July 2019.
+
+\bibitem{3gpp2020multiconnectivity}
+TS~37.340 3GPP TSG RAN Meeting~{\#}82,
+\newblock ``{NR}; multi-connectivity; {O}verall description (release 15),''
+  Rel. 15, Jun 2018.
+
+\bibitem{qualcomm2021comp}
+Qualcomm,
+\newblock ``How {CoMP} can extend {5G NR} to high capacity and ultra-reliable
+  communications,'' 2020,
+\newblock Accessed: June 19, 2023. [Online]. Available:
+  https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/comp{\textunderscore}webinar{\textunderscore}v18.pdf.
+
+\bibitem{ericsson2023concept}
+Ericsson and Intel,
+\newblock ``A concept for evaluating sub-{THz} communication for future {6G},''
+  2023,
+\newblock Accessed: June 19, 2023. [Online]. Available:
+  https://www.ericsson.com/490d1a/assets/local/reports-papers/research-papers/high-band-testbed-concept-description.pdf.
+
+\bibitem{jungnickel2019optical}
+P.~W. Berenguer, P.~Hellwig, D.~Schulz, J.~Hilt, G.~Kleinpeter, J.~K. Fischer,
+  and V.~Jungnickel,
+\newblock ``Real-time optical wireless mobile communication with high physical
+  layer reliability,''
+\newblock {\em Journal of Lightwave Technology}, vol. 37, no. 6, pp.
+  1638--1646, 2019.
+
+\bibitem{skouroumounis2017base}
+C.~Skouroumounis, C.~Psomas, and I.~Krikidis,
+\newblock ``Low-complexity base station selection scheme in mmwave cellular
+  networks,''
+\newblock {\em IEEE Transactions on Communications}, vol. 65, no. 9, pp.
+  4049--4064, Sept. 2017.
+
+\bibitem{giordani2018control}
+M.~Giordani, M.~Mezzavilla, S.~Rangan, and M.~Zorzi,
+\newblock ``An efficient uplink multi-connectivity scheme for {5G}
+  millimeter-wave control plane applications,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 17, no. 10,
+  pp. 6806--6821, 2018.
+
+\bibitem{gerasimenko2019capacity}
+M.~Gerasimenko, D.~Moltchanov, M.~Gapeyenko, S.~Andreev, and Y.~Koucheryavy,
+\newblock ``Capacity of multiconnectivity mm{W}ave systems with dynamic
+  blockage and directional antennas,''
+\newblock {\em IEEE Transactions on Vehicular Technology}, vol. 68, no. 4, pp.
+  3534--3549, Apr. 2019.
+
+\bibitem{fettweis2019reliable}
+A.~Wolf, P.~Schulz, M.~Dörpinghaus, J.~C.~S. Santos~Filho, and G.~Fettweis,
+\newblock ``How reliable and capable is multi-connectivity?,''
+\newblock {\em IEEE Transactions on Communications}, vol. 67, no. 2, pp.
+  1506--1520, Feb. 2019.
+
+\bibitem{tuninetti2016coverage}
+D.~Maamari, N.~Devroye, and D.~Tuninetti,
+\newblock ``Coverage in mm{W}ave cellular networks with base station
+  co-operation,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 15, no. 4,
+  pp. 2981--2994, Apr. 2016.
+
+\bibitem{fettweis2020network}
+L.~You, X.~Chen, X.~Song, F.~Jiang, W.~Wang, X.~Gao, and G.~Fettweis,
+\newblock ``Network massive {MIMO} transmission over millimeter-wave and
+  terahertz bands: Mobility enhancement and blockage mitigation,''
+\newblock {\em IEEE Journal on Selected Areas in Communications}, vol. 38, no.
+  12, pp. 2946--2960, Dec. 2020.
+
+\bibitem{tolli2021blockage}
+D.~Kumar, J.~Kaleva, and A.~Tölli,
+\newblock ``Blockage-aware reliable mm{W}ave access via coordinated multi-point
+  connectivity,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 20, no. 7,
+  pp. 4238--4252, July 2021.
+
+\bibitem{gesbert2010multicell}
+D.~{Gesbert}, S.~{Hanly}, H.~{Huang}, S.~{Shamai Shitz}, O.~{Simeone}, and
+  W.~{Yu},
+\newblock ``Multi-cell {MIMO} cooperative networks: A new look at
+  interference,''
+\newblock {\em IEEE J. Sel. Areas Commun.}, vol. 28, no. 9, pp. 1380--1408,
+  Sept. 2010.
+
+\bibitem{demir2021foundations}
+{\"O}.~T. Demir, E.~Bj{\"o}rnson, and L.~Sanguinetti,
+\newblock ``Foundations of user-centric cell-free massive {MIMO},''
+\newblock {\em Foundations and Trends{\textregistered} in Signal Processing},
+  vol. 14, no. 3-4, pp. 162--472, 2021.
+
+\bibitem{alonzo2019energy}
+M.~Alonzo, S.~Buzzi, A.~Zappone, and C.~D’Elia,
+\newblock ``Energy-efficient power control in cell-free and user-centric
+  massive {MIMO} at millimeter wave,''
+\newblock {\em IEEE Transactions on Green Communications and Networking}, vol.
+  3, no. 3, pp. 651--663, 2019.
+
+\bibitem{garcia2020energy}
+J.~García-Morales, G.~Femenias, and F.~Riera-Palou,
+\newblock ``Energy-efficient access-point sleep-mode techniques for cell-free
+  mm{W}ave massive {MIMO} networks with non-uniform spatial traffic density,''
+\newblock {\em IEEE Access}, vol. 8, pp. 137587--137605, July 2020.
+
+\bibitem{nguyen2022hybrid}
+N.~T. Nguyen, K.~Lee, and H.~Dai,
+\newblock ``Hybrid beamforming and adaptive {RF} chain activation for uplink
+  cell-free millimeter-wave massive {MIMO} systems,''
+\newblock {\em IEEE Transactions on Vehicular Technology}, vol. 71, no. 8, pp.
+  8739--8755, Aug. 2022.
+
+\bibitem{guo2023energy}
+J.~Guo, D.~Zhang, C.~Cui, and X.~Liu,
+\newblock ``On ergodic energy efficiency of mm{W}ave heterogeneous cell-free
+  systems with {ZF} hybrid precoders,''
+\newblock {\em IEEE Transactions on Vehicular Technology}, pp. 1--17, 2023.
+
+\bibitem{ismath2021deep}
+I.~Ismath, S.~Ali, N.~Rajatheva, and M.~Latva-Aho,
+\newblock ``Deep contextual bandits for fast neighbor-aided initial access in
+  mm{W}ave cell-free networks,''
+\newblock {\em IEEE Wireless Communications Letters}, vol. 10, no. 12, pp.
+  2752--2756, Oct. 2021.
+
+\bibitem{dasilva2023energy}
+H.~T.~P. Da~Silva, H.~S. Silva, M.~S. Alencar, W.~J.~L. De~Queiroz, and U.~S.
+  Dias,
+\newblock ``Energy and spectral efficiencies of cell-free millimeter-wave
+  massive {MIMO} systems under rain attenuation based on ray tracing
+  simulations,''
+\newblock {\em IEEE Access}, vol. 11, pp. 26979--26995, 2023.
+
+\bibitem{dandrea2021cell}
+C.~D'Andrea, G.~Interdonato, and S.~Buzzi,
+\newblock ``User-centric handover in mm{W}ave cell-free massive {MIMO} with
+  user mobility,''
+\newblock in {\em 2021 29th European Signal Processing Conference (EUSIPCO)},
+  2021, pp. 1--5.
+
+\bibitem{zaher2022soft}
+M.~Zaher, E.~Bj{\"o}rnson, and M.~Petrova,
+\newblock ``Soft handover procedures in mm{W}ave cell-free massive {MIMO}
+  networks,''
+\newblock {\em arXiv preprint arXiv:2209.02548}, 2022.
+
+\bibitem{pollin2021association}
+R.~Hersyandika, Q.~Wang, and S.~Pollin,
+\newblock ``Association in dense cell-free mm{W}ave networks,''
+\newblock in {\em ICC 2021 - IEEE International Conference on Communications},
+  2021, pp. 1--6.
+
+\bibitem{eryani2022self}
+Y.~Al-Eryani and E.~Hossain,
+\newblock ``Self-organizing mm{W}ave {MIMO} cell-free networks with hybrid
+  beamforming: A hierarchical {DRL}-based design,''
+\newblock {\em IEEE Transactions on Communications}, vol. 70, no. 5, pp.
+  3169--3185, May 2022.
+
+\bibitem{wang2022joint}
+Z.~Wang, M.~Li, R.~Liu, and Q.~Liu,
+\newblock ``Joint user association and hybrid beamforming designs for cell-free
+  {mmWave MIMO} communications,''
+\newblock {\em IEEE Transactions on Communications}, vol. 70, no. 11, pp.
+  7307--7321, Nov. 2022.
+
+\bibitem{kamiwatari2022rf}
+S.~Kamiwatari, I.~Kanno, T.~Ohseki, K.~Yamazaki, and Y.~Kishi,
+\newblock ``{RF} chain-wise clustering for centralized mm-wave cell-free
+  massive {MIMO} with hybrid beamforming,''
+\newblock in {\em GLOBECOM 2022 - 2022 IEEE Global Communications Conference},
+  2022, pp. 764--769.
+
+\bibitem{femenias2019fronthaul}
+G.~Femenias and F.~Riera-Palou,
+\newblock ``Cell-free millimeter-wave massive {MIMO} systems with limited
+  fronthaul capacity,''
+\newblock {\em IEEE Access}, vol. 7, pp. 44596--44612, Mar. 2019.
+
+\bibitem{buzzi2022beam}
+S.~Buzzi, C.~D’Andrea, M.~Fresia, and X.~Wu,
+\newblock ``Multi-{UE} multi-{AP} beam alignment in user-centric cell-free
+  massive {MIMO} systems operating at mm{W}ave,''
+\newblock {\em IEEE Transactions on Wireless Communications}, pp. 1--1, 2022.
+
+\bibitem{guo2021hybrid}
+J.-C. Guo, Q.-Y. Yu, W.-B. Sun, and W.-X. Meng,
+\newblock ``Robust efficient hybrid pre-coding scheme for mm{W}ave cell-free
+  and user-centric massive {MIMO} communications,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 20, no. 12,
+  pp. 8006--8022, 2021.
+
+\bibitem{bennis2022cellfree}
+I.~Kim, M.~Bennis, and J.~Choi,
+\newblock ``Cell-free mmwave massive {MIMO} systems with low-capacity fronthaul
+  links and low-resolution {ADC/DAC}s,''
+\newblock {\em IEEE Transactions on Vehicular Technology}, vol. 71, no. 10, pp.
+  10512--10526, Oct. 2022.
+
+\bibitem{yetis2021analog}
+C.~M. Yetis, E.~Björnson, and P.~Giselsson,
+\newblock ``Joint analog beam selection and digital beamforming in millimeter
+  wave cell-free massive {MIMO} systems,''
+\newblock {\em IEEE Open Journal of the Communications Society}, vol. 2, pp.
+  1647--1662, 2021.
+
+\bibitem{femenias2022wideband}
+G.~Femenias and F.~Riera-Palou,
+\newblock ``Wideband cell-free mm{W}ave massive {MIMO-OFDM}: Beam squint-aware
+  channel covariance-based hybrid beamforming,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 21, no. 7,
+  pp. 4695--4710, 2022.
+
+\bibitem{feng2022weighted}
+C.~Feng, W.~Shen, J.~An, and L.~Hanzo,
+\newblock ``Weighted sum rate maximization of the {mmWave} cell-free {MIMO}
+  downlink relying on hybrid precoding,''
+\newblock {\em IEEE Transactions on Wireless Communications}, vol. 21, no. 4,
+  pp. 2547--2560, Apr. 2022.
+
+\bibitem{zhang2020delay}
+X.~Zhang, J.~Wang, and H.~V. Poor,
+\newblock ``Statistical delay and error-rate bounded {QoS} provisioning over
+  {mmWave} cell-free {M-MIMO} and {FBC-HARQ-IR} based {6G} wireless networks,''
+\newblock {\em IEEE Journal on Selected Areas in Communications}, vol. 38, no.
+  8, pp. 1661--1677, Aug. 2020.
+
+\bibitem{jafri2023cooperative}
+M.~Jafri, S.~Srivastava, N.~K.~D. Venkategowda, A.~K. Jagannatham, and
+  L.~Hanzo,
+\newblock ``Cooperative hybrid transmit beamforming in cell-free mm{W}ave
+  {MIMO} networks,''
+\newblock {\em IEEE Transactions on Vehicular Technology}, vol. 72, no. 5, pp.
+  6023--6038, May 2023.
+
+\bibitem{studer2022beam}
+J.~Brun, V.~Palhares, G.~Marti, and C.~Studer,
+\newblock ``Beam alignment for the cell-free {mmWave} massive {MU-MIMO}
+  uplink,''
+\newblock in {\em 2022 IEEE Workshop on Signal Processing Systems (SiPS)},
+  2022, pp. 1--6.
+
+\bibitem{kassam2022distributed}
+J.~Kassam, D.~Castanheira, A.~Silva, R.~Dinis, and A.~Gameiro,
+\newblock ``Distributed hybrid equalization for cooperative millimeter-wave
+  cell-free massive {MIMO},''
+\newblock {\em IEEE Transactions on Communications}, vol. 70, no. 8, pp.
+  5300--5316, Aug. 2022.
+
+\bibitem{kim2023beam}
+M.~Kim, S.-E. Hong, and J.-H. Na,
+\newblock ``Beam selection for cell-free millimeter-wave massive {MIMO}
+  systems: A matching-theoretic approach,''
+\newblock {\em IEEE Wireless Communications Letters}, pp. 1--1, 2023.
+
+\bibitem{irmer2011coordinated}
+R.~Irmer, H.~Droste, P.~Marsch, M.~Grieger, G.~Fettweis, S.~Brueck, H.-P.
+  Mayer, L.~Thiele, and V.~Jungnickel,
+\newblock ``Coordinated multipoint: Concepts, performance, and field trial
+  results,''
+\newblock {\em IEEE Communications Magazine}, vol. 49, no. 2, pp. 102--111,
+  Feb. 2011.
+
+\bibitem{dammann2002low}
+A.~Dammann and S.~Kaiser,
+\newblock ``Low complex standard conformable antenna diversity techniques for
+  {OFDM} systems and its application to the {DVB-T} system,''
+\newblock {\em 4th International ITG Conference on Source and Channel Coding,
+  Berlin}, pp. 253--260, 2002.
+
+\bibitem{alamouti1998}
+S.~M. Alamouti,
+\newblock ``A simple transmit diversity technique for wireless
+  communications,''
+\newblock {\em IEEE Journal on Selected Areas in Communications}, vol. 16, no.
+  8, pp. 1451--1458, 1998.
+
+\bibitem{cover1982asynchronous}
+T.~Cover, R.~McEliece, and E.~Posner,
+\newblock ``Asynchronous multiple-access channel capacity,''
+\newblock {\em IEEE Transactions on Information Theory}, vol. 27, no. 4, pp.
+  409--413, 1981.
+
+\bibitem{blackwell1960capacities}
+D.~Blackwell, L.~Breiman, and A.~J. Thomasian,
+\newblock ``The capacities of certain channel classes under random coding,''
+\newblock {\em The Annals of Mathematical Statistics}, vol. 31, no. 3, pp.
+  558--567, 1960.
+
+\bibitem{molish2022directionally}
+J.~Gomez-Ponce, N.~A. Abbasi, A.~E. Willner, C.~J. Zhang, and A.~F. Molisch,
+\newblock ``Directionally resolved measurement and modeling of {THz} band
+  propagation channels,''
+\newblock {\em IEEE Open Journal of Antennas and Propagation}, vol. 3, pp.
+  663--686, 2022.
+
+\bibitem{alper2023uniform}
+J.~M. Eckhardt, A.~Schultze, R.~Askar, T.~Doeker, M.~Peter, W.~Keusgen, and
+  T.~Kürner,
+\newblock ``Uniform analysis of multipath components from various scenarios
+  with time-domain channel sounding at {300GHz},''
+\newblock {\em IEEE Open Journal of Antennas and Propagation}, vol. 4, pp.
+  446--460, 2023.
+
+\bibitem{caire1999capacity}
+G.~Caire and S.~Shamai,
+\newblock ``On the capacity of some channels with channel state information,''
+\newblock {\em IEEE Transactions on Information Theory}, vol. 45, no. 6, pp.
+  2007--2019, 1999.
+
+\bibitem{sesia2004incremental}
+S.~Sesia, G.~Caire, and G.~Vivier,
+\newblock ``Incremental redundancy hybrid {ARQ} schemes based on low-density
+  parity-check codes,''
+\newblock {\em IEEE Transactions on Communications}, vol. 52, no. 8, pp.
+  1311--1321, 2004.
+
+\bibitem{tarok1999space}
+V.~Tarokh, H.~Jafarkhani, and A.~R. Calderbank,
+\newblock ``Space-time block codes from orthogonal designs,''
+\newblock {\em IEEE Transactions on Information Theory}, vol. 45, no. 5, pp.
+  1456--1467, 1999.
+
+\bibitem{papadias2003capacity}
+C.~B. Papadias and G.~J. Foschini,
+\newblock ``Capacity-approaching space-time codes for systems employing four
+  transmitter antennas,''
+\newblock {\em IEEE Transactions on Information Theory}, vol. 49, no. 3, pp.
+  726--732, Mar. 2003.
+
+\bibitem{hassibi2002linear}
+B.~Hassibi and B.~M. Hochwald,
+\newblock ``High-rate codes that are linear in space and time,''
+\newblock {\em IEEE Transactions on Information Theory}, vol. 48, no. 7, pp.
+  1804--1824, 2002.
+
+\bibitem{hoeffding1963}
+W.~Hoeffding,
+\newblock ``Probability inequalities for sums of bounded random variables,''
+\newblock {\em Journal of the American Statistical Association}, vol. 58, no.
+  301, pp. 13--30, 1963.
+
+\end{thebibliography}

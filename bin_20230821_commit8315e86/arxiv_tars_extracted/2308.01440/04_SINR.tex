@@ -1,0 +1,377 @@
+\section{Optimal SINR in Cellular Networks}\label{SINR-Chapter}
+
+
+\subsection{Problem Formulation}\label{SINR-Problem-Formulation}
+
+Our goal in this section is to optimize the average signal-to-interference-plus-noise ratio (SINR) across all users within the target region $Q$. Not only is this optimization performed over the cell partitioning $\bm{V}$ and BS vertical antenna tilts $\bm{\Theta}$, but also this is done over BS transmission power values $\bm{\rho}$. Indeed, unlike the case of RSS in Section \ref{RSS-Chapter}, BS transmission power values play a crucial role because of the interference from neighboring cells. Using the definition of $\mathtt{RSS_{dBm}^{(n)}}$ in Eq. (\ref{RSS-dBm}), we define:
+\begin{equation}\label{eqn:SINR_dB}
+\mathtt{SINR^{(n)}_{dB}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) = 10 \log_{10} \frac{10^{\frac{1}{10}\mathtt{RSS^{(n)}_{dBm}} (\bm{q}; \theta_n, \rho_n)}}{\sum_{j\neq n}^{} 10^{\frac{1}{10}\mathtt{RSS^{(j)}_{dBm}} (\bm{q}; \theta_j, \rho_j)} + \sigma^2}  
+\end{equation}
+where $\sigma^2$ denotes the noise variance in linear units. The performance function, which is the SINR measured in dB and averaged over all network users, is given by:
+\begin{align}\label{SINR-objective}
+    \Phi_{\mathtt{SINR}}(\bm{V}, \mathbf{\Theta}, \bm{\rho}) &=  \sum_{n=1}^{N} \int_{V_n} \mathtt{SINR_{dB}^{(n)}}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}, \\
+    \textrm{s.t. } \rho_n &\leq \rho_{\max} \qquad \forall n\in\{1,\cdots, N\}, \label{SINR-objective-constraint}
+\end{align}
+where the constraint in Eq. (\ref{SINR-objective-constraint}) comes from the fact that for any BS, say $n$, the transmission power $\rho_n$ measured in dBm cannot exceed $\rho_{\max}$. In what follows, we aim to optimize the performance function $\Phi_{\mathtt{SINR}}$ over the cell partitioning, BS vertical antenna tilts, and BS transmission powers.
+
+
+
+
+\subsection{Analytical Framework}\label{SINR-Analytical-Framework}
+
+Our approach to optimize the performance function $\Phi_{\mathtt{SINR}}$ over variables $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$ is via an alternating optimization algorithm that iteratively optimizes each variable while the other two are held fixed. This goal is carried out over the following three steps: (i) find the optimal cell partitioning $\bm{V}$ for a given BS vertical antenna tilt $\bm{\Theta}$ and transmission power $\bm{\rho}$; (ii) find the optimal antenna tilts $\bm{\Theta}$ for a given cell partitioning and BS transmission power $\bm{\rho}$; and (iii) find the optimal BS transmission power $\bm{\rho}$ for a given cell partitioning $\bm{V}$ and vertical antenna tilts $\bm{\Theta}$. The first step is accomplished in the following proposition. 
+\begin{Proposition}\label{optimal-V-SINR}
+For a given set of BS vertical antenna tilts $\bm{\Theta}$ and transmission power values $\bm{\rho}$, the optimal cell partitioning $\bm{V}^*(\bm{\Theta}, \bm{\rho}) = \big(V_1^*(\bm{\Theta}, \bm{\rho}), \cdots, V_N^*(\bm{\Theta}, \bm{\rho})\big)$ that maximizes the performance function $\Phi_{\mathtt{SINR}}$ is given by:
+\begin{multline}\label{optimal-cell-partitioning-SINR}
+    \!\!\! V_n^*(\bm{\Theta}, \bm{\rho}) \!=\! \big\{\bm{q} \in Q \mid \mathtt{RSS_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) \geq \mathtt{RSS_{dBm}^{(k)}}(\bm{q}; \theta_k, \rho_k), \\ \textrm{ for all } 1 \leq k \leq N \big\},
+\end{multline}
+for each $n \in \{1, \cdots, N\}$. The ties can be broken arbitrarily.
+\end{Proposition}
+\noindent The proof of Proposition \ref{optimal-V-SINR} is provided in Appendix \ref{Appendix_A}.
+
+
+For the second step, we aim to apply gradient ascent to find the optimal $\bm{\Theta}$ for a given cell partitioning and BS transmission power. The following proposition provides the main ingredient needed for this process.
+\begin{Proposition}\label{gradient-equation-SINR}
+The derivative of Eq. (\ref{SINR-objective}) w.r.t. the BS vertical antenna tilt $\theta_n$ is given by:
+\begin{multline}\label{gradient-equation-SINR-equation}
+     \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V}, \bm{\Theta}, \bm{\rho})}{\partial \theta_n} =  \frac{24}{\theta^2_{\mathrm{3dB}}} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_u} \!\!\!\!\!\!\!\!\!\!\!\! (\theta_{n,\bm{q}}-\theta_n) \lambda(\bm{q}) d\bm{q}  
+    \\ +  \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_G} \!\!\!\! (\theta_{n,\bm{q}}-\theta_n) \lambda(\bm{q}) d\bm{q} \Bigg\}  -\frac{24}{\theta^2_{\mathrm{3dB}}} \sum_{i\neq n}^{}  \Bigg\{ \\ \sum_{u=1}^{N_U} \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_u}  \frac{(\theta_{n,\bm{q}}-\theta_n) \cdot 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(n)}} (\bm{q}; \theta_n, \rho_n)}}{{\sum_{j\neq i}^{} 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(j)}} (\bm{q}; \theta_j, \rho_j)} + \sigma^2}} \lambda(\bm{q}) d\bm{q} 
+    \\+ \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_G}  \frac{(\theta_{n,\bm{q}}-\theta_n) \cdot 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(n)}} (\bm{q}; \theta_n, \rho_n)}}{{\sum_{j\neq i}^{} 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(j)}} (\bm{q}; \theta_j,\rho_j)} + \sigma^2}} \lambda(\bm{q}) d\bm{q} \Bigg\}.
+\end{multline}
+\end{Proposition}
+\textit{Proof. }Similar to the proof of Proposition \ref{rss-grad-eq}, it can be shown that the partial derivative in Eq. (\ref{gradient-equation-SINR-equation}) has two components and the second component is zero. This is because, according to Eq. (\ref{optimal-cell-partitioning-SINR-proof}) in Appendix \ref{Appendix_A}, for any point $\bm{q}$ on the boundary of neighboring regions $V_n$ and $V_m$, we have $\mathtt{SINR_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) = \mathtt{SINR_{dBm}^{(m)}}(\bm{q}; \theta_m, \rho_m)$ and the unit outward normal vectors have opposite directions \cite{GuoJaf2016}. Thus:
+\begin{multline}\label{eqn:derivativePhi-SINR}
+    \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta}, \bm{\rho})}{\partial \theta_n} = 
+    \sum_{i=1}^{N} \int_{V_i(\mathbf{\Theta}, \bm{\rho})} \!\!\!\frac{\partial \mathtt{SINR_{dB}^{(i)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n}  \lambda(\bm{q})d\bm{q} \\
+     =
+    \int_{V_n(\mathbf{\Theta}, \bm{\rho})} \frac{\partial}{\partial \theta_n} \mathtt{SINR_{dB}^{(n)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q})d\bm{q} 
+      \\ + \sum_{i\neq n}^{} \int_{V_i(\mathbf{\Theta}, \bm{\rho})} \frac{\partial}{\partial \theta_n} \mathtt{SINR_{dB}^{(i)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q})d\bm{q}.
+\end{multline}
+Eq. (\ref{gradient-equation-SINR-equation}) is then derived via straightforward algebraic operations on Eq. (\ref{eqn:derivativePhi-SINR}) and using the definition of SINR in Eq. (\ref{eqn:SINR_dB}), which concludes the proof. $\hfill\blacksquare$
+
+
+Finally, for the third step, we optimize the BS transmission power $\bm{\rho}$ for a given cell partitioning $\bm{V}$ and vertical antenna tilts $\bm{\Theta}$. We utilize the gradient projection method, a variation of the gradient ascent algorithm that keeps the power of each BS lower than its maximum possible power. To this end, we require the gradient formula given below.
+\begin{Proposition}\label{sinr-power-allocation-gradient}
+The derivative of Eq. (\ref{SINR-objective}) w.r.t. the BS transmission power $\rho_n$ is given by:
+\begin{multline}\label{sinr-power-allocation-gradient-equation}
+     \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V}, \bm{\Theta}, \bm{\rho})}{\partial \rho_n} =   \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_u}   \lambda(\bm{q}) d\bm{q}  
+    \\+  \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_G}  \lambda(\bm{q}) d\bm{q} \Bigg\}   - \sum_{i\neq n}^{}  \Bigg\{ \\ \sum_{u=1}^{N_U} \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_u} \!\!\!\!\!\!\!\!\! \!\!\!\!\frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n) \times \mathtt{SINR_{lin}^{(i)}}(\bm{q}; \bm{\Theta},\bm{\rho})}{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)} \lambda(\bm{q}) d\bm{q}
+    \\+ \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_G} \!\!\!\!\!\!\!\!\!\!\!\!\! \frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n) \times \mathtt{SINR_{lin}^{(i)}}(\bm{q}; \bm{\Theta},\bm{\rho})}{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)} \lambda(\bm{q}) d\bm{q} \Bigg\}.
+\end{multline}
+\end{Proposition}
+\noindent The proof of Proposition \ref{sinr-power-allocation-gradient} is provided in Appendix \ref{Appendix_B}.
+
+
+
+In the remainder of this section, we embed Propositions \ref{optimal-V-SINR}, \ref{gradient-equation-SINR}, and \ref{sinr-power-allocation-gradient} into an alternating optimization algorithm that maximizes the average SINR across all network users.
+
+
+\subsection{Proposed Algorithm}\label{SINR-Algorithm}
+
+Propositions \ref{optimal-V-SINR}, \ref{gradient-equation-SINR}, and \ref{sinr-power-allocation-gradient} provide the main ingredients required for the three-step maximum-SINR power allocation and vertical antenna tilt (Max-SINR-PA-VAT)
+optimization process presented in Algorithm \ref{BS_PA_VAT_Algorithm}. While BS vertical antenna tilts $\bm{\Theta}$ are optimized via gradient ascent, as shown in Algorithm \ref{BS_PA_VAT_Algorithm}, the BS transmission powers $\bm{\rho}$ are optimized via the gradient projection method with the projection operator $P_{\bm{\Lambda}}(.)$ that projects the updated $\bm{\rho}$ onto the subspace $\bm{\Lambda} = (-\infty, \rho_{\max}]^N$. This is done to make sure that the range of all transmission power values remain in the feasible set and satisfy the constraint in Eq. (\ref{SINR-objective-constraint}).
+
+
+
+\begin{algorithm}[ht!]
+\SetAlgoLined
+\SetKwRepeat{Do}{do}{while}
+\KwResult{Optimal cell partitioning $\bm{V}^*$, BS antenna tilts $\bm{\Theta}^*$ and transmission power $\bm{\rho}^*$.}
+
+\textbf{Input:} Initial cell partitioning $\bm{V}$, BS vertical antenna tilts $\mathbf{\Theta}$ and transmission power $\bm{\rho}$, 
+maximum BS transmission power $\rho_{\max}$, learning rates $\eta_0, \eta'_0 \in (0,1)$, 
+convergence error thresholds $\epsilon_1, \epsilon_2, \epsilon_3 \in \mathbb{R}^+$, constant $\kappa \in  (0, 1)$\;
+
+
+\Do{$\frac{\Phi_{\mathtt{SINR}}^{\textrm{(new)}} - \Phi_{\mathtt{SINR}}^{\textrm{(old)}}}{\Phi_{\mathtt{SINR}}^{\textrm{(old)}}} \geq \epsilon_3$}
+{
+-- Calculate  $\Phi_{\mathtt{SINR}}^{\textrm{(old)}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+-- Update the cell $V_n$ according to Eq. (\ref{optimal-cell-partitioning-SINR}) for each $n \in \{1, \cdots, N\}$\;
+-- Set $\eta \gets \eta_0$\;
+\Do{$\frac{\Phi_{\textrm{e}} - \Phi_{\textrm{s}}}{\Phi_{\textrm{s}}} \geq \epsilon_1$}
+{
+-- Calculate  $\Phi_{\textrm{s}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta},\bm{\rho}\right)$\;
+-- Calculate $\frac{\partial \Phi_{\mathtt{SINR}}(\mathbf{V},\mathbf{\Theta},\bm{\rho})}{\partial \theta_n}$ according to Eq. (\ref{gradient-equation-SINR-equation}) for each $n \in \{1, \cdots, N\}$\;
+-- $\eta \gets \eta \times \kappa$\;
+-- $\mathbf{\Theta} \gets \mathbf{\Theta} + \eta \nabla_{\mathbf{\Theta}} \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta},\bm{\rho})$\;
+-- Calculate $\Phi_{\textrm{e}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+}
+-- Set $\eta \gets \eta'_0$\;
+\Do{$\frac{\Phi_{\textrm{e}} - \Phi_{\textrm{s}}}{\Phi_{\textrm{s}}} \geq \epsilon_2$}
+{
+-- Calculate  $\Phi_{\textrm{s}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+-- Calculate $\frac{\partial \Phi_{\mathtt{SINR}}(\mathbf{V},\mathbf{\Theta}, \bm{\rho})}{\partial \rho_n}$ according to Eq. (\ref{sinr-power-allocation-gradient-equation}) for each $n \in \{1, \cdots, N\}$\;
+-- $\eta \gets \eta \times \kappa$\;
+-- $\bm{\rho} \gets P_{\bm{\Lambda}}\big(\bm{\rho} + \eta \nabla_{\bm{\rho}} \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta}, \bm{\rho})\big)$\;
+-- Calculate $\Phi_{\textrm{e}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+}
+-- Calculate  $\Phi_{\mathtt{SINR}}^{\textrm{(new)}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+}
+ \caption{Maximum-SINR power allocation and vertical antenna tilt (Max-SINR-PA-VAT) optimization}
+ \label{BS_PA_VAT_Algorithm}
+\end{algorithm}
+
+
+
+\begin{Proposition}\label{BS-PA-VAT-convergence}
+    The Max-SINR-PA-VAT algorithm is an iterative improvement algorithm and converges.
+\end{Proposition}
+
+{\it Proof. } The Max-SINR-PA-VAT algorithm iteratively updates the parameters $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$. Updating the cell partitioning $\bm{V}$ according to Eq. (\ref{optimal-cell-partitioning-SINR}) does not decrease the performance function $\Phi_{\mathtt{SINR}}$ because Proposition \ref{optimal-V-SINR} guarantees its optimality for a given $\bm{\Theta}$ and $\bm{\rho}$. A similar argument to the one presented in Proposition \ref{BS-VAT-convergence} suggests that updating $\bm{\Theta}$ and $\bm{\rho}$ using the gradient ascent and the gradient projection methods, respectively, will not result in a decrease in the performance function. This indicates that Algorithm \ref{BS_PA_VAT_Algorithm} produces a sequence of performance function values that are non-decreasing and upper-bounded, as a result of the finite transmission power at each BS; thus, it converges. $\hfill\blacksquare$
+
+The above general framework, inspired by quantization theory, works for any performance function for which the required gradients can be calculated. To demonstrate the general capability of our proposed solution, in the sequel, we introduce and optimize two generalized performance functions: the max-product SINR and the soft max-min SINR \cite{nikbakht2020unsupervised}. These performance functions avoid the occasional disparities among individual network users that can happen when optimizing the performance function $\Phi_{\mathtt{SINR}}$.
+%While optimizing the performance function $\Phi_{\mathtt{SINR}}$ improves the average SINR in dB, it may occasionally result in performance disparities among individual network users. To achieve a desired balance, in the sequel we introduce and optimize two generalized performance functions: the max-product SINR and the soft max-min SINR \cite{nikbakht2020unsupervised}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Fairness in Cellular Network Configuration}\label{SM-MP-Chapter}
+
+%The performance function $\Phi_{\mathtt{SINR}}$ studied in the previous section takes into account the SINR provided in dB and averaged over all network users. While optimizing this performance function improves the average SINR in dB, it can lead to significant performance disparities among individual network users. To achieve a desired balance, it is important to introduce appropriate SINR performance measures that provide a level of fairness among different users. Two such measures, namely the Max-Product and Soft Max-Min proxy performance functions \cite{nikbakht2020unsupervised}, are studied in Sections \ref{MP-Subsection} and \ref{SM-Subsection}, respectively. These proxy performance functions aim to promote fairness and balance the users' SINR at the expense of a reduced average performance.
+
+\subsection{Generalization to Max-Product SINR}\label{MP-Subsection}
+
+\subsubsection{Performance Function}\label{MP-Objective}
+%To avoid low SINR values, 
+The goal of the max-product performance function is to maximize the product of the SINRs. 
+%Obviously, the outcome of such an optimization cannot result in extremely small SINR values since such a case will create low SINR product \cite{nikbakht2020unsupervised}. 
+%The main property of the max-product performance function is to provide a trade-off between the average performance and fairness. The goal is to maximize the product of SINRs while discouraging users with extremely low or high SINR values. 
+The max-product proxy performance function is defined as:
+\begin{align}\label{max-product-objective}
+    \Phi_{{\sf MP}}(\bm{V}, \mathbf{\Theta}, \bm{\rho}) &=  \sum_{n=1}^{N} \int_{V_n} \gamma^{(n)}_{{\sf MP}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}, \\
+    \textrm{s.t. } \rho_n &\leq \rho_{\max} \qquad \forall n \in \{1,\cdots, N\}, \label{max-product-objective-constraint}
+\end{align}
+where
+\begin{align}\label{Max-product}
+\gamma_{\sf MP}^{(n)}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) = - \log \! \left[ \mu + \frac{1}{(\mathtt{SINR^{(n)}_{lin}}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) + \nu )} \right].
+\end{align}
+The offset $\nu$ prevents the performance from being dominated by users with very low SINRs. The offset $\mu$ plays a similar role for high SINRs. %, e.g., $\mu=0.01$ stops rewarding SINRs above $20$dB. 
+Note that for the special case of $\mu = \nu = 0$, $\Phi_{{\sf MP}}$ in \eqref{max-product-objective} boils down to $\Phi_{\mathtt{SINR}}$ in \eqref{SINR-objective} except for a constant multiplier. As a result, 
+%for $\mu = \nu = 0$, maximizing  \eqref{max-product-objective} or \eqref{SINR-objective} results in the same solution and for a non-zero $\mu$ and/or $\nu$ value, 
+\eqref{max-product-objective} can be considered as a generalization of \eqref{SINR-objective}.
+%For the specific scenario where $\mu = \nu = 0$, it is important to highlight that the performance function of the max-product proxy, as shown in Eq. (\ref{max-product-objective}), becomes equivalent to that of $\Phi_{\mathtt{SINR}}$ stated in Eq. (\ref{SINR-objective}), except for a constant multiplier.
+
+
+
+
+\subsubsection{Optimal Configuration}\label{MP-Optimal-Configuration}
+
+The iterative process for maximizing the constrained performance function described in Eqs. (\ref{max-product-objective}) and (\ref{max-product-objective-constraint}) over variables $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$ is similar to the one outlined in Section \ref{SINR-Algorithm}. This process requires determining the optimality conditions for each variable while keeping the other two variables constant.
+
+\begin{Proposition}\label{MP-optimal-cell}
+For a given BS vertical antenna tilts $\bm{\Theta}$ and transmission powers $\bm{\rho}$, the optimal cell partitioning $\bm{V}^*(\bm{\Theta}, \bm{\rho}) = \left(V^*_1(\bm{\Theta}, \bm{\rho}), \cdots, V_N^*(\bm{\Theta}, \bm{\rho})\right)$ that maximizes $\Phi_{{\sf MP}}$ is given by:
+\begin{multline}\label{optimal-cell-partitioning-MP}
+    \!\!\!\!\! V_n^*(\bm{\Theta}, \bm{\rho}) = \big\{\bm{q} \in Q \mid \mathtt{RSS_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) \geq \mathtt{RSS_{dBm}^{(k)}}(\bm{q}; \theta_k, \rho_k), \\ \textrm{ for all } 1 \leq k \leq N \big\}.,
+\end{multline}        
+for each $n \in \{1, \cdots, N\}$. The ties can be broken arbitrarily.
+\end{Proposition}
+\textit{Proof. }
+Since $\mu$ and $\nu$ are constants, $\gamma_{\sf MP}^{(n)}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) \geq \gamma_{\sf MP}^{(k)}(\bm{q}; \mathbf{\Theta}, \bm{\rho})$ for all $k \neq n$ is the same as Eq. \eqref{optimal-cell-partitioning-SINR-proof} in Appendix \ref{Appendix_A}; therefore, the rest of the proof follows from that of Proposition \ref{optimal-V-SINR}. $\hfill\blacksquare$ 
+%In order to achieve an optimal association between the network user located at position $\bm{q} \in Q$ and BS $n$, $\gamma_{\sf MP}^{(n)}(\bm{q}; \mathbf{\Theta}, \bm{\rho})$ must be no less than $\gamma_{\sf MP}^{(k)}(\bm{q}; \mathbf{\Theta}, \bm{\rho})$ for any other index $k \neq n$. The inequality $\gamma_{\sf MP}^{(n)}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) \geq \gamma_{\sf MP}^{(k)}(\bm{q}; \mathbf{\Theta}, \bm{\rho})$ is equivalent to base station $n$ providing the maximum SINR value at the user location $\bm{q}$, which is mathematically asserted in Eq. (\ref{optimal-cell-partitioning-SINR-proof}). Thus, the remainder of the proof follows the same reasoning as in the proof of Proposition \ref{optimal-V-SINR}. $\hfill\blacksquare$
+
+
+Next, we provide the partial derivative expression for $\Phi_{{\sf MP}}$ w.r.t. the BS $n$'s antenna tilt $\theta_n$.
+
+
+\begin{Proposition}\label{gradient-theta-MP}
+    The partial derivative of the performance function $\Phi_{{\sf MP}}$ w.r.t. the BS $n$'s vertical antenna tilt $\theta_n$ is given by Eq. (\ref{gradient-theta-MP-equation}), on top of the next page, 
+    % \begin{figure*}[t!]
+% \begin{multline}\label{gradient-theta-MP-equation}
+%     \frac{\partial \Phi_{{\sf MP}}}{\partial \theta_n} = \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n \cap Q_u}  \frac{ \SINR^{(n)}_{\mathtt{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\textrm{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right)}{\left[\SINR^{(n)}_{\mathtt{lin}} + \nu \right] \cdot \left[ 1 + \mu \left( \SINR^{(n)}_{\mathtt{lin}} + \nu \right) \right] }  \lambda(\bm{q})d\bm{q} \\ +  \int_{V_n \cap Q_G}  \frac{ \SINR^{(n)}_{\mathtt{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\textrm{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right)}{\left[\SINR^{(n)}_{\mathtt{lin}} + \nu \right] \cdot \left[ 1 + \mu \left( \SINR^{(n)}_{\mathtt{lin}} + \nu \right) \right] }    \lambda(\bm{q})d\bm{q} \Bigg\} \\
+%     - \sum_{i\neq n} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u}  \frac{\SINR^{(i)}_{\mathtt{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,q} - \theta_n \right)\cdot \RSS^{(n)}_{\mathtt{lin}}  }{\left[\SINR^{(i)}_{\mathtt{lin}} + \nu \right] \cdot 
+%     \left[ 1 + \mu \left( \SINR^{(i)}_{\mathtt{lin}} + \nu \right) \right] \cdot \left[ {\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}}  + \sigma^2_{\mathtt{lin}}} \right] }   \lambda(\bm{q})d\bm{q} \\ + \int_{V_i \cap Q_G}   \frac{\SINR^{(i)}_{\mathtt{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,q} - \theta_n \right)\cdot \RSS^{(n)}_{\mathtt{lin}}  }{\left[\SINR^{(i)}_{\mathtt{lin}} + \nu \right] \cdot 
+%     \left[ 1 + \mu \left( \SINR^{(i)}_{\mathtt{lin}} + \nu \right) \right] \cdot \left[ {\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}}  + \sigma^2_{\mathtt{lin}}} \right] }   \lambda(\bm{q})d\bm{q}  \Bigg \},    
+% \end{multline}   
+\begin{figure*}[t!]
+\begin{multline}\label{gradient-theta-MP-equation}
+    \frac{\partial \Phi_{{\sf MP}}}{\partial \theta_n} =   \int_{V_n}  \frac{ \SINR^{(n)}_{\mathtt{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\textrm{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right)}{\left[\SINR^{(n)}_{\mathtt{lin}} + \nu \right] \cdot \left[ 1 + \mu \left( \SINR^{(n)}_{\mathtt{lin}} + \nu \right) \right] }  \lambda(\bm{q})d\bm{q} \\
+    - \sum_{i\neq n}   \int_{V_i }  \frac{\SINR^{(i)}_{\mathtt{lin}} \cdot \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,q} - \theta_n \right)\cdot \RSS^{(n)}_{\mathtt{lin}}  }{\left[\SINR^{(i)}_{\mathtt{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(i)}_{\mathtt{lin}} + \nu \right) \right] \cdot \left[ {\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}}  + \sigma^2_{\mathtt{lin}}} \right] }   \lambda(\bm{q})d\bm{q}.  
+\end{multline}   
+\end{figure*}
+where for the sake of brevity of the notation, the dependence of the variables $\mathtt{SINR}_{\mathtt{lin}}^{(n)}$, $\mathtt{RSS}_{\mathtt{lin}}^{(n)}$, and $V_n$ on $\bm{\Theta}$ and $\bm{\rho}$ is omitted.
+\end{Proposition}
+\noindent The proof is similar to that of Proposition \ref{gradient-equation-SINR} and is omitted.
+%The proof of Proposition \ref{gradient-theta-MP} is provided in Appendix \ref{Appendix_C}.
+
+
+
+Next, we provide the partial derivative of $\Phi_{{\sf MP}}$ w.r.t. $\rho_n$.
+%Finally, the partial derivative of $\Phi_{{\sf MP}}$ w.r.t. $\rho_n$ is given by the following equation:
+
+\begin{Proposition}\label{gradient-formula-MP-power}
+The partial derivative of $\Phi_{{\sf MP}}$ w.r.t. the BS transmission power $\rho_n$ is given by Eq. (\ref{gradient-MP-power}),  on top of the next page,
+% \begin{figure*}[t!]
+%     \begin{multline}\label{gradient-MP-power}
+%     \frac{\partial \Phi_{{\sf MP}}}{\partial \rho_n} = \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n \cap Q_u}  \frac{\SINR^{(n)}_{\mathtt{lin}} \cdot \frac{\log 10}{10}}{\left[\SINR^{(n)}_{\mathtt{lin}} + \nu \right] \cdot 
+%     \left[ 1 + \mu \left( \SINR^{(n)}_{\mathtt{lin}} + \nu \right) \right] }   \lambda(\bm{q})d\bm{q} \\ + \int_{V_n \cap Q_G}   \frac{\SINR^{(n)}_{\mathtt{lin}} \cdot \frac{\log 10}{10}}{\left[\SINR^{(n)}_{\mathtt{lin}} + \nu \right] \cdot 
+%     \left[ 1 + \mu \left( \SINR^{(n)}_{\mathtt{lin}} + \nu \right) \right] }   \lambda(\bm{q})d\bm{q} \Bigg\} \\
+%     - \sum_{i\neq n} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u}     \frac{\left[\frac{1}{10}\log (10) \cdot \left[ \SINR^{(i)}_{\mathtt{lin}} \right]^2 \cdot \frac{\RSS^{(n)}_{\mathtt{lin}}}{\RSS^{(i)}_{\mathtt{lin}}}
+%     \right]}{\left[\SINR^{(i)}_{\mathtt{lin}} + \nu \right] \cdot 
+%     \left[ 1 + \mu \left( \SINR^{(i)}_{\mathtt{lin}} + \nu \right) \right] }  
+%      \lambda(\bm{q})d\bm{q} \\ + \int_{V_i \cap Q_G}     \frac{\left[\frac{1}{10}\log (10) \cdot \left[ \SINR^{(i)}_{\mathtt{lin}} \right]^2 \cdot \frac{\RSS^{(n)}_{\mathtt{lin}}}{\RSS^{(i)}_{\mathtt{lin}}}
+%     \right]}{\left[\SINR^{(i)}_{\mathtt{lin}} + \nu \right] \cdot 
+%     \left[ 1 + \mu \left( \SINR^{(i)}_{\mathtt{lin}} + \nu \right) \right] }  \lambda(\bm{q})d\bm{q}  \Bigg \},
+% \end{multline}
+% \end{figure*}
+\begin{figure*}[t!]
+    \begin{multline}\label{gradient-MP-power}
+    \frac{\partial \Phi_{{\sf MP}}}{\partial \rho_n} =   \int_{V_n }  \frac{\SINR^{(n)}_{\mathtt{lin}} \cdot \frac{\log 10}{10}}{\left[\SINR^{(n)}_{\mathtt{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(n)}_{\mathtt{lin}} + \nu \right) \right] }   \lambda(\bm{q})d\bm{q}   
+    - \sum_{i\neq n}   \int_{V_i }     \frac{\left[\frac{1}{10}\log (10) \cdot \left[ \SINR^{(i)}_{\mathtt{lin}} \right]^2 \cdot \frac{\RSS^{(n)}_{\mathtt{lin}}}{\RSS^{(i)}_{\mathtt{lin}}}
+    \right]}{\left[\SINR^{(i)}_{\mathtt{lin}} + \nu \right] \cdot 
+    \left[ 1 + \mu \left( \SINR^{(i)}_{\mathtt{lin}} + \nu \right) \right] }  
+     \lambda(\bm{q})d\bm{q}.
+\end{multline}
+\end{figure*}
+where $\SINR^{(n)}_{\mathtt{lin}}(\bm{q}; \bm{\Theta}, \bm{\rho})$, $\RSS^{(n)}_{\mathtt{lin}}(\bm{q}; \theta_n, \rho_n)$, and $V_n(\bm{\Theta}, \bm{\rho})$ are abbreviated as
+$\SINR^{(n)}_{\mathtt{lin}} $, $\RSS^{(n)}_{\mathtt{lin}}$, and $V_n$, respectively. 
+\end{Proposition}
+\noindent The proof is similar to that of Proposition \ref{sinr-power-allocation-gradient} and is omitted.
+%The proof of Proposition \ref{gradient-formula-MP-power} is provided in Appendix \ref{Appendix_D}.
+
+
+
+\subsubsection{Proposed Algorithm}\label{MP-Algorithm}
+
+Using Propositions \ref{MP-optimal-cell}, \ref{gradient-theta-MP}, and \ref{gradient-formula-MP-power}, %we propose an iterative algorithm to maximize the constrained optimization problem in Eqs. (\ref{max-product-objective}) and (\ref{max-product-objective-constraint}) over the cell partitioning, BS vertical antenna tilts, and transmission powers. 
+after a random initialization for the values of $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$, our %algorithm, referred to as the 
+max-product power allocation and vertical antenna tilt (MP-PA-VAT) optimization algorithm, iterates over the following main three steps until its convergence criterion is met: 
+\begin{itemize}
+    \item Adjust the cell $V_n$ according to Eq. (\ref{optimal-cell-partitioning-MP}) for each $n \in \{1, \cdots, N\}$ while $\bm{\Theta}$ and $\bm{\rho}$ are fixed;
+    \item Calculate the gradient $\nabla_{\bm{\Theta}}\Phi_{{\sf MP}}$ according to Proposition~\ref{gradient-theta-MP} and apply the gradient ascent algorithm to optimize $\bm{\Theta}$ while $\bm{V}$ and $\bm{\rho}$ are fixed;
+    \item Compute the gradient vector $\nabla_{\bm{\rho}}\Phi_{{\sf MP}}$ according to Proposition~\ref{gradient-formula-MP-power} and use the projected gradient ascent algorithm to optimize $\bm{\rho}$ within the confined space $(-\infty, \rho_{\max}]^N$ while $\bm{V}$ and $\bm{\Theta}$ are fixed.
+\end{itemize}
+%The MP-PA-VAT algorithm iterates between the above three steps until the convergence criteria is met, i.e., the relative improvement in the performance function $\Phi_{{\sf MP}}$ becomes less than a predefined threshold.
+
+
+\begin{Proposition}\label{MP-PA-VAT-convergence}
+    The MP-PA-VAT algorithm is an iterative improvement algorithm and converges.
+\end{Proposition}
+
+\noindent The proof is similar to that of Proposition \ref{BS-PA-VAT-convergence} and is omitted.
+
+
+
+
+\subsection{Generalization to Soft Max-Min SINR}\label{SM-Subsection}
+
+
+\subsubsection{Performance Function}\label{SM-Objective}
+%The primary objective of the soft max-min performance function is to promote fairness for individual user SINR. 
+The soft max-min performance function is formulated as:
+\begin{align}\label{soft-max-min-objective}
+    \Phi_{{\sf SM}}(\bm{V}, \mathbf{\Theta}, \bm{\rho}) &=  \sum_{n=1}^{N} \int_{V_n} \gamma^{(n)}_{{\sf SM}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}, \\
+    \textrm{s.t. } \rho_n &\leq \rho_{\max} \qquad \forall n \in \{1,\cdots, N\}, \label{soft-max-min-objective-constraint}
+\end{align}
+where 
+\begin{align}\label{Soft-max-min}
+\gamma^{(n)}_{\sf SM}(\bm{q}; \mathbf{\Theta}, \bm{\rho})
+= - \exp  \Bigg[ \frac{\alpha}{\big(\mathtt{SINR^{(n)}_{lin}}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) + \nu \big)^{\xi}}\Bigg].
+\end{align}
+
+The hyperparameter $\alpha$ controls the softness of the max-min policy, with larger values resulting in the domination of the smallest SINR in $\gamma_{{\sf SM}}$. Thus, for large $\alpha$ values, optimizing $\Phi_{{\sf SM}}$ reduces to maximizing the minimum SINR. 
+Conversely, smaller $\alpha$ values involve more SINR values in the performance function. To prevent users with very low SINR from dominating the performance, a small offset parameter $\nu$ is introduced. %For example, $\nu = 0.01$ disregards SINRs below $-20$ dB. 
+The exponent $\xi \leq 1$ compresses the dynamic range and enhances performance in the high-SINR regime.
+
+
+
+\subsubsection{Optimal Configuration}\label{SM-Optimal-Configuration}
+
+As before, we derive the necessary optimality conditions for each variable while holding the other two variables fixed to optimize the performance function $\Phi_{{\sf SM}}(\bm{V}, \mathbf{\Theta}, \bm{\rho})$ over cell partitioning, BS antenna tilts, and transmission powers.
+\begin{Proposition}\label{optimal-cell-partitioning-SM-performance}
+    The optimal cell partitioning $\bm{V}^*(\bm{\Theta}, \bm{\rho}) = \left(V_1^*(\bm{\Theta}, \bm{\rho}), \cdots, V_N^*(\bm{\Theta}, \bm{\rho}) \right)$ that maximizes the performance function $\Phi_{{\sf SM}}$ for a given $\bm{\Theta}$ and $\bm{\rho}$ is given by:
+\begin{multline}\label{optimal-cell-partitioning-SM}
+   \!\!\!\!\! V_n^*(\bm{\Theta}, \bm{\rho}) = \big\{\bm{q} \in Q \mid \mathtt{RSS_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) \geq \mathtt{RSS_{dBm}^{(k)}}(\bm{q}; \theta_k, \rho_k), \\ \textrm{ for all } 1 \leq k \leq N \big\},
+\end{multline}  
+for each $n \in \{1, \cdots, N\}$. The ties can be broken arbitrarily.
+\end{Proposition}
+\textit{Proof. }
+Since $\alpha$, $\nu$, and $\xi$ are constants, $\gamma_{\sf SM}^{(n)}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) \geq \gamma_{\sf SM}^{(k)}(\bm{q}; \mathbf{\Theta}, \bm{\rho})$ for all $k \neq n$ is the same as Eq. \eqref{optimal-cell-partitioning-SINR-proof} in Appendix \ref{Appendix_A}; therefore, the rest of the proof follows from that of Proposition \ref{optimal-V-SINR}. $\hfill\blacksquare$ 
+
+
+% \begin{figure*}[t!]
+%     \begin{multline}\label{gradient-vector-theta-SM-equation}
+%     \frac{\partial \Phi_{{\sf SM}}}{\partial \theta_n} = \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n \cap Q_u}  \frac{2.4 \log 10 \cdot \alpha \, \xi \,\left(\theta_{n,\bm{q}} - \theta_n \right) \SINR^{(n)}_{\mathtt{lin}} }{\left(\SINR^{(n)}_{\mathtt{lin}} + \nu\right)^{\xi+1} \cdot \theta^2_{\text{3dB}}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(n)}_{\mathtt{lin}} + \nu )^{\xi}}\right]   \lambda(\bm{q})d\bm{q} \\ + \int_{V_n \cap Q_G}   \frac{2.4 \log 10 \cdot \alpha \, \xi \,\left(\theta_{n,\bm{q}} - \theta_n \right) \SINR^{(n)}_{\mathtt{lin}} }{\left(\SINR^{(n)}_{\mathtt{lin}} + \nu\right)^{\xi+1} \cdot \theta^2_{\text{3dB}}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(n)}_{\mathtt{lin}} + \nu )^{\xi}}\right]   \lambda(\bm{q})d\bm{q} \Bigg\} \\
+%     - \sum_{i\neq n} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u}  \frac{\alpha \, \xi \, \SINR^{(i)}_{\mathtt{lin}}}{\left(\SINR^{(i)}_{\mathtt{lin}} + \nu\right)^{\xi+1}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\mathtt{lin}} + \nu )^{\xi}}\right] \times  \\
+%     \left[ \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot {\frac{\RSS^{(n)}_{\mathtt{lin}}}{\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}} + \sigma^2_{\mathtt{lin}}}} \right]   \lambda(\bm{q})d\bm{q} \\ + \int_{V_i \cap Q_G}  \frac{\alpha \, \xi \, \SINR^{(i)}_{\mathtt{lin}}}{\left(\SINR^{(i)}_{\mathtt{lin}} + \nu\right)^{\xi+1}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\mathtt{lin}} + \nu )^{\xi}}\right] \times  \\
+%     \left[ \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot {\frac{\RSS^{(n)}_{\mathtt{lin}}}{\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}} + \sigma^2_{\mathtt{lin}}}} \right]  \lambda(\bm{q})d\bm{q}  \Bigg \},    
+% \end{multline}
+% \end{figure*}
+\begin{figure*}[t!]
+    \begin{multline}\label{gradient-vector-theta-SM-equation}
+    \frac{\partial \Phi_{{\sf SM}}}{\partial \theta_n} =   \int_{V_n }  \frac{2.4 \log 10 \cdot \alpha \, \xi \,\left(\theta_{n,\bm{q}} - \theta_n \right) \SINR^{(n)}_{\mathtt{lin}} }{\left(\SINR^{(n)}_{\mathtt{lin}} + \nu\right)^{\xi+1} \cdot \theta^2_{\text{3dB}}} 
+    \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(n)}_{\mathtt{lin}} + \nu )^{\xi}}\right]   \lambda(\bm{q})d\bm{q}   \\
+    - \sum_{i\neq n}   \int_{V_i }  \frac{\alpha \, \xi \, \SINR^{(i)}_{\mathtt{lin}}}{\left(\SINR^{(i)}_{\mathtt{lin}} + \nu\right)^{\xi+1}} 
+    \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\mathtt{lin}} + \nu )^{\xi}}\right] \times  
+    \left[ \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot {\frac{\RSS^{(n)}_{\mathtt{lin}}}{\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}} + \sigma^2_{\mathtt{lin}}}} \right]   \lambda(\bm{q})d\bm{q}.    
+\end{multline}
+\end{figure*}
+
+
+
+
+
+
+
+% \begin{figure*}[t!]
+%     \begin{multline}\label{gradient-SM-wrt-power-equation}
+%     \frac{\partial \Phi_{{\sf SM}}}{\partial \rho_n} = \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n \cap Q_u} \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR^{(n)}_{\mathtt{lin}}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q} \\+ \int_{V_n \cap Q_G} \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR^{(n)}_{\mathtt{lin}}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q} \Bigg\} \\
+%     - \sum_{i\neq n} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u} \frac{\alpha\xi\cdot \big[\mathtt{SINR_{\mathtt{lin}}^{(i)}} \big]^2 \cdot \frac{\ln(10)}{10}\cdot \mathtt{RSS_{\mathtt{lin}}^{(n)}}    }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}\cdot \mathtt{RSS_{\mathtt{lin}}^{(i)}}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q} \\+ \int_{V_i \cap Q_G} \frac{\alpha\xi\cdot \big[\mathtt{SINR_{\mathtt{lin}}^{(i)}} \big]^2 \cdot \frac{\ln(10)}{10}\cdot \mathtt{RSS_{\mathtt{lin}}^{(n)}}    }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}\cdot \mathtt{RSS_{\mathtt{lin}}^{(i)}}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q}  \Bigg \},
+% \end{multline}
+% \end{figure*}
+\begin{figure*}[t!]
+    \begin{multline}\label{gradient-SM-wrt-power-equation}
+    \frac{\partial \Phi_{{\sf SM}}}{\partial \rho_n} =   \int_{V_n } \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR^{(n)}_{\mathtt{lin}}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q}   
+    - \sum_{i\neq n}   \int_{V_i } \frac{\alpha\xi\cdot \big[\mathtt{SINR_{\mathtt{lin}}^{(i)}} \big]^2 \cdot \frac{\ln(10)}{10}\cdot \mathtt{RSS_{\mathtt{lin}}^{(n)}}    }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}\cdot \mathtt{RSS_{\mathtt{lin}}^{(i)}}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q}.
+\end{multline}
+\end{figure*}
+
+The following proposition provides the gradient of the performance function w.r.t. the vertical antenna tilts.
+%We will then furnish the gradient of the performance function w.r.t. the vertical antenna tilts of the BSs, which can be utilized in a gradient ascent algorithm to enhance the optimization of the BSs' vertical antenna tilts.
+\begin{Proposition}\label{gradient-vector-theta-SM}
+    The partial derivative of $\Phi_{{\sf SM}}$ w.r.t. the BS vertical antenna tilt $\theta_n$ is given by Eq. (\ref{gradient-vector-theta-SM-equation}), on top of the next page,
+% \begin{multline}\label{gradient-vector-theta-SM-equation}
+%     \frac{\partial \Phi_{{\sf SM}}}{\partial \theta_n} = \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n \cap Q_u}  \frac{2.4 \log 10 \cdot \alpha \, \xi \,\left(\theta_{n,\bm{q}} - \theta_n \right) \SINR^{(n)}_{\mathtt{lin}} }{\left(\SINR^{(n)}_{\mathtt{lin}} + \nu\right)^{\xi+1} \cdot \theta^2_{\text{3dB}}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(n)}_{\mathtt{lin}} + \nu )^{\xi}}\right]   \lambda(\bm{q})d\bm{q} \\ + \int_{V_n \cap Q_G}   \frac{2.4 \log 10 \cdot \alpha \, \xi \,\left(\theta_{n,\bm{q}} - \theta_n \right) \SINR^{(n)}_{\mathtt{lin}} }{\left(\SINR^{(n)}_{\mathtt{lin}} + \nu\right)^{\xi+1} \cdot \theta^2_{\text{3dB}}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(n)}_{\mathtt{lin}} + \nu )^{\xi}}\right]   \lambda(\bm{q})d\bm{q} \Bigg\} \\
+%     - \sum_{i\neq n} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u}  \frac{\alpha \, \xi \, \SINR^{(i)}_{\mathtt{lin}}}{\left(\SINR^{(i)}_{\mathtt{lin}} + \nu\right)^{\xi+1}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\mathtt{lin}} + \nu )^{\xi}}\right] \times  \\   \left[ \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot {\frac{\RSS^{(n)}_{\mathtt{lin}}}{\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}} + \sigma^2_{\mathtt{lin}}}} \right]   \lambda(\bm{q})d\bm{q} \\ + \int_{V_i \cap Q_G}  \frac{\alpha \, \xi \, \SINR^{(i)}_{\mathtt{lin}}}{\left(\SINR^{(i)}_{\mathtt{lin}} + \nu\right)^{\xi+1}} 
+%     \cdot \exp \! \left[ \frac{\alpha}{(\SINR^{(i)}_{\mathtt{lin}} + \nu )^{\xi}}\right] \times  \\   \left[ \frac{2.4 \log 10}{\theta^2_{\text{3dB}}} \cdot \left(\theta_{n,\bm{q}} - \theta_n \right) \cdot {\frac{\RSS^{(n)}_{\mathtt{lin}}}{\sum_{j\neq i}^{} \RSS^{(j)}_{\mathtt{lin}} + \sigma^2_{\mathtt{lin}}}} \right]  \lambda(\bm{q})d\bm{q}  \Bigg \},    
+% \end{multline}
+where $\SINR^{(n)}_{\mathtt{lin}}(\bm{q}; \bm{\Theta}, \bm{\rho})$, $\RSS^{(n)}_{\mathtt{lin}}(\bm{q}; \theta_n, \rho_n)$, and $V_n(\bm{\Theta}, \bm{\rho})$ are written as $\SINR^{(n)}_{\mathtt{lin}} $, $\RSS^{(n)}_{\mathtt{lin}}$, and $V_n$, respectively, for the brevity of notation.
+\end{Proposition}
+\noindent The proof is similar to that of Proposition \ref{gradient-equation-SINR} and is omitted.
+%The proof of Proposition \ref{gradient-vector-theta-SM} is provided in Appendix \ref{Appendix_E}.
+
+
+
+Next, we provide the expression for the gradient of $\Phi_{{\sf SM}}$ w.r.t. the BS transmission powers $\bm{\rho}$.
+
+\begin{Proposition}\label{gradient-SM-wrt-power}
+    The partial derivative of $\Phi_{{\sf SM}}$ w.r.t. the BS transmission power $\rho_n$ is given by Eq. (\ref{gradient-SM-wrt-power-equation}), on top of the next page,
+% \begin{multline}\label{gradient-SM-wrt-power-equation}
+%     \frac{\partial \Phi_{{\sf SM}}}{\partial \rho_n} = \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n \cap Q_u} \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR^{(n)}_{\mathtt{lin}}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q} \\+ \int_{V_n \cap Q_G} \frac{\alpha\xi \cdot \mathtt{SINR_{\mathtt{lin}}^{(n)}} \cdot \frac{\ln(10)}{10} }{\big(\mathtt{SINR_{\mathtt{lin}}^{(n)}} + \nu\big)^{\xi + 1}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR^{(n)}_{\mathtt{lin}}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q} \Bigg\} \\
+%     - \sum_{i\neq n} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_i \cap Q_u} \frac{\alpha\xi\cdot \big[\mathtt{SINR_{\mathtt{lin}}^{(i)}} \big]^2 \cdot \frac{\ln(10)}{10}\cdot \mathtt{RSS_{\mathtt{lin}}^{(n)}}    }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}\cdot \mathtt{RSS_{\mathtt{lin}}^{(i)}}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q} \\+ \int_{V_i \cap Q_G} \frac{\alpha\xi\cdot \big[\mathtt{SINR_{\mathtt{lin}}^{(i)}} \big]^2 \cdot \frac{\ln(10)}{10}\cdot \mathtt{RSS_{\mathtt{lin}}^{(n)}}    }{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu\big)^{\xi + 1}\cdot \mathtt{RSS_{\mathtt{lin}}^{(i)}}} \cdot e^{\frac{\alpha}{\big(\mathtt{SINR_{\mathtt{lin}}^{(i)}} + \nu \big)^\xi}}   \lambda(\bm{q})d\bm{q}  \Bigg \},
+% \end{multline}
+where $\SINR^{(n)}_{\mathtt{lin}} $, $\RSS^{(n)}_{\mathtt{lin}}$, and $V_n$ are shorts for $\SINR^{(n)}_{\mathtt{lin}}(\bm{q}; \bm{\Theta}, \bm{\rho})$, $\RSS^{(n)}_{\mathtt{lin}}(\bm{q}; \theta_n, \rho_n)$, and $V_n(\bm{\Theta}, \bm{\rho})$, respectively, for the brevity of notation.
+\end{Proposition}
+\noindent The proof is similar to that of Proposition \ref{sinr-power-allocation-gradient} and is omitted.
+%The proof of Proposition \ref{gradient-SM-wrt-power} is provided in Appendix \ref{Appendix_F}.
+
+
+
+\subsubsection{Proposed Algorithm}\label{SM-Algorithm}
+Using Propositions \ref{optimal-cell-partitioning-SM-performance}, \ref{gradient-vector-theta-SM}, and \ref{gradient-SM-wrt-power}, we design an alternating optimization algorithm, called the soft max-min power allocation and vertical antenna tilt (SMM-PA-VAT) optimization algorithm, similar to Algorithm \ref{BS_PA_VAT_Algorithm}.
+%By utilizing Propositions \ref{optimal-cell-partitioning-SM-performance}, \ref{gradient-vector-theta-SM}, and \ref{gradient-SM-wrt-power}, we can create an alternating optimization algorithm that aims to maximize the constrained optimization problem presented in Eqs. (\ref{soft-max-min-objective}) and (\ref{soft-max-min-objective-constraint}) regarding the cell partitioning $\bm{V}$, BS vertical antenna tilts $\bm{\Theta}$, and BS transmission powers $\bm{\rho}$. This algorithm, which we call the soft max-min power allocation and vertical antenna tilt (SMM-PA-VAT) optimization algorithm, closely resembles the iterative process outlined in Algorithm \ref{BS_PA_VAT_Algorithm}, and it can be described as follows: Starting from a random initialization of $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$, iteratively: (i) update the cell partitioning $\bm{V}$ according to Proposition \ref{optimal-cell-partitioning-SM-performance} while $\bm{\Theta}$ and $\bm{\rho}$ are fixed; (ii) update the BS vertical antenna tilts $\bm{\Theta}$ using the gradient ascent algorithm, with gradient vector calculated according to Proposition \ref{gradient-vector-theta-SM}, while $\bm{V}$ and $\bm{\rho}$ are fixed; and (iii) update the BS transmission powers $\bm{\rho}$ via the projected gradient ascent algorithm, with the gradient vector computed according to Proposition \ref{gradient-SM-wrt-power}, while $\bm{V}$ and $\bm{\Theta}$ are fixed. The algorithm iterates between these three steps until converged, i.e., when the relative improvement in the performance function $\Phi_{{\sf SM}}$ falls below a predefined threshold. 
+
+
+\begin{Proposition}\label{SMM-PA-VAT-convergence}
+    The SMM-PA-VAT algorithm is an iterative improvement algorithm and converges.
+\end{Proposition}
+\noindent The proof resembles the one of Proposition \ref{BS-PA-VAT-convergence} and  is omitted. 
+

@@ -1,0 +1,602 @@
+\documentclass[conference,10pt]{IEEEtran}
+\usepackage[cmex10]{amsmath}
+\usepackage[nolist,withpage]{acronym}
+\usepackage{etoolbox}
+\makeatletter
+\newif\if@in@acrolist
+\AtBeginEnvironment{acronym}{\@in@acrolisttrue}
+\newrobustcmd{\LU}[2]{\if@in@acrolist#1\else#2\fi}
+
+\newcommand{\ACF}[1]{{\@in@acrolisttrue\acf{#1}}}
+\makeatother
+\usepackage{amsthm,amsfonts,mathrsfs}
+\usepackage{graphicx}
+\usepackage{dsfont,enumitem,stackrel}
+\usepackage{color}
+\usepackage{mathtools,amssymb,bm,mathabx}
+\usepackage{amstext}
+\usepackage{array}
+\usepackage{algorithmicx}
+\usepackage[ruled]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algpascal}
+\usepackage{algc}
+\usepackage{subfigure}
+\usepackage[font=footnotesize]{caption}
+\usepackage{cases}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{spy}
+\usepackage{accents}
+\usepackage{float}
+\usepackage{cite}
+% \usepackage{hyperref}
+
+
+\theoremstyle{remark}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\myhyperref}[2]{#2 \ref{#1}}
+\newcommand{\vect}[2]{\left[ #1_1, #1_2, #1_3, ..., #1_#2 \right]^{\mathsf{T}}}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+\newcommand*{\Resize}[2]{\resizebox{#1}{!}{$#2$}}%
+\newcommand{\alg}{\texttt{algorithmicx}}
+\newcommand{\old}{\texttt{algorithmic}}
+\newcommand{\euk}{Euclid}
+\newcommand\ASTART{\bigskip\noindent\begin{minipage}[b]{0.5\linewidth}}
+	\newcommand\ACONTINUE{\end{minipage}\begin{minipage}[b]{0.5\linewidth}}
+	\newcommand\AENDSKIP{\end{minipage}\bigskip}
+\newcommand\AEND{\end{minipage}}
+\newcommand{\RN}[1]{%
+	\textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+
+
+
+\def\C{ \mathbb{C}}
+\def\R{\mathbb{R}}
+\def\Z{ \mathbb{Z}}
+\def\N{ \mathbb{N}}
+\def\change{red}
+\theoremstyle{plain}
+\newtheorem{thm}{\textbf{Theorem}}
+\newtheorem{lem}{\textbf{Lemma}}
+\newtheorem{prop}{\textbf{Proposition}}
+\newtheorem*{corl}{\textbf{Corollary}}
+\newtheorem{result}{\textbf{Result}}
+\theoremstyle{definition}
+\newtheorem{defn}{\textbf{Definition}}
+\newtheorem{conj}{\textbf{Conjecture}}
+\newtheorem{example}{\textbf{Example}}
+\theoremstyle{remark}
+\newtheorem{rem}{\bf Remark}
+\newtheorem*{sketch}{\bf Proof skech }
+\newtheorem*{note}{Note}
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+
+
+
+
+\definecolor{copperrose}{rgb}{0.6, 0.4, 0.4}
+\definecolor{azure}{rgb}{0.0, 0.5, 1.0}
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\definecolor{chestnut}{rgb}{0.8, 0.36, 0.36}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
+\definecolor{blue(ncs)}{rgb}{0.0, 0.53, 0.74}
+\definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
+\definecolor{cssgreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
+\definecolor{amaranth}{rgb}{0.9, 0.17, 0.31}
+\definecolor{bluegray}{rgb}{0.4, 0.6, 0.8}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{cerulean}{rgb}{0.0, 0.48, 0.65}
+\definecolor{ceil}{rgb}{0.57, 0.63, 0.81}
+
+
+
+
+
+
+
+
+
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+% Title.
+% ------
+\title{Off-the-grid Blind Deconvolution and Demixing}
+% \title{Multi User Channel Estimation and Message Recovery}
+%
+% Single address.
+% ---------------
+\author{\IEEEauthorblockN{Saeed Razavikia$^\dagger$, Sajad Daei$^\dagger$, Mikael Skoglund$^\dagger$, Gabor Fodor$^{\dagger,\flat}$, Carlo Fischione$^\dagger$}
+ \IEEEauthorblockA{$^\dagger$School of Electrical Engineering and Computer Science, KTH Royal Institute of Technology, Stockholm, Sweden\\
+ $^\flat$Ericsson Research, Sweden\\
+Email: \{sraz, sajado, skoglund, gaborf, carlofi\}@kth.se}
+\thanks{S. Razavikia was supported by the Wallenberg AI, Autonomous Systems and Software Program (WASP).}
+}
+
+
+
+\begin{document}
+\input{acronyms}
+\bstctlcite{IEEEexample:BSTcontrol}
+\maketitle
+
+
+\begin{abstract}
+We consider the problem of \ac{GB2D} in scenarios where multiple users communicate messages through multiple unknown channels, and a single \ac{BS} collects their contributions. This scenario arises in various communication fields, including wireless communications, the Internet of Things, over-the-air computation, and integrated sensing and communications. In this setup, each user's message is convolved with a multi-path channel formed by several scaled and delayed copies of Dirac spikes. The \ac{BS} receives a linear combination of the convolved signals, and the goal is to recover the unknown amplitudes, continuous-indexed delays, and transmitted waveforms from a compressed vector of measurements at the \ac{BS}. However, in the absence of any prior knowledge of the transmitted messages and channels, \ac{GB2D} is highly challenging and intractable in general. To address this issue, we assume that each user's message follows a distinct modulation scheme living in a known low-dimensional subspace. By exploiting these subspace assumptions and the sparsity of the multipath channels for different users, we transform the nonlinear \ac{GB2D} problem into a matrix tuple recovery problem from a few linear measurements. To achieve this, we propose a semidefinite programming optimization that exploits the specific low-dimensional structure of the matrix tuple to recover the messages and continuous delays of different communication paths from a single received signal at the \ac{BS}. Finally, our numerical experiments show that our proposed method effectively recovers all transmitted messages and the continuous delay parameters of the channels with a sufficient number of samples.
+\end{abstract}
+
+
+
+% Note that keywords are not normally used for peer review papers.
+\begin{IEEEkeywords}
+Atomic norm minimization, blind channel estimation, blind data recovery, blind deconvolution, blind demixing.
+\end{IEEEkeywords}
+
+\makeatletter{\renewcommand*{\@makefnmark}{}
+\footnotetext{Saeed Razavikia and Carlo Fischione acknowledge the support of WASP, SSF SAICOM, VR, EU FLASH project, and Digital Futures.
+
+Sajad Daei and Mikael Skoglund were supported in part by Digital Futures. Digital Futures Project PERCy supported the work of Gabor Fodor. 
+
+ }
+\makeatother}
+
+
+
+
+
+% ## =========================== ##
+\section{Introduction}
+% ## =========================== ##
+In the near future, the Internet of Things (IoT) is expected to connect billions of wireless devices, surpassing the capacity of the current fifth-generation (5G) wireless system both technically and economically. One of the primary challenges that 6G, the future wireless communication system, will face is managing the massive number of IoT devices that generate sporadic traffic. As the 6G market grows, this sporadic traffic will significantly increase, and it is generally agreed among communications engineers that the current 5G channel access procedures cannot handle this volume of traffic.
+
+Traditional channel access methods, which rely on classical information and communication theory, require a large number of pilots or training signals to estimate the channel, leading to significant resource waste that does not scale towards IoT requirements. Thus, minimizing the overhead caused by exchanging certain types of training information, such as channel estimation and data slot assignment, is necessary. This is especially critical for communications over dynamic channels, such as millimeter-wave or terahertz, where channel coherence times are short, and the channel state information changes rapidly. In these cases, the assumption of block fading no longer holds. One approach to addressing this issue is to incorporate channel aging effects into the channel estimation process to maximize spectral efficiency (see, e.g., \cite{fodor2023optimizing}), but this requires knowledge of the channel correlation structure at different times, which might be challenging to obtain in general channel environments. Therefore, for situations where a large number of devices transmit small amounts of data sporadically over dynamic channels, and the channel correlation structure is unknown, it is crucial to avoid transmitting a signal with much longer overhead information than actual data. This raises the question of whether this is feasible.
+
+
+
+
+% || ==================== ||
+ \input{Figures/Fig_System2}
+% || ==================== ||
+
+
+To facilitate explanation, we consider a scenario where multiple users transmit messages through multiple frequency-selective channels towards a central \ac{BS} (as described in \cite[Eq. 19]{sayeed2010wireless}). The \ac{BS} receives a combined signal comprising contributions from all users, which is then processed through a sensing filter (see Fig. \ref{fig:system}). The goal is to simultaneously estimate the transmitted messages and channels from the received measurements at the \ac{BS}, which is a challenging nonlinear problem. 
+
+This scenario appears in a variety of applications, including over-the-air computation~\cite{SaeedBlind2022,razavikia2023computing}, super-resolution single-molecule imaging~\cite{three-dimensionalsuper,SaeedBinary2020,razavikia2019sampling,maskan2023demixing,valiulahi2019two},  multi-user multipath channel estimation~\cite{jung2017blind,daei2023blind}, blind calibration in multi-channel sampling systems~\cite{vetterli2010multichannel,SayyariBlind2021}, random access~\cite{daei2023blinda} and integrated (radar) sensing and communications~\cite{liu2020joint,seidi2022novel,safari2021off}. 
+  
+
+
+\subsection{Related work}
+
+The problem of recovering messages and channels in the model described above falls into the class of blind deconvolution techniques used to solve inverse problems. These techniques have made notable progress in addressing blind deconvolution problems, with a focus on sparse signals consisting of a single user \cite{jain2017non,ahmed2013blind,ling2015self,candes2013phaselift,daei2019distribution}. The conventional method involves assuming that the continuous channel parameters lie on a predefined domain of grids, which can be estimated using well-established methods such as $\ell_1$ minimization. However, the predefined grids may not accurately match the true continuous-index values of parameters, leading to basis mismatch issues that can degrade the performance of blind deconvolution. To address these issues, recent work has focused on continuous parameter estimation, with a blind deconvolution method developed in \cite{chi2016guaranteed} to recover continuous parameters in the case of a single user.
+
+In this work, we tackle a challenging and more generalized model that involves a mixture of blind deconvolution problems, with transmitted signals being encoded with different codebooks and arbitrary channels that do not follow a specific channel model. Further, we consider the availability of a general sensing filter at the \ac{BS} that allows us to observe compressed linear combinations of data samples instead of the whole samples, as in \cite{Jacome2020DualBlind}, to ensure practicality and generality. It is noteworthy that our proposed method is deterministic and is independent of either the channel or message distribution, which sets it apart from existing statistical techniques (such as approximate message passing~\cite{ke2020compressive}) that can only work on specific distributions. Finally, we prove a remarkable result that when all users use the same codebook to transmit their messages, our proposed optimization problem is independent of the total number of users.   
+
+\subsection{Contributions}
+
+We propose a novel optimization framework, named \ac{GB2D}, that leverages specific features of the channels and transmitted signals. Specifically, each user's channel has few dominant scattering paths, and each user employs a distinct channel coding scheme. \ac{GB2D} utilizes a lifting technique to convert the demixing of nonlinear problems into high-dimensional matrices containing continuous channel parameters, which transforms multiple features of the channels and transmitted signals into a single specific feature of a matrix tuple lying in a higher dimension. A tractable convex optimization problem is proposed to recover the continuous channel parameters by promoting the specific feature of the matrix tuple, followed by a least-squares problem to estimate the transmitted messages. In addition, this work provides conditions under which the solution to \ac{GB2D} is unique and optimal, and simulation results demonstrate its effectiveness in recovering the channel parameters and transmitted messages with a sufficient number of samples.
+
+Specifically, our contributions are summarized as follows:
+
+\begin{itemize}
+    \item \textbf{Blind message recovery and channel estimation with any linear encoder and sensing filter}:  \ac{GB2D} recovers the messages and channels without spending training resources and provides a general communication framework where each user employs a distinct codebook, and the \ac{BS} employs a linear filter modeling matched filter or sensing block of a communication system. 
+    \item \textbf{Independent of the number of users}: In a case wherein all users use the same codebook to transmit their messages, the proposed optimization problem is independent of the total number of users.
+    \item \textbf{Tractable complexity}: We propose a tractable convex optimization problem to recover continuous channel parameters by promoting the specific feature of the channels and transmitted signals and then recovering the messages. 
+    \item  \textbf{Optimality condition}: We provide a theoretical guarantee that the solution to \ac{GB2D} is unique and optimal under some minimum separation conditions on the multipath channel delays. 
+    \item \textbf{Message and channel distribution are arbitrary}: In contrast to the statistical channel estimation methods, e.g.,covariance-based methods and approximate message passing,  \ac{GB2D} does not require any assumptions for the distributions of users' messages and channels.
+\end{itemize}
+
+
+
+
+The rest of the paper is organized as follows.  In Section~\ref{sec.model}, the problem formulation is formalized. In Section~\ref{sec.proposed}, we provide the \ac{GB2D} method, which includes the convex optimization and dual problem to localize the spikes. Section~\ref{sec.simulations} verifies the performance of \ac{GB2D} through simulations. Lastly, the paper is concluded in Section~\ref{sec.conclusion}.
+
+
+The paper shows vectors and matrices in boldface lower-and upper-case letters, respectively. We use $\bm{X}^{\dagger}$ to show the pseudo inverse of matrix $\bm{X}$.  For vector $\bm{x}\in\mathbb{C}^N$ and matrix $\bm{X}\in\mathbb{C}^{N_1\times N_2}$, the norms $\ell_2$ is defined as $\|\bm{x}\|_2:= \sqrt{\sum\nolimits_{i=1}^n|x(i)|^2}$. 
+We further use $\odot$ to show Hadamard products (element-wise products). The Toeplitz lifting operator $\mathscr{T}: \mathbb{C}^N \to \mathbb{C}^{N\times N}$ for given vector $\bm{x}$  is defined as follows
+%---------------
+\begin{equation}
+    \label{eq:Hankel}
+    \mathscr{T}(\bm{x}): = \begin{bmatrix}
+        x_{1} & x_{2} & \dots & x_{N} \\
+        \Bar{x}_{2} & x_{1} & \dots & x_{N-1} \\
+        \vdots \\
+        \Bar{x}_{N} & \Bar{x}_{N-1} & \dots & x_{1} 
+    \end{bmatrix}, 
+\end{equation}
+%---------------
+where the $(i,j)$-th  element is given by $[\mathscr{T}(\bm{x})]_{i,j} = x_{i-j+1}$ for $i\geq j$ and $[\mathscr{T}(\bm{x})]_{i,j} = \Bar{x}_{i-j+1}$ for $i<j$. Also $\bm{e}_n$ stands for the $n$-th column of identity matrix $\bm{I}_{N}$. We use $\langle \cdot, \cdot \rangle$ to show the inner product operator where for two arbitrary matrices $\bm{A}, \bm{B}$, i.e., $\langle \bm{A}, \bm{B}\rangle$ represents ${\rm Tr} (\bm{B}^{\mathsf  H}\bm{A})$ and for two continuous functions $f(t)$ and $g(t)$ it means $\int_{-\infty}^{\infty}f(t)g(t)dt$ by $\langle f(t), g(t) \rangle$ based on context. The notation $\bm{A}\succeq \bm{0}$ means $\bm{A}$ is a positive semidefinite matrix.
+
+ 
+
+
+ % ## =========================== ##
+ \section{System Model and Problem Formulation}\label{sec.model}
+ % ## =========================== ##
+
+
+For the purpose of exposition, we consider $K$ single-antenna users transmitting their messages toward a \ac{BS} over the \ac{MAC}.  Let  $x_k(t)$ be the message of user $k$; it is mapped into modulated band-limited signal $s_k(t)$ using linear encoder $\mathcal{C}_k(\cdot)$, i.e., $s_k(t):= \mathcal{C}_k(x_k(t))$ for transmitting over the \ac{MAC}. Then, all users transmit simultaneously over the same frequency or codes, and the \ac{BS} records the signal $v(t)$, which is the sum of all these convolved signals given by 
+%--------------
+\begin{align}\label{eq:mymodel}
+v(t)=\sum_{k=1}^{K}h_k(t)\circledast s_k(t),
+\end{align}
+%--------------
+where $h_k(t)=\sum_{\ell=1}^{P_k}g_{\ell}^k\delta(t-\overline{\tau}_{\ell}^k)$, is the impulse response of the frequency selective channel corresponding to user $k$, and $\circledast$ is the convolution operator. Furthermore, $P_k$, $\overline{\tau}_{\ell}^k$, and $g_{\ell}^k$ are the number of multipath delays, the delay, and the complex amplitude of the communication path $k$ corresponding to user $k$, respectively. The channel delays $\overline{\tau}_{\ell}^k$s can take any arbitrary continuous values in $[0, T)$ in which $T$ denotes the duration of the observation time.  Afterward, the convoluted signal $v(t)$ goes through linear system $\mathcal{D}(\cdot)$ (e.g., matched-filter or low pass filter) whose output becomes signal $y(t)$, i.e.,  
+      %--------------
+     \begin{align}\label{eq:measure}
+     y(t) = \mathcal{D}\{v(t)\},  \quad t \in [0,T].
+     \end{align}      
+      %--------------
+Then, after sampling, the measurements are given by $y_m:= y(\frac{m}{T})$ for $m\in [M]$. The goal is to estimate the set of channel delays and amplitudes of $\{h_k(t)\}_{k=1}^K$, as well as the unknown transmitted messages $\{x_k(t)\}_{k=1}^K$ from the available measurements  $y_1, \ldots, y_M$ at the \ac{BS} (see Fig~\ref{fig:system}). We refer to the solution to this problem as \ac{GB2D}.
+
+%------------------------------
+\subsection{Problem formulation}
+%------------------------------
+
+Assuming the measured signal $y(t)$ is square-integrable in Lebesgue’s sense (or Band-limited), we can expand it as $y(t):=  \sum\nolimits_{m=1}^M y_m \varphi_m(t)$  where  $\varphi_n$s  are compact support basis functions for $t\in [0, T]$ that are orthonormal, i.e., 
+ %--------------
+ \begin{align}
+    \langle\varphi_i(t), \varphi_j(t) \rangle :=  \int_{-\infty}^{\infty}\varphi_i(t)\varphi_j(t) dt  = \delta_{i-j},     
+ \end{align}
+%--------------
+ where $\delta_{i-j}$ is the discrete delta Dirac function. Then, $m$-th sample of the signal in~\eqref{eq:measure}, can be written as 
+ %--------------
+ \begin{align}
+    \label{eq:innerVL}
+     \nonumber y_m &= \langle \mathcal{D}\{v(t)\}, \varphi_m \rangle  \\ \nonumber
+     & = \langle v(t), \underbrace{\mathcal{D}^*\{\varphi_m \}}_{d_{m}(t)}\rangle \\ 
+     \nonumber & = \langle \mathscr{F}^*\mathscr{F}\{v(t)\}, d_{m}(t)\rangle \\ & = \nonumber \langle \mathscr{F}\{v(t)\}, \mathscr{F}\{\ell_{m}(t)\}\rangle \\
+     & = \langle V(f), D_m(f)\rangle,
+ \end{align}
+ %--------------
+where $\mathscr{F}(\cdot)$ denotes linear Fourier operator, and $V(f)$ and $D_m(f)$ are the Fourier transform of $v(t)$ and $d_m(t)$, respectively. Let $\{s_k(t)\}_{k=1}^K$ be the transmitted waveforms whose spectrum lie in the interval $[-B,B]$. Taking the Fourier transform of~\eqref{eq:mymodel}; we have the following.
+%--------------
+ \begin{align} \label{eq.Yf}
+V(f)=\sum_{k=1}^{K}H_k(f)S_k(f), ~\forall f\in [-B,B],
+ \end{align}   
+%--------------
+ where $V(f)$, $H_k(f)$, and $S_k(f)$ are the Fourier transform of $v(t)$, $h_k(t)$, and $s_k(t)$, respectively. Substituting \eqref{eq.Yf} into \eqref{eq:innerVL}, we obtain
+ %--------------
+  \begin{align}
+     \nonumber y_m = \sum_{k=1}^{K} \langle H_k(f)S_k(f), D_m(f)\rangle.
+ \end{align}
+ %--------------
+ By uniformly sampling \eqref{eq.Yf} at $N$ points $f_n=Bn/\lfloor (N-1)/2\rfloor,~n= -\lceil (N-1)/2\rceil, \ldots, \lfloor (N-1)/2\rfloor$ or $n=0,\ldots, N-1$ provided that $BT\le \lfloor (N-1)/2\rfloor$, we reach
+  %--------------
+ \begin{align}\label{eq.sampledmodel1}
+  y_m =  \langle \bm{d}_m, \sum_{k=1}^K \bm{h}_k\odot \bm{s}_k \rangle = \langle \bm{d}_m, \bm{v} \rangle,
+  % v_n=\sum\nolimits_{\ell=1}^Rx_n^rg_n^r=\sum\nolimits_{\ell=1}^{R}\sum\nolimits_{k=1}^{S_r}g_k^r{\rm e}^{-j2\pi n \tau_k^r \frac{BT}{M} }g_n^r,
+ \end{align}
+  %--------------
+where vectors $\bm{h}_k, \bm{s}_k, \bm{d}_m$ and  $\bm{v}$ are defined as 
+% $\bm{h}_k:= [H(f_1),\ldots,H(f_N)]^{\mathsf{T}}$, $\bm{s}_k  := [S(f_1),\ldots,S(f_N)]^{\mathsf{T}}$, $\bm{d}_m  = [D_m(f_1),\ldots,D_m(f_N)]^{\mathsf{T}}$ and $\bm{v}  =  [V(f_1),\ldots,V(f_N)]^{\mathsf{T}}$.
+ %--------------
+\begin{align*}
+    \bm{h}_k & = [H(f_1),\ldots,H(f_N)]^{\mathsf{T}}, \\
+     \bm{s}_k & = [S(f_1),\ldots,S(f_N)]^{\mathsf{T}}, \\ 
+     \bm{d}_m & = [D_m(f_1),\ldots,D_m(f_N)]^{\mathsf{T}}, \\
+     \bm{v} & =  [V(f_1),\ldots,V(f_N)]^{\mathsf{T}}.
+\end{align*}
+%--------------
+Note that to set $N$ as small as possible without loss of generality, we choose $N= 2BT + 1$.
+The relation in \eqref{eq.sampledmodel1} can be represented in a matrix form as
+  %--------------
+ \begin{align}
+ \bm{y}=\bm{D}\sum_{k=1}^K \bm{h}_k\odot \bm{s}_k,
+ \end{align}
+  %--------------
+ where $\bm{y}=[y_{1}, \ldots,y_{M}]^{\mathsf{T}}$ and $\bm{D} = [\bm{d}_1,\ldots, \bm{d}_M]^{\mathsf{T}} \in \mathbb{C}^{M\times N}$. Now, recall that $h_k(t) = \sum_{\ell=1}^{P_k}g_{\ell}^k\delta(t-\tau_{\ell}^k)$ and $s_k(t)= \mathcal{C}_k(x_k(t))$ where ${\tau}_{\ell}^k:=  \overline{\tau}_{\ell}^k/T$, then we can write  
+  %--------------
+\begin{align}
+    \label{eq.sampledmodel2}
+   \bm{y} = \bm{D}\sum_{k=1}^K \sum_{\ell=1}^{P_k}g_{\ell}^k \bm{a}(\tau_{\ell}^k)\odot \bm{C}_k\bm{x}_k,
+\end{align}
+  %--------------
+ where $\bm{a}(\tau):=[1,{\rm e}^{-j2\pi\tau}, \ldots ,{\rm e}^{-j2\pi(N-1)\tau}]^{\mathsf{T}}$ and 
+  %--------------
+\begin{align}\label{eq.subspace_assumption}
+ \bm{s}_k=\bm{C}_k\bm{x}_k.
+ \end{align} 
+   %--------------
+  Also, $\bm{C}_k:=[\bm{c}_{1}^k, \ldots, \bm{c}_{N}^k]^{\mathsf{T}}\in\mathbb{C}^{N\times M_k}$ is codebook matrix corresponding to encoder $\mathcal{C}_k$ which is a known basis of the subspace with $N\gg M_k$. Further, $\bm{x}_k\in\mathbb{C}^{M_k}$ is the Fourier transform of message vector of user $k$.  Without loss of generality, we assume that the energy of the message signal is normalized, i.e., $\|\bm{x}_k\|_2=1$ for $k \in [K]$. Our goal is to recover $\tau_{\ell}^k$s, $g_{\ell}^k$s, and $\bm{x}_k$s from the observation vector $\bm{y}\in\mathbb{C}^{M}$. Note that it is unavoidable to
+have phase ambiguities for recovering $\bm{x}_k$'s and $\bm{h}_k$'s because of any $\alpha_k\in\mathbb{C}\setminus\{0\}$, we have
+  %--------------
+ \begin{align}
+ \bm{y}= \bm{D}\sum_{k=1}^K\alpha_k\bm{h}_k\odot \bm{C}_k\frac{\bm{x}_k}{\alpha_k}.
+ \end{align}
+  %--------------
+
+  
+
+
+In the next section, we present the \ac{GB2D} method for demixing the measured signals by solving a convex optimization.
+
+% || ==================== ||
+ \input{Figures/Fig_daul}
+% || ==================== ||
+
+% ## =========================== ##
+\section{Proposed Method}\label{sec.proposed}
+% ## =========================== ##
+ In this section, we introduce the main idea \ac{GB2D} method and propose a convex optimization to recover all the channel parameters ${\tau}_{\ell}^k$'s, $\ell \in [P_k]$ and transmitted waveforms $s_k(t)$s with general known codebook matrices $\bm{C}_k$'s.  Invoking the subspace assumption \eqref{eq.subspace_assumption},  $n$-th Fourier samples of signal $v(t)$ can be written as 
+ %--------------
+ \begin{align}\label{eq.sampledmodel3}
+ V(f_n)&= \sum_{k=1}^K\sum_{\ell=1}^{P_k}g_{\ell}^k\bm{e}_n^{\mathsf{T}}\bm{a}(\tau_{\ell}^k)\bm{x}_k^{\mathsf{T}}\bm{c}^k_n,
+ \end{align}
+ %--------------
+ where $\bm{e}_n$ stands for the $n$-th column of $\bm{I}_{N}$. Let $\bm{X}_k=\sum_{\ell=1}^{P_k} g_{\ell}^k\bm{x}_k\bm{a}(\tau_{\ell}^k)^{\mathsf{T}}\in\mathbb{C}^{M_k\times N}$. Using the lifting trick \cite{ling2015self}, the measurements $V(f_n), n\in [N]$ in \eqref{eq.sampledmodel3} can be written as
+ %--------------
+ \begin{align*}
+ % \label{eq:SamplesInner}
+ &V(f_n)=\sum_{k=1}^K\sum_{\ell=1}^{P_k}g_{\ell}^k {\rm Tr}\Big(\bm{c}^k_n\bm{e}_n^{\mathsf{T}}\bm{a}(\tau_{\ell}^k)\bm{x}_k^{\mathsf{T}}\Big)=\sum_{k=1}^K\big\langle \bm{X}_k, \bm{c}^k_n\bm{e}_n^{\mathsf{T}}\big\rangle.
+ \end{align*} 
+ %--------------
+ Writing in matrix form, we have $\bm{v}=\mathcal{C}(\bm{\mathcal{X}}),$ where $\bm{\mathcal{X}}:=(\bm{X}_k)_{k=1}^K\in \bigoplus_{k=1}^k\mathbb{C}^{M_k\times N}$ is the matrix tuple of interest and $\mathcal{C}$ is the linear measurement mapping defined as
+ %--------------
+ \begin{align*}
+ \bigoplus_{k=1}^K\mathbb{C}^{M_k\times N}\rightarrow \mathbb{C}^N,~~ \bm{\mathcal{Z}}\rightarrow \Bigg(\sum_{k=1}^K\big\langle \bm{Z}_k, \bm{c}^k_n\bm{e}_n^{\mathsf{T}}\big\rangle\Bigg)_{n=1}^{N}.	
+ \end{align*}
+ %--------------
+Then, by defining $ \mathcal{B} := \bm{D}\mathcal{C}$, the measurements $\bm{y}$ reads to
+ %--------------
+\begin{align}\label{eq:measure_model1}
+    \bm{y}  =  \mathcal{B}(\bm{\mathcal{X}}). 
+\end{align} 
+%--------------
+ 
+ In model~\eqref{eq.sampledmodel3}, the number of delays $\{P_k\}_{k=1}^K$ (e.g., in a multipath channel in multi-user wireless systems) is small. 
+ Thus, we define the atomic norm~\cite{chandrasekaran2012convex}
+ %--------------
+ \begin{align}\label{eq.atomic_def}
+ &\|\bm{Z}\|_{\mathcal{A}_k}:=\inf\{t>0: \bm{Z}\in t{\rm conv}(\mathcal{A}_k)\}\nonumber\\
+ &=\inf_{\substack{c_{\ell}, \tau_{\ell}\\\|{\bm{x}_k}\|_2=1}}\Big\{\sum_{\ell}|c_{\ell}|:~\bm{Z}=\sum_{\ell}c_{\ell} \bm{x}_k\bm{a}(\tau_{\ell})^{\mathsf{T}}  \in\mathbb{C}^{M_k\times N} \Big\}
+ \end{align}
+ %--------------
+ associated with the atoms
+ %--------------
+ \begin{align*}
+ \mathcal{A}_k=\big\{\bm{x}\bm{a}(\tau)^{\mathsf{T}}: \tau\in[0,1), \|\bm{x}\|_2=1, \bm{x}\in\mathbb{C}^{M_k} \big\}, k\in [K].
+ \end{align*}
+ %--------------
+  The atomic norm $\|\bm{X}_k\|_{\mathcal{A}_k}$ can be regarded as the best convex alternative for the smallest number of atoms $\mathcal{A}_k$ needed to represent a signal $\bm{X}_k$. Hence, we are interested in recovering the matrix tuple $\bm{\mathcal{X}}:=(\bm{X}_k)_{k=1}^K$ by motivating its atomic sparsity by solving the following optimization problem. 
+ %--------------
+ \begin{align}\label{eq.primalprob}
+ \min_{\bm{\mathcal{Z}}=(\bm{Z}_k)_{k=1}^K} ~\sum_{k=1}^{K}\|\bm{Z}_k\|_{\mathcal{A}_k}\quad 
+ \bm{y}_{M\times 1}=\mathcal{B}(\bm{\mathcal{Z}}).	
+ \end{align} 
+ %--------------
+Finding the optimal parameters in \eqref{eq.primalprob} is not an easy task because it involves an infinite-dimensional variable optimization due to the continuity of the set. Alternatively, we can solve the dual problem explained in the next section. 
+
+In what follows, we state the conditions for the uniqueness of the solution to optimization in \eqref{eq.primalprob} and the exact recovery of channel parameters and message data. Before expressing Proposition \ref{prop.optimality}, we define the separation between the delays of channel $k$ as
+  %--------------
+ \begin{align}
+ \Delta_k:=\min_{\ell \neq q}|\tau^k_{\ell}-\tau^k_q|,
+ \end{align} 
+ %--------------
+and the minimum separation between all users by $\Delta:=\min_{i} \Delta_k$. The absolute value in the latter definition is evaluated as the wrap-around distance on the unit circle.
+
+
+% || ==================== ||
+\input{Figures/Fig_Polar}
+% || ==================== |
+
+%=================
+\begin{prop}\label{prop.optimality}
+Denote the set of multipath's delays of $h_k(t)$ as $\mathcal{P}_k:=\{\tau_{\ell}^k\}_{\ell=1}^{P_k}$. The solution $\widehat{\bm{\mathcal{X}}}=(\widehat{\bm{X}}_k)_{k=1}^K$ of \eqref{eq.primalprob} is unique if  $\Delta \geq \frac{1}{N}$ and there exists a vector $\bm{\lambda}=[\lambda_{1}, \ldots, \lambda_{N}]^{\mathsf{T}}\in\mathbb{C}^N$ such that the vector-valued dual polynomials 
+%--------------
+\begin{align}\label{eq.Qi}
+\bm{q}_k(\tau)=(\mathcal{B}^*\bm{\lambda})_k\bm{a}^*(\tau)= \sum_{n=1}^{N}\lambda_n {\rm e}^{j2\pi n \tau} \bm{c}_n^k\in\mathbb{C}^{r_k}, 
+\end{align}
+%--------------
+for $k \in [K]$, satisfy the conditions
+%--------------
+\begin{align}
+&\bm{q}_k(\tau_{\ell})={\rm sgn}({c_{\ell}^{k}})\bm{x}_k~\forall \tau_{\ell}\in \mathcal{P}_k,~ k\in [K]\label{eq.supp_cond}\\
+&\|\bm{q}_k(\tau)\|_2<1~~\forall \tau \in [0,1)\setminus \mathcal{P}_k,~ k\in [K].\label{eq.offsupp_cond}
+\end{align}
+%--------------
+ \end{prop}
+%=================
+\begin{proof}
+See Appendix \ref{proof.optimality}.
+\end{proof}
+
+
+
+
+\begin{corl}
+The dual polynomial $\bm{q}_k(\tau)$ only depends on its corresponding codebook, i.e.,   $\bm{C}_k$. Therefore, in the case where all users employ the same codebook matrix, all users have a common subspace, i.e., $\bm{C}_k = \bm{C} \in \mathbb{C}^{N\times M'}$ where $M'$ denotes message size for all the users,  all the atomic norms in \eqref{eq.primalprob} can be replaced with only one atom and its dual polynomial. 
+\end{corl}            
+
+% ## =========================== ##
+ \subsection{Channel estimation via Dual Problem}
+% ## =========================== ##
+Before proceeding with the dual problem, let us define the dual polynomial of the atomic norm in the sequel.  In particular, the dual atomic norm $\|\cdot\|_{\mathcal{A}_k}^{\mathsf{d}}$ at an arbitrary point $\bm{Z}\in \mathbb{C}^{M_k\times N}$ is defined as
+%--------------
+\begin{align}\label{eq.dualnorm1}
+\|\bm{Z}\|_{\mathcal{A}_k}^{\mathsf{d}}&:=\sup_{\|\bm{X}\|_{\mathcal{A}_k}\le 1}{\rm Re}\big\{\langle \bm{Z}, \bm{X} \rangle\big\}\nonumber\\
+&=\sup_{\substack{\tau\in [0,1)\\\|\bm{x}\|_2=1}}{\rm Re}\big\{\langle \bm{Z}, \bm{x}\bm{a}(\tau)^{\mathsf{T}} \rangle\big\} \nonumber\\
+&=\sup_{\substack{\tau\in [0,1)\\ \|\bm{x}\|_2=1}}{\rm Re}\big\{\langle \bm{x}, \bm{Z}\bm{a}^*(\tau) \rangle\big\}\nonumber \\ 
+& =\sup_{\tau\in [0,1)}\|\bm{Z}\bm{a}^*(\tau)\|_2.
+\end{align}
+%--------------
+Then, by assigning the Lagrangian vector $\bm{\lambda}\in\mathbb{C}^N$ to the equality constraint of \eqref{eq.primalprob}, we have
+%--------------
+\begin{align}\label{eq.lagran1}
+&L(\bm{\mathcal{Z}},\bm{\lambda})=\inf _{\bm{\mathcal{Z}}\in\bigoplus_{k=1}^K\mathbb{C}^{M_k\times N}}\Big[\sum_{k=1}^K\|\bm{Z}_k\|_{\mathcal{A}_k}+\langle \bm{\lambda},\bm{y}-\mathcal{B}(\bm{\mathcal{Z}}) \rangle\Big]\nonumber\\
+&\langle \bm{\lambda},\bm{y}\rangle+\sum_{k=1}^K\inf_{\bm{Z}_k\in\mathbb{C}^{M_k\times N}}\Big[\|\bm{Z}_k\|_{\mathcal{A}_k}-\langle (\mathcal{B}^*\bm{\lambda})_k, \bm{Z}_k \rangle\Big],
+\end{align}
+%--------------
+where we used that $\langle \mathcal{B}^*\bm{\lambda}, \bm{\mathcal{Z}}\rangle=\sum_{k=1}^K\langle (\mathcal{B}^*\bm{\lambda})_k, \bm{Z}_k\rangle.$
+By using H\"{o}lder's inequality, \eqref{eq.lagran1} becomes equivalent to
+%--------------
+\begin{align}
+\nonumber L(\bm{\mathcal{Z}},\bm{\lambda})&=\langle  \bm{\lambda},\bm{y}\rangle
+\\
+& \nonumber+\sum_{k=1}^K\inf_{\bm{Z}_k\in\mathbb{C}^{M_k\times N}}\Big[\|\bm{Z}_k\|_{\mathcal{A}_k}(1-\|(\mathcal{B}^*\bm{\lambda})_k\|_{\mathcal{A}_k}^{\mathsf{d}})\Big].
+\end{align}
+%--------------
+Solving the latter optimization problem, we obtain 
+%--------------
+\begin{align}
+&L(\bm{\mathcal{Z}},\bm{\lambda})= \begin{cases}
+\langle \bm{\lambda},\bm{y}\rangle,&~~ \|(\mathcal{B}^*\bm{\lambda})_k\|_{\mathcal{A}_k}^{\mathsf{d}}\le 1,~ k \in [K] \\
+-\infty, &{\rm otherwise.}
+\end{cases}	
+\end{align}
+%--------------
+By transforming implicit constraints into explicit ones, the dual problem becomes
+%--------------
+\begin{align}\label{eq.lagran2}
+\max_{\bm{\lambda}\in\mathbb{C}^{N}}~\langle \bm{\lambda},\bm{y}\rangle \quad {\rm s.t.}\quad 
+\|(\mathcal{B}^*\bm{\lambda})_k\|_{\mathcal{A}_k}^{\mathsf{d}}\le 1,\quad 
+k \in [K],
+\end{align}
+%--------------
+ where $\mathcal{B}^*:\mathbb{C}^{M}\rightarrow \bigoplus_{k=1}^K\mathbb{C}^{M_k\times N}$ denotes the adjoint operator of $\mathcal{B}$ and $\mathcal{B}^*\bm{\lambda}:=((\mathcal{B}^*\bm{\lambda})_k)_{k=1}^K$ is a matrix tuple where the $k$-th matrix is given by $(\mathcal{B}^*\bm{\lambda})_k=\sum\nolimits_{n=1}^{N}\lambda_n\bm{c}^k_n\bm{e}_n^{\mathsf{T}}.$
+ %--------------
+Maximization in \eqref{eq.lagran2} can also be presented in SDP format as 
+ %--------------
+\begin{equation}\label{prob.sdp}
+    \begin{aligned}
+    &\bm{\lambda}^* = \underset{\substack{\bm{\lambda}\in\mathbb{C}^{N}, \bm{Q}\in \mathbb{C}^{N\times N}}}{\rm argmax}~~{\rm Re}\big\{\langle \bm{\lambda}, \bm{y}\rangle\big\}\\
+    &~~~~{\rm s.t.}~~
+    \begin{bmatrix}
+        \bm{Q}&(\mathcal{B}^{*}(\bm{\lambda}))_k\\
+        (\mathcal{B}^{*}(\bm{\lambda}))_k^{\mathsf{H}}&\bm{I}_T
+    \end{bmatrix}\succeq \bm{0}, \quad k \in [K],\\
+    & ~~~~~~\langle \mathscr{T}({\bm{e}_q}), \bm{Q}  \rangle=1_{q=0}, \quad q=-N+1,..., N-1,
+    \end{aligned}
+\end{equation}	
+ %--------------
+ where $\mathscr{T}$ shows the Toeplitz structure. 
+Maximization in \eqref{prob.sdp} is a convex problem; therefore,  it can be efficiently solved using the CVX toolbox \cite{grant2014cvx}.  Let $\hat{\bm{\lambda}}$ be the solution to the dual problem in~\eqref{eq.lagran2},
+then the spikes can be localized by the peaks of the following term $ \hat{\mathcal{T}}_k = \Big\{\tau \in [0,1) | \big\|  (\mathcal{B}^* \hat{\bm{\lambda}})_k \bm{a}(\tau) \big\|_2=1 \Big\}.$ For instance, an example of this channel estimation is depicted in Fig~\ref{fig:Daul} for a case with $K=2$. 
+ 
+ To recover the message vector and the channel amplitudes corresponding to user $k$, we form  $\widehat{\bm{Z}}_k=\sum\nolimits_{\ell}\widehat{g}_{\ell}^k \widehat{\bm{x}}_k\bm{a}(\widehat{\tau}_{\ell}^k)^{\mathsf{T}}$. Let $\widehat{\bm{g}}^k:=[\widehat{g}_1^k, \ldots,\widehat{g}_{P_k}^k]^{\mathsf{T}}$. Then, the rank one matrix $\widehat{\bm{x}}_k$ can be estimated as $\widehat{\bm{x}}_k\widehat{\bm{g}}^{k\mathsf{T}}=\widehat{\bm{Z}}_k\bm{A}^{(k)\dagger}$ where $\bm{A}^{(k)}:=[\bm{a}(\widehat{\tau}_k^1), \ldots,\bm{a}(\widehat{\tau}_k^{P_k})]^\mathsf{T}$. By using the assumption $\|\widehat{\bm{x}}_k\|_2=1$ and taking singular value decomposition, we can find $|\widehat{\bm{x}}_k|$ and $|\widehat{\bm{g}}^k|$ for $k=1, \ldots, K$.
+ 
+ % and multiplying the left-hand side of the latter equation by $\widehat{\bm{x}}_r^T$, we can estimate $\widehat{\bm{c}}^r=\bm{A}^{{(r)\dagger}^T}\widehat{\bm{Z}}_r\widehat{\bm{x}}_r, \ell=1,..., S_R$. Then, by knowing $|\widehat{c}_i^{r}|$, we can estimate the absolute value of each element of the channel corresponding to the $r$-th user, i.e., $|\widehat{\bm{x}}_r|$.
+ % rank one matrix $\hat{\bm{Z}}_r = \bm{u}_rS_r\bm{v}^{\mathsf{H}}$  and set $\hat{\bm{x}}_r =  \sqrt{S_r}\bm{u}_r$ and $\bm{d}_k: = \sum\nolimits_{k}c_k^{r}\bm{a}(\tau_k^{r}) =  \sqrt{S_r}\bm{u}_r$. Finally, the amplitudes of $x_r(t)$ is obtained by least square solution i.e. $\bm{c}^{r} = \bm{A}^{(r)\dagger} \bm{d}_k$ where  $\bm{A} \in \mathbb{C}$ is complex matrix whose $k$-th column is $\bm{a}(\tau_k^{r})$.
+ 
+% {\scriptsize{
+%      \begin{align}
+%          \begin{bmatrix}
+%               \bm{e}_{-2M}^T
+%               \bm{a}(\hat{\tau}_1^1)
+%               {\bm{b}_{-2M}^1}^T
+%               &\hdots&\bm{e}_{-2M}^T\bm{a}(\widehat{\tau}_{s_r}^r){\bm{b}_{-2M}^r}^T\\
+%               \vdots&\ddots&\vdots\\
+%            \bm{e}_{2M}^T
+%               \bm{a}(\hat{\tau}_1^1)
+%               {\bm{b}_{2M}^1}^T
+%              &\hdots&\bm{e}_{2M}^T\bm{a}(\widehat{\tau}_{s_r}^r){\bm{b}_{2M}^r}^T\\
+%          \end{bmatrix} \begin{bmatrix}
+%              c_1^1 \bm{x}_1\\
+%              \vdots\\
+%              c_{s_1}^1 \bm{x}_1\\
+%              \vdots\\
+%              c_1^r \bm{x}_r\\
+%              \vdots\\
+%              c_{s_r}^r \bm{x}_r\\
+%          \end{bmatrix}=\begin{bmatrix}
+%              y(-2M)\\
+%              \vdots\\
+%              y(2M)
+%          \end{bmatrix}
+%      \end{align}}
+% }
+
+
+
+
+
+% ## =========================== ##
+\section{Simulation Results}\label{sec.simulations}
+% ## =========================== ##
+% \vspace{-10pt}
+This section evaluates the optimization performance in \eqref{eq.lagran2} for different channel delays and message lengths. Then numerical experiments are implemented using MATLAB CVX Toolbox \cite{grant2014cvx}.  The delays' locations are generated uniformly at random with the minimum separation $\Delta\geq \frac{1}{N}$ to be smaller than what we theoretically expected.  The basis of low  
+dimensional tall matrix $\bm{C}_k\in \mathbb{C}^{ N \times M_k}$ is generated uniformly at random for $k\in [K]$ from normal distribution $\mathcal{N}(0,1)$. The messages $\bm{x}_k, k=1, \ldots, K$ are generated \textit{i.i.d} and uniformly at random  from the unit sphere. Note that if there is some sort of coordination on the values of transmitted messages (e.g., positiveness) between users and \ac{BS}, \ac{GB2D} can unambiguously recover the transmitted messages.   
+
+
+
+For the first case,  we set $K=4$ with $P_1=\cdots=P_4=3$ from $N=200$ samples, and the filter size $M_k=5$ for $k\in [4]$. Also, the sensing matrix $\bm{D}$ is set to be identity, i.e., $\bm{D}=\bm{I}_N$. Then, the results are depicted in Fig~\ref{Fig(a):Circ}. Fig~\ref{Fig(a):Circ} shows that  the \ac{GB2D} can distinguish two closely spaced delays. In Fig~\ref{Fig(b):Circ}, we repeat this experiment for $K=3$ with $M_1=3,M_2=2,M_3=1$ from $N=128$ samples.  
+% || ==================== ||
+\input{Figures/Fig_message}
+% || ==================== |
+
+For the last case, we check the stability of the algorithm regarding a larger message size $M_k=16$ with $N=128$ samples and the effect of the sensing matrix with $M=64$ (sub-sampling uniform) in Fig~\ref{Fig(c):Circ}. We observe that all the cases are successfully recovered by \ac{GB2D} for a sufficient number of samples $N$. 
+
+Finally, we evaluate the performance of the \ac{GB2D} method for message recovery in Fig~\ref{fig:Mas}.  Fig~\ref{fig:Mas} depicts the mean square error (MSE) of the estimated messages by the \ac{GB2D} for different numbers of samples $N$. We generate two messages of size $4$, i.e.,  $M_1 = M_2= 4$ with positive elements. The channel amplitudes are generated as complex Gaussian distribution, and the number of multipath components is set to $P_1 = 5$ and $P_2 = 5$. As it turns out from Fig. \ref{fig:Mas}, \ac{GB2D} provides excellent performance in message recovery, and the messages are unambiguously estimated\footnote{Note that the positiveness of the message elements and the $\ell_2$ normalized assumption of the message vector, i.e., $\|\bm{x}_k\|_2=1, k=1, \ldots, K$ are one of the ways to remove the multiplicative ambiguity caused by multiplying channel amplitudes and messages.}. Moreover, increasing the number of samples at the \ac{BS} leads to higher message recovery performance. 
+
+The results show that for different numbers of multipath components and various sizes of messages, \ac{GB2D} can simultaneously recover messages and estimate multipath channels.  
+
+
+% ## =========================== ##
+\section{Conclusion}\label{sec.conclusion}
+% ## =========================== ##
+
+The focus of our paper was to explore the possibility of simultaneous data recovery and channel estimation when multiple users send their messages through multiple channels and a \ac{BS} receives a linear combination of multiple convolved channels that are made up of a few scaled and delayed continuous Dirac spikes. Specifically, the measurements we worked with were a linear combination  of the collective sum of these convolved signals with unknown amplitudes.
+The main goal was to find these unknown channel delay parameters from only one vector of observations. Since this problem is inherently highly challenging to solve, we overcome this issue by restricting the domain of the transmitted signals to some known low-dimensional subspaces while we have a separation condition on the Dirac spikes. Afterward, we proposed a semidefinite programming optimization to recover the channel delays and the messages of different users simultaneously from one observed vector.
+For future works, we will provide the performance guarantee of \ac{GB2D} by obtaining the required sample complexity that one needs for perfect recovery of the continuous parameters and the transmitted waveforms.  Moreover, we plan to investigate further the impact of noise on the \ac{GB2D}'s performance and explore possible techniques to enhance its robustness. 
+ 
+
+
+
+\appendix
+
+\section{Proof of Proposition \ref{prop.optimality}}\label{proof.optimality}
+
+Any $\bm{\lambda}\in\mathbb{C}^N$ satisfying \eqref{eq.supp_cond} and \eqref{eq.offsupp_cond} is a feasible point in the dual problem \eqref{eq.lagran2}. Recall that $\bm{\mathcal{X}}=(\bm{X}_k)_{k=1}^K$ is the matrix tuple of interests where $\bm{X}_k=\sum_{\ell=1}^{P_k}g_{\ell}^k\bm{x}_k\bm{a}(\tau_{\ell}^k)^{\mathsf{T}}$. It holds that
+%--------------
+\begin{align}\label{eq.rel1}
+\sum_{k=1}^K\|\bm{X}_k\|_{\mathcal{A}_k}&\ge \sum_{k=1}^K\|\bm{X}_k\|_{\mathcal{A}_k}\|(\mathcal{B}^*\bm{\lambda})_k\|_{\mathcal{A}_k}^{\mathsf{d}}\nonumber\\ \nonumber
+& \ge\sum_{k=1}^K\langle (\mathcal{B}^*\bm{\lambda})_k, \bm{X}_k \rangle\\ 
+&=\sum_{k=1}^K\langle (\mathcal{B}^*\bm{\lambda})_k, \sum_{\ell=1}^{P_k}g_{\ell}^k\bm{x}_k\bm{a}(\tau_{\ell}^k)^{\mathsf{T}} \rangle\nonumber\\
+&=\sum_{k=1}^K\sum_{\ell=1}^{P_k}{\rm Re}\Big\{{g_{\ell}^k}^*\langle (\mathcal{B}^{\ast}\bm{\lambda})_k, \bm{x}_k\bm{a}(\tau_{\ell}^k)^{\mathsf{T}} \rangle \Big\} \nonumber\\
+&=\sum_{k=1}^K\sum_{\ell=1}^{P_k}{\rm Re}\Big\{{g_{\ell}^k}^*\langle \bm{Q}_k(\tau_{\ell}^k), \bm{x}_k \rangle\Big\},
+\end{align}
+%--------------
+where the second inequality is due to H\"{o}lder's inequality, and the last equalities are due to the definition of $\bm{Q}_k(\tau_{\ell}^k)$ in \eqref{eq.Qi}. We proceed \eqref{eq.rel1} by using conditions \eqref{eq.supp_cond} and \eqref{eq.offsupp_cond}:
+%--------------
+\begin{align}\label{eq.rel2}
+\sum_{k=1}^K\|\bm{X}_k\|_{\mathcal{A}_k}&\ge \sum_{k=1}^K\sum_{\ell=1}^{P_k}{\rm Re}\Big\{{g_{\ell}^k}^*\langle \frac{1}{\|\bm{x}_k\|_2^2}{\rm sgn}(g_{\ell}^k)\bm{x}_k, \bm{x}_k \rangle\Big\}  \nonumber\\
+& = \sum_{k=1}^K\sum_{\ell=1}^{P_k}|g_{\ell}^k|\nonumber\\
+&\ge\sum_{k=1}^K\|\bm{X}_k\|_{\mathcal{A}_k},
+\end{align}
+%--------------
+where we used the definition of atomic norm \eqref{eq.atomic_def} in the last step. From \eqref{eq.rel1} and \eqref{eq.rel2}, we find that 
+$\langle \bm{\lambda}, \mathcal{B}\bm{\mathcal{X}}\rangle=\sum_{k=1}^K\|\bm{X}_k\|_{\mathcal{A}_k}$. Since the pair $(\bm{\mathcal{X}}, \bm{\lambda})$ is primal-dual feasible, we reach the conclusion that $\bm{\mathcal{X}}$ is an optimal solution of \eqref{eq.primalprob} and $\bm{\lambda}$ is an optimal solution of \eqref{eq.lagran2} by strong duality. For proving uniqueness, suppose $\widehat{\bm{\mathcal{X}}}:=(\widehat{\bm{X}}_k)_{k=1}^K$ is another optimal solution of \eqref{eq.primalprob} where $\widehat{\bm{X}}_k=\sum_{\widehat{\tau}_{\ell}^k\in \widehat{\mathcal{P}}_k}\widehat{g}_{\ell}^k\widehat{\bm{x}}_k\bm{a}(\widehat{\tau}_{\ell}^k)^{\mathsf{T}}$. If $\widehat{\bm{\mathcal{X}}}$ and $\bm{\mathcal{X}}$ have the same set of delays, i.e., $\widehat{\mathcal{P}}_k=\mathcal{P}_k,~\forall~k \in [K]$, we then have $\widehat{\bm{\mathcal{X}}}=\bm{\mathcal{X}}$ since the set of atoms building $\bm{\mathcal{X}}$ are linearly independent. If there exists some $\widehat{\tau}_{\ell}^k\notin \mathcal{P}_k$, then we can expand term $\langle \bm{\lambda}, \mathcal{B}\widehat{\bm{\mathcal{X}}}\rangle$ as follows 
+%--------------
+\begin{align}\label{eq.rel3}
+&\sum_{k=1}^K\langle (\mathcal{B}^*\bm{\lambda})_k, \widehat{\bm{X}}_k\rangle=\hspace{-4pt}
+\sum_{k=1}^K \sum_{k}{\rm Re}\Big\{{\overset{*}{\widehat{g}_{\ell}^k}}\langle (\mathcal{B}^*\bm{\lambda})_k, \widehat{\bm{x}}_k\bm{a}(\widehat{\tau}_{\ell}^k)^{\mathsf{T}} \rangle\Big\}\hspace{-2pt}=\nonumber\\
+&	{\footnotesize \sum_{k=1}^K\Big[\hspace{-6pt}\sum_{\widehat{\tau}_{\ell}^k\in \mathcal{P}_k}\hspace{-6pt}{\rm Re}\Big\{{\overset{*}{\widehat{g}_{\ell}^k}}
+\langle\bm{Q}_k(\widehat{\tau}_{\ell}^k),\widehat{\bm{x}}_k \rangle\Big\}\hspace{-3pt}+\hspace{-10pt}\sum_{\widehat{\tau}_{\ell}^k\notin \mathcal{P}_k}\hspace{-6pt}{\rm Re}\Big\{{\overset{*}{\widehat{g}_{\ell}^k}}
+\langle\bm{Q}_k(\widehat{\tau}_{\ell}^k),\widehat{\bm{x}}_k \rangle\Big\}\Big]\le}\nonumber\\
+&\sum_{k=1}^K\Big[\sum_{\widehat{\tau}_{\ell}^k\in \mathcal{P}_k}\hspace{-6pt}|\widehat{g}_{\ell}^k|
+\|\bm{Q}_k(\widehat{\tau}_{\ell}^k)\|_2\|\widehat{\bm{x}}_r\|_2 +\hspace{-7pt}\sum_{\widehat{\tau}_{\ell}^k\notin \mathcal{P}_k}\hspace{-5pt}|\widehat{g}_{\ell}^k|
+\|\bm{Q}_k(\widehat{\tau}_{\ell}^k)\|_2\|\widehat{\bm{x}}_k\|_2\Big]\nonumber\\ \nonumber
+&<\sum_{k=1}^K\Big[\sum_{\widehat{\tau}_{\ell}^k\in \mathcal{P}_k}|\widehat{g}_{\ell}^k|
+ +\sum_{\widehat{\tau}_{\ell}^k\notin \mathcal{P}_k}|\widehat{g}_{\ell}^k|\Big]\\
+ & =\sum_{k=1}^K|\widehat{g}_{\ell}^k|=\sum_{k=1}^K\|\widehat{\bm{X}}_k\|_{\mathcal{A}_k},
+\end{align}
+%--------------
+where we used the conditions \eqref{eq.supp_cond} and \eqref{eq.offsupp_cond}. The relation \eqref{eq.rel3} contradicts strong duality; hence $\bm{\mathcal{X}}$ is the unique optimal solution of \eqref{eq.primalprob}.
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{Ref}
+
+% \bibliographystyle{ieeetr}
+
+
+
+\end{document}

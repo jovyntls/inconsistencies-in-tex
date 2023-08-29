@@ -1,0 +1,635 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021) 
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+ L3 programming layer <2021-02-18> (./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+
+-- Using 210mm x 297mm (a4) paper.
+-- Using DVI output.
+-- This is a 10 point document.
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty))
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psfrag/psfrag.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/acronym/acronym.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bigfoot/suffix.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.tex)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/arydshln/arydshln.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/stfloats.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)
+No file 2308.00543_lualatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cbfonts-fd/lgrlmr.fd)
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 517.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 517.
+
+-- Lines per column: 56 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cbfonts-fd/lgrcmss.fd)
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 576.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 580.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 601.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 604.
+
+
+LaTeX Warning: Citation `HugKawSim:J15' on page 1 undefined on input line 604.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 604.
+
+
+LaTeX Warning: Citation `LiuCuiMas:J22' on page 1 undefined on input line 604.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 604.
+
+
+LaTeX Warning: Citation `StuWie:J11' on page 1 undefined on input line 604.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 607.
+
+
+LaTeX Warning: Citation `ZhaRahWu:J21' on page 1 undefined on input line 607.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 609.
+
+
+LaTeX Warning: Citation `AhmKobWig:J22' on page 1 undefined on input line 609.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 609.
+
+
+LaTeX Warning: Citation `ChaMoeHim:J17' on page 1 undefined on input line 609.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 609.
+
+
+LaTeX Warning: Citation `XioLiuCui:J22' on page 1 undefined on input line 609.
+
+[1
+Non-PDF special ignored!
+Non-PDF special ignored!{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 627.
+
+
+LaTeX Warning: Reference `Fig_scheme' on page 2 undefined on input line 627.
+
+
+warning  (file Fig_scheme.pdf) (pdf inclusion): PDF inclusion: found PDF versio
+n '1.6', but at most version '1.5' allowed
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 636.
+
+
+LaTeX Warning: Citation `PolPooVer:J10' on page 2 undefined on input line 636.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 661.
+
+
+LaTeX Warning: Citation `VanBel:B68' on page 2 undefined on input line 661.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 666.
+
+
+LaTeX Warning: Citation `ZhaLiuMas:J21' on page 2 undefined on input line 666.
+
+
+Underfull \vbox (badness 1009) has occurred while \output is active [2<./Fig_sc
+heme.pdf>]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 695.
+
+
+LaTeX Warning: Citation `PolPooVer:J10' on page 3 undefined on input line 695.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 695.
+
+
+LaTeX Warning: Citation `YanDurKoc:C13' on page 3 undefined on input line 695.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 695.
+
+
+LaTeX Warning: Citation `YanDurKoc:J10' on page 3 undefined on input line 695.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 698.
+
+
+LaTeX Warning: Citation `AhmKobWig:J22' on page 3 undefined on input line 698.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 698.
+
+
+LaTeX Warning: Citation `ChaMoeHim:J17' on page 3 undefined on input line 698.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 698.
+
+
+LaTeX Warning: Citation `XioLiuCui:J22' on page 3 undefined on input line 698.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 707.
+
+
+LaTeX Warning: Reference `Power-constraint' on page 3 undefined on input line 7
+07.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 707.
+
+
+LaTeX Warning: Citation `PolPooVer:J10' on page 3 undefined on input line 707.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 713.
+
+
+LaTeX Warning: Reference `MSE' on page 3 undefined on input line 713.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 723.
+
+
+LaTeX Warning: Reference `ML-estimator' on page 3 undefined on input line 723.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 736.
+
+
+LaTeX Warning: Reference `Pro:Error-upperbound' on page 3 undefined on input li
+ne 736.
+
+[3]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 739.
+
+
+LaTeX Warning: Reference `Pro:Error-upperbound' on page 4 undefined on input li
+ne 739.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 746.
+
+
+LaTeX Warning: Citation `YanDurKoc:C13' on page 4 undefined on input line 746.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 746.
+
+
+LaTeX Warning: Citation `YanDurKoc:J10' on page 4 undefined on input line 746.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 754.
+
+
+LaTeX Warning: Reference `Pro:Saturate' on page 4 undefined on input line 754.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 785.
+
+
+LaTeX Warning: Reference `Pro:Saturate' on page 4 undefined on input line 785.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 785.
+
+
+LaTeX Warning: Reference `Pro:achievability-bound' on page 4 undefined on input
+ line 785.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 785.
+
+
+LaTeX Warning: Citation `YanDurKoc:C13' on page 4 undefined on input line 785.
+
+
+Overfull \hbox (1.9389pt too wide) detected at line 792
+\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = []
+
+warning  (file Achievability.pdf) (pdf inclusion): PDF inclusion: found PDF ver
+sion '1.6', but at most version '1.5' allowed
+
+warning  (file Converse.pdf) (pdf inclusion): PDF inclusion: found PDF version 
+'1.6', but at most version '1.5' allowed
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 828.
+
+
+LaTeX Warning: Reference `Power-constraint' on page 4 undefined on input line 8
+28.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 828.
+
+
+LaTeX Warning: Reference `Average-power-constraint' on page 4 undefined on inpu
+t line 828.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 828.
+
+
+LaTeX Warning: Reference `Average-power-constraint' on page 4 undefined on inpu
+t line 828.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 832.
+
+
+LaTeX Warning: Reference `Power-constraint' on page 4 undefined on input line 8
+32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 832.
+
+
+LaTeX Warning: Reference `Average-power-constraint' on page 4 undefined on inpu
+t line 832.
+
+[4<./Achievability.pdf><./Converse.pdf>]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 855.
+
+
+LaTeX Warning: Citation `Sha:J59' on page 5 undefined on input line 855.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 855.
+
+
+LaTeX Warning: Reference `Pro:Converse-bound' on page 5 undefined on input line
+ 855.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 855.
+
+
+LaTeX Warning: Reference `Converse-bound' on page 5 undefined on input line 855
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 859.
+
+
+LaTeX Warning: Reference `Pro:Converse-bound' on page 5 undefined on input line
+ 859.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 859.
+
+
+LaTeX Warning: Reference `Converse-bound' on page 5 undefined on input line 859
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 929.
+
+
+LaTeX Warning: Citation `YanDurKoc:C13' on page 5 undefined on input line 929.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 933.
+
+
+LaTeX Warning: Reference `Maximal-error' on page 5 undefined on input line 933.
+
+
+
+Underfull \vbox (badness 1117) has occurred while \output is active
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 939.
+
+
+LaTeX Warning: Citation `FozMcLSch:J03' on page 5 undefined on input line 939.
+
+
+Overfull \hbox (4.07967pt too wide) in paragraph at lines 976--977
+ [][] 
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 985.
+
+
+LaTeX Warning: Reference `Channel' on page 5 undefined on input line 985.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 985.
+
+
+LaTeX Warning: Reference `Fig_rate_error' on page 5 undefined on input line 985
+.
+
+[5]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 989.
+
+
+LaTeX Warning: Reference `Fig_rate_error' on page 6 undefined on input line 989
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 991.
+
+
+LaTeX Warning: Reference `Fig_region' on page 6 undefined on input line 991.
+
+
+Overfull \hbox (4.07967pt too wide) in paragraph at lines 995--996
+ [][] 
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1001.
+
+
+LaTeX Warning: Reference `Fig_region' on page 6 undefined on input line 1001.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1001.
+
+
+LaTeX Warning: Reference `Achievability-rate-loss' on page 6 undefined on input
+ line 1001.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1001.
+
+
+LaTeX Warning: Reference `Fig_region' on page 6 undefined on input line 1001.
+
+No file 2308.00543_lualatex.bbl.
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[6<./Fig_rate_error-eps-converted-to.pdf><./Fig_region-eps-converted-to.pdf>]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.00543/2308.00543_lualatex.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+)
+(see the transcript file for additional information)
+ 842 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 85 attribute, 59 glue_spe
+c, 85 attribute_list, 1 write nodes
+   avail lists: 2:845,3:268,4:36,5:1022,6:43,7:11829,8:50,9:1098,10:21,11:1046
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.o
+tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
+r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-reg
+ular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman9-
+regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroma
+n10-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lm
+roman12-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/l
+m/lmroman17-regular.otf></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 2308.00543_lualatex.pdf (6 pages, 630874 bytes).
+Transcript written on 2308.00543_lualatex.log.

@@ -1,0 +1,69 @@
+\begin{figure}[t]
+
+\centering
+\resizebox{0.85\linewidth}{!}{
+
+\definecolor{mycolor6}{rgb}{0.92941,0.69412,0.12549}%
+\definecolor{mycolor7}{rgb}{0.74902,0.00000,0.74902}%
+\definecolor{mycolor8}{rgb}{0.60000,0.20000,0.00000}%
+
+\begin{tikzpicture}
+\begin{axis}[%
+width=5.1in,
+height=3.003in,
+at={(2.6in,0.85in)},
+scale only axis,
+xmin=0,
+xmax=1,
+xlabel style={font=\color{white!15!black}, font=\LARGE},
+xlabel={Probability of an entry of $S$ to be non-zero, $\mu$},
+ymin=0,
+ymax=70,
+xtick={0, 0.2, 0.4, 0.6, 0.8, 1},
+ytick={0,10,20,30,40,50,60,70},
+tick label style={font=\LARGE} ,
+ylabel style={font=\color{white!15!black}, font=\LARGE},
+ylabel={Worker computation time (in $ms$)},
+axis background/.style={fill=white},
+xmajorgrids={true},
+ymajorgrids={true},
+legend style={at={(0.50,0.10)}, nodes={scale=1}, anchor=south west, legend cell align=left, align=left, draw=white!15!black,font = \Huge}
+%legend style={legend cell align=left, align=left, draw=white!15!black,font = \Large}
+]
+
+\addplot [solid, color=mycolor8, line width=2.0pt, mark=diamond, mark options={solid, mycolor8, scale = 3}]
+  table[row sep=crcr]{%
+0	21.8\\
+0.02	40.1\\
+0.05	44.8\\
+0.1   48.2\\
+0.2	51.7\\
+0.4	54.3\\
+0.6	55.1\\
+0.8	55.7\\
+1	55.8\\
+};
+\addlegendentry{$n = 36, s = 8$}
+
+
+\addplot [dashed, color=mycolor1, line width=2.0pt, mark=*, mark options={solid, mycolor1, scale = 2}]
+  table[row sep=crcr]{%
+0	16.7\\
+0.02	37.1\\
+0.05	44.7\\
+0.1	50.4\\
+0.2	54.6\\
+0.4	57.3\\
+0.6	61.1\\
+0.8	61.5\\
+1	61.3\\
+};
+\addlegendentry{$n = 30, s = 5$}
+
+\end{axis}
+\end{tikzpicture}%
+}
+\caption{\small Trade-off between the protection against information leakage and the worker computation time. A larger $\mu$ enhances the protection, but reduces the computation speed.}
+\vspace{-0.2 in}
+\label{privacy_plot}
+\end{figure}

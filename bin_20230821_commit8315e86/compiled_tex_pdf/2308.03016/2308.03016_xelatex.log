@@ -1,0 +1,23 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.5)  20 AUG 2023 02:08
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**macro.TeX
+(./macro.TeX
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>)
+! Emergency stop.
+<*> macro.TeX
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 359 strings out of 476919
+ 1793 string characters out of 5821840
+ 292912 words of memory out of 5000000
+ 20461 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 12i,0n,15p,97b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

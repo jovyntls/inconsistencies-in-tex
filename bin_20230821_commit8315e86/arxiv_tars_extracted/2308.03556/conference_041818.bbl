@@ -1,0 +1,165 @@
+\begin{thebibliography}{10}
+
+\bibitem{b1}
+Y.~{LeCun}, Y.~{Bengio}, and G.~{Hinton}, ``Deep learning,'' {\em Nature},
+  vol.~521, pp.~436--444, May 2015.
+
+\bibitem{b2}
+I.~Goodfellow, Y.~Bengio, and A.~Courville, {\em Deep Learning}.
+\newblock MIT Press, 2016.
+
+\bibitem{b3}
+J.~{Kim}, S.~{Kwon}, and D.~{Shin}, ``Statistical approach for blind
+  recognition of narrow-sense bch codes,'' in {\em 2018 International
+  Conference on Network Infrastructure and Digital Content (IC-NIDC)},
+  pp.~363--366, Aug 2018.
+
+\bibitem{b4}
+G.~Wu, ``Blind recognition of bch codes in faster-than-nyquist signalling
+  system,'' {\em Electronics Letters}, vol.~52, pp.~716--718(2), April 2016.
+
+\bibitem{b5}
+A.~{Bonvard}, S.~{Houcke}, M.~{Marazin}, and R.~{Gautier}, ``Order statistics
+  on minimal euclidean distance for blind linear block code identification,''
+  in {\em 2018 IEEE International Conference on Communications (ICC)},
+  pp.~1--5, May 2018.
+
+\bibitem{b6}
+G.~{Li}, J.~{Liu}, J.~{Long}, C.~{Li}, and G.~{Wu}, ``Blind recognition of
+  binary linear block code,'' in {\em 2017 International Conference on Computer
+  Systems, Electronics and Control (ICCSEC)}, pp.~909--913, Dec 2017.
+
+\bibitem{b7}
+{Tian Xia} and H.~{Wu}, ``Novel blind identification of ldpc codes using
+  average llr of syndrome a posteriori probability,'' in {\em 2012 12th
+  International Conference on ITS Telecommunications}, pp.~12--16, Nov 2012.
+
+\bibitem{b8}
+T.~{Xia}, H.~{Wu}, and S.~Y. {Chang}, ``Joint blind frame synchronization and
+  encoder identification for ldpc codes,'' in {\em 2014 IEEE International
+  Conference on Communications (ICC)}, pp.~5221--5226, June 2014.
+
+\bibitem{b9}
+Y.~{Zrelli}, M.~{Marazin}, E.~{Rannou}, and R.~{Gautier}, ``Blind
+  identification of convolutional encoder parameters over gf(2m) in the
+  noiseless case,'' in {\em 2011 Proceedings of 20th International Conference
+  on Computer Communications and Networks (ICCCN)}, pp.~1--5, July 2011.
+
+\bibitem{b10}
+R.~{Pei}, Z.~{Wang}, Q.~{Xiao}, and L.~{Quan}, ``Blind identification for turbo
+  codes in amc systems,'' in {\em 2016 8th IEEE International Conference on
+  Communication Software and Networks (ICCSN)}, pp.~43--47, June 2016.
+
+\bibitem{b11}
+A.~D. {Yardi}, S.~{Vijayakumaran}, and A.~{Kumar}, ``Blind reconstruction of
+  binary cyclic codes from unsynchronized bitstream,'' {\em IEEE Transactions
+  on Communications}, vol.~64, pp.~2693--2706, July 2016.
+
+\bibitem{b12}
+A.~{Bonvard}, S.~{Houcke}, R.~{Gautier}, and M.~{Marazin}, ``Classification
+  based on euclidean distance distribution for blind identification of error
+  correcting codes in noncooperative contexts,'' {\em IEEE Transactions on
+  Signal Processing}, vol.~66, pp.~2572--2583, May 2018.
+
+\bibitem{b13}
+R.~{Moosavi} and E.~G. {Larsson}, ``A fast scheme for blind identification of
+  channel codes,'' in {\em 2011 IEEE Global Telecommunications Conference -
+  GLOBECOM 2011}, pp.~1--5, Dec 2011.
+
+\bibitem{b14}
+R.~{Moosavi} and E.~G. {Larsson}, ``Fast blind recognition of channel codes,''
+  {\em IEEE Transactions on Communications}, vol.~62, pp.~1393--1405, May 2014.
+
+\bibitem{b15}
+P.~{Giard}, A.~{Balatsoukas-Stimming}, and A.~{Burg}, ``Blind detection of
+  polar codes,'' in {\em 2017 IEEE International Workshop on Signal Processing
+  Systems (SiPS)}, pp.~1--6, Oct 2017.
+
+\bibitem{b16}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' in {\em The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, June 2016.
+
+\bibitem{b17}
+K.~{Simonyan} and A.~{Zisserman}, ``{Very Deep Convolutional Networks for
+  Large-Scale Image Recognition},'' {\em arXiv e-prints}, p.~arXiv:1409.1556,
+  Sep 2014.
+
+\bibitem{b18}
+D.~Bahdanau, K.~Cho, and Y.~Bengio, ``Neural machine translation by jointly
+  learning to align and translate,'' {\em CoRR}, vol.~abs/1409.0473, 2015.
+
+\bibitem{b19}
+Z.~Yang, D.~Yang, C.~Dyer, X.~He, A.~Smola, and E.~Hovy, ``Hierarchical
+  attention networks for document classification,'' in {\em Proceedings of the
+  2016 Conference of the North American Chapter of the Association for
+  Computational Linguistics: Human Language Technologies}, pp.~1480--1489,
+  2016.
+
+\bibitem{b20}
+N.~{Farsad} and A.~{Goldsmith}, ``Neural network detection of data sequences in
+  communication systems,'' {\em IEEE Transactions on Signal Processing},
+  vol.~66, pp.~5663--5678, Nov 2018.
+
+\bibitem{b21}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Identity mappings in deep residual
+  networks,'' in {\em Computer Vision -- ECCV 2016} (B.~Leibe, J.~Matas,
+  N.~Sebe, and M.~Welling, eds.), (Cham), pp.~630--645, Springer International
+  Publishing, 2016.
+
+\bibitem{b30}
+H.~Vangala, E.~Viterbo, and Y.~Hong, ``A comparative study of polar code
+  constructions for the {AWGN} channel,'' {\em CoRR}, vol.~abs/1501.02473,
+  2015.
+
+\bibitem{b22}
+H.~{Li} and J.~{Yuan}, ``A practical construction method for polar codes in
+  awgn channels,'' in {\em IEEE 2013 Tencon - Spring}, pp.~223--226, April
+  2013.
+
+\bibitem{b23}
+G.~{He}, J.~{Belfiore}, I.~{Land}, G.~{Yang}, X.~{Liu}, Y.~{Chen}, R.~{Li},
+  J.~{Wang}, Y.~{Ge}, R.~{Zhang}, and W.~{Tong}, ``Beta-expansion: A
+  theoretical framework for fast and recursive construction of polar codes,''
+  in {\em GLOBECOM 2017 - 2017 IEEE Global Communications Conference},
+  pp.~1--6, Dec 2017.
+
+\bibitem{b24}
+``Ieee standard for information technology—telecommunications and information
+  exchange between systems local and metropolitan area networks—specific
+  requirements - part 11: Wireless lan medium access control (mac) and physical
+  layer (phy) specifications,'' {\em IEEE Std 802.11-2016 (Revision of IEEE Std
+  802.11-2012)}, pp.~1--3534, Dec 2016.
+
+\bibitem{b25}
+``Ieee standard for wirelessman-advanced air interface for broadband wireless
+  access systems --amendment 2: Higher reliability networks,'' {\em IEEE Std
+  802.16.1a-2013 (Amendment to IEEE Std 802.16.1-2012)}, pp.~1--319, June 2013.
+
+\bibitem{b26}
+``Digital video broadcasting (dvb); interaction channel for satellite
+  distribution systems tsi en 301, 790 v1.5.1,'' {\em European
+  Telecommunications Standards Institute.}, May 2009.
+
+\bibitem{b27}
+D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' {\em
+  arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{b28}
+S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' {\em Neural
+  computation}, vol.~9, no.~8, pp.~1735--1780, 1997.
+
+\bibitem{b29}
+A.~L. Maas, A.~Y. Hannun, and A.~Y. Ng, ``Rectifier nonlinearities improve
+  neural network acoustic models,'' in {\em Proc. icml}, vol.~30, p.~3, 2013.
+
+\bibitem{b31}
+P.~Trifonov, ``Efficient design and decoding of polar codes,'' {\em IEEE
+  Transactions on Communications}, vol.~60, no.~11, pp.~3221--3227, 2012.
+
+\bibitem{b32}
+C.~{Studer}, C.~{Benkeser}, S.~{Belfanti}, and Q.~{Huang}, ``Design and
+  implementation of a parallel turbo-decoder asic for 3gpp-lte,'' {\em IEEE
+  Journal of Solid-State Circuits}, vol.~46, pp.~8--17, Jan 2011.
+
+\end{thebibliography}

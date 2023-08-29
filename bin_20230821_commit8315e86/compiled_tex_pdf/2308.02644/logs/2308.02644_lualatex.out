@@ -1,0 +1,886 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021) 
+ restricted system commands enabled.
+(./NDT_O-RAN_Aug2023.tex
+LaTeX2e <2020-10-01> patch level 4
+ L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+-- This is a 10 point document.
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithmic.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/stfloats.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+
+Package hyperref Warning: Wrong driver `hpdftex.def';
+(hyperref)                pdfTeX is running in PDF mode.
+(hyperref)                Forcing driver `hluatex.def'.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hluatex.def
+(/usr/local/texlive/2021/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/pifont.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/upzd.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/upsy.fd))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)
+No file 2308.02644_lualatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd)
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 32.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 32.
+
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty))
+! Undefined control sequence.
+<argument> ...x \ifdim \paperheight >0pt\relax \pdfpagewidth 
+                                                  =\paperwidth \pdfpageheigh...
+
+l.32 \begin{document}
+                   
+! Undefined control sequence.
+<argument> ...elax \pdfpagewidth =\paperwidth \pdfpageheight 
+                                                  =\paperheight \fi \fi 
+l.32 \begin{document}
+                   
+! Undefined control sequence.
+<argument> \ifnum \pdfshellescape 
+                       >0 \edef \Gin@extensions {\Gin@extensions ,.eps}\Require
+l.32 \begin{document}
+                   
+! Missing number, treated as zero.
+<to be read again> 
+>
+l.32 \begin{document}
+                   
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.45 	
+    
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.45 	
+    
+
+Overfull \hbox (60.36987pt too wide) has occurred while \output is active
+[] \TU/ptm/bx/it/10 ^^@󰀀push0 g 0 G|^^@󰀀pop []
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.45 	
+    
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.45 	
+    
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.45 	
+    
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.45 	
+    
+[1
+Non-PDF special ignored!{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}]
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.45 	
+    
+
+Overfull \hbox (327.16988pt too wide) in paragraph at lines 45--45
+[]\TU/ptm/bx/it/10 ^^@󰀀push0 g 0 G[] 
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.45 	
+    
+
+LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 45.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[][][]\TU/pcr/m/n/8 This work is de-vel-oped within the Ad-vanced Wire-less
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\TU/pcr/m/n/8 Tech-nol-ogy (AWT), AI/ML at Dell Tech-nolo-gies Inc.
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\TU/pcr/m/n/8 Emails: Javad.Mirzaei@Dell.com, Ibrahim.Abual-haol@Dell.com,
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 46.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 53.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 59.
+
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.63 D
+    espite the O-RAN's potential to revolutionize the telecommunications ind...
+
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.63 D
+    espite the O-RAN's potential to revolutionize the telecommunications ind...
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 69.
+
+
+LaTeX Warning: Reference `sec:O-RANTechnologyReview' on page 2 undefined on inp
+ut line 69.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 69.
+
+
+LaTeX Warning: Reference `sec:NDT_for_ORAN' on page 2 undefined on input line 6
+9.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 69.
+
+
+LaTeX Warning: Reference `sec:Practical_NDT' on page 2 undefined on input line 
+69.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 69.
+
+
+LaTeX Warning: Reference `sec:conclusion' on page 2 undefined on input line 69.
+
+
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.70 
+   
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.70 
+   
+
+Overfull \hbox (60.36987pt too wide) has occurred while \output is active
+[] \TU/ptm/bx/it/10 ^^@󰀀push0 g 0 G|^^@󰀀pop []
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.70 
+   
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.70 
+   
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.70 
+   
+! Undefined control sequence.
+\reset@color ->\pdfcolorstack 
+                              \@pdfcolorstack pop\relax 
+l.70 
+   
+[2]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 74.
+
+
+LaTeX Warning: Citation `O-RAN_IEEE' on page 3 undefined on input line 74.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 78.
+
+
+LaTeX Warning: Citation `O-RAN.WG1.O-RAN-Architecture-Description-v07.00' on pa
+ge 3 undefined on input line 78.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 80.
+
+
+LaTeX Warning: Reference `fig:oran-logical-architecture' on page 3 undefined on
+ input line 80.
+
+! Undefined control sequence.
+\set@color ->\pdfcolorstack 
+                            \@pdfcolorstack push{\current@color }\aftergroup...
+
+l.82 \begin{figure}[t]
+                    
+! Undefined control sequence.
+\Gread@pdftex ...\expandafter \relax \pdffilesize 
+                                                  {#1}\relax \expandafter \@...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+<argument> \pdfximage 
+           \ifnum 0\ifx \Gin@decode \@empty \else 1\fi \ifGin@interpolate 1\fi 
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+<argument> ... .png}\setbox \@tempboxa =\hbox {\pdfrefximage 
+                                                  \pdflastximage }\def \Gin@...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+<argument> ...@tempboxa =\hbox {\pdfrefximage \pdflastximage 
+                                                  }\def \Gin@llx {0}\let \Gi...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+<argument> ... image\Gin@attr@hash \endcsname {\pdfrefximage 
+                                                  \the \pdflastximage }\expa...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+<argument> ... \endcsname {\pdfrefximage \the \pdflastximage 
+                                                  }\expandafter \xdef \csnam...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! You can't use `end-group character }' after \the.
+<argument> ...\endcsname {\pdfrefximage \the \pdflastximage }
+                                                  \expandafter \xdef \csname...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+<argument> ...n@log {<\Gin@base .png, id=\the \pdflastximage 
+                                                  , \ifx \Gin@page \@empty \...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! You can't use `the character ,' after \the.
+<argument> ...@log {<\Gin@base .png, id=\the \pdflastximage ,
+                                                   \ifx \Gin@page \@empty \e...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\GenericError  ...                                
+                                                     \endgroup 
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+2
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+2
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Argument of \@tempa has an extra }.
+<inserted text> 
+\par 
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+Runaway argument?
+{[}\def \@tempb {\reserved@b \@gobble }\ifx \@tempa \@tempb \def \@tempa \ETC.
+! Paragraph ended before \@tempa was complete.
+<to be read again> 
+\par 
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+! Argument of \@providesfile has an extra }.
+<inserted text> 
+\par 
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+Runaway argument?
+{\Gin@base \Gin@ext }
+! Paragraph ended before \@providesfile was complete.
+<to be read again> 
+\par 
+l.84 ...idth=1\linewidth]{oran-logical-architecture}
+                                                  
+Runaway argument?
+{[}\def \@tempb {\@providesfile {\Gin@base \Gin@ext }[]}\ifx \@tempa \ETC.
+! Paragraph ended before \@tempa was complete.
+<to be read again> 
+\par 
+l.88 	
+    
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Argument of \@ssect has an extra }.
+<inserted text> 
+\par 
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+Runaway argument?
+! Paragraph ended before \@ssect was complete.
+<to be read again> 
+\par 
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.89 	\section
+            {NDT for 5G O-RAN} \label{sec:NDT_for_ORAN}
+Runaway argument?
+{[}\def \@tempb {\@dblarg {\@sect {section}{1}{\z@ }{3.0ex plus 1.5ex\ETC.
+! Paragraph ended before \@tempa was complete.
+<to be read again> 
+\par 
+l.90 	
+    
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Argument of \@ssect has an extra }.
+<inserted text> 
+\par 
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+Runaway argument?
+! Paragraph ended before \@ssect was complete.
+<to be read again> 
+\par 
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.91 	\subsection
+               {What does NDT mean for O-RAN in 5G?}
+Runaway argument?
+{[}\def \@tempb {\@dblarg {\@sect {subsection}{2}{\z@ }{3.5ex plus 1.\ETC.
+! Paragraph ended before \@tempa was complete.
+<to be read again> 
+\par 
+l.92 	
+    
+! Undefined control sequence.
+\GenericError  ...                                
+                                                    #4  \errhelp \@err@     ...
+
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \let \@err@               ...
+
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Undefined control sequence.
+\GenericError  ...                                
+                                                  \@empty \def \MessageBreak...
+
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Argument of \@ssect has an extra }.
+<inserted text> 
+\par 
+l.105 \subsection
+               {The Standard Perspective for NDT}
+Runaway argument?
+! Paragraph ended before \@ssect was complete.
+<to be read again> 
+\par 
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Illegal parameter number in definition of \oran-logical-architecture.png imag
+e.
+<to be read again> 
+1
+l.105 \subsection
+               {The Standard Perspective for NDT}
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.105 \subsection
+               {The Standard Perspective for NDT}
+Runaway argument?
+{[}\def \@tempb {\@dblarg {\@sect {subsection}{2}{\z@ }{3.5ex plus 1.\ETC.
+! Paragraph ended before \@tempa was complete.
+<to be read again> 
+\par 
+l.107 
+    
+! Illegal parameter number in definition of \^^@.
+<to be read again> 
+1
+l.108 \begin{table*}
+                  [t]
+! Illegal parameter number in definition of \^^@.
+<to be read again> 
+1
+l.108 \begin{table*}
+                  [t]
+! Undefined control sequence.
+\Gin@temp ->\@nil 
+                  
+l.108 \begin{table*}
+                  [t]
+! TeX capacity exceeded, sorry [parameter stack size=10000].
+\@setfontsize #1#2#3->
+                      \@nomath #1\ifx \protect \@typeset@protect \let \@curr...
+
+l.108 \begin{table*}
+                  [t]
+ 46117 words of node memory still in use:
+   89 hlist, 2 vlist, 4 rule, 421 disc, 6 local_par, 3 dir, 709 glue, 248 kern,
+ 28 penalty, 3857 glyph, 41 attribute, 68 glue_spec, 41 attribute_list, 4 temp,
+ 3348 if_stack, 4 write, 1 pdf_dest nodes
+   avail lists: 3:96,4:25,5:459,6:26,7:8500,8:3,9:212,10:22,11:804
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on 2308.02644_lualatex.log.

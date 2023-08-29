@@ -1,0 +1,90 @@
+\begin{tikzpicture}[font=\scriptsize,inner sep=1pt, minimum width=1.2em]
+
+  \definecolor{deepgreen}{RGB}{8, 130, 25}
+
+  \tikzset{
+    branch/.style={fill,shape=circle,minimum size=3pt,inner sep=0pt},
+    block/.style={draw, rectangle, minimum height=2em},
+    comb/.style={draw, rectangle, minimum height=6em}
+  }
+
+  \node (ac) at (0.2,0) {$\alpha_c$};
+  \node at (0.2, 0.63) (cc) {CC};
+
+  \node[shape=reg] at ($(ac)+(0.65,-0.195)$) (REGc0) {$\alpha_c$};
+
+  \node[shape=regdot] at ($(REGc0)+(1.3,0)$) (REGc1) {$\alpha_c$};
+  \node[block] at ($(REGc0)+(0.7,-1.0)$) (F1) {$f$};
+  \node[shape=reg] at ($(F1)+(0.6,-0.2)$) (REGf1) {$\alpha_1$};
+
+  \node[block,anchor=west] at ($(REGf1.Q)+(0.15,0)$) (G0R1) {$g_{0R}$};
+  \node[shape=reg,anchor=west] at ($(G0R1.east)+(0.15,-0.2)$) (REGg0r1) {$\alpha_2$};
+  \node[shape=reg] at (REGc1 -| REGg0r1) (REGc2) {$\alpha_c$};
+
+  \node[block,anchor=west] at ($(REGg0r1.Q)+(0.15,0)$) (G0R2) {$g_{0R}$};
+  \node[block,anchor=west] at ($(G0R2.east)+(0.15,0)$) (I1) {$I$};
+  \node[shape=reg,anchor=west] at ($(I1.east)+(0.15,-0.2)$) (REGi1) {$\beta_1$};
+  \node[shape=regdot] at (REGc2 -| REGi1) (REGc3) {$\alpha_c$};
+
+  \node[block,anchor=west] at ($(REGi1.Q)+(0.15,0)$) (C0R1) {$C_{0R}$};
+  \node[block] at ($(REGc3.Q -| C0R1.east)+(0.5,0)$) (G1) {$g$};
+  \node[block,anchor=west] at ($(G1.east)+(0.15,0)$) (I2) {$I$};
+
+  \node[shape=reg,anchor=west] at ($(I2.east)+(0.15,-0.2)$) (REGi2) {$\beta_2$};
+  \node[shape=reg] at ($(C0R1 -| REGi2)+(0,-0.2)$) (REGc0r1) {$\beta_3$};
+
+  \node[comb] at ($(REGi2.east)!0.5!(REGc0r1.east)+(0.4,0)$) (C1) {$C$};
+  \node[shape=reg] at ($(C1 |- REGi2)+(0.6,0)$) (REGcomb1) {$\beta_c$};
+
+  \node[anchor=west] (bc) at ($(REGcomb1.east)+(0.15,0.195)$) {$\beta_c$};
+  \node at (cc -| bc) {6};
+
+  \draw[-] (ac.east) -- (REGc0.D);
+
+  \draw[dotted] (cc.north -| REGc0.north) -- (REGc0.north) (REGc0.south) -- ($(REGc0.south |- REGf1.south)+(0, -0.2)$);
+
+  \draw[-] (REGc0.Q) -- (REGc1.D);
+  \draw[-] ($(REGc0.Q)!0.5!(REGc0.Q-|F1.west)$) node[branch] {} |- (F1);
+  \draw[-] (F1.east |- REGf1.D) -- (REGf1.D);
+
+  \draw[dotted] (cc.north -| REGc1.north) -- (REGc1.north) (REGc1.south) -- (REGf1.north) (REGf1.south) -- ($(REGc1.south |- REGf1.south)+(0, -0.2)$);
+
+  \draw[-] (REGc1.Q) -- (REGc2.D);
+  \draw[-] (REGf1.Q) -- (G0R1.west) (G0R1.east |- REGg0r1.D) -- (REGg0r1.D);
+
+  \draw[dotted] (cc.north -| REGc2.north) -- (REGc2.north) (REGc2.south) -- (REGg0r1.north) (REGg0r1.south) -- ($(REGc2.south |- REGf1.south)+(0, -0.2)$);
+
+  \draw[-] (REGc2.Q) -- (REGc3.D);
+  \draw[-] (REGg0r1.Q) -- (G0R2.west) (G0R2.east) -- (I1.west) (I1.east |- REGi1.D) -- (REGi1.D);
+
+  \draw[dotted] (cc.north -| REGc3.north) -- (REGc3.north) (REGc3.south) -- (REGi1.north) (REGi1.south) -- ($(REGc3.south |- REGf1.south)+(0, -0.2)$);
+
+  \draw[-] (REGc3.Q) -- (REGc3.Q -| G1.west) (G1.east) -- (I2.west) (I2.east |- REGi2.D) -- (REGi2.D);
+  \draw[-] (REGi1.Q) -- (C0R1.west) (C0R1.east |- REGc0r1.D) -- (REGc0r1.D);
+  \draw[-] ($(C0R1.east)!0.5!(G1.west|-C0R1.east)$) node[branch] {} |- ($(G1.base west)!0.5!(G1.south west)$);
+
+
+  \draw[dotted] (cc.north -| REGi2.north) -- (REGi2.north) (REGi2.south) -- (REGc0r1.north) (REGc0r1.south) -- ($(REGi2.south |- REGf1.south)+(0, -0.2)$);
+
+  \draw[-] (REGi2.Q) -- (REGi2.Q -| C1.west);
+  \draw[-] (REGc0r1.Q) -- (REGc0r1.Q -| C1.west);
+  \draw[-] (REGcomb1.D -| C1.east) -- (REGcomb1.D);
+
+  \draw[dotted] (cc.north -| REGcomb1.north) -- (REGcomb1.north) (REGcomb1.south) -- ($(REGcomb1.south |- REGf1.south)+(0, -0.2)$);
+
+  \draw[-] (bc.west) -- (REGcomb1.Q);
+
+  \draw let \p1 = (REGc0), \p2 = (cc) in node[coordinate] at (\x1, \y2) (cc0) {};
+  \draw let \p1 = (REGc1), \p2 = (cc) in node[coordinate] at (\x1, \y2) (cc1) {};
+  \draw let \p1 = (REGc2), \p2 = (cc) in node[coordinate] at (\x1, \y2) (cc2) {};
+  \draw let \p1 = (REGc3), \p2 = (cc) in node[coordinate] at (\x1, \y2) (cc3) {};
+  \draw let \p1 = (REGi2), \p2 = (cc) in node[coordinate] at (\x1, \y2) (cc4) {};
+  \draw let \p1 = (REGcomb1), \p2 = (cc) in node[coordinate] at (\x1, \y2) (cc5) {};
+
+  \node at ($(cc0)!0.5!(cc1)$) {1};
+  \node at ($(cc1)!0.5!(cc2)$) {2};
+  \node at ($(cc2)!0.5!(cc3)$) {3};
+  \node at ($(cc3)!0.5!(cc4)$) {4};
+  \node at ($(cc4)!0.5!(cc5)$) {5};
+
+\end{tikzpicture}

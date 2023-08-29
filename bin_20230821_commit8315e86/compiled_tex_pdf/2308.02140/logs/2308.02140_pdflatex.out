@@ -1,0 +1,301 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./DDPG_XP.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/epsfig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty))
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/authblk.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithmic.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/bbm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/stfloats.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+
+LaTeX Warning: Unused global option(s):
+    [lettersize].
+
+No file 2308.02140_pdflatex.aux.
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+Underfull \hbox (badness 3260) in paragraph at lines 59--59
+[][][]\OT1/ptm/m/n/8 Da Wu, Ji-ahui Feng, Zheng Shi, and Guanghua Yang are with
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 59--59
+\OT1/ptm/m/n/8 ver-sity, Zhuhai 519070, China (e-mails: 0x8a@stu2021.jnu.edu.cn
+; ji-
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 1 undefined on input line 83
+.
+
+
+LaTeX Warning: Citation `jabi2017boost' on page 1 undefined on input line 83.
+
+
+LaTeX Warning: Citation `jabi2018amc' on page 1 undefined on input line 83.
+
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 1 undefined on input line 85
+.
+
+
+LaTeX Warning: Citation `jabi2017boost' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `jabi2017boost' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `jabi2018amc' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `shi2019effective' on page 1 undefined on input line 85
+.
+
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 1 undefined on input line 85
+.
+
+
+LaTeX Warning: Citation `jabi2017boost' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `jabi2018amc' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `shi2019effective' on page 1 undefined on input line 85
+.
+
+
+LaTeX Warning: Citation `9768121' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `9376717' on page 1 undefined on input line 118.
+
+
+LaTeX Warning: Citation `9217354' on page 1 undefined on input line 118.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `sec:sys mod' on page 2 undefined on input line 120.
+
+
+LaTeX Warning: Reference `sec:rein' on page 2 undefined on input line 120.
+
+
+LaTeX Warning: Reference `sec:eva' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Reference `sec:con' on page 2 undefined on input line 122.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Reference `Fig.XP-HARQ model' on page 2 undefined on input line 
+143.
+
+
+Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
+ead on input line 143.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 2 undefined on input line 14
+7.
+
+
+LaTeX Warning: Citation `7878518' on page 2 undefined on input line 151.
+
+
+LaTeX Warning: Citation `5710995' on page 2 undefined on input line 166.
+
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 2 undefined on input line 17
+8.
+
+
+LaTeX Warning: Citation `Caire2001' on page 2 undefined on input line 186.
+
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 2 undefined on input line 18
+7.
+
+
+LaTeX Warning: Reference `eqn:LTAT' on page 2 undefined on input line 196.
+
+
+LaTeX Warning: Citation `Caire2001' on page 2 undefined on input line 196.
+
+
+LaTeX Warning: Citation `jabi2017adaptive' on page 2 undefined on input line 19
+6.
+
+[2 <./XP-HARQ_model-after-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `eqn:state transition' on page 3 undefined on input li
+ne 209.
+
+
+LaTeX Warning: Reference `eq:out' on page 3 undefined on input line 209.
+
+
+LaTeX Warning: Reference `eq:ltat_max' on page 3 undefined on input line 209.
+
+
+LaTeX Warning: Reference `eq:ltat_max' on page 3 undefined on input line 228.
+
+
+LaTeX Warning: Reference `eqn:Throughput' on page 3 undefined on input line 247
+.
+
+
+LaTeX Warning: Reference `Fig.DDPG_framework' on page 3 undefined on input line
+ 281.
+
+
+LaTeX Warning: Reference `eqn:prob_def' on page 3 undefined on input line 281.
+
+[3]
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 290--291
+ [][] 
+
+LaTeX Warning: Citation `schaul2015prioritized' on page 4 undefined on input li
+ne 296.
+
+
+LaTeX Warning: Citation `schaul2015prioritized' on page 4 undefined on input li
+ne 310.
+
+
+LaTeX Warning: Citation `silver2014deterministic' on page 4 undefined on input 
+line 322.
+
+
+LaTeX Warning: Reference `eqn:omega_up' on page 4 undefined on input line 336.
+
+
+LaTeX Warning: Reference `eqn:theta_up' on page 4 undefined on input line 336.
+
+[4 <./DDPG_frame3-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `Fig.throughputs' on page 5 undefined on input line 38
+8.
+
+
+LaTeX Warning: Citation `7959548' on page 5 undefined on input line 388.
+
+
+LaTeX Warning: Citation `9768121' on page 5 undefined on input line 389.
+
+
+LaTeX Warning: Reference `Fig.throughputs' on page 5 undefined on input line 38
+9.
+
+
+LaTeX Warning: Reference `Fig.throughputs' on page 5 undefined on input line 38
+9.
+
+
+LaTeX Warning: Reference `Fig.Throughput_Rho' on page 5 undefined on input line
+ 416.
+
+
+LaTeX Warning: Citation `7959548' on page 5 undefined on input line 416.
+
+
+LaTeX Warning: Reference `Fig.Throughput_Rho' on page 5 undefined on input line
+ 416.
+
+No file 2308.02140_pdflatex.bbl.
+[5 <./Throughput_Power_All-eps-converted-to.pdf> <./Throughput_Rho-eps-converte
+d-to.pdf>]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02140/2308.02140_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2021/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/euler/eufm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/time
+s/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.02140/2308.02140_pdflatex.pdf (5 pages, 552261 
+bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.02140/2308.02140_pdflatex.log.

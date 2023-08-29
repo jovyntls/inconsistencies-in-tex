@@ -1,0 +1,105 @@
+\begin{tikzpicture}[spy using outlines={circle, magnification=2.75, connect spies}]
+
+  \pgfplotsset{
+    grid style = {
+      dash pattern = on 0.05mm off 1mm,
+      line cap = round,
+      black,
+      line width = 0.5pt
+    },
+    label style = {font=\fontsize{10pt}{7.2}\selectfont},
+    tick label style = {font=\fontsize{8pt}{7.2}\selectfont}
+  }
+
+  \begin{semilogyaxis}[%
+    xlabel=$E_b/N_0$ (dB),%
+    xlabel style={yshift=0.5em},%
+    xtick={0, 1, ..., 5},%
+    xmin=0, xmax=5,
+    ymin=5e-5,
+    ylabel=FER, ylabel style={yshift=-0.6em},%
+    width=0.52\columnwidth, height=6.6cm, grid=major,%
+    legend style={
+      anchor={center},
+      cells={anchor=west},
+      column sep= 2mm,
+      font=\fontsize{8pt}{7.2}\selectfont
+    },
+    legend to name=ec-perf-legend,
+    legend columns=3,
+    mark size=2.0pt,
+    mark options=solid]
+
+    \addlegendimage{empty legend}
+    \addlegendentry[anchor=east]{Floating point:}
+    \addplot[color=black,solid,thick] table[x=ebn0_db,y=FER] {data/n128_awgn_s0.708.perf.trex.float.csv};
+    \addlegendentry{}
+    \addlegendimage{empty legend}
+    \addlegendentry{}
+
+    \addlegendimage{empty legend}
+    \addlegendentry[anchor=east]{Fixed point:}
+    
+    \addplot[color=blue,thick,dashed,mark=o,mark options=solid] table[x=ebn0_db,y=FER] {data/n128_awgn_s0.708.perf.trex.fixed.5.4.0.csv};
+    \addlegendentry{$Q_i.Q_c=5.4$}
+
+    \addplot[color=orange,thick,dashed,mark=square,mark options=solid] table[x=ebn0_db,y=FER] {data/n128_awgn_s0.708.perf.trex.fixed.4.4.0.csv};
+    \addlegendentry{$Q_i.Q_c=4.4$}
+
+    \addlegendimage{empty legend}
+    \addlegendentry[anchor=east]{LUTs:}
+
+    \addplot[color=red,thick,dotted,mark=+,mark options=solid] table[x=ebn0_db,y=FER] {data/n128_awgn_s0.708.perf.HW-Unrolled-LUT.csv};
+    \addlegendentry{IB}
+
+    \addplot[color=teal,thick,dotted,mark=asterisk,mark options=solid] table[x=EbN0dB,y=FER] {data/n128_awgn_s0.708.perf.HW-Unrolled-minLUT-relabel-SSC.csv};
+    \addlegendentry{MS-IB/re-MS-IB}
+
+    \coordinate (spypoint) at (axis cs:4.35,1e-3); %xy to spy
+    \coordinate (magnifyglass) at (axis cs:2.2,5e-4); %sy to zoom
+  
+  \end{semilogyaxis}
+
+  \spy [gray, size=1.5cm] on (spypoint) in node[fill=white] at (magnifyglass);
+\end{tikzpicture}\hspace{-5pt}
+\begin{tikzpicture}[spy using outlines={circle, magnification=2.75, connect spies}]
+
+  \pgfplotsset{
+    grid style = {
+      dash pattern = on 0.05mm off 1mm,
+      line cap = round,
+      black,
+      line width = 0.5pt
+    },
+    label style = {font=\fontsize{10pt}{7.2}\selectfont},
+    tick label style = {font=\fontsize{8pt}{7.2}\selectfont}
+  }
+
+  \begin{semilogyaxis}[%
+    xlabel=$E_b/N_0$ (dB),%
+    xlabel style={yshift=0.5em},%
+    xtick={0, 1, ..., 5},%
+    xmin=0, xmax=5,
+    ymin=5e-6,
+    ylabel=BER, ylabel style={yshift=-0.6em},%
+    width=0.52\columnwidth, height=6.6cm, grid=major,%
+    mark size=2.0pt,
+    mark options=solid]
+
+    \addplot[color=black,thick,solid] table[x=ebn0_db,y=BER] {data/n128_awgn_s0.708.perf.trex.float.csv};
+
+    \addplot[color=blue,thick,dashed,mark=o] table[x=ebn0_db,y=BER] {data/n128_awgn_s0.708.perf.trex.fixed.5.4.0.csv};
+
+    \addplot[color=orange,thick,dashed,mark=square,mark options=solid] table[x=ebn0_db,y=BER] {data/n128_awgn_s0.708.perf.trex.fixed.4.4.0.csv};
+
+    \addplot[color=red,thick,dotted,mark=+] table[x=ebn0_db,y=BER] {data/n128_awgn_s0.708.perf.HW-Unrolled-LUT.csv};
+
+    \addplot[color=teal,thick,dotted,mark=asterisk,mark options=solid] table[x=EbN0dB,y=BER] {data/n128_awgn_s0.708.perf.HW-Unrolled-minLUT-relabel-SSC.csv};
+
+    \coordinate (spypoint) at (axis cs:4.35,1e-4); %xy to spy
+    \coordinate (magnifyglass) at (axis cs:2.2,5e-5); %sy to zoom
+  \end{semilogyaxis}
+  \spy [gray, size=1.5cm] on (spypoint) in node[fill=white] at (magnifyglass);
+\end{tikzpicture}
+\\
+\ref{ec-perf-legend}

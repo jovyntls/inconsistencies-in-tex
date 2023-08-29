@@ -1,0 +1,205 @@
+%
+\section{Two Statements from \cite{b1}}
+%
+Towards achieving its goal, \cite{b1} introduced the following lemma.
+
+{\em Lemma 1:\/} For an optimal solution $(\theta_1^*, \ldots, \theta_n^*)$ to problem (8),
+each $\theta_n^*$ must satisfy
+\begin{equation}\tag{11}
+\theta_n^* = \arg \min_{\theta_n\in \Phi_K} |(\theta_n +\alpha_n - \phase{\mu}) \mod 2\pi|
+\end{equation}
+where $\phase{\mu}$ stands for the phase of $\mu$ in (10)\footnote{To prevent confusion,
+we will use the same equation numbers (7)--(13) in \cite{b1}. Our own equation numbers,
+not available in \cite{b1}, will begin at (19) and will be incremented from that number
+on. Similarly, we will introduce Lemma~2 and Algorithm~2 in lieu of Lemma~1 and Algorithm~1
+in \cite{b1}. Note that a lemma or an algorithm with
+number 2 does not exist in \cite{b1}.}.
+
+In \cite{b1}, problem (8) is defined as
+\begin{align}
+\tag{8a}\underset{\mbox{\boldmath$\theta$}}{\rm maximize\ } & f({\mbox{\boldmath$\theta$}})\\
+\tag{8b}{\rm subject\ to\ } & \theta_n\in \Phi_K\quad {\rm for}\quad n=1, 2, \ldots, N
+\end{align}
+where
+\begin{equation*}\tag{7b}
+f({\mbox{\boldmath$\theta$}}) = \frac{1}{\beta_0^2}\bigg|\beta_0e^{j\alpha_0}+\sum_{n=1}^N \beta_n
+e^{j(\alpha_n + \theta_n)}\bigg|^2,
+\end{equation*}
+$h_n = \beta_ne^{j\alpha_n}$ for $n = 0, 1, \ldots, N$,
+and ${\mbox{\boldmath$\theta$}} = (\theta_1, \theta_2, \ldots, \theta_N)$. Also, $g$ is defined as
+\begin{equation}\tag{9}
+g = h_0 + \sum_{n=1}^N h_n e^{j\theta_n^*}
+\end{equation} and $\mu$ as
+\begin{equation}\tag{10}
+\mu = \frac{g}{|g|}.
+\end{equation}
+
+\setcounter{equation}{18}
+\begin{comment}
+In fact,
+\end{comment}
+Lemma 1 does not hold. This can be seen by numerical examples. We give one such
+example in Table~\ref{tbl:compare}. In this table, we look at the simple case of $K=2$, $N=2$.
+According to Lemma 1 in \cite{b1}, the condition in (11) should satisfy (8) for this simple
+case. We draw values of $h_n$ according to the first paragraph of Sec.~IV in \cite{b1}. We
+list these values in rows 2--4 of Table~\ref{tbl:compare}. We define
+\begin{equation}
+g_0(\theta_1, \theta_2) = h_0 + \sum_{n=1}^2 h_n e^{j\theta_n}
+\end{equation}
+and list the values of $g_0(\theta_1,\theta_2)$ for all possible $\theta_1, \theta_2 \in \{0, \pi\}$.
+There are four such values and they are listed in rows 5--8 of Table~\ref{tbl:compare}. The
+set of values for $\theta_1$ and $\theta_2$ that maximize $|g_0|$, or equivalently, that
+achieve $g$ in (9), are $\theta_1 = \theta_2 = \pi$ as in row 8 of Table~\ref{tbl:compare}.
+Note that this operation results in $\phase{\mu}=2.3719$ radians as shown in column~5 of
+row~8 of Table~\ref{tbl:compare}.
+
+\begin{table*}[!t]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ &${\rm Re}[\cdot]$&${\rm Im}[\cdot]$&$| \cdot |$&$\phase{\cdot}\in [0, 2\pi )$ (rad.)\\
+ \hline
+ $h_0$& $-2.8267\times 10^{-7}$ & $2.7376\times 10^{-7}$ & $3.9350\times 10^{-7}$ & $2.3722$\\
+ $h_1$& $1.0958\times 10^{-10}$ & $-1.0501\times 10^{-11}$ & $1.1008\times 10^{-10}$ & $6.1876$\\
+ $h_2$& $-1.2238\times 10^{-11}$ & $-2.6605\times 10^{-11}$ & $2.6634\times 10^{-10}$ & $4.6664$\\
+ \hline
+ $g_0(\theta_1=0,\theta_2=0)$&$-2.8257\times 10^{-7}$&$2.7348\times 10^{-7}$&$3.9324\times 10^{-7}$&$2.3725$\\
+ $g_0(\theta_1=0,\theta_2=\pi)$&$-2.8255\times 10^{-7}$&$2.7401\times 10^{-7}$&$3.9359\times 10^{-7}$&$2.3715$\\
+ $g_0(\theta_1=\pi,\theta_2=0)$&$-2.8279\times 10^{-7}$&$2.7350\times 10^{-7}$&$3.9341\times 10^{-7}$&$2.3729$\\
+ $g_0(\theta_1=\pi,\theta_2=\pi)$&$-2.8277\times 10^{-7}$&$2.7403\times 10^{-7}$&${\bf 3.9377}\times {\bf 10^{-7}}$&$\bf 2.3719$\\
+ \hline
+\end{tabular}
+\caption{Sample calculation for attempting to find optimum $\theta_1^*, \theta_2^*,\ldots,\theta_N^*$ to maximize $|g_0|$ where $g_0 (\theta_1, \theta_2, \ldots, \theta_N) = h_0 + \sum_{n=1}^N h_n e^{j\theta_n}$ with $\theta_n\in\Phi_K = \{0,\frac{2\pi}{K},\ldots,(K-1)\frac{2\pi}{K}\}$, $n=1, 2, \ldots, N$, for $K=2$ and $N=2$. Channel coefficients $h_n$, $n=0,1,2$ are calculated using the technique described in \cite{b1}.
+Rows 5--8 present all values of $g_0$ with all combinations of $\theta_1, \theta_2 \in \Phi_2$, showing that $|g| = \max |g_0 (\theta_1, \theta_2) |$ is achieved with $\theta_1^* =\theta_2^* = \pi$.
+}
+\label{tbl:compare}
+\end{center}
+\end{table*}
+\begin{table}[!t]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$(\theta_1=0)+\alpha_1-\phase{\mu}$&{3.8158}\\
+$\mod((\theta_1=0)+\alpha_1-\phase{\mu},2\pi)$&{3.8158}\\
+$(\theta_1=\pi)+\alpha_1-\phase{\mu}$&{6.9574}\\
+$\mod((\theta_1=\pi)+\alpha_1-\phase{\mu},2\pi)$&{\bf 0.67417}\\[0.7mm]
+ \hline
+$(\theta_2=0)+\alpha_2-\phase{\mu}$&{2.2945}\\
+$\mod((\theta_2=0)+\alpha_2-\phase{\mu},2\pi)$&{\bf 2.2945}\\
+$(\theta_2=\pi)+\alpha_2-\phase{\mu}$&{5.4361}\\
+$\mod((\theta_2=\pi)+\alpha_2-\phase{\mu},2\pi)$&{5.4361}\\[0.7mm]
+ \hline
+$\cos((\theta_1=0)+\alpha_1-\phase{\mu})$&{-0.7812}\\
+$\cos((\theta_1=\pi)+\alpha_1-\phase{\mu})$&{\bf 0.7812}\\[0.7mm]
+ \hline
+$\cos((\theta_2=0)+\alpha_2-\phase{\mu})$&{-0.6672}\\
+$\cos((\theta_2=\pi)+\alpha_2-\phase{\mu})$&{\bf 0.6672}\\[0.7mm]
+\hline
+\end{tabular}
+\caption{Continuation of the sample calculation for attempting to find optimum $\theta_1^*, \theta_2^*,\ldots,\theta_N^*$ to maximize $|g_0|$. Rows 1--8 present the calculation of $\min_{\theta_n\in \Phi_K} \mod (\theta_n + \alpha_n - \phase{\mu}, 2\pi)$ for $n=1,2,\ldots,N$, as specified in \cite{b1} to attempt to find the optimum values of $\theta_n$. This calculation results in values $\theta_1=0$ and $\theta_2=\pi$, which are not $\theta_1^*, \theta_2^*$. Rows 9-12 present the calculation of $\max_{\theta_n\in \Phi_K} \cos(\theta_n + \alpha_n - \phase{\mu})$ to find $\theta_1^*, \theta_2^*, \ldots, \theta_N^*$ as discussed in this comment. This technique finds the optimum values of $\theta_n,$ $n=1,2,\ldots, N$.
+}
+\label{tbl:compare2}
+\end{center}
+\end{table}
+At this point, we would like to emphasize that \cite{b1} uses a particular convention for the
+phases of complex numbers. They are defined to be in $[0, 2\pi)$, see the text that follows
+(2) in \cite{b1}. We use the same convention in generating Table~\ref{tbl:compare}, see its
+column 5, as well as in generating Table~\ref{tbl:compare2}. With this convention, we list
+ $\theta_n + \alpha_n -\phase{\mu}$ and
+$(\theta_n + \alpha_n - \phase{\mu}) \mod 2\pi$ for possibilities of $\theta_n = 0$ and
+$\theta_n=\pi$ and
+$n=1,2$ in rows 1--8 of Table~\ref{tbl:compare2}.\footnote{Note that absolute value
+signs in (11) are not needed since the argument of the minimum operation
+in (11) is in $[0, 2\pi)$.} It can be seen from rows~1--4 of Table~\ref{tbl:compare2}
+that the method results in $\theta_1 = \pi$ as the potential $\theta_1^*$, which we
+know from the discussion in the previous paragraph to be correct. When we carry out
+the calculation $(\theta_2 + \alpha_2 - \phase{\mu}) \mod 2\pi$ in rows 5--8 of
+Table~\ref{tbl:compare2}, we find that the method suggests $\theta_2=0$ should be
+$\theta_2^*$. However, we know from the exhaustive search in rows 5--8 of
+Table~\ref{tbl:compare} that $\theta_2^*=\pi$. Thus, Lemma~1 is not correct.
+
+It is possible to come up with a correct lemma similar to Lemma~1. We
+specify this lemma below.
+
+{\em Lemma 2:\/} For an optimal solution $(\theta_1^*, \theta_2^*, \ldots,
+\theta_n^*)$, it is necessary and sufficient that each $\theta_n^*$ satisfy
+\begin{equation}
+\theta_n^* = \arg \max_{\theta_n\in \Phi_K} \cos(\theta_n + \alpha_n -\phase{\mu})
+\label{eqn:lemma2}
+\end{equation}
+where $\phase{\mu}$ stands for the phase of $\mu$ in (10).
+
+{\em Proof:\/} We can rewrite (9) as
+\begin{align}
+|g| =& \ \beta_0 e^{j(\alpha_0-\phase{\mu})} + \sum_{n=1}^N \beta_n e^{j(\alpha_n+\theta_n-\phase{\mu})} \\
+ = & \ \beta_0 \cos(\alpha_0 - \phase{\mu}) + j \beta_0 \sin (\alpha_0-\phase{\mu}) \nonumber\\
+ & + \sum_{n=1}^N \beta_n \cos(\theta_n + \alpha_n - \phase{\mu}) \nonumber\\
+ & + j \sum_{n=1}^N \beta_n \sin(\theta_n + \alpha_n - \phase{\mu}).
+ \label{eqn:absg}
+\end{align}
+Because $|g|$ is real-valued, the second and fourth terms in (\ref{eqn:absg}) sum to zero, and
+\begin{equation}
+|g| = \beta_0 \cos(\alpha_0 - \phase{\mu}) + \sum_{n=1}^N \beta_n \cos(\theta_n + \alpha_n - \phase{\mu})
+\end{equation}
+from which (\ref{eqn:lemma2}) follows as a necessary and sufficient condition for Lemma~2 to hold.
+\hfill$\blacksquare$
+
+Rows~9--12 of Table~\ref{tbl:compare2} illustrate that this method finds $\theta_1^*$ and $\theta_2^*$.
+More extensive calculations can be carried out to show that an exhaustive search as in rows 5--8 of
+Table~\ref{tbl:compare} confirms that Lemma~2 holds for a wide set of $K$ and $N$ values as well as
+a wide set of channel coefficients $h_0, h_1, \ldots, h_N$.
+
+Reference \cite{b1} attempts to decide a range of $\mu$ for which $\theta_n^* = k\omega$ must hold,
+making use of Lemma~1. Towards that end, it first defines a sequence of complex numbers with respect to
+each $n=1,2,\ldots,N$ as
+\begin{equation}\tag{12}
+s_{nk} = e^{j(\alpha_n+(k-0.5)\omega)},\ {\rm for}\ k=1,2,\ldots,K.
+\end{equation}
+Then, \cite{b1} defines, for any two points $a$ and $b$ on the unit circle $C$, ${\rm arc}(a:b)$
+to be the unit circular arc with $a$ as the initial end and $b$ as the terminal end in the counterclockwise
+direction; in particular, it defines ${\rm arc}(a:b)$ as an open arc with the two endpoints $a$ and $b$
+excluded. With this definition, \cite{b1} states the following proposition follows from Lemma 1.
+
+{\em Proposition 1:\/} A sufficient condition for $\theta_n^*=k\omega$ is
+\begin{equation}\tag{13}
+\mu \in {\rm arc} (s_{nk}:s_{n,k+1}).
+\end{equation}
+Reference \cite{b1} states that ``letting $\theta_n = k\omega$ is guaranteed to minimize the gap
+$|(\theta_n+\alpha_n-\phase{\mu}) \mod 2\pi |$ whenever $\mu$ lies in its associated arc, and thus
+$k\omega$ must be optimal according to Lemma 1.''
+
+Now, let $K=2$ and thus $\omega=\frac{2\pi}{K}=\pi$, and the two possibilities for $\theta$ are
+$\theta^1=\pi$ and $\theta^2 = 2\pi$, or equivalently $\theta^2 = 0$. According to (12), we have
+\begin{equation}
+s_{n1}=e^{j(\alpha_n+\frac{\pi}{2})},\quad s_{n2}=e^{j(\alpha_n+\frac{3\pi}{2})}.
+\end{equation}
+According to Proposition~1, if $\mu\in {\rm arc}(s_{n1}:s_{n2})$ then $\theta_n^*=\omega=\pi$
+should hold. Assume $\mu$ is in ${\rm arc}(s_{n1},s_{n2})$. Then, it can be observed that
+$\alpha_n-\phase{\mu}\in (\frac{\pi}{2},\frac{3\pi}{2})$, paying
+attention to the change of order due to the subtraction of $\phase{\mu}$. In particular, let
+$\mu$ be
+such that $\alpha_n-\phase{\mu}\in (\frac{\pi}{2},\pi)$. When this is the case, note that $(\theta^1
++\alpha_n - \phase{\mu})\in (\frac{3\pi}{2}, 2\pi)$ while $(\theta^2+\alpha_n-\phase{\mu})\in
+(\frac{\pi}{2},\pi)$. Thus, $|(\theta^2 + \alpha_n - \phase{\mu}) \mod 2\pi| <
+|(\theta^1 + \alpha_n - \phase{\mu}) \mod 2\pi|$, and according to Lemma~1,
+$\theta_n^*=\theta^2=0$, in contradiction with Proposition~1.
+On the other hand, Proposition~1 is compatible with Lemma~2. To see this, assume
+$\mu$ satisfies (12). Then,
+\begin{equation}
+\phase{\mu}\in \Big(\alpha_n+\Big(k-\frac{1}{2}\Big)\omega,\alpha_n+\Big(k+\frac{1}{2}\Big)\omega\Big).
+\end{equation}
+Since $\omega=\frac{2\pi}{K}$,
+\begin{equation}
+\alpha_n-\phase{\mu}\in \Big((-2k-1)\frac{\pi}{K}, (-2k+1)\frac{\pi}{K}\Big)
+\end{equation}
+considering the reversal of order due to the substraction of $\phase{\mu}$.
+Now, let $\theta_n = k\omega = 2k \frac{\pi}{K}$. Then
+\begin{equation}
+\theta_n + \alpha_n - \phase{\mu} \in \Big(-\frac{\pi}{K}, \frac{\pi}{K}\Big)
+\end{equation}
+and thus $\cos(\theta_n + \alpha_n-\phase{\mu})$ is the largest among
+all other possibilities for $\theta_n$ because the slice $(-\frac{\pi}{K}, \frac{\pi}{K})$ corresponds
+to the largest values of the cosine function among all slices corresponding to different values of
+$\theta_k \in \Phi_K$ for $k=1,2,\ldots,K$.
+
+

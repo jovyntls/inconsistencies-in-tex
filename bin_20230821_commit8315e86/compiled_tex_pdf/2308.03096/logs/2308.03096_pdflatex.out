@@ -1,0 +1,1465 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+** ATTENTION: Single column mode is not typically used with IEEE publications.
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/balance.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+
+No file 2308.03096_pdflatex.aux.
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+
+Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
+d on input line 271.
+
+
+LaTeX Warning: Citation `AV21' on page 1 undefined on input line 271.
+
+
+LaTeX Warning: Citation `PV20' on page 1 undefined on input line 271.
+
+
+LaTeX Warning: Citation `MLG08' on page 1 undefined on input line 273.
+
+
+LaTeX Warning: Citation `Mah12' on page 1 undefined on input line 273.
+
+
+LaTeX Warning: Citation `JL84' on page 1 undefined on input line 275.
+
+
+LaTeX Warning: Citation `BZMD14' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `CEMMP15' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `Cha20' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `DFKVV99' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `DFKVV04' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `DKM06a' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `DKM06b' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `HMJ11' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `Mah12' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `Mah16' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `MM20' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `Wan15' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `Woo14' on page 1 undefined on input line 277.
+
+
+LaTeX Warning: Citation `DM16' on page 1 undefined on input line 277.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Elf80' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `Gut06' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `NT14' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `RN20' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `PW16' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `PW17' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `LLDP20' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `Sar06' on page 2 undefined on input line 281.
+
+
+LaTeX Warning: Citation `OJXE18' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `CPH20c' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `LLPPR17' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `BP23' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `CPH20a' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `CPH20c' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `GWCR18' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `GKCMR20' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `JM21' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `LLPPR17' on page 2 undefined on input line 283.
+
+
+LaTeX Warning: Citation `ZKJKS08' on page 2 undefined on input line 292.
+
+
+LaTeX Warning: Citation `TLDK17' on page 2 undefined on input line 292.
+
+
+LaTeX Warning: Citation `CMH20' on page 2 undefined on input line 292.
+
+
+LaTeX Warning: Citation `CMH21' on page 2 undefined on input line 292.
+
+
+LaTeX Warning: Citation `LA20' on page 2 undefined on input line 292.
+
+
+LaTeX Warning: Citation `ng2021' on page 2 undefined on input line 292.
+
+
+LaTeX Warning: Citation `LLPPR17' on page 2 undefined on input line 294.
+
+
+LaTeX Warning: Citation `GWCR18' on page 2 undefined on input line 294.
+
+
+LaTeX Warning: Citation `GKCMR20' on page 2 undefined on input line 294.
+
+
+LaTeX Warning: Citation `CPH20a' on page 2 undefined on input line 294.
+
+
+LaTeX Warning: Citation `CPH20c' on page 2 undefined on input line 294.
+
+[2 <./block_lvg_GC_schematic.png (PNG copy)>]
+
+LaTeX Warning: Reference `weighting_sec' on page 3 undefined on input line 296.
+
+
+
+LaTeX Warning: Reference `prop_wght_lr' on page 3 undefined on input line 296.
+
+
+LaTeX Warning: Reference `unb_est_Sw' on page 3 undefined on input line 296.
+
+
+LaTeX Warning: Reference `thm_exp_dim' on page 3 undefined on input line 296.
+
+
+LaTeX Warning: Citation `PKB14' on page 3 undefined on input line 296.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 3 undefined on input line 
+298.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 3 undefined on input line 298.
+
+
+LaTeX Warning: Citation `LA20' on page 3 undefined on input line 298.
+
+
+LaTeX Warning: Reference `not_backgr_sec' on page 3 undefined on input line 302
+.
+
+
+LaTeX Warning: Reference `rel_work_subs' on page 3 undefined on input line 302.
+
+
+
+LaTeX Warning: Reference `lvg_sec' on page 3 undefined on input line 302.
+
+
+LaTeX Warning: Reference `exp_netw_sec' on page 3 undefined on input line 302.
+
+
+LaTeX Warning: Reference `opt_ind_distr_subsec' on page 3 undefined on input li
+ne 302.
+
+
+LaTeX Warning: Reference `sk_lin_regr' on page 3 undefined on input line 302.
+
+
+LaTeX Warning: Reference `convergence_subsec' on page 3 undefined on input line
+ 302.
+
+
+LaTeX Warning: Reference `appr_GC_subsec' on page 3 undefined on input line 302
+.
+
+
+LaTeX Warning: Reference `exper_sec' on page 3 undefined on input line 302.
+
+
+LaTeX Warning: Citation `CMH20' on page 3 undefined on input line 310.
+
+
+LaTeX Warning: Reference `part_matrix' on page 3 undefined on input line 317.
+
+[3]
+
+LaTeX Warning: Citation `IWN22' on page 4 undefined on input line 321.
+
+
+LaTeX Warning: Citation `DMMS11' on page 4 undefined on input line 325.
+
+
+LaTeX Warning: Reference `part_matrix' on page 4 undefined on input line 335.
+
+
+LaTeX Warning: Reference `sk_lin_regr' on page 4 undefined on input line 335.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 4 undefined on input line 335.
+
+
+LaTeX Warning: Citation `MMY15' on page 4 undefined on input line 349.
+
+
+LaTeX Warning: Citation `DMMW12' on page 4 undefined on input line 349.
+
+
+LaTeX Warning: Citation `DMMW12' on page 4 undefined on input line 354.
+
+
+LaTeX Warning: Citation `Woo14' on page 4 undefined on input line 354.
+
+
+LaTeX Warning: Citation `Mah16' on page 4 undefined on input line 354.
+
+
+LaTeX Warning: Citation `ERNM22' on page 4 undefined on input line 354.
+
+
+LaTeX Warning: Citation `CPH20a' on page 4 undefined on input line 356.
+
+
+LaTeX Warning: Citation `OJXE18' on page 4 undefined on input line 356.
+
+
+LaTeX Warning: Reference `norm_lvg_sc' on page 4 undefined on input line 356.
+
+
+LaTeX Warning: Reference `part_matrix' on page 4 undefined on input line 361.
+
+
+LaTeX Warning: Citation `DKM06a' on page 4 undefined on input line 361.
+
+
+LaTeX Warning: Citation `DKM06b' on page 4 undefined on input line 361.
+
+
+LaTeX Warning: Citation `DMMW12' on page 4 undefined on input line 363.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 4 undefined on input line 367.
+
+
+LaTeX Warning: Citation `Woo14' on page 4 undefined on input line 372.
+
+
+LaTeX Warning: Reference `subsp_emb_Ax' on page 4 undefined on input line 372.
+
+[4]
+
+LaTeX Warning: Reference `eq_form' on page 5 undefined on input line 396.
+
+
+LaTeX Warning: Reference `CG_schematic' on page 5 undefined on input line 407.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 5 undefined on input line 408.
+
+
+LaTeX Warning: Citation `LLPPR17' on page 5 undefined on input line 415.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 5 undefined on input line 
+422.
+
+
+LaTeX Warning: Reference `part_matrix' on page 5 undefined on input line 422.
+
+[5]
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 6 undefined on input line 
+428.
+
+
+LaTeX Warning: Reference `exp_netw_sec' on page 6 undefined on input line 430.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 6 undefined on input line 430.
+
+
+LaTeX Warning: Reference `opt_ind_distr_subsec' on page 6 undefined on input li
+ne 430.
+
+
+LaTeX Warning: Reference `sk_lin_regr' on page 6 undefined on input line 430.
+
+
+LaTeX Warning: Reference `GC_block_lvg_schematic' on page 6 undefined on input 
+line 431.
+
+
+LaTeX Warning: Reference `app_example' on page 6 undefined on input line 431.
+
+
+LaTeX Warning: Citation `FD16' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `JM19' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `GWCR18' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `GKCMR20' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `FD16' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `GKCMR20' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `JM19' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `DK01' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `DFKVV99' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `CPH20c' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Reference `concl_sec' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Citation `FD16' on page 6 undefined on input line 445.
+
+
+LaTeX Warning: Citation `FD16' on page 6 undefined on input line 445.
+
+
+LaTeX Warning: Citation `FD16' on page 6 undefined on input line 445.
+
+
+LaTeX Warning: Citation `FD16' on page 6 undefined on input line 445.
+
+[6 <./GC_lvg_score_schematic_final.png>]
+
+LaTeX Warning: Citation `JM19' on page 7 undefined on input line 447.
+
+
+LaTeX Warning: Citation `GWCR18' on page 7 undefined on input line 447.
+
+
+LaTeX Warning: Citation `CCFC04' on page 7 undefined on input line 447.
+
+
+LaTeX Warning: Citation `JM19' on page 7 undefined on input line 447.
+
+
+LaTeX Warning: Citation `YMAA20' on page 7 undefined on input line 447.
+
+
+LaTeX Warning: Citation `GWCR18' on page 7 undefined on input line 450.
+
+
+LaTeX Warning: Citation `GKCMR20' on page 7 undefined on input line 450.
+
+
+LaTeX Warning: Citation `DMMW12' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `ERNM22' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `MMY15' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `Mah16' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `Woo14' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Reference `part_matrix' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Reference `norm_block_lvg_sc' on page 7 undefined on input line 
+456.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `DMMW12' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `DMM06' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Citation `Mah16' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 7 undefined on input line 
+456.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 7 undefined on input line 456.
+
+
+LaTeX Warning: Reference `norm_block_lvg_sc' on page 7 undefined on input line 
+464.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 7 undefined on input line 482.
+
+
+LaTeX Warning: Reference `eq_form' on page 7 undefined on input line 482.
+
+
+LaTeX Warning: Citation `Woo14' on page 7 undefined on input line 489.
+
+
+LaTeX Warning: Reference `lvg_app' on page 7 undefined on input line 489.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 7 undefined on input line 
+492.
+
+
+LaTeX Warning: Citation `AC06' on page 7 undefined on input line 492.
+
+
+LaTeX Warning: Citation `AC09' on page 7 undefined on input line 492.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 7 undefined on input line 492.
+
+
+LaTeX Warning: Citation `MOW21' on page 7 undefined on input line 492.
+
+
+LaTeX Warning: Reference `comp_SRHT_app' on page 7 undefined on input line 492.
+
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 7 undefined on input line 492.
+
+
+LaTeX Warning: Citation `CMPH22' on page 7 undefined on input line 492.
+
+[7]
+
+LaTeX Warning: Citation `PW16' on page 8 undefined on input line 499.
+
+
+LaTeX Warning: Citation `PW16' on page 8 undefined on input line 499.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 8 undefined on input line 503.
+
+
+LaTeX Warning: Citation `PW16' on page 8 undefined on input line 503.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 8 undefined on input line 503.
+
+
+LaTeX Warning: Reference `sub_opt_cor' on page 8 undefined on input line 510.
+
+
+LaTeX Warning: Reference `sub_opt_error' on page 8 undefined on input line 510.
+
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 8 undefined on input line 516.
+
+
+LaTeX Warning: Citation `CPH20a' on page 8 undefined on input line 516.
+
+
+LaTeX Warning: Citation `CPH20c' on page 8 undefined on input line 516.
+
+
+LaTeX Warning: Citation `RCHV23' on page 8 undefined on input line 516.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `appr_distr' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `int_program' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `int_program' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `int_program' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `eq_form' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 8 undefined on input line 518.
+
+
+LaTeX Warning: Reference `eras_prob' on page 8 undefined on input line 525.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `sample_er_channel' on page 8 undefined on input line 
+546.
+
+
+LaTeX Warning: Reference `lvg_score_eras_prob' on page 8 undefined on input lin
+e 546.
+
+[8]
+
+LaTeX Warning: Reference `exp_netw_distr' on page 9 undefined on input line 558
+.
+
+
+LaTeX Warning: Reference `sample_er_channel' on page 9 undefined on input line 
+558.
+
+
+LaTeX Warning: Reference `opt_ind_distr_subsec' on page 9 undefined on input li
+ne 565.
+
+
+LaTeX Warning: Reference `appr_distr' on page 9 undefined on input line 569.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 9 undefined on input line 569.
+
+
+LaTeX Warning: Reference `appr_err_rounding' on page 9 undefined on input line 
+598.
+
+[9 <./expansion_bipartite_graph_itlaic.png (PNG copy)>]
+
+LaTeX Warning: Reference `part_matrix' on page 10 undefined on input line 605.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 10 undefined on input line
+ 607.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 10 undefined on input lin
+e 607.
+
+
+LaTeX Warning: Citation `CLMMPS15' on page 10 undefined on input line 607.
+
+
+LaTeX Warning: Citation `DMMW12' on page 10 undefined on input line 607.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 10 undefined on input line 614.
+
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 10 undefined on input line 619.
+
+
+
+LaTeX Warning: Reference `int_program' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Reference `eras_prob' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Reference `int_program' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Reference `int_program' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Citation `LLPPR17' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Reference `int_program' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Reference `cor_exact_sol' on page 10 undefined on input line 619
+.
+
+
+LaTeX Warning: Reference `int_program' on page 10 undefined on input line 619.
+
+
+LaTeX Warning: Reference `int_program' on page 10 undefined on input line 634.
+
+
+LaTeX Warning: Reference `perf_emulation_prop' on page 10 undefined on input li
+ne 638.
+
+[10]
+
+LaTeX Warning: Reference `int_program' on page 11 undefined on input line 664.
+
+
+LaTeX Warning: Reference `lvg_score_eras_prob' on page 11 undefined on input li
+ne 664.
+
+
+LaTeX Warning: Reference `cor_exact_sol' on page 11 undefined on input line 664
+.
+
+
+LaTeX Warning: Reference `lvg_score_eras_prob' on page 11 undefined on input li
+ne 664.
+
+
+LaTeX Warning: Reference `int_program' on page 11 undefined on input line 666.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 11 undefined on input lin
+e 666.
+
+
+LaTeX Warning: Reference `appr_distr' on page 11 undefined on input line 666.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 11 undefined on input lin
+e 666.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 11 undefined on input lin
+e 707.
+
+
+LaTeX Warning: Reference `bds_distortion' on page 11 undefined on input line 70
+7.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 11 undefined on input lin
+e 707.
+
+
+LaTeX Warning: Reference `appr_distr' on page 11 undefined on input line 707.
+
+
+LaTeX Warning: Reference `appr_distr' on page 11 undefined on input line 712.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 11 undefined on input lin
+e 712.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 11 undefined on input lin
+e 716.
+
+[11]
+
+LaTeX Warning: Reference `int_program' on page 12 undefined on input line 727.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 12 undefined on input line 727.
+
+
+LaTeX Warning: Reference `perf_emulation_prop' on page 12 undefined on input li
+ne 727.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 12 undefined on input line 727.
+
+
+
+LaTeX Warning: Reference `appr_distr' on page 12 undefined on input line 727.
+
+
+LaTeX Warning: Reference `alg_replicas_mod_R' on page 12 undefined on input lin
+e 727.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 12 undefined on input line 734.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 12 undefined on input line 734.
+
+
+LaTeX Warning: Reference `part_matrix' on page 12 undefined on input line 741.
+
+
+LaTeX Warning: Reference `GC_block_lvg_schematic' on page 12 undefined on input
+ line 746.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 12 undefined on input line 768.
+
+
+LaTeX Warning: Reference `gr_update' on page 12 undefined on input line 772.
+
+
+LaTeX Warning: Reference `rmk_SSD' on page 12 undefined on input line 775.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 12 undefined on input line 775.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 12 undefined on input line 775.
+
+
+LaTeX Warning: Reference `mod_OLS' on page 12 undefined on input line 775.
+
+
+LaTeX Warning: Reference `sub_opt_cor' on page 12 undefined on input line 775.
+
+
+LaTeX Warning: Reference `exper_sec' on page 12 undefined on input line 775.
+
+[12]
+
+LaTeX Warning: Reference `gr_ls' on page 13 undefined on input line 780.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 13 undefined on input line 785.
+
+
+LaTeX Warning: Reference `rmk_SSD' on page 13 undefined on input line 785.
+
+
+LaTeX Warning: Reference `gt_unif_id' on page 13 undefined on input line 792.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 13 undefined on input line 797.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 13 undefined on input line 8
+06.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 13 undefined on input line 8
+08.
+
+
+LaTeX Warning: Citation `SB14' on page 13 undefined on input line 808.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 811.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 811.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\star' on input line 811.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 811.
+
+
+LaTeX Warning: Reference `cont_rate_app' on page 13 undefined on input line 814
+.
+
+
+LaTeX Warning: Reference `summary_approach' on page 13 undefined on input line 
+816.
+
+
+LaTeX Warning: Reference `appr_opt_sol' on page 13 undefined on input line 816.
+
+
+
+LaTeX Warning: Reference `appr_distr' on page 13 undefined on input line 816.
+
+
+LaTeX Warning: Reference `appr_err_rounding' on page 13 undefined on input line
+ 816.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 13 undefined on input line
+ 816.
+
+
+LaTeX Warning: Reference `eq_form' on page 13 undefined on input line 816.
+
+
+LaTeX Warning: Reference `appr_xbh' on page 13 undefined on input line 816.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 13 undefined on input line 8
+16.
+
+
+LaTeX Warning: Reference `eq_opt_sols' on page 13 undefined on input line 816.
+
+
+LaTeX Warning: Citation `DGSX12' on page 13 undefined on input line 816.
+
+
+LaTeX Warning: Citation `Bub15' on page 13 undefined on input line 816.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 818.
+
+
+LaTeX Warning: Reference `eq_form' on page 13 undefined on input line 818.
+
+
+LaTeX Warning: Reference `appr_xbh' on page 13 undefined on input line 818.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 13 undefined on input line
+ 818.
+
+
+LaTeX Warning: Reference `summary_approach' on page 13 undefined on input line 
+818.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 13 undefined on input line
+ 818.
+
+
+LaTeX Warning: Reference `summary_approach' on page 13 undefined on input line 
+818.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 13 undefined on input line 8
+18.
+
+
+LaTeX Warning: Reference `eq_opt_sols' on page 13 undefined on input line 818.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 13 undefined on input line 8
+18.
+
+
+LaTeX Warning: Reference `eq_opt_sols' on page 13 undefined on input line 818.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ell' on input line 822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 822.
+
+
+LaTeX Warning: Citation `CPE17' on page 13 undefined on input line 825.
+
+
+LaTeX Warning: Citation `KKR19' on page 13 undefined on input line 825.
+
+
+LaTeX Warning: Citation `SH22' on page 13 undefined on input line 825.
+
+[13]
+
+LaTeX Warning: Reference `appr_GC_error_prop' on page 14 undefined on input lin
+e 843.
+
+
+LaTeX Warning: Command \textdollar invalid in math mode on input line 859.
+
+
+LaTeX Warning: Command \textdollar invalid in math mode on input line 859.
+
+
+LaTeX Warning: Command \textdollar invalid in math mode on input line 860.
+
+
+LaTeX Warning: Reference `gr_ls' on page 14 undefined on input line 860.
+
+
+LaTeX Warning: Reference `app_GC_thm' on page 14 undefined on input line 863.
+
+
+LaTeX Warning: Reference `eq_form' on page 14 undefined on input line 863.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 14 undefined on input line
+ 863.
+
+
+LaTeX Warning: Reference `summary_approach' on page 14 undefined on input line 
+863.
+
+
+LaTeX Warning: Reference `appr_GC_error_prop' on page 14 undefined on input lin
+e 872.
+
+
+LaTeX Warning: Reference `gr_ls' on page 14 undefined on input line 876.
+
+
+LaTeX Warning: Reference `eq_form' on page 14 undefined on input line 885.
+
+
+LaTeX Warning: Reference `appr_GC_error_prop' on page 14 undefined on input lin
+e 885.
+
+[14]
+
+LaTeX Warning: Reference `alg_lvg_b' on page 15 undefined on input line 893.
+
+
+LaTeX Warning: Reference `varying_its_t_distr' on page 15 undefined on input li
+ne 897.
+
+
+LaTeX Warning: Reference `varying_its_t_distr' on page 15 undefined on input li
+ne 897.
+
+
+LaTeX Warning: Reference `log_res_err_table' on page 15 undefined on input line
+ 897.
+
+
+LaTeX Warning: Reference `conv_fig_t_distr' on page 15 undefined on input line 
+897.
+
+
+LaTeX Warning: Reference `comparison_two_embds' on page 15 undefined on input l
+ine 897.
+
+
+LaTeX Warning: Reference `opt_step_t_distr' on page 15 undefined on input line 
+975.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 15 undefined on input line 9
+75.
+
+
+LaTeX Warning: Reference `eq_opt_sols' on page 15 undefined on input line 975.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `SH22' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `BWE19' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `CPH20a' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `CPH20c' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `CP18' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `CPE17' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `FD16' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `GW20' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `HYKM19' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `KKR19' on page 15 undefined on input line 1075.
+
+
+LaTeX Warning: Citation `RTTD17' on page 15 undefined on input line 1075.
+
+[15 <./avg_log_over_six_exp_good-stretch-eps-converted-to.pdf> <./conv_fixed_xi
+_good--stretch-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `exper_sec' on page 16 undefined on input line 1077.
+
+
+LaTeX Warning: Citation `BP19a' on page 16 undefined on input line 1077.
+
+
+LaTeX Warning: Citation `Mah16' on page 16 undefined on input line 1079.
+
+
+LaTeX Warning: Citation `BMD09' on page 16 undefined on input line 1079.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/t1phv.fd)
+
+LaTeX Warning: Citation `Civ14' on page 16 undefined on input line 1079.
+
+
+LaTeX Warning: Citation `CPH20c' on page 16 undefined on input line 1081.
+
+
+LaTeX Warning: Citation `OJXE18' on page 16 undefined on input line 1081.
+
+
+LaTeX Warning: Citation `CPH20c' on page 16 undefined on input line 1081.
+
+
+LaTeX Warning: Citation `OJXE18' on page 16 undefined on input line 1081.
+
+
+Overfull \hbox (0.38805pt too wide) in paragraph at lines 1081--1082
+[]\T1/ptm/m/n/10 Furthermore, ex-ist-ing block sam-pling al-go-rithms can also 
+ben-e-fit from the pro-posed ex-pan-sion net-works, \T1/ptm/m/it/10 e.g. $\OML/
+cmm/m/it/10 CR$\T1/ptm/m/n/10 -multiplication
+
+LaTeX Warning: Reference `lvg_sec' on page 16 undefined on input line 1087.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 16 undefined on input line
+ 1100.
+
+
+LaTeX Warning: Reference `sub_opt_cor' on page 16 undefined on input line 1100.
+
+
+
+LaTeX Warning: Citation `Woo14' on page 16 undefined on input line 1100.
+
+
+LaTeX Warning: Reference `prop_Sp_lvg' on page 16 undefined on input line 1100.
+
+
+
+LaTeX Warning: Citation `Woo14' on page 16 undefined on input line 1102.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 16 undefined on input line 1114.
+
+
+LaTeX Warning: Reference `prop_Sp_lvg' on page 16 undefined on input line 1122.
+
+
+
+LaTeX Warning: Reference `matr_Chern' on page 16 undefined on input line 1123.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 16 undefined on input line 1123.
+
+[16 <./comp_good_NonIt_FINAL--stretch-eps-converted-to.pdf>] [17]
+
+LaTeX Warning: Reference `matr_Chern' on page 18 undefined on input line 1160.
+
+
+LaTeX Warning: Reference `matr_Chern' on page 18 undefined on input line 1166.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 18 undefined on input line
+ 1170.
+
+
+LaTeX Warning: Reference `conc_lvg_b' on page 18 undefined on input line 1171.
+
+
+LaTeX Warning: Reference `sub_opt_cor' on page 18 undefined on input line 1174.
+
+
+
+LaTeX Warning: Citation `PW16' on page 18 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `sub_opt_cor' on page 18 undefined on input line 1185.
+
+
+
+LaTeX Warning: Citation `PW16' on page 18 undefined on input line 1186.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 18 undefined on input line 1188.
+
+
+LaTeX Warning: Reference `impl_bal_wts' on page 18 undefined on input line 1188
+.
+
+[18]
+
+LaTeX Warning: Reference `alg_lvg_b' on page 19 undefined on input line 1236.
+
+
+LaTeX Warning: Citation `AC06' on page 19 undefined on input line 1248.
+
+
+LaTeX Warning: Citation `DMMS11' on page 19 undefined on input line 1248.
+
+
+LaTeX Warning: Citation `CMPH22' on page 19 undefined on input line 1248.
+
+
+LaTeX Warning: Citation `BBGL22' on page 19 undefined on input line 1248.
+
+
+LaTeX Warning: Reference `Lemma_flat' on page 19 undefined on input line 1250.
+
+[19]
+
+LaTeX Warning: Reference `expansion_matrix' on page 20 undefined on input line 
+1262.
+
+
+LaTeX Warning: Reference `scalar_enc_matrix' on page 20 undefined on input line
+ 1262.
+
+
+LaTeX Warning: Reference `comparison_two_embds' on page 20 undefined on input l
+ine 1286.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 20 undefined on input line 1286.
+
+
+LaTeX Warning: Citation `CMPH22' on page 20 undefined on input line 1286.
+
+
+LaTeX Warning: Reference `subsp_emb_thm_lvg' on page 20 undefined on input line
+ 1286.
+
+
+LaTeX Warning: Citation `CMPH22' on page 20 undefined on input line 1289.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 20 undefined on input line 1297.
+
+
+LaTeX Warning: Citation `CMPH22' on page 20 undefined on input line 1297.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 20 undefined on input line 1334.
+
+
+LaTeX Warning: Reference `weighting_sec' on page 20 undefined on input line 133
+4.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 20 undefined on input line 1338.
+
+
+LaTeX Warning: Reference `prop_Sp_lvg' on page 20 undefined on input line 1342.
+
+
+[20]
+
+LaTeX Warning: Reference `lem_exp_StS' on page 21 undefined on input line 1366.
+
+
+
+LaTeX Warning: Reference `contr_rate_Bs' on page 21 undefined on input line 137
+6.
+
+
+LaTeX Warning: Reference `exp_null_term' on page 21 undefined on input line 137
+6.
+
+
+LaTeX Warning: Reference `exp_Bs_term' on page 21 undefined on input line 1376.
+
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 21 undefined on input line 1380.
+
+
+LaTeX Warning: Reference `contr_rate_Bs' on page 21 undefined on input line 138
+4.
+
+
+LaTeX Warning: Reference `mod_OLS' on page 21 undefined on input line 1397.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 21 undefined on input line 1397.
+
+[21]
+
+LaTeX Warning: Reference `alg_lvg_b' on page 22 undefined on input line 1403.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 22 undefined on input line 1412.
+
+
+LaTeX Warning: Reference `mod_OLS' on page 22 undefined on input line 1421.
+
+
+LaTeX Warning: Reference `mod_OLS' on page 22 undefined on input line 1425.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 22 undefined on input line 1425.
+
+
+LaTeX Warning: Reference `expr_Sw' on page 22 undefined on input line 1425.
+
+
+LaTeX Warning: Reference `Sb_WSp_expr_lvg' on page 22 undefined on input line 1
+425.
+
+
+LaTeX Warning: Reference `alg_lvg_b' on page 22 undefined on input line 1429.
+
+[22]
+
+LaTeX Warning: Reference `mod_OLS' on page 23 undefined on input line 1438.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 23 undefined on input line 1448.
+
+
+LaTeX Warning: Reference `mod_OLS' on page 23 undefined on input line 1448.
+
+
+LaTeX Warning: Reference `prop_wght_lr' on page 23 undefined on input line 1466
+.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 23 undefined on input line 1
+466.
+
+
+LaTeX Warning: Reference `SGD_nonunif_thm' on page 23 undefined on input line 1
+468.
+
+
+LaTeX Warning: Reference `x_star_lr' on page 23 undefined on input line 1472.
+
+
+LaTeX Warning: Reference `prop_wght_lr' on page 23 undefined on input line 1472
+.
+
+[23]
+
+LaTeX Warning: Reference `alg_lvg_b' on page 24 undefined on input line 1485.
+
+
+LaTeX Warning: Reference `partial_lambda' on page 24 undefined on input line 15
+12.
+
+
+LaTeX Warning: Reference `partial_Pi' on page 24 undefined on input line 1512.
+
+
+LaTeX Warning: Reference `partial_set_0' on page 24 undefined on input line 151
+2.
+
+
+LaTeX Warning: Reference `partial_Pi' on page 24 undefined on input line 1512.
+
+
+LaTeX Warning: Reference `partial_Pi' on page 24 undefined on input line 1516.
+
+
+LaTeX Warning: Reference `partial_lambda' on page 24 undefined on input line 15
+16.
+
+
+LaTeX Warning: Reference `thm_exp_dim' on page 24 undefined on input line 1521.
+
+
+No file 2308.03096_pdflatex.bbl.
+[24]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.03096/2308.03096_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `2308.03096_pdflatex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2021/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publ
+ic/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs1
+0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.03096/2308.03096_pdflatex.pdf (24 pages, 160553
+7 bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.03096/2308.03096_pdflatex.log.

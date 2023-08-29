@@ -1,0 +1,1763 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2021.12.5)  20 AUG 2023 02:07
+ restricted system commands enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
+Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/Users/jovyntan/Library/texlive/202
+1/texmf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
+olved path "/usr/local/texlive/2021/texmf-dist/tex/luatex/luaotfload/fontloader-
+2021-01-07.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/Users/jovyntan/Library/texlive/202
+1/texmf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count175
+\@IEEEtrantmpcountB=\count176
+\@IEEEtrantmpcountC=\count177
+\@IEEEtrantmptoksA=\toks15
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 50
+3.
+LaTeX Font Info:    No file TUptm.fd. on input line 503.
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+luaotfload | db : Font names database loaded from /Users/jovyntan/Library/texliv
+e/2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@IEEEsubequation=\count182
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count183
+\c@table=\count184
+\@IEEEeqnnumcols=\count185
+\@IEEEeqncolcnt=\count186
+\@IEEEsubeqnnumrollback=\count187
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count188
+\@IEEEquantizeboxA=\box47
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count189
+\@IEEEtranrubishbin=\box48
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
+2.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: luatex.def on input line 147.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box49
+\extrarowheight=\dimen163
+\NC@list=\toks16
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box50
+)
+\everycr=\toks17
+\minrowclearance=\skip52
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/luababel.def
+\bbl@readstream=\read2
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 117.
+\l@nohyphenation=\language3
+\l@german-x-2021-02-26=\language4
+\l@ngerman-x-2021-02-26=\language5
+\l@afrikaans=\language6
+\l@ancientgreek=\language7
+\l@ibycus=\language8
+\l@arabic=\language9
+\l@armenian=\language10
+\l@basque=\language11
+\l@belarusian=\language12
+\l@bulgarian=\language13
+\l@catalan=\language14
+\l@pinyin=\language15
+\l@churchslavonic=\language16
+\l@coptic=\language17
+\l@croatian=\language18
+\l@czech=\language19
+\l@danish=\language20
+\l@dutch=\language21
+\l@ukenglish=\language22
+\l@usenglishmax=\language23
+\l@esperanto=\language24
+\l@estonian=\language25
+\l@ethiopic=\language26
+\l@farsi=\language27
+\l@finnish=\language28
+\l@schoolfinnish=\language29
+\l@french=\language30
+\l@friulan=\language31
+\l@galician=\language32
+\l@georgian=\language33
+\l@german=\language34
+\l@ngerman=\language35
+\l@swissgerman=\language36
+\l@greek=\language37
+\l@monogreek=\language38
+\l@hungarian=\language39
+\l@icelandic=\language40
+\l@assamese=\language41
+\l@bengali=\language42
+\l@gujarati=\language43
+\l@hindi=\language44
+\l@kannada=\language45
+\l@malayalam=\language46
+\l@marathi=\language47
+\l@oriya=\language48
+\l@pali=\language49
+\l@panjabi=\language50
+\l@tamil=\language51
+\l@telugu=\language52
+\l@indonesian=\language53
+\l@interlingua=\language54
+\l@irish=\language55
+\l@italian=\language56
+\l@kurmanji=\language57
+\l@classiclatin=\language58
+\l@latin=\language59
+\l@liturgicallatin=\language60
+\l@latvian=\language61
+\l@lithuanian=\language62
+\l@macedonian=\language63
+\l@mongolian=\language64
+\l@mongolianlmc=\language65
+\l@bokmal=\language66
+\l@nynorsk=\language67
+\l@occitan=\language68
+\l@piedmontese=\language69
+\l@polish=\language70
+\l@portuguese=\language71
+\l@romanian=\language72
+\l@romansh=\language73
+\l@russian=\language74
+\l@sanskrit=\language75
+\l@serbian=\language76
+\l@serbianc=\language77
+\l@slovak=\language78
+\l@slovenian=\language79
+\l@spanish=\language80
+\l@swedish=\language81
+\l@thai=\language82
+\l@turkish=\language83
+\l@turkmen=\language84
+\l@ukrainian=\language85
+\l@uppersorbian=\language86
+\l@welsh=\language87
+\babelcatcodetablenum=\catcodetable12
+\bbl@pattcodes=\catcodetable13
+)
+\babel@savecnt=\count190
+\U@D=\dimen164
+\l@babelnohyphens=\language88
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute4
+))
+Package babel Info: You haven't specified a language. I'll use 'nil'
+(babel)             as the main language. Reported on input line 1160.
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2021/03/24 3.56 Nil language
+\l@nil=\language89
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks18
+\verbatim@line=\toks19
+\verbatim@in@stream=\read3
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen165
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen166
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count191
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count192
+\leftroot@=\count193
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count194
+\DOTSCASE@=\count195
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen167
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
+\dotsspace@=\muskip16
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
+\tag@help=\toks21
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
+\andhelp@=\toks22
+\eqnshift@=\dimen168
+\alignsep@=\dimen169
+\tagshift@=\dimen170
+\tagwidth@=\dimen171
+\totwidth@=\dimen172
+\lineht@=\dimen173
+\@envbody=\toks23
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip56
+\thm@postskip=\skip57
+\thm@headsep=\skip58
+\dth@everypar=\toks30
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks31
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+)
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+\TY@count=\count269
+\TY@linewidth=\dimen176
+\tymin=\dimen177
+\tymax=\dimen178
+\TY@tablewidth=\dimen179
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen180
+\captionmargin@=\dimen181
+\captionwidth=\dimen182
+\caption@tempdima=\dimen183
+\caption@indent=\dimen184
+\caption@parindent=\dimen185
+\caption@hangindent=\dimen186
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1139.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count270
+\c@continuedfloat=\count271
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count272
+\c@subtable=\count273
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks32
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box53
+\UL@hyphenbox=\box54
+\UL@skip=\skip59
+\UL@hook=\toks33
+\UL@height=\dimen187
+\UL@pe=\count274
+\UL@pixel=\dimen188
+\ULC@box=\box55
+Package: ulem 2019/11/18
+\ULdepth=\dimen189
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen190
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip60
+\multirow@cntb=\count275
+\multirow@dima=\skip61
+\bigstrutjot=\dimen191
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks34
+\SOUL@lasttoken=\toks35
+\SOUL@cmds=\toks36
+\SOUL@buffer=\toks37
+\SOUL@token=\toks38
+\SOUL@spaceskip=\skip62
+\SOUL@ttwidth=\dimen192
+\SOUL@uldp=\dimen193
+\SOUL@ulht=\dimen194
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count276
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip63
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count277
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip64
+\skiplinenumber=\skip65
+\skiprule=\skip66
+\skiphlne=\skip67
+\skiptext=\skip68
+\skiplength=\skip69
+\algomargin=\skip70
+\skipalgocfslide=\skip71
+\algowidth=\dimen195
+\inoutsize=\dimen196
+\inoutindent=\dimen197
+\interspacetitleruled=\dimen198
+\interspacealgoruled=\dimen199
+\interspacetitleboxruled=\dimen256
+\algocf@ruledwidth=\skip72
+\algocf@inoutbox=\box56
+\algocf@inputbox=\box57
+\AlCapSkip=\skip73
+\AlCapHSkip=\skip74
+\algoskipindent=\skip75
+\algocf@nlbox=\box58
+\algocf@hangingbox=\box59
+\algocf@untilbox=\box60
+\algocf@skipuntil=\skip76
+\algocf@capbox=\box61
+\algocf@lcaptionbox=\skip77
+\algoheightruledefault=\skip78
+\algoheightrule=\skip79
+\algotitleheightruledefault=\skip80
+\algotitleheightrule=\skip81
+\c@algocfline=\count278
+\c@algocfproc=\count279
+\c@algocf=\count280
+\algocf@algoframe=\box62
+\algocf@algobox=\box63
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+\figwidth=\skip82
+\c@Theorem=\count281
+\c@Proposition=\count282
+\c@Corollary=\count283
+\c@Remark=\count284
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2021-03-18 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box64
+)
+No file 2308.01440_lualatex.aux.
+
+\openout1 = 2308.01440_lualatex.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
+3.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count286
+\scratchdimen=\dimen257
+\scratchbox=\box65
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen258
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks40
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Citation `KarGerJafICC2023' on page 1 undefined on input line 75
+.
+
+(./00_Abstract.tex
+Underfull \hbox (badness 2865) in paragraph at lines 1--7
+\T1/ptm/b/n/9 algorithms for multiple system-level performance metrics,
+ []
+
+) (./01_Introduction.tex
+
+LaTeX Warning: Citation `GerGarAza2022' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `wu20205g' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `UAVfire2022' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `SaeAlnAlo2020' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `FotQiaDin2019' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `ZenGuvZha2020' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `SaaBenMoz2020' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `NamChaKim17' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `CDHJGC20' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `GerGarGal2018' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation `ZenLyuZha2019' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation `NguAmoWig2018' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Citation `GarGerLop2019' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `KanMezLoz2021' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `DanGarGer2020' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `CDALHJTWC22' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `GerLopBen2022' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `KimKimRyu2022' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `MozLinHay2021' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `BenGerLop2022' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Citation `GerGarAza2022' on page 1 undefined on input line 12.
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 10--13
+[]\T1/ptm/m/n/10 Achieving fly-and-connect capabilities faces important
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 10--13
+\T1/ptm/m/n/10 BSs. This interference results in UAVs experiencing a
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 10--13
+\T1/ptm/m/n/10 hinders the correct decoding of critical command and
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 10--13
+\T1/ptm/m/n/10 also up in the air, by re-engineering the deployments
+ []
+
+
+LaTeX Warning: Citation `CheJaaYan2020' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Citation `BhuGuvDai2021' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `fig:illustration' on page 1 undefined on input line 1
+5.
+
+
+LaTeX Warning: Citation `BulGuv2018' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `ChaSaaBet2018' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `EsrGanGes2020' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `BayTheCac2021' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `MaeChoGuv2021' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `ChoGuvSaa2021' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `SinBhaOzt2021' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `BerLopGes2022' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `BerLopPio2023' on page 1 undefined on input line 17.
+
+
+LaTeX Warning: Citation `azari2019cellular' on page 1 undefined on input line 2
+0.
+
+
+LaTeX Warning: Citation `AzaGerGar2020' on page 1 undefined on input line 20.
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 14--21
+\T1/ptm/m/n/10 to guarantee connectivity at every 3D space location.
+ []
+
+[1
+Non-PDF special ignored!{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updm
+ap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Citation `GuoJaf2016' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `cortes2005spatially' on page 2 undefined on input line
+ 27.
+
+
+LaTeX Warning: Citation `guo2018source' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `ingle2011energy' on page 2 undefined on input line 27.
+
+
+
+LaTeX Warning: Citation `guo2019movement' on page 2 undefined on input line 27.
+
+
+
+LaTeX Warning: Citation `cortes2004coverage' on page 2 undefined on input line 
+27.
+
+
+LaTeX Warning: Citation `karimi2020energy' on page 2 undefined on input line 27
+.
+
+
+LaTeX Warning: Citation `tang2019three' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `karimi2021energy' on page 2 undefined on input line 27
+.
+
+
+LaTeX Warning: Citation `wang2006movement' on page 2 undefined on input line 27
+.
+
+
+LaTeX Warning: Citation `9086619' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Citation `8519749' on page 2 undefined on input line 27.
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 29--30
+\T1/ptm/m/n/10 develop optimization algorithms for three system-level
+ []
+
+
+Underfull \hbox (badness 6592) in paragraph at lines 31--33
+[]\T1/ptm/m/n/10 To illustrate the effectiveness of our mathematical
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 36--38
+\T1/ptm/m/n/10 of BSs operating at maximum power, while the
+ []
+
+
+Underfull \hbox (badness 3302) in paragraph at lines 38--40
+\T1/ptm/m/n/10 only a marginal reduction in ground performance
+ []
+
+<Figures/figureCorridors_v03.png, id=11, 985.6825pt x 678.535pt>
+File: Figures/figureCorridors_v03.png Graphic file (type png)
+<use Figures/figureCorridors_v03.png>
+Package luatex.def Info: Figures/figureCorridors_v03.png  used on input line 45
+.
+(luatex.def)             Requested size: 249.48138pt x 171.7351pt.
+) (./02_SystemModel.tex
+
+LaTeX Warning: Reference `fig:illustration' on page 2 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 2 undefined on input line 20.
+
+[2<./Figures/figureCorridors_v03.png>]
+
+LaTeX Warning: Reference `case-study' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 3 undefined on input line 47.
+
+) (./03_RSS.tex
+
+LaTeX Warning: Reference `RSS-objective-function' on page 3 undefined on input 
+line 15.
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 18--19
+[]\T1/ptm/b/n/10 Remark 1. []\T1/ptm/m/it/10 Due to the absence of interference from
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 18--19
+\T1/ptm/m/it/10 powers $\OML/cmm/b/it/10 $ \T1/ptm/m/it/10 always reduces to al
+locating the maximum
+ []
+
+
+LaTeX Warning: Reference `RSS-dBm' on page 3 undefined on input line 22.
+
+
+LaTeX Warning: Citation `lloyd1982least' on page 3 undefined on input line 31.
+
+
+LaTeX Warning: Citation `gray1998quantization' on page 3 undefined on input lin
+e 31.
+
+
+LaTeX Warning: Citation `boots2009spatial' on page 3 undefined on input line 31
+.
+
+
+LaTeX Warning: Citation `du1999centroidal' on page 3 undefined on input line 31
+.
+
+[3]
+
+LaTeX Warning: Reference `RSS-objective-function' on page 4 undefined on input 
+line 56.
+
+
+LaTeX Warning: Citation `GuoJaf2016' on page 4 undefined on input line 56.
+
+
+LaTeX Warning: Reference `optimal-V' on page 4 undefined on input line 68.
+
+
+LaTeX Warning: Reference `rss-grad-eq' on page 4 undefined on input line 68.
+
+
+LaTeX Warning: Reference `BS_VAT_Algorithm' on page 4 undefined on input line 6
+8.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning' on page 4 undefined on inp
+ut line 90.
+
+
+LaTeX Warning: Reference `eqn:derivativePhidBm' on page 4 undefined on input li
+ne 90.
+
+
+LaTeX Warning: Reference `optimal-V' on page 4 undefined on input line 98.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning' on page 4 undefined on inp
+ut line 98.
+
+
+LaTeX Warning: Citation `goodfellow2016deep' on page 4 undefined on input line 
+98.
+
+) (./04_SINR.tex
+
+LaTeX Warning: Reference `RSS-Chapter' on page 4 undefined on input line 6.
+
+
+LaTeX Warning: Reference `RSS-dBm' on page 4 undefined on input line 6.
+
+
+LaTeX Warning: Reference `SINR-objective-constraint' on page 4 undefined on inp
+ut line 15.
+
+[4]
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 30.
+
+
+
+LaTeX Warning: Reference `Appendix_A' on page 5 undefined on input line 30.
+
+
+LaTeX Warning: Reference `SINR-objective' on page 5 undefined on input line 35.
+
+
+
+LaTeX Warning: Reference `rss-grad-eq' on page 5 undefined on input line 42.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR-equation' on page 5 undefined 
+on input line 42.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 5 undef
+ined on input line 42.
+
+
+LaTeX Warning: Reference `Appendix_A' on page 5 undefined on input line 42.
+
+
+LaTeX Warning: Citation `GuoJaf2016' on page 5 undefined on input line 42.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR-equation' on page 5 undefined 
+on input line 50.
+
+
+LaTeX Warning: Reference `eqn:derivativePhi-SINR' on page 5 undefined on input 
+line 50.
+
+
+LaTeX Warning: Reference `eqn:SINR_dB' on page 5 undefined on input line 50.
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 49--51
+\T1/ptm/m/n/10 Eq. ([]) is then derived via straightforward algebraic
+ []
+
+
+LaTeX Warning: Reference `SINR-objective' on page 5 undefined on input line 55.
+
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 5 undefined o
+n input line 62.
+
+
+LaTeX Warning: Reference `Appendix_B' on page 5 undefined on input line 62.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 66.
+
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 5 undefined on input 
+line 66.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 5 undefined o
+n input line 66.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 71.
+
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 5 undefined on input 
+line 71.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 5 undefined o
+n input line 71.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 5 undefined on input lin
+e 72.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 5 undefined on input lin
+e 72.
+
+
+LaTeX Warning: Reference `SINR-objective-constraint' on page 5 undefined on inp
+ut line 72.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 5 undefined o
+n input line 109.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR-equation' on page 5 undefined 
+on input line 109.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-equation' on page 5 un
+defined on input line 109.
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 117--118
+[]\T1/ptm/b/n/10 Proposition 7. []\T1/ptm/m/it/10 The Max-SINR-PA-VAT algorithm is an
+ []
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 5 undefined o
+n input line 120.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 5 undefined on input line 120
+.
+
+
+LaTeX Warning: Reference `BS-VAT-convergence' on page 5 undefined on input line
+ 120.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 5 undefined on input lin
+e 120.
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 120--121
+[]\T1/ptm/m/it/10 Proof.  \T1/ptm/m/n/10 The Max-SINR-PA-VAT algorithm iterative
+ly
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 120--121
+\T1/ptm/m/n/10 methods, respectively, will not result in a decrease in
+ []
+
+
+LaTeX Warning: Citation `nikbakht2020unsupervised' on page 5 undefined on input
+ line 122.
+
+[5]
+
+LaTeX Warning: Reference `max-product-objective' on page 6 undefined on input l
+ine 149.
+
+
+LaTeX Warning: Reference `SINR-objective' on page 6 undefined on input line 149
+.
+
+
+LaTeX Warning: Reference `max-product-objective' on page 6 undefined on input l
+ine 151.
+
+
+LaTeX Warning: Reference `SINR-objective' on page 6 undefined on input line 151
+.
+
+
+LaTeX Warning: Reference `max-product-objective' on page 6 undefined on input l
+ine 159.
+
+
+LaTeX Warning: Reference `max-product-objective-constraint' on page 6 undefined
+ on input line 159.
+
+
+LaTeX Warning: Reference `SINR-Algorithm' on page 6 undefined on input line 159
+.
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 159--160
+ \T1/ptm/m/it/10 2) Optimal Configuration: [][]\T1/ptm/m/n/10 The iterative proc
+ess for
+ []
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 6 undef
+ined on input line 169.
+
+
+LaTeX Warning: Reference `Appendix_A' on page 6 undefined on input line 169.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 6 undefined on input line 169
+.
+
+
+LaTeX Warning: Reference `gradient-theta-MP-equation' on page 6 undefined on in
+put line 177.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 6 undefined on input 
+line 194.
+
+
+LaTeX Warning: Reference `gradient-MP-power' on page 6 undefined on input line 
+203.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 6 undefined o
+n input line 230.
+
+
+LaTeX Warning: Reference `MP-optimal-cell' on page 6 undefined on input line 23
+7.
+
+
+LaTeX Warning: Reference `gradient-theta-MP' on page 6 undefined on input line 
+237.
+
+
+LaTeX Warning: Reference `gradient-formula-MP-power' on page 6 undefined on inp
+ut line 237.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-MP' on page 6 undefined on 
+input line 241.
+
+
+LaTeX Warning: Reference `gradient-theta-MP' on page 6 undefined on input line 
+242.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+[]\T1/ptm/m/n/10 Calculate the gradient $\OMS/cmsy/m/n/10 r[]\OT1/cmr/m/n/10 [
+]$ \T1/ptm/m/n/10 according to
+ []
+
+
+LaTeX Warning: Reference `gradient-formula-MP-power' on page 6 undefined on inp
+ut line 243.
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 243--244
+[]\T1/ptm/m/n/10 Compute the gradient vector $\OMS/cmsy/m/n/10 r[]\OT1/cmr/m/n/
+10 []$ \T1/ptm/m/n/10 according to
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 243--244
+\T1/ptm/m/n/10 algorithm to optimize $\OML/cmm/b/it/10 $ \T1/ptm/m/n/10 within the confined space
+ []
+
+
+LaTeX Warning: Reference `BS-PA-VAT-convergence' on page 6 undefined on input l
+ine 252.
+
+[6]
+Underfull \hbox (badness 2495) in paragraph at lines 281--282
+ \T1/ptm/m/it/10 2) Optimal Configuration: [][]\T1/ptm/m/n/10 As before, we deri
+ve the
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 281--282
+\T1/ptm/m/n/10 necessary optimality conditions for each variable while
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 281--282
+\T1/ptm/m/n/10 holding the other two variables fixed to optimize the
+ []
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 7 undef
+ined on input line 290.
+
+
+LaTeX Warning: Reference `Appendix_A' on page 7 undefined on input line 290.
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 7 undefined on input line 290
+.
+
+
+LaTeX Warning: Reference `gradient-vector-theta-SM-equation' on page 7 undefine
+d on input line 337.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 7 undefined on input 
+line 348.
+
+
+LaTeX Warning: Reference `gradient-SM-wrt-power-equation' on page 7 undefined o
+n input line 356.
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 356--362
+\T1/ptm/m/it/10 of the next page, where $[][]$, $[][]$, and $\OML/cmm/m/it/10 V[]$ \T1/ptm/m/it/10 are
+ []
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 7 undefined o
+n input line 363.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SM-performance' on page 7 u
+ndefined on input line 369.
+
+
+LaTeX Warning: Reference `gradient-vector-theta-SM' on page 7 undefined on inpu
+t line 369.
+
+
+LaTeX Warning: Reference `gradient-SM-wrt-power' on page 7 undefined on input l
+ine 369.
+
+
+LaTeX Warning: Reference `BS_PA_VAT_Algorithm' on page 7 undefined on input lin
+e 369.
+
+
+LaTeX Warning: Reference `BS-PA-VAT-convergence' on page 7 undefined on input l
+ine 376.
+
+) (./05_CaseStudy.tex
+Underfull \hbox (badness 1360) in paragraph at lines 4--5
+[]\T1/ptm/m/n/10 To evaluate the effectiveness and performance of the
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 4--5
+\T1/ptm/m/n/10 using a practical case study. The subsequent sections
+ []
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-UAV' on page 7 undefined on input lin
+e 11.
+
+[7]
+
+LaTeX Warning: Reference `TWC-Normal-Size-GUE' on page 8 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-UAV' on page 8 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 8 undefined on input line 20.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 8 undefined on input line 20.
+
+<Figures/Exemplary-Cell-Partitioning/TWC-normal-size-SINR-GUE-Cells_1.png, id=5
+0, 952.55875pt x 887.315pt>
+File: Figures/Exemplary-Cell-Partitioning/TWC-normal-size-SINR-GUE-Cells_1.png 
+Graphic file (type png)
+<use Figures/Exemplary-Cell-Partitioning/TWC-normal-size-SINR-GUE-Cells_1.png>
+Package luatex.def Info: Figures/Exemplary-Cell-Partitioning/TWC-normal-size-SI
+NR-GUE-Cells_1.png  used on input line 44.
+(luatex.def)             Requested size: 159.33542pt x 148.41801pt.
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 44.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 44.
+
+<Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Large-Cells_4.png, id=51, 956
+.57375pt x 889.3225pt>
+File: Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Large-Cells_4.png Graphi
+c file (type png)
+<use Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Large-Cells_4.png>
+Package luatex.def Info: Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Large
+-Cells_4.png  used on input line 47.
+(luatex.def)             Requested size: 159.33542pt x 148.12958pt.
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 47.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 47.
+
+<Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Very-Large-Cells_2.png, id=52
+, 956.57375pt x 891.33pt>
+File: Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Very-Large-Cells_2.png G
+raphic file (type png)
+<use Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Very-Large-Cells_2.png>
+Package luatex.def Info: Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Very-
+Large-Cells_2.png  used on input line 50.
+(luatex.def)             Requested size: 159.33542pt x 148.46396pt.
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 50.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 50.
+
+<Figures/Exemplary-Cell-Partitioning/TWC-normal-size-UAV-target-region.png, id=
+53, 952.55875pt x 888.31876pt>
+File: Figures/Exemplary-Cell-Partitioning/TWC-normal-size-UAV-target-region.png
+ Graphic file (type png)
+<use Figures/Exemplary-Cell-Partitioning/TWC-normal-size-UAV-target-region.png>
+
+Package luatex.def Info: Figures/Exemplary-Cell-Partitioning/TWC-normal-size-UA
+V-target-region.png  used on input line 53.
+(luatex.def)             Requested size: 159.33542pt x 148.5859pt.
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 53.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 53.
+
+<Figures/Exemplary-Cell-Partitioning/TWC-large-size-UAV-target-region-2.png, id
+=54, 956.57375pt x 892.33376pt>
+File: Figures/Exemplary-Cell-Partitioning/TWC-large-size-UAV-target-region-2.pn
+g Graphic file (type png)
+<use Figures/Exemplary-Cell-Partitioning/TWC-large-size-UAV-target-region-2.png
+>
+Package luatex.def Info: Figures/Exemplary-Cell-Partitioning/TWC-large-size-UAV
+-target-region-2.png  used on input line 56.
+(luatex.def)             Requested size: 159.33542pt x 148.63115pt.
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 56.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 56.
+
+<Figures/Exemplary-Cell-Partitioning/TWC-very-large-size-UAV-target-region-2.pn
+g, id=55, 956.57375pt x 891.33pt>
+File: Figures/Exemplary-Cell-Partitioning/TWC-very-large-size-UAV-target-region
+-2.png Graphic file (type png)
+<use Figures/Exemplary-Cell-Partitioning/TWC-very-large-size-UAV-target-region-
+2.png>
+Package luatex.def Info: Figures/Exemplary-Cell-Partitioning/TWC-very-large-siz
+e-UAV-target-region-2.png  used on input line 59.
+(luatex.def)             Requested size: 159.33542pt x 148.46396pt.
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 59.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 8 undefined on input line
+ 59.
+
+<Figures/TWC-RSS-Optimal-Theta.png, id=56, 1610.015pt x 784.9325pt>
+File: Figures/TWC-RSS-Optimal-Theta.png Graphic file (type png)
+<use Figures/TWC-RSS-Optimal-Theta.png>
+Package luatex.def Info: Figures/TWC-RSS-Optimal-Theta.png  used on input line 
+75.
+(luatex.def)             Requested size: 249.48138pt x 121.62733pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 75--76
+ [][] 
+ []
+
+<Figures/TWC-MP-010-Optimal-Theta.png, id=57, 1612.0225pt x 784.9325pt>
+File: Figures/TWC-MP-010-Optimal-Theta.png Graphic file (type png)
+<use Figures/TWC-MP-010-Optimal-Theta.png>
+Package luatex.def Info: Figures/TWC-MP-010-Optimal-Theta.png  used on input li
+ne 79.
+(luatex.def)             Requested size: 249.48138pt x 121.47163pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 79--81
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `TWC-RSS-Optimal-Theta' on page 8 undefined on input l
+ine 87.
+
+
+LaTeX Warning: Reference `TWC-MP-010-Optimal-Theta' on page 8 undefined on inpu
+t line 87.
+
+
+LaTeX Warning: Reference `TWC-RSS-Optimal-Theta' on page 8 undefined on input l
+ine 89.
+
+[8]
+
+LaTeX Warning: Reference `TWC-SINR-Optimal-Power' on page 9 undefined on input 
+line 96.
+
+
+LaTeX Warning: Reference `TWC-MP-010-Optimal-Power' on page 9 undefined on inpu
+t line 96.
+
+
+LaTeX Warning: Reference `TWC-Cell-Partitionings' on page 9 undefined on input 
+line 97.
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-GUE' on page 9 undefined on input lin
+e 98.
+
+
+LaTeX Warning: Reference `TWC-Normal-Size-UAV' on page 9 undefined on input lin
+e 98.
+
+
+LaTeX Warning: Reference `experimental-setup' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-GUE' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-UAV' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-GUE' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-GUE' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Large-Size-UAV' on page 9 undefined on input line
+ 98.
+
+
+LaTeX Warning: Reference `TWC-Very-Large-Size-GUE' on page 9 undefined on input
+ line 98.
+
+
+LaTeX Warning: Reference `TWC-Very-Large-Size-UAV' on page 9 undefined on input
+ line 98.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<Figures/TWC-SINR-Optimal-Power.png, id=61, 1614.03pt x 785.93625pt>
+File: Figures/TWC-SINR-Optimal-Power.png Graphic file (type png)
+<use Figures/TWC-SINR-Optimal-Power.png>
+Package luatex.def Info: Figures/TWC-SINR-Optimal-Power.png  used on input line
+ 104.
+(luatex.def)             Requested size: 249.48138pt x 121.48306pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 104--105
+ [][] 
+ []
+
+<Figures/TWC-MP-010-Optimal-Power.png, id=62, 1591.9475pt x 783.92876pt>
+File: Figures/TWC-MP-010-Optimal-Power.png Graphic file (type png)
+<use Figures/TWC-MP-010-Optimal-Power.png>
+Package luatex.def Info: Figures/TWC-MP-010-Optimal-Power.png  used on input li
+ne 108.
+(luatex.def)             Requested size: 249.48138pt x 122.84741pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 108--110
+ [][] 
+ []
+
+<Figures/TWC-RSS-CDF-Plot.png, id=63, 1635.10875pt x 801.99625pt>
+File: Figures/TWC-RSS-CDF-Plot.png Graphic file (type png)
+<use Figures/TWC-RSS-CDF-Plot.png>
+Package luatex.def Info: Figures/TWC-RSS-CDF-Plot.png  used on input line 122.
+(luatex.def)             Requested size: 249.48138pt x 122.36237pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 122--123
+ [][] 
+ []
+
+<Figures/TWC-MP-010-CDF-Plot.png, id=64, 1616.0375pt x 797.98125pt>
+File: Figures/TWC-MP-010-CDF-Plot.png Graphic file (type png)
+<use Figures/TWC-MP-010-CDF-Plot.png>
+Package luatex.def Info: Figures/TWC-MP-010-CDF-Plot.png  used on input line 12
+6.
+(luatex.def)             Requested size: 249.48138pt x 123.18658pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+<Figures/TWC-SINR-CDF-Curve-Probabilistic_LoS.png, id=65, 1618.045pt x 799.9887
+5pt>
+File: Figures/TWC-SINR-CDF-Curve-Probabilistic_LoS.png Graphic file (type png)
+<use Figures/TWC-SINR-CDF-Curve-Probabilistic_LoS.png>
+Package luatex.def Info: Figures/TWC-SINR-CDF-Curve-Probabilistic_LoS.png  used
+ on input line 130.
+(luatex.def)             Requested size: 249.48138pt x 123.3378pt.
+
+Overfull \hbox (0.98145pt too wide) in paragraph at lines 130--132
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `TWC-RSS-CDF-Plot' on page 9 undefined on input line 1
+43.
+
+
+LaTeX Warning: Reference `TWC-RSS-CDF-Plot' on page 9 undefined on input line 1
+43.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+ \T1/ptm/m/it/10 3) Performance Improvement: [][]\T1/ptm/m/n/10 Fig. [] shows th
+e
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9<./Figures/Exemplary-Cell-Partitioning/TWC-normal-size-SINR-GUE-Cells_1.png><
+./Figures/Exemplary-Cell-Partitioning/TWC-SINR-GUE-Large-Cells_4.png><./Figures/
+Exemplary-Cell-Partitioning/TWC-SINR-GUE-Very-Large-Cells_2.png><./Figures/Exemp
+lary-Cell-Partitioning/TWC-normal-size-UAV-target-region.png><./Figures/Exemplar
+y-Cell-Partitioning/TWC-large-size-UAV-target-region-2.png><./Figures/Exemplary-
+Cell-Partitioning/TWC-very-large-size-UAV-target-region-2.png>]
+
+LaTeX Warning: Reference `TWC-MP-010-CDF-Plot' on page 10 undefined on input li
+ne 145.
+
+
+LaTeX Warning: Reference `TWC-MP-010-CDF-Plot' on page 10 undefined on input li
+ne 145.
+
+
+LaTeX Warning: Reference `Experimental-Results' on page 10 undefined on input l
+ine 192.
+
+
+LaTeX Warning: Citation `3GPP38901' on page 10 undefined on input line 193.
+
+
+LaTeX Warning: Reference `a_q_values' on page 10 undefined on input line 193.
+
+
+LaTeX Warning: Reference `b_q_values' on page 10 undefined on input line 193.
+
+
+LaTeX Warning: Citation `3GPP36777' on page 10 undefined on input line 196.
+
+
+LaTeX Warning: Reference `eqn:Pathloss' on page 10 undefined on input line 214.
+
+
+[10<./Figures/TWC-RSS-Optimal-Theta.png><./Figures/TWC-MP-010-Optimal-Theta.png>
+<./Figures/TWC-SINR-Optimal-Power.png><./Figures/TWC-MP-010-Optimal-Power.png>]
+
+
+LaTeX Warning: Reference `TWC-SINR-CDF-Plot-Prob-LoS' on page 11 undefined on i
+nput line 229.
+
+
+LaTeX Warning: Reference `Resulting-performance-improvement' on page 11 undefin
+ed on input line 229.
+
+) (./06_Conclusion.tex
+Underfull \hbox (badness 3019) in paragraph at lines 4--6
+\T1/ptm/m/n/10 a mathematical framework for optimizing antenna tilts
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 4--6
+\T1/ptm/m/n/10 and challenging to design, were shown to significantly
+ []
+
+) (./07_Appendix.tex
+Underfull \hbox (badness 1484) in paragraph at lines 7--1
+\T1/ptm/m/n/10 aligning more closely with the objectives of real-world
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 7--1
+\T1/ptm/m/n/10 in optimizing cellular networks for UAV corridors and
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 7--1
+\T1/ptm/m/n/10 addressing emerging challenges in air-to-ground wireless
+ []
+
+
+LaTeX Warning: Reference `optimal-V-SINR' on page 11 undefined on input line 2.
+
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 11 undefined 
+on input line 4.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 11 unde
+fined on input line 4.
+
+
+Underfull \vbox (badness 3068) has occurred while \output is active []
+
+ [11<./Figures/TWC-RSS-CDF-Plot.png><./Figures/TWC-MP-010-CDF-Plot.png><./Figure
+s/TWC-SINR-CDF-Curve-Probabilistic_LoS.png>]
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR' on page 12 undefined 
+on input line 21.
+
+
+LaTeX Warning: Reference `optimal-cell-partitioning-SINR-proof' on page 12 unde
+fined on input line 21.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient' on page 12 undefined 
+on input line 25.
+
+
+LaTeX Warning: Reference `gradient-equation-SINR' on page 12 undefined on input
+ line 43.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-equation' on page 12 u
+ndefined on input line 48.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-proof-eq1' on page 12 
+undefined on input line 48.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-proof-eq2' on page 12 
+undefined on input line 48.
+
+
+LaTeX Warning: Reference `sinr-power-allocation-gradient-proof-eq3' on page 12 
+undefined on input line 48.
+
+)
+No file 2308.01440_lualatex.bbl.
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[12] [13]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.01440/2308.01440_lualatex.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+)
+
+Here is how much of LuaTeX's memory you used:
+ 9265 strings out of 478531
+ 125002,552014 words of node,token memory allocated
+ 1714 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 dir, 5 glue, 12 kern, 1 glyph, 347 attribute, 75 
+glue_spec, 175 attribute_list, 1 write nodes
+   avail lists: 1:1,2:2039,3:363,4:70,5:848,6:89,7:12989,8:191,9:1870,10:15,11:8
+0
+ 28583 multiletter control sequences out of 65536+600000
+ 179 fonts using 14460655 bytes
+ 68i,20n,71p,1645b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 2308.01440_lualatex.pdf (13 pages, 4176440 bytes).
+
+PDF statistics: 192 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

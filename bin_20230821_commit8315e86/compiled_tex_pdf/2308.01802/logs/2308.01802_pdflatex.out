@@ -1,0 +1,1481 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main_arxiv.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amscd.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsxtra.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/breakurl/breakurl.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty))
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 48.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cellspace/cellspace.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/acro/acro.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty)
+No file 2308.01802_pdflatex.aux.
+-- Lines per column: 58 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+Underfull \hbox (badness 3068) in paragraph at lines 608--608
+[][][]\OT1/ptm/m/n/8 L. Hanzo is with the School of Elec-tron-ics and Com-puter
+ Sci-
+
+Underfull \hbox (badness 2856) in paragraph at lines 620--622
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Multi-carrier mod-u-la-tion, Or-
+thog-o-nal fre-
+
+LaTeX Warning: Citation `bello' on page 1 undefined on input line 667.
+
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 1 undefined on input line 667.
+
+
+LaTeX Warning: Citation `Jacobs_pce' on page 1 undefined on input line 671.
+
+
+LaTeX Warning: Citation `sigsyt' on page 1 undefined on input line 675.
+
+
+LaTeX Warning: Citation `fwc' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `ofdm' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `tff' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `mct' on page 1 undefined on input line 677.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Citation `ofdm' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `80211a' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `80211ac' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `4Gbook' on page 1 undefined on input line 677.
+
+
+LaTeX Warning: Citation `5Gbook' on page 1 undefined on input line 677.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `tff' on page 2 undefined on input line 679.
+
+
+LaTeX Warning: Reference `tf_grid' on page 2 undefined on input line 691.
+
+
+LaTeX Warning: Reference `tf_grid' on page 2 undefined on input line 692.
+
+
+LaTeX Warning: Reference `tf_grid' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `tff' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `wavelet' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `gaborana' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `ftfa' on page 2 undefined on input line 693.
+
+
+LaTeX Warning: Citation `wexler1990' on page 2 undefined on input line 694.
+
+
+LaTeX Warning: Citation `janssen1995' on page 2 undefined on input line 694.
+
+
+LaTeX Warning: Citation `tff' on page 2 undefined on input line 694.
+
+
+LaTeX Warning: Citation `mct' on page 2 undefined on input line 694.
+
+
+LaTeX Warning: Citation `eigen' on page 2 undefined on input line 697.
+
+
+LaTeX Warning: Citation `eigen' on page 2 undefined on input line 698.
+
+
+LaTeX Warning: Citation `matz07' on page 2 undefined on input line 698.
+
+
+LaTeX Warning: Citation `otfs_wcnc_2017' on page 2 undefined on input line 701.
+
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 2 undefined on input line 70
+1.
+
+
+LaTeX Warning: Citation `oddmicc22' on page 2 undefined on input line 701.
+
+
+LaTeX Warning: Citation `oddm' on page 2 undefined on input line 701.
+
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 2 undefined on input line 702.
+
+
+LaTeX Warning: Citation `yuan_wcm_2021' on page 2 undefined on input line 704.
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 2 undefined on input line 70
+5.
+
+
+LaTeX Warning: Citation `oddm' on page 2 undefined on input line 706.
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 2 undefined on input line 70
+7.
+
+
+LaTeX Warning: Citation `hadaniyt' on page 2 undefined on input line 710.
+
+
+LaTeX Warning: Citation `otfs_wcnc_2017' on page 2 undefined on input line 712.
+
+
+
+LaTeX Warning: Citation `zemenpimrc2018' on page 2 undefined on input line 714.
+
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 2 undefined on input line 71
+5.
+
+
+LaTeX Warning: Citation `shen2022error' on page 2 undefined on input line 716.
+
+[2 <./tf_grid_only-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `oddm' on page 3 undefined on input line 718.
+
+
+LaTeX Warning: Citation `bello' on page 3 undefined on input line 721.
+
+
+LaTeX Warning: Citation `oddmicc22' on page 3 undefined on input line 727.
+
+
+LaTeX Warning: Citation `oddm' on page 3 undefined on input line 727.
+
+
+LaTeX Warning: Citation `ddop' on page 3 undefined on input line 727.
+
+
+LaTeX Warning: Citation `ddop' on page 3 undefined on input line 728.
+
+
+LaTeX Warning: Citation `fwc' on page 3 undefined on input line 729.
+
+
+LaTeX Warning: Citation `bello' on page 3 undefined on input line 729.
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 731--732
+[]\OT1/ptm/m/n/10 In com-par-i-son to the con-ven-tional TFMC mod-u-la-tion
+
+LaTeX Warning: Citation `onbandwidth' on page 3 undefined on input line 754.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
+
+LaTeX Warning: Citation `fwc' on page 4 undefined on input line 756.
+
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 4 undefined on input line 774.
+
+
+LaTeX Warning: Reference `bbyt_general' on page 4 undefined on input line 775.
+
+
+LaTeX Warning: Reference `tvcir0' on page 4 undefined on input line 779.
+
+
+LaTeX Warning: Reference `sf' on page 4 undefined on input line 789.
+
+
+LaTeX Warning: Reference `hlti_offgrid' on page 4 undefined on input line 794.
+
+
+LaTeX Warning: Reference `sf' on page 4 undefined on input line 799.
+
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 4 undefined on input line 799.
+
+
+LaTeX Warning: Citation `bello' on page 4 undefined on input line 799.
+
+
+LaTeX Warning: Reference `bbyt' on page 4 undefined on input line 808.
+
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 4 undefined on input line 820.
+
+
+Overfull \hbox (5.15831pt too wide) detected at line 823
+\OML/cmm/m/it/10 Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; f\OT1/cmr/m/n/10 ) = [
+] [] \OMS/cmsy/m/n/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^\; ^^W\OT1/cmr/m/n/1
+0 )\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@
+ \OML/cmm/m/it/10 ^^\; f \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^W\OT1/cmr/m/n/
+10 )\OML/cmm/m/it/10 e[]d^^\d^^W:
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 4 undefined on input line 834.
+
+
+LaTeX Warning: Citation `Hlawatsch2011' on page 4 undefined on input line 836.
+
+[4]
+
+LaTeX Warning: Reference `eschannel' on page 5 undefined on input line 844.
+
+
+LaTeX Warning: Citation `rfme' on page 5 undefined on input line 845.
+
+
+LaTeX Warning: Reference `eschannel' on page 5 undefined on input line 847.
+
+
+LaTeX Warning: Citation `fwc' on page 5 undefined on input line 850.
+
+
+LaTeX Warning: Reference `eschannel' on page 5 undefined on input line 855.
+
+
+LaTeX Warning: Reference `sf' on page 5 undefined on input line 857.
+
+
+LaTeX Warning: Citation `bello' on page 5 undefined on input line 857.
+
+
+LaTeX Warning: Reference `esddchannel' on page 5 undefined on input line 862.
+
+[5 <./tx_channel_rx-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `esddchannel' on page 6 undefined on input line 867.
+
+
+LaTeX Warning: Reference `hlti_ongrid' on page 6 undefined on input line 875.
+
+
+LaTeX Warning: Reference `hlti_offgrid' on page 6 undefined on input line 875.
+
+
+LaTeX Warning: Citation `fwc' on page 6 undefined on input line 875.
+
+
+LaTeX Warning: Reference `esddchannel' on page 6 undefined on input line 878.
+
+
+LaTeX Warning: Reference `hlti_ongrid' on page 6 undefined on input line 878.
+
+
+LaTeX Warning: Citation `ofdm' on page 6 undefined on input line 923.
+
+
+LaTeX Warning: Citation `tff' on page 6 undefined on input line 923.
+
+
+LaTeX Warning: Citation `mct' on page 6 undefined on input line 923.
+
+
+LaTeX Warning: Citation `keller_proc_ieee_2000' on page 6 undefined on input li
+ne 923.
+
+
+LaTeX Warning: Citation `jiang_proc_ieee_2007' on page 6 undefined on input lin
+e 923.
+
+
+LaTeX Warning: Citation `weinstein2009' on page 6 undefined on input line 923.
+
+
+LaTeX Warning: Citation `mc_book_lly_2009' on page 6 undefined on input line 92
+3.
+
+
+LaTeX Warning: Citation `jiang_proc_ieee_2007' on page 6 undefined on input lin
+e 923.
+
+
+LaTeX Warning: Citation `tff' on page 6 undefined on input line 926.
+
+
+LaTeX Warning: Citation `tff' on page 6 undefined on input line 929.
+
+
+LaTeX Warning: Reference `gtf' on page 6 undefined on input line 936.
+
+
+LaTeX Warning: Reference `xt' on page 6 undefined on input line 942.
+
+
+LaTeX Warning: Reference `tab:parameters' on page 6 undefined on input line 953
+.
+
+
+LaTeX Warning: Citation `onbandwidth' on page 6 undefined on input line 954.
+
+
+LaTeX Warning: Citation `gabor' on page 6 undefined on input line 955.
+
+
+LaTeX Warning: Citation `haas_wpc_97' on page 6 undefined on input line 955.
+
+
+LaTeX Warning: Reference `dtdf' on page 6 undefined on input line 956.
+
+
+LaTeX Warning: Citation `gabor' on page 6 undefined on input line 957.
+
+
+LaTeX Warning: Citation `haas_wpc_97' on page 6 undefined on input line 958.
+
+[6 <./dtdf-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `gtf' on page 7 undefined on input line 971.
+
+
+LaTeX Warning: Citation `haas_wpc_97' on page 7 undefined on input line 971.
+
+
+LaTeX Warning: Citation `wavelet' on page 7 undefined on input line 971.
+
+
+LaTeX Warning: Reference `gtf' on page 7 undefined on input line 972.
+
+
+LaTeX Warning: Citation `cofdm' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `wavelet' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `ftfa' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `gaborana' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `wexler1990' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `haas_wpc_97' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `kozek98' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `tff' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `strohmer2003' on page 7 undefined on input line 974.
+
+
+LaTeX Warning: Citation `wavelet_book' on page 7 undefined on input line 976.
+
+
+LaTeX Warning: Reference `xt' on page 7 undefined on input line 985.
+
+
+LaTeX Warning: Citation `Jacobs_pce' on page 7 undefined on input line 988.
+
+
+LaTeX Warning: Citation `fwc' on page 7 undefined on input line 988.
+
+
+LaTeX Warning: Citation `onbandwidth' on page 7 undefined on input line 988.
+
+
+LaTeX Warning: Reference `xt' on page 7 undefined on input line 994.
+
+
+LaTeX Warning: Reference `hlti_ongrid' on page 7 undefined on input line 994.
+
+
+LaTeX Warning: Reference `eschannel' on page 7 undefined on input line 1002.
+
+
+LaTeX Warning: Citation `ofdm' on page 7 undefined on input line 1005.
+
+
+LaTeX Warning: Citation `fwc' on page 7 undefined on input line 1007.
+
+
+LaTeX Warning: Reference `xt' on page 7 undefined on input line 1008.
+
+
+LaTeX Warning: Citation `adsl' on page 7 undefined on input line 1008.
+
+
+LaTeX Warning: Citation `toiotf_harmuth_60' on page 7 undefined on input line 1
+009.
+
+
+LaTeX Warning: Citation `ofdm_dft_weinstein_71' on page 7 undefined on input li
+ne 1009.
+
+
+LaTeX Warning: Citation `mc_commag_90' on page 7 undefined on input line 1009.
+
+
+LaTeX Warning: Citation `cp' on page 7 undefined on input line 1015.
+
+
+LaTeX Warning: Reference `tf_lattice' on page 7 undefined on input line 1029.
+
+
+LaTeX Warning: Citation `tff' on page 7 undefined on input line 1029.
+
+
+LaTeX Warning: Reference `tf_grid' on page 7 undefined on input line 1029.
+
+[7]
+
+LaTeX Warning: Reference `g_ortho' on page 8 undefined on input line 1033.
+
+
+LaTeX Warning: Citation `toiotf_harmuth_60' on page 8 undefined on input line 1
+034.
+
+
+LaTeX Warning: Citation `tlomcm_95' on page 8 undefined on input line 1034.
+
+
+LaTeX Warning: Citation `wavelet_book' on page 8 undefined on input line 1034.
+
+
+LaTeX Warning: Citation `80211a' on page 8 undefined on input line 1035.
+
+
+LaTeX Warning: Citation `80211ac' on page 8 undefined on input line 1035.
+
+
+LaTeX Warning: Citation `3gpp_4g' on page 8 undefined on input line 1035.
+
+
+LaTeX Warning: Citation `mallory_92' on page 8 undefined on input line 1036.
+
+
+LaTeX Warning: Citation `tlomcm_95' on page 8 undefined on input line 1036.
+
+
+LaTeX Warning: Citation `80211a' on page 8 undefined on input line 1036.
+
+
+LaTeX Warning: Citation `80211ac' on page 8 undefined on input line 1036.
+
+
+LaTeX Warning: Citation `rcwofdm' on page 8 undefined on input line 1036.
+
+
+LaTeX Warning: Citation `wola' on page 8 undefined on input line 1036.
+
+
+LaTeX Warning: Citation `waveformcandidate' on page 8 undefined on input line 1
+036.
+
+
+LaTeX Warning: Citation `ofdm_oqam_chang_66' on page 8 undefined on input line 
+1039.
+
+
+LaTeX Warning: Citation `ofdm_oqam_saltzberg_67' on page 8 undefined on input l
+ine 1039.
+
+
+LaTeX Warning: Citation `ofdm_oqam_hirosaki_81' on page 8 undefined on input li
+ne 1039.
+
+
+LaTeX Warning: Citation `ofdm_oqam_hirosaki_86' on page 8 undefined on input li
+ne 1039.
+
+
+LaTeX Warning: Citation `finitepulse_96' on page 8 undefined on input line 1039
+.
+
+
+LaTeX Warning: Citation `oqam_pulse_icc99' on page 8 undefined on input line 10
+39.
+
+
+LaTeX Warning: Citation `ofdm_oqam_siohan_02' on page 8 undefined on input line
+ 1039.
+
+
+LaTeX Warning: Citation `fbmcprimer' on page 8 undefined on input line 1039.
+
+
+LaTeX Warning: Citation `ofdmvsfbmc' on page 8 undefined on input line 1041.
+
+
+LaTeX Warning: Citation `mct' on page 8 undefined on input line 1041.
+
+
+LaTeX Warning: Citation `ofdm_oqam_chang_66' on page 8 undefined on input line 
+1041.
+
+
+LaTeX Warning: Reference `tf_lattice' on page 8 undefined on input line 1041.
+
+
+LaTeX Warning: Citation `weinstein2009' on page 8 undefined on input line 1042.
+
+
+
+LaTeX Warning: Citation `zhao_pulse_2017' on page 8 undefined on input line 104
+2.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pzc.fd)
+
+LaTeX Warning: Citation `oqam_pulse_icc99' on page 8 undefined on input line 10
+46.
+
+
+LaTeX Warning: Reference `g_ortho' on page 8 undefined on input line 1048.
+
+
+LaTeX Warning: Citation `ofdm_oqam_siohan_02' on page 8 undefined on input line
+ 1048.
+
+
+Overfull \hbox (0.7064pt too wide) in paragraph at lines 1060--1073
+ [][] 
+
+LaTeX Warning: Reference `tfmc_imple_method' on page 8 undefined on input line 
+1074.
+
+
+LaTeX Warning: Reference `eschannel' on page 8 undefined on input line 1076.
+
+
+LaTeX Warning: Reference `tab:mcmclassification' on page 8 undefined on input l
+ine 1077.
+
+
+LaTeX Warning: Citation `scfde' on page 8 undefined on input line 1080.
+
+
+LaTeX Warning: Citation `goodman_sc_fdma_2006' on page 8 undefined on input lin
+e 1080.
+
+
+LaTeX Warning: Citation `4Gbook' on page 8 undefined on input line 1080.
+
+[8 <./tf_grid-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `xt' on page 9 undefined on input line 1088.
+
+
+LaTeX Warning: Reference `adi1' on page 9 undefined on input line 1088.
+
+
+LaTeX Warning: Reference `adi2' on page 9 undefined on input line 1093.
+
+
+LaTeX Warning: Reference `xt' on page 9 undefined on input line 1098.
+
+
+LaTeX Warning: Reference `adi1' on page 9 undefined on input line 1098.
+
+
+LaTeX Warning: Reference `adi2' on page 9 undefined on input line 1098.
+
+
+LaTeX Warning: Citation `zimmerman_kathryn_1967' on page 9 undefined on input l
+ine 1114.
+
+
+LaTeX Warning: Citation `fft' on page 9 undefined on input line 1115.
+
+
+LaTeX Warning: Citation `salz1969' on page 9 undefined on input line 1115.
+
+
+LaTeX Warning: Citation `ofdm_dft_weinstein_71' on page 9 undefined on input li
+ne 1115.
+
+
+LaTeX Warning: Reference `adi2n_ifft1' on page 9 undefined on input line 1126.
+
+
+LaTeX Warning: Reference `adi2' on page 9 undefined on input line 1126.
+
+
+LaTeX Warning: Reference `txmt' on page 9 undefined on input line 1126.
+
+
+LaTeX Warning: Citation `oddmicc22' on page 9 undefined on input line 1134.
+
+
+LaTeX Warning: Reference `adi2n_ifft2' on page 9 undefined on input line 1135.
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 1129--1136
+\OT1/ptm/m/it/10 pe-ri-odic \OT1/ptm/m/n/10 sig-nal, which in-di-cates that we 
+can re-peat $\OML/cmm/m/it/10 N$
+[9 <./adi11-eps-converted-to.pdf> <./adi2n-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `rfme' on page 10 undefined on input line 1148.
+
+
+LaTeX Warning: Reference `adi2n_ifft2' on page 10 undefined on input line 1148.
+
+
+
+LaTeX Warning: Reference `adi2n_ifft3' on page 10 undefined on input line 1148.
+
+
+
+LaTeX Warning: Citation `fofdm' on page 10 undefined on input line 1157.
+
+
+LaTeX Warning: Citation `fofdmspawc' on page 10 undefined on input line 1157.
+
+
+LaTeX Warning: Citation `fofdm' on page 10 undefined on input line 1157.
+
+
+LaTeX Warning: Reference `tab:mcmclassification' on page 10 undefined on input 
+line 1157.
+
+
+LaTeX Warning: Citation `ofdm_oqam_siohan_02' on page 10 undefined on input lin
+e 1163.
+
+
+LaTeX Warning: Citation `fbmcprimer' on page 10 undefined on input line 1163.
+
+
+LaTeX Warning: Citation `cimini_tcom_1985' on page 10 undefined on input line 1
+167.
+
+
+LaTeX Warning: Citation `li_tcom_1998' on page 10 undefined on input line 1167.
+
+
+
+LaTeX Warning: Citation `ici_ofdm_tcom_1999' on page 10 undefined on input line
+ 1167.
+
+
+LaTeX Warning: Citation `ced_mc_tcom2001' on page 10 undefined on input line 11
+67.
+
+
+LaTeX Warning: Citation `ici_ofdm_tcom_2003' on page 10 undefined on input line
+ 1167.
+
+
+LaTeX Warning: Citation `lc_eq_ofdm_tsp_2004' on page 10 undefined on input lin
+e 1167.
+
+
+LaTeX Warning: Citation `1291798' on page 10 undefined on input line 1167.
+
+
+LaTeX Warning: Citation `1315913' on page 10 undefined on input line 1167.
+
+
+LaTeX Warning: Citation `1381441' on page 10 undefined on input line 1167.
+
+
+LaTeX Warning: Citation `1413242' on page 10 undefined on input line 1167.
+
+
+LaTeX Warning: Citation `turbo_eq_ofdm_tsp_2008' on page 10 undefined on input 
+line 1167.
+
+
+LaTeX Warning: Citation `ov_ofdm_tcom_2011' on page 10 undefined on input line 
+1167.
+
+
+LaTeX Warning: Citation `ced_mc_tcom2001' on page 10 undefined on input line 11
+67.
+
+
+LaTeX Warning: Citation `ici_ofdm_tcom_2003' on page 10 undefined on input line
+ 1167.
+
+
+LaTeX Warning: Citation `nissel2017_cl' on page 10 undefined on input line 1173
+.
+
+[10 <./adi2n_ifft1-eps-converted-to.pdf> <./adi2n_ifft2-eps-converted-to.pdf> <
+./adi2n_ifft3-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `haas_wpc_97' on page 11 undefined on input line 1176.
+
+
+LaTeX Warning: Citation `strohmer2003' on page 11 undefined on input line 1176.
+
+
+
+LaTeX Warning: Citation `kozek98' on page 11 undefined on input line 1176.
+
+
+LaTeX Warning: Citation `matz07' on page 11 undefined on input line 1176.
+
+
+LaTeX Warning: Citation `jung07' on page 11 undefined on input line 1176.
+
+
+LaTeX Warning: Citation `eigen' on page 11 undefined on input line 1177.
+
+
+LaTeX Warning: Citation `eigen' on page 11 undefined on input line 1178.
+
+
+LaTeX Warning: Citation `matz07' on page 11 undefined on input line 1178.
+
+
+LaTeX Warning: Reference `esddchannel' on page 11 undefined on input line 1192.
+
+
+
+LaTeX Warning: Reference `esddchannel' on page 11 undefined on input line 1200.
+
+
+
+LaTeX Warning: Reference `esddchannel' on page 11 undefined on input line 1207.
+
+
+
+LaTeX Warning: Reference `xt' on page 11 undefined on input line 1211.
+
+
+LaTeX Warning: Reference `yt' on page 11 undefined on input line 1213.
+
+
+LaTeX Warning: Citation `moose94' on page 11 undefined on input line 1220.
+
+
+LaTeX Warning: Reference `ymt' on page 11 undefined on input line 1223.
+
+
+LaTeX Warning: Reference `esddchannel' on page 11 undefined on input line 1227.
+
+
+
+LaTeX Warning: Reference `ddm' on page 11 undefined on input line 1227.
+
+
+LaTeX Warning: Reference `ddm' on page 11 undefined on input line 1228.
+
+
+LaTeX Warning: Citation `moose94' on page 11 undefined on input line 1228.
+
+
+LaTeX Warning: Reference `sf' on page 11 undefined on input line 1230.
+
+[11]
+
+LaTeX Warning: Reference `esddchannel' on page 12 undefined on input line 1233.
+
+
+
+LaTeX Warning: Reference `ymt' on page 12 undefined on input line 1233.
+
+
+LaTeX Warning: Citation `moose94' on page 12 undefined on input line 1234.
+
+
+LaTeX Warning: Reference `xtddmc' on page 12 undefined on input line 1241.
+
+
+LaTeX Warning: Reference `stft_io' on page 12 undefined on input line 1243.
+
+
+LaTeX Warning: Reference `rp' on page 12 undefined on input line 1243.
+
+
+LaTeX Warning: Reference `stft_io' on page 12 undefined on input line 1243.
+
+
+LaTeX Warning: Reference `stft_io_discrete1' on page 12 undefined on input line
+ 1262.
+
+
+LaTeX Warning: Reference `stft_io_discrete2' on page 12 undefined on input line
+ 1262.
+
+
+LaTeX Warning: Reference `l0' on page 12 undefined on input line 1265.
+
+
+LaTeX Warning: Reference `stft_io_discrete2' on page 12 undefined on input line
+ 1266.
+
+
+LaTeX Warning: Citation `hadaniyt' on page 12 undefined on input line 1269.
+
+
+LaTeX Warning: Citation `otfs_wcnc_2017' on page 12 undefined on input line 127
+3.
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 12 undefined on input line 1
+273.
+
+
+LaTeX Warning: Citation `otfs_wcnc_2017' on page 12 undefined on input line 127
+7.
+
+
+LaTeX Warning: Reference `xtotfs' on page 12 undefined on input line 1287.
+
+
+LaTeX Warning: Reference `xtotfs' on page 12 undefined on input line 1289.
+
+
+LaTeX Warning: Citation `otfs_wcnc_2017' on page 12 undefined on input line 128
+9.
+
+
+LaTeX Warning: Reference `xtotfs' on page 12 undefined on input line 1290.
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 12 undefined on input line 1
+291.
+
+
+LaTeX Warning: Citation `hadani_otfs_2018' on page 12 undefined on input line 1
+292.
+
+
+LaTeX Warning: Reference `tfmc_for_ltv' on page 12 undefined on input line 1292
+.
+
+[12]
+
+LaTeX Warning: Citation `viterbo_twc_2018' on page 13 undefined on input line 1
+295.
+
+
+LaTeX Warning: Reference `unload_subcarrier' on page 13 undefined on input line
+ 1295.
+
+
+LaTeX Warning: Citation `shen2022error' on page 13 undefined on input line 1295
+.
+
+
+LaTeX Warning: Reference `isfft' on page 13 undefined on input line 1296.
+
+
+LaTeX Warning: Reference `xtotfs' on page 13 undefined on input line 1297.
+
+
+LaTeX Warning: Citation `viterbo_tvt_19' on page 13 undefined on input line 129
+7.
+
+
+LaTeX Warning: Reference `ddm' on page 13 undefined on input line 1298.
+
+
+LaTeX Warning: Reference `xtddmc' on page 13 undefined on input line 1304.
+
+
+Overfull \hbox (15.19286pt too wide) detected at line 1307
+[]
+
+LaTeX Warning: Reference `xtotfs' on page 13 undefined on input line 1308.
+
+
+LaTeX Warning: Reference `xtoddm' on page 13 undefined on input line 1308.
+
+
+LaTeX Warning: Reference `xtoddm' on page 13 undefined on input line 1311.
+
+
+LaTeX Warning: Citation `oddmicc22' on page 13 undefined on input line 1312.
+
+
+LaTeX Warning: Reference `shape_ut' on page 13 undefined on input line 1320.
+
+
+LaTeX Warning: Reference `xtoddm' on page 13 undefined on input line 1330.
+
+
+LaTeX Warning: Reference `esddchannel' on page 13 undefined on input line 1341.
+
+
+[13 <./ut_new-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `ioddcompact' on page 14 undefined on input line 1389.
+
+
+
+LaTeX Warning: Reference `ut' on page 14 undefined on input line 1390.
+
+
+LaTeX Warning: Citation `oddmicc22' on page 14 undefined on input line 1390.
+
+
+LaTeX Warning: Citation `oddm' on page 14 undefined on input line 1390.
+
+
+LaTeX Warning: Reference `orth' on page 14 undefined on input line 1393.
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 1393--1394
+\OT1/ptm/m/n/10 of sur-prise, be-cause the con-ven-tional un-der-stand-ing of
+
+LaTeX Warning: Reference `orth' on page 14 undefined on input line 1396.
+
+
+LaTeX Warning: Reference `tf_lattice' on page 14 undefined on input line 1402.
+
+
+LaTeX Warning: Citation `landau62' on page 14 undefined on input line 1403.
+
+
+LaTeX Warning: Reference `g_ortho' on page 14 undefined on input line 1409.
+
+
+LaTeX Warning: Reference `g_biortho' on page 14 undefined on input line 1409.
+
+
+LaTeX Warning: Reference `l_ortho' on page 14 undefined on input line 1426.
+
+
+LaTeX Warning: Reference `l_biortho' on page 14 undefined on input line 1426.
+
+
+LaTeX Warning: Reference `l_ortho' on page 14 undefined on input line 1434.
+
+
+LaTeX Warning: Reference `l_biortho' on page 14 undefined on input line 1438.
+
+
+LaTeX Warning: Citation `gaborana' on page 14 undefined on input line 1442.
+
+
+LaTeX Warning: Citation `ftfa' on page 14 undefined on input line 1442.
+
+
+LaTeX Warning: Citation `wexler1990' on page 14 undefined on input line 1445.
+
+
+LaTeX Warning: Citation `janssen1995' on page 14 undefined on input line 1445.
+
+
+LaTeX Warning: Citation `daubechies95' on page 14 undefined on input line 1445.
+
+
+[14]
+
+LaTeX Warning: Reference `g_ortho' on page 15 undefined on input line 1451.
+
+
+LaTeX Warning: Reference `g_biortho' on page 15 undefined on input line 1451.
+
+
+LaTeX Warning: Reference `g_ortho' on page 15 undefined on input line 1453.
+
+
+LaTeX Warning: Reference `g_biortho' on page 15 undefined on input line 1453.
+
+
+LaTeX Warning: Reference `l_ortho' on page 15 undefined on input line 1453.
+
+
+LaTeX Warning: Reference `l_biortho' on page 15 undefined on input line 1453.
+
+
+LaTeX Warning: Reference `l1' on page 15 undefined on input line 1479.
+
+
+LaTeX Warning: Reference `l1' on page 15 undefined on input line 1480.
+
+
+LaTeX Warning: Reference `gtF2' on page 15 undefined on input line 1480.
+
+[15 <./govf-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `orth' on page 16 undefined on input line 1513.
+
+
+LaTeX Warning: Reference `orth' on page 16 undefined on input line 1523.
+
+
+LaTeX Warning: Reference `l2' on page 16 undefined on input line 1544.
+
+
+LaTeX Warning: Reference `ncpcs' on page 16 undefined on input line 1545.
+
+
+LaTeX Warning: Citation `oddmicc22' on page 16 undefined on input line 1555.
+
+
+LaTeX Warning: Reference `tf_lattice' on page 16 undefined on input line 1561.
+
+
+Overfull \hbox (4.55255pt too wide) detected at line 1586
+[]
+
+LaTeX Warning: Reference `derivation_uf' on page 16 undefined on input line 159
+1.
+
+
+LaTeX Warning: Citation `ddop' on page 16 undefined on input line 1591.
+
+
+LaTeX Warning: Citation `spcctalk' on page 16 undefined on input line 1591.
+
+
+LaTeX Warning: Reference `derivation_uf' on page 16 undefined on input line 159
+4.
+
+[16]
+
+LaTeX Warning: Reference `tf_lattice' on page 17 undefined on input line 1601.
+
+
+LaTeX Warning: Citation `radar_handbook' on page 17 undefined on input line 160
+7.
+
+
+LaTeX Warning: Citation `radar_sp' on page 17 undefined on input line 1607.
+
+
+LaTeX Warning: Reference `2dcon' on page 17 undefined on input line 1617.
+
+
+LaTeX Warning: Reference `2dcon' on page 17 undefined on input line 1619.
+
+
+LaTeX Warning: Reference `tfl_ddop' on page 17 undefined on input line 1636.
+
+[17 <./utuf-eps-converted-to.pdf> <./ddop_tfl-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `tfl_ddop' on page 18 undefined on input line 1640.
+
+
+LaTeX Warning: Reference `cms' on page 18 undefined on input line 1640.
+
+
+LaTeX Warning: Reference `cms' on page 18 undefined on input line 1641.
+
+
+LaTeX Warning: Citation `ofdm_oqam_chang_66' on page 18 undefined on input line
+ 1652.
+
+
+LaTeX Warning: Citation `tlomcm_95' on page 18 undefined on input line 1652.
+
+
+Overfull \hbox (15.85724pt too wide) detected at line 1689
+[]
+[18 <./oddm_vs_others_c4-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `eva_channel_model' on page 19 undefined on input line 
+1696.
+
+
+LaTeX Warning: Reference `secomp' on page 19 undefined on input line 1696.
+
+
+LaTeX Warning: Reference `tfmc_imple_method' on page 19 undefined on input line
+ 1709.
+
+
+LaTeX Warning: Reference `adi1' on page 19 undefined on input line 1709.
+
+
+LaTeX Warning: Reference `adi2n_ifft3' on page 19 undefined on input line 1709.
+
+
+
+LaTeX Warning: Reference `oddmwaveform' on page 19 undefined on input line 1713
+.
+
+
+LaTeX Warning: Citation `oddm' on page 19 undefined on input line 1713.
+
+
+LaTeX Warning: Reference `oddmwaveform' on page 19 undefined on input line 1713
+.
+
+
+LaTeX Warning: Citation `oddm' on page 19 undefined on input line 1713.
+
+
+LaTeX Warning: Reference `oddm_di1' on page 19 undefined on input line 1733.
+
+
+LaTeX Warning: Citation `oddm' on page 19 undefined on input line 1733.
+
+
+LaTeX Warning: Reference `oddm_di1' on page 19 undefined on input line 1733.
+
+
+LaTeX Warning: Reference `oddm_di2' on page 19 undefined on input line 1734.
+
+
+Underfull \vbox (badness 1769) has occurred while \output is active [19 <./oddm
+_waveform-eps-converted-to.pdf> <./se_comparison-eps-converted-to.pdf> <./oddm_
+di1-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `zak' on page 20 undefined on input line 1738.
+
+
+LaTeX Warning: Citation `hadaniyt' on page 20 undefined on input line 1738.
+
+
+LaTeX Warning: Citation `oddm' on page 20 undefined on input line 1738.
+
+
+LaTeX Warning: Citation `sturm2011' on page 20 undefined on input line 1745.
+
+
+LaTeX Warning: Citation `ma2020' on page 20 undefined on input line 1749.
+
+
+LaTeX Warning: Citation `sturm2011' on page 20 undefined on input line 1749.
+
+
+LaTeX Warning: Citation `paul2017' on page 20 undefined on input line 1749.
+
+
+LaTeX Warning: Citation `ma2020' on page 20 undefined on input line 1749.
+
+
+LaTeX Warning: Citation `guo_radarcon_2014' on page 20 undefined on input line 
+1754.
+
+
+LaTeX Warning: Citation `sturm2011' on page 20 undefined on input line 1754.
+
+
+LaTeX Warning: Citation `sturm2011' on page 20 undefined on input line 1754.
+
+
+LaTeX Warning: Citation `berger_jstsp_2010' on page 20 undefined on input line 
+1754.
+
+
+LaTeX Warning: Citation `sturm2011' on page 20 undefined on input line 1754.
+
+
+LaTeX Warning: Citation `paul2017' on page 20 undefined on input line 1756.
+
+
+LaTeX Warning: Citation `keskin_tsp_2021' on page 20 undefined on input line 17
+64.
+
+
+LaTeX Warning: Reference `isl' on page 20 undefined on input line 1769.
+
+[20 <./oddm_di2_v2-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `radar_handbook' on page 21 undefined on input line 177
+5.
+
+
+LaTeX Warning: Reference `shape_ut' on page 21 undefined on input line 1775.
+
+
+LaTeX Warning: Reference `tab:simpara' on page 21 undefined on input line 1806.
+
+
+
+LaTeX Warning: Citation `eva_channel_model' on page 21 undefined on input line 
+1806.
+
+
+LaTeX Warning: Reference `oddm_psd' on page 21 undefined on input line 1809.
+
+
+LaTeX Warning: Reference `oddm_di1' on page 21 undefined on input line 1816.
+
+
+LaTeX Warning: Reference `oddm_di2' on page 21 undefined on input line 1817.
+
+
+LaTeX Warning: Reference `xtoddm' on page 21 undefined on input line 1821.
+
+
+LaTeX Warning: Reference `xt_appro_nmse' on page 21 undefined on input line 182
+2.
+
+
+LaTeX Warning: Reference `oddm_di1' on page 21 undefined on input line 1822.
+
+
+LaTeX Warning: Reference `oddm_di2' on page 21 undefined on input line 1823.
+
+
+LaTeX Warning: Citation `viterbo_twc_2018' on page 21 undefined on input line 1
+842.
+
+
+LaTeX Warning: Reference `H' on page 21 undefined on input line 1842.
+
+
+LaTeX Warning: Reference `ber_N32_S500_rho' on page 21 undefined on input line 
+1843.
+
+[21 <./oddm_psd-eps-converted-to.pdf> <./xt_appro_nmse-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `ber_N32_rho01_q12_S' on page 22 undefined on input li
+ne 1870.
+
+
+LaTeX Warning: Reference `ber_S500_rho01_q12_N' on page 22 undefined on input l
+ine 1873.
+
+
+LaTeX Warning: Reference `afgceg' on page 22 undefined on input line 1900.
+
+
+LaTeX Warning: Citation `ofdmvsfbmc' on page 22 undefined on input line 1900.
+
+
+LaTeX Warning: Reference `as' on page 22 undefined on input line 1900.
+
+
+LaTeX Warning: Reference `as_n0' on page 22 undefined on input line 1900.
+
+
+LaTeX Warning: Reference `as_m0' on page 22 undefined on input line 1900.
+
+[22 <./ber_vs_rho-eps-converted-to.pdf> <./ber_vs_speed-eps-converted-to.pdf> <
+./ber_vs_N-eps-converted-to.pdf> <./ambiguity_3d_new-eps-converted-to.pdf> <./a
+mbiguity_tau-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `ofdm' on page 23 undefined on input line 2011.
+
+
+LaTeX Warning: Citation `tff' on page 23 undefined on input line 2011.
+
+
+LaTeX Warning: Citation `mct' on page 23 undefined on input line 2011.
+
+
+LaTeX Warning: Citation `keller_proc_ieee_2000' on page 23 undefined on input l
+ine 2011.
+
+
+LaTeX Warning: Citation `jiang_proc_ieee_2007' on page 23 undefined on input li
+ne 2011.
+
+
+LaTeX Warning: Citation `weinstein2009' on page 23 undefined on input line 2011
+.
+
+
+LaTeX Warning: Citation `mc_book_lly_2009' on page 23 undefined on input line 2
+011.
+
+
+LaTeX Warning: Citation `ofdm-im' on page 23 undefined on input line 2011.
+
+
+LaTeX Warning: Citation `hanzo1' on page 23 undefined on input line 2011.
+
+
+LaTeX Warning: Citation `viterbo_twc_2018' on page 23 undefined on input line 2
+019.
+
+
+LaTeX Warning: Citation `ampotfs' on page 23 undefined on input line 2019.
+
+
+LaTeX Warning: Citation `thaj2020low' on page 23 undefined on input line 2019.
+
+
+LaTeX Warning: Citation `mmse_otfs' on page 23 undefined on input line 2019.
+
+
+LaTeX Warning: Citation `oddm_detector' on page 23 undefined on input line 2019
+.
+
+
+LaTeX Warning: Citation `rfme' on page 23 undefined on input line 2021.
+
+
+LaTeX Warning: Citation `ofdm_cfo_dc' on page 23 undefined on input line 2021.
+
+
+LaTeX Warning: Citation `ofdm_cfo_iq_blind' on page 23 undefined on input line 
+2021.
+
+
+LaTeX Warning: Citation `ofdm_cfo_iq' on page 23 undefined on input line 2021.
+
+
+Underfull \vbox (badness 4543) has occurred while \output is active [23 <./ambi
+guity_nu-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `ofdm-im' on page 24 undefined on input line 2023.
+
+
+LaTeX Warning: Citation `nathan_ieice_2002' on page 24 undefined on input line 
+2023.
+
+
+LaTeX Warning: Citation `yang_commag_2003' on page 24 undefined on input line 2
+023.
+
+
+LaTeX Warning: Citation `rsma' on page 24 undefined on input line 2030.
+
+
+LaTeX Warning: Citation `noma' on page 24 undefined on input line 2030.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 2064--2065
+ [][] 
+
+Underfull \hbox (badness 2012) in paragraph at lines 2073--2075
+\OT1/ptm/m/n/10 we can di-vide $\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 t\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 into $\OML/cmm/m/it/10 N$ \OT1/ptm/m/n
+/10 seg-ments, where $\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1
+/cmr/m/n/10 ) =
+
+LaTeX Warning: Reference `gtat' on page 24 undefined on input line 2088.
+
+
+LaTeX Warning: Reference `gtat' on page 24 undefined on input line 2092.
+
+[24 <./uce11-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `gce1' on page 25 undefined on input line 2096.
+
+
+LaTeX Warning: Reference `gce2' on page 25 undefined on input line 2096.
+
+
+LaTeX Warning: Reference `gtat' on page 25 undefined on input line 2123.
+
+
+LaTeX Warning: Reference `cycforinte' on page 25 undefined on input line 2123.
+
+No file 2308.01802_pdflatex.bbl.
+
+Package acro Warning: Empty acronym list. If you have used acronyms then
+(acro)                re-compile to get the list filled. Otherwise remove
+(acro)                \printacronyms
+
+[25 <./uce22-eps-converted-to.pdf>]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.01802/2308.01802_pdflatex.aux
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.01802/2308.01802_pdflatex.acr))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1713 ({)
+### bottom level
+(see the transcript file for additional information){/usr/local/texlive/2021/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.01802/2308.01802_pdflatex.pdf (25 pages, 310714
+4 bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.01802/2308.01802_pdflatex.log.

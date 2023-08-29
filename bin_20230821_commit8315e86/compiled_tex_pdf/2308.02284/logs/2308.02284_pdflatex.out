@@ -1,0 +1,367 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./conference_101719.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+)
+** ATTENTION: Overriding command lockouts (line 2).
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithmic.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file 2308.02284_pdflatex.aux.
+-- Lines per column: 56 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omsptm.fd)
+
+LaTeX Warning: Citation `Intro_short' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation `Covert' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation `Covert' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Gaussian' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `AWGN3' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Fading3' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Nmin' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `ECT2' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `Fading4' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `UAV' on page 1 undefined on input line 47.
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 47--48
+[]\OT1/ptm/m/n/10 The fun-da-men-tal work for covert com-mu-ni-ca-tion [\OT1/pt
+m/b/n/10 ?\OT1/ptm/m/n/10 ]
+
+LaTeX Warning: Citation `Active1' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Active2' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Active3' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Active1' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Active2' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Active3' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Fading3' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Nmin' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `ECT2' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `Fading4' on page 1 undefined on input line 51.
+
+
+LaTeX Warning: Citation `UAV' on page 1 undefined on input line 51.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Active3' on page 2 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Gaussian' on page 2 undefined on input line 67.
+
+
+LaTeX Warning: Citation `DF' on page 2 undefined on input line 69.
+
+
+LaTeX Warning: Citation `statistical_CSI' on page 2 undefined on input line 69.
+
+
+
+LaTeX Warning: Citation `Active2' on page 2 undefined on input line 78.
+
+
+LaTeX Warning: Citation `Active3' on page 2 undefined on input line 78.
+
+
+LaTeX Warning: Citation `Gaussian' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `Nmin' on page 2 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Active2' on page 2 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Active3' on page 2 undefined on input line 87.
+
+
+LaTeX Warning: Citation `DF' on page 2 undefined on input line 87.
+
+
+LaTeX Warning: Reference `y_b' on page 2 undefined on input line 106.
+
+
+LaTeX Warning: Citation `ECT2' on page 2 undefined on input line 106.
+
+[2 <./figure/system-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `Pout' on page 3 undefined on input line 114.
+
+
+LaTeX Warning: Citation `ECT2' on page 3 undefined on input line 114.
+
+
+LaTeX Warning: Citation `Gaussian' on page 3 undefined on input line 123.
+
+
+LaTeX Warning: Citation `Gaussian' on page 3 undefined on input line 129.
+
+
+LaTeX Warning: Citation `Fading3' on page 3 undefined on input line 134.
+
+
+LaTeX Warning: Reference `opt_threshold' on page 3 undefined on input line 149.
+
+
+
+LaTeX Warning: Reference `ori' on page 3 undefined on input line 149.
+
+
+LaTeX Warning: Reference `equ_proof1' on page 3 undefined on input line 157.
+
+
+LaTeX Warning: Citation `Quadrature' on page 3 undefined on input line 157.
+
+
+LaTeX Warning: Reference `ave_Pd' on page 3 undefined on input line 157.
+
+
+LaTeX Warning: Reference `ave_Pd' on page 3 undefined on input line 160.
+
+
+LaTeX Warning: Reference `proof_theorem2' on page 3 undefined on input line 170
+.
+
+
+LaTeX Warning: Reference `app1' on page 3 undefined on input line 174.
+
+
+LaTeX Warning: Reference `proof_corollary1' on page 3 undefined on input line 1
+74.
+
+
+LaTeX Warning: Citation `ECT2' on page 3 undefined on input line 174.
+
+
+LaTeX Warning: Citation `DF' on page 3 undefined on input line 174.
+
+
+LaTeX Warning: Reference `proof_corollary1' on page 3 undefined on input line 1
+74.
+
+
+LaTeX Warning: Citation `Gaussian' on page 3 undefined on input line 176.
+
+
+LaTeX Warning: Citation `ECT2' on page 3 undefined on input line 176.
+
+
+LaTeX Warning: Citation `ECT2' on page 3 undefined on input line 176.
+
+
+LaTeX Warning: Citation `Nmin' on page 3 undefined on input line 176.
+
+
+LaTeX Warning: Reference `ave_Pd' on page 3 undefined on input line 186.
+
+
+LaTeX Warning: Reference `ave_Pd_app1' on page 3 undefined on input line 186.
+
+
+LaTeX Warning: Reference `app1' on page 3 undefined on input line 186.
+
+
+LaTeX Warning: Reference `proof_corollary1' on page 3 undefined on input line 1
+86.
+
+[3]
+
+LaTeX Warning: Citation `ECT2' on page 4 undefined on input line 201.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+\OT1/ptm/m/n/10 where $\OML/cmm/m/it/10   \OT1/cmr/m/n/10 =  []  \OMS/cmsy/m/n
+/10 ^^@  \OT1/cmr/m/n/10 1$\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 ^^L  \OT1/cmr/m/
+n/10 =  []$ \OT1/ptm/m/n/10 and
+
+Underfull \hbox (badness 2653) in paragraph at lines 207--209
+\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = [][] [
+] +
+
+LaTeX Warning: Citation `jammer' on page 4 undefined on input line 231.
+
+
+LaTeX Warning: Reference `con2' on page 4 undefined on input line 231.
+
+
+LaTeX Warning: Reference `con1' on page 4 undefined on input line 233.
+
+
+LaTeX Warning: Reference `con2' on page 4 undefined on input line 233.
+
+
+LaTeX Warning: Reference `ave_Pd' on page 4 undefined on input line 246.
+
+
+LaTeX Warning: Reference `ave_Pd_app1' on page 4 undefined on input line 246.
+
+
+LaTeX Warning: Reference `KL_app' on page 4 undefined on input line 246.
+
+
+LaTeX Warning: Reference `ave_Pd' on page 4 undefined on input line 246.
+
+
+LaTeX Warning: Reference `ave_Pd_app1' on page 4 undefined on input line 246.
+
+
+LaTeX Warning: Reference `ave_Pd_app1' on page 4 undefined on input line 246.
+
+[4]
+
+LaTeX Warning: Reference `app1' on page 5 undefined on input line 274.
+
+[5 <./figure/figure2-eps-converted-to.pdf> <./figure/fig3_re-eps-converted-to.p
+df> <./figure/figure3-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `app1' on page 6 undefined on input line 276.
+
+
+LaTeX Warning: Reference `ori' on page 6 undefined on input line 276.
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 280--282
+[] \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 0$\OT1/ptm/m/n/10 . Thus, the first-order
+
+
+LaTeX Warning: Citation `ECT2' on page 6 undefined on input line 286.
+
+
+LaTeX Warning: Citation `DF' on page 6 undefined on input line 286.
+
+
+LaTeX Warning: Reference `app1' on page 6 undefined on input line 292.
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 296--297
+[]\OT1/ptm/m/n/10 By de-not-ing $\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/
+m/it/10 n\OT1/cmr/m/n/10 ) = []$\OT1/ptm/m/n/10 , we can ob-tain
+
+Underfull \hbox (badness 2875) in paragraph at lines 298--299
+\OT1/cmr/m/n/10 0$ \OT1/ptm/m/n/10 and $\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 is larger than 0 in the in-t
+er-val $[]$
+
+Underfull \hbox (badness 1755) in paragraph at lines 298--299
+\OT1/ptm/m/n/10 the so-lu-tion to $ \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2[][][
+]\OML/cmm/m/it/10 x [] x  \OT1/cmr/m/n/10 +  \OML/cmm/m/it/10 x    \OT1/cmr/m/n
+/10 =    1$ \OT1/ptm/m/n/10 ex-
+
+Underfull \hbox (badness 1527) in paragraph at lines 298--299
+\OT1/ptm/m/n/10 cept 1. Futher-more, $\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 in-creases in $[]$ and de-
+No file 2308.02284_pdflatex.bbl.
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[6]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02284/2308.02284_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2021/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.02284/2308.02284_pdflatex.pdf (6 pages, 522407 
+bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.02284/2308.02284_pdflatex.log.

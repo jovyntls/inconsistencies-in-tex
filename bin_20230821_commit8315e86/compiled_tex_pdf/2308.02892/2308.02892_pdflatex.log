@@ -1,0 +1,1157 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.5)  20 AUG 2023 02:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**AE-GC.tex
+(./AE-GC.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count179
+\@IEEEtrantmpcountB=\count180
+\@IEEEtrantmpcountC=\count181
+\@IEEEtrantmptoksA=\toks15
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@IEEEsubequation=\count186
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count187
+\c@table=\count188
+\@IEEEeqnnumcols=\count189
+\@IEEEeqncolcnt=\count190
+\@IEEEsubeqnnumrollback=\count191
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count192
+\@IEEEquantizeboxA=\box47
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count193
+\@IEEEtranrubishbin=\box48
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks16
+\thm@bodyfont=\toks17
+\thm@headfont=\toks18
+\thm@notefont=\toks19
+\thm@headpunct=\toks20
+\thm@preskip=\skip50
+\thm@postskip=\skip51
+\thm@headsep=\skip52
+\dth@everypar=\toks21
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+)
+\epsfxsize=\dimen164
+\epsfysize=\dimen165
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen166
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+LaTeX Info: Redefining \boldsymbol on input line 28.
+\pmbraise@=\dimen167
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen168
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks24
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks25
+\eqnshift@=\dimen169
+\alignsep@=\dimen170
+\tagshift@=\dimen171
+\tagwidth@=\dimen172
+\totwidth@=\dimen173
+\lineht@=\dimen174
+\@envbody=\toks26
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen175
+\enit@toks=\toks28
+\enit@inbox=\box51
+\enit@count@id=\count272
+\enitdp@description=\count273
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count274
+\calc@Bcount=\count275
+\calc@Adimen=\dimen176
+\calc@Bdimen=\dimen177
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count276
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count277
+\l_MT_multwidth_dim=\dimen178
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen179
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen180
+\l_MT_above_intertext_sep=\dimen181
+\l_MT_below_intertext_sep=\dimen182
+\l_MT_above_shortintertext_sep=\dimen183
+\l_MT_below_shortintertext_sep=\dimen184
+\xmathstrut@box=\box52
+\xmathstrut@dim=\dimen185
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/optidef/optidef.sty
+Package: optidef 2019/04/23 - version=3.1, Package for defining optimization pr
+oblems
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count278
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box53
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
+01.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
+tex)))
+\widthInit=\skip61
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/lettrine/lettrine.sty
+File: lettrine.sty 2020-03-14 v2.23 (Daniel Flipo)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/minifp/minifp.sty
+Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack
+-based programing language.
+\MFP@loopctr=\count280
+)
+\c@DefaultLines=\count281
+\c@DefaultDepth=\count282
+\DefaultFindent=\dimen186
+\DefaultNindent=\dimen187
+\DefaultSlope=\dimen188
+\DiscardVskip=\dimen189
+\L@lbox=\box54
+\L@tbox=\box55
+\c@L@lines=\count283
+\c@L@depth=\count284
+\L@Pindent=\dimen190
+\L@Findent=\dimen191
+\L@Nindent=\dimen192
+\L@lraise=\dimen193
+\L@first=\dimen194
+\L@next=\dimen195
+\L@slope=\dimen196
+\L@height=\dimen197
+\L@novskip=\dimen198
+\L@target@ht=\dimen199
+\L@target@dp=\dimen256
+\L@target@tht=\dimen257
+\LettrineWidth=\dimen258
+\LettrineHeight=\dimen259
+\LettrineDepth=\dimen260
+\Llist@everypar=\toks29
+
+Loading lettrine.cfg
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lettrine/lettrine.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count285
+\mult@box=\box56
+\multicol@leftmargin=\dimen261
+\c@unbalance=\count286
+\c@collectmore=\count287
+\doublecol@number=\count288
+\multicoltolerance=\count289
+\multicolpretolerance=\count290
+\full@width=\dimen262
+\page@free=\dimen263
+\premulticols=\dimen264
+\postmulticols=\dimen265
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box57
+\last@line=\box58
+\maxbalancingoverflow=\dimen266
+\mult@rightbox=\box59
+\mult@grightbox=\box60
+\mult@gfirstbox=\box61
+\mult@firstbox=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\c@minrows=\count291
+\c@columnbadness=\count292
+\c@finalcolumnbadness=\count293
+\last@try=\dimen267
+\multicolovershoot=\dimen268
+\multicolundershoot=\dimen269
+\mult@nat@firstbox=\box100
+\colbreak@box=\box101
+\mc@col@check@num=\count294
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/flushend.sty
+Package: flushend 2020/10/16 v3.5 Balancing columns in twocolumn mode
+\flushend@@lastskip@a=\skip64
+\flushend@@lastskip@b=\skip65
+\flushend@@lastskip@c=\skip66
+\flushend@@penalty@a=\count295
+\var@@loop@iter=\count296
+\flushend@@lastkern@a=\dimen270
+\var@@temp@spread=\dimen271
+\var@@temp@a=\dimen272
+\var@@temp@loop=\dimen273
+\flushend@@page@rule=\dimen274
+\flushend@@varbox@a=\box102
+\flushend@@varbox@c=\box103
+\flushend@@tempbox@a=\box104
+\flushend@@tempbox@c=\box105
+\@viper=\box106
+\hold@viper=\box107
+\atColsBreak=\toks30
+\atColsEnd=\toks31
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count297
+\float@exts=\toks32
+\float@box=\box108
+\@float@everytoks=\toks33
+\@floatcapt=\box109
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks34
+\c@algorithm=\count298
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count299
+\c@ALG@rem=\count300
+\c@ALG@nested=\count301
+\ALG@tlm=\skip67
+\ALG@thistlm=\skip68
+\c@ALG@Lnr=\count302
+\c@ALG@blocknr=\count303
+\c@ALG@storecount=\count304
+\c@ALG@tmpcounter=\count305
+\ALG@tmplength=\skip69
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/cuted.sty
+Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
+\At@ViperColsBreak=\toks35
+\v@aaa=\box110
+\v@ccc=\box111
+\lastskip@a=\skip70
+\lastskip@b=\skip71
+\lastskip@d=\skip72
+\lastbox@a=\box112
+\stripsep=\skip73
+\viper@penalty=\count306
+\ht@viper=\dimen275
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen276
+\captionmargin@=\dimen277
+\captionwidth=\dimen278
+\caption@tempdima=\dimen279
+\caption@indent=\dimen280
+\caption@parindent=\dimen281
+\caption@hangindent=\dimen282
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1139.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count307
+\c@continuedfloat=\count308
+Package caption Info: float package is loaded.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count309
+\c@subtable=\count310
+)
+\c@proposition=\count311
+\c@lemma=\count312
+
+No file 2308.02892_pdflatex.aux.
+\openout1 = `2308.02892_pdflatex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+-- Lines per column: 56 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count313
+\scratchdimen=\dimen283
+\scratchbox=\box113
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen284
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 70
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 70
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 70
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 7
+0.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
+
+** WARNING: \IEEEaftertitletext is locked out when in conference mode (line 77)
+.
+
+Underfull \hbox (badness 6380) in paragraph at lines 153--155
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Secure Deep-JSCC, data-driven se
+-cu-rity,
+ []
+
+
+LaTeX Warning: Citation `SC' on page 1 undefined on input line 162.
+
+
+LaTeX Warning: Citation `AdHoc' on page 1 undefined on input line 164.
+
+
+LaTeX Warning: Citation `Im-retriev-deniz' on page 1 undefined on input line 16
+4.
+
+
+LaTeX Warning: Citation `caching' on page 1 undefined on input line 164.
+
+
+LaTeX Warning: Citation `arxive' on page 1 undefined on input line 165.
+
+
+LaTeX Warning: Citation `medical' on page 1 undefined on input line 165.
+
+
+LaTeX Warning: Citation `6G-PLS' on page 1 undefined on input line 169.
+
+
+LaTeX Warning: Citation `WSKG-letter' on page 1 undefined on input line 170.
+
+
+LaTeX Warning: Citation `WSKG-GC' on page 1 undefined on input line 170.
+
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 1 undefined on input line 180.
+
+
+LaTeX Warning: Citation `BW-agile' on page 1 undefined on input line 180.
+
+
+LaTeX Warning: Citation `vtc2022' on page 1 undefined on input line 180.
+
+
+LaTeX Warning: Citation `Eduard-AE' on page 1 undefined on input line 186.
+
+
+LaTeX Warning: Citation `MI-estim-channel_coding' on page 1 undefined on input 
+line 207.
+
+
+LaTeX Warning: Citation `MI-Wiretap-estim' on page 1 undefined on input line 20
+7.
+
+
+LaTeX Warning: Citation `Eduard-AE' on page 1 undefined on input line 207.
+
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 1 undefined on input line 230.
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 1 undefined on input line 233.
+
+
+LaTeX Warning: Citation `Ecenaz-icassp' on page 1 undefined on input line 233.
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 1 undefined on input line 236.
+
+
+LaTeX Warning: Citation `Ecenaz-icassp' on page 1 undefined on input line 236.
+
+
+LaTeX Warning: Reference `fig:SysModel' on page 1 undefined on input line 241.
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 1 undefined on input line 249.
+
+
+LaTeX Warning: Citation `Ecenaz-icassp' on page 1 undefined on input line 249.
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 1 undefined on input line 251.
+
+
+LaTeX Warning: Citation `Ecenaz-icassp' on page 1 undefined on input line 251.
+
+
+LaTeX Warning: Citation `Eduard-AE' on page 1 undefined on input line 252.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Package epstopdf Info: Source file: <AE_SysMod_8.eps>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 1255213 bytes
+(epstopdf)             Output file: <AE_SysMod_8-eps-converted-to.pdf>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 86519 bytes
+(epstopdf)             Command: <repstopdf --outfile=AE_SysMod_8-eps-converted-
+to.pdf AE_SysMod_8.eps>
+(epstopdf)             \includegraphics on input line 300.
+Package epstopdf Info: Output file is already uptodate.
+<AE_SysMod_8-eps-converted-to.pdf, id=14, 214.8025pt x 96.36pt>
+File: AE_SysMod_8-eps-converted-to.pdf Graphic file (type pdf)
+<use AE_SysMod_8-eps-converted-to.pdf>
+Package pdftex.def Info: AE_SysMod_8-eps-converted-to.pdf  used on input line 3
+00.
+(pdftex.def)             Requested size: 271.01982pt x 83.11224pt.
+
+Overfull \hbox (19.01982pt too wide) in paragraph at lines 298--303
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:SysModel' on page 2 undefined on input line 314.
+
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 2 undefined on input line 318.
+
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 2 undefined on input line 318.
+
+
+LaTeX Warning: Citation `ensemble' on page 2 undefined on input line 332.
+
+Package epstopdf Info: Source file: <AE_SysMod_5.eps>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 387750 bytes
+(epstopdf)             Output file: <AE_SysMod_5-eps-converted-to.pdf>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 28272 bytes
+(epstopdf)             Command: <repstopdf --outfile=AE_SysMod_5-eps-converted-
+to.pdf AE_SysMod_5.eps>
+(epstopdf)             \includegraphics on input line 340.
+Package epstopdf Info: Output file is already uptodate.
+<AE_SysMod_5-eps-converted-to.pdf, id=16, 5128.15875pt x 1891.065pt>
+File: AE_SysMod_5-eps-converted-to.pdf Graphic file (type pdf)
+<use AE_SysMod_5-eps-converted-to.pdf>
+Package pdftex.def Info: AE_SysMod_5-eps-converted-to.pdf  used on input line 3
+40.
+(pdftex.def)             Requested size: 397.4784pt x 144.51979pt.
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 2 undefined on input line 352.
+
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 2 undefined on input line 352.
+
+
+LaTeX Warning: Command \textcompwordmark invalid in math mode on input line 393
+.
+
+
+LaTeX Warning: Command \textcompwordmark invalid in math mode on input line 393
+.
+
+
+LaTeX Warning: Citation `funnel' on page 2 undefined on input line 412.
+
+
+LaTeX Warning: Reference `eq:P0' on page 2 undefined on input line 433.
+
+
+LaTeX Warning: Citation `MI-approx' on page 2 undefined on input line 433.
+
+
+LaTeX Warning: Command \textcompwordmark invalid in math mode on input line 441
+.
+
+
+LaTeX Warning: Command \textcompwordmark invalid in math mode on input line 441
+.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 441.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 441.
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 441.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 441.
+
+
+LaTeX Warning: Command \textcompwordmark invalid in math mode on input line 441
+.
+
+
+LaTeX Warning: Command \textcompwordmark invalid in math mode on input line 441
+.
+
+
+Overfull \hbox (8.3994pt too wide) detected at line 441
+[]
+ []
+
+
+LaTeX Warning: Reference `eq:P1' on page 2 undefined on input line 450.
+
+
+LaTeX Warning: Reference `eq:P1' on page 2 undefined on input line 453.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./AE_SysMod_8-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `DJSCC-Deniz' on page 3 undefined on input line 498.
+
+
+LaTeX Warning: Reference `fig:DNN' on page 3 undefined on input line 504.
+
+
+LaTeX Warning: Reference `fig:DNN-Advs' on page 3 undefined on input line 505.
+
+Package epstopdf Info: Source file: <AE_SysMod_6.eps>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 626299 bytes
+(epstopdf)             Output file: <AE_SysMod_6-eps-converted-to.pdf>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 53144 bytes
+(epstopdf)             Command: <repstopdf --outfile=AE_SysMod_6-eps-converted-
+to.pdf AE_SysMod_6.eps>
+(epstopdf)             \includegraphics on input line 515.
+Package epstopdf Info: Output file is already uptodate.
+<AE_SysMod_6-eps-converted-to.pdf, id=76, 1531.7225pt x 999.735pt>
+File: AE_SysMod_6-eps-converted-to.pdf Graphic file (type pdf)
+<use AE_SysMod_6-eps-converted-to.pdf>
+Package pdftex.def Info: AE_SysMod_6-eps-converted-to.pdf  used on input line 5
+15.
+(pdftex.def)             Requested size: 205.95673pt x 119.23926pt.
+
+LaTeX Warning: Citation `AE-Deniz' on page 3 undefined on input line 530.
+
+
+LaTeX Warning: Citation `Ecenaz-icassp' on page 3 undefined on input line 530.
+
+
+LaTeX Warning: Reference `fig:DNN-Advs' on page 3 undefined on input line 534.
+
+
+LaTeX Warning: Reference `eq:P-DL' on page 3 undefined on input line 540.
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 3 undefined on input line 572.
+
+
+LaTeX Warning: Citation `Ecenaz-icassp' on page 3 undefined on input line 572.
+
+
+LaTeX Warning: Citation `Eduard-AE' on page 3 undefined on input line 572.
+
+
+LaTeX Warning: Citation `MI-Wiretap-estim' on page 3 undefined on input line 57
+2.
+
+
+LaTeX Warning: Citation `MI-estim-channel_coding' on page 3 undefined on input 
+line 572.
+
+
+LaTeX Warning: Reference `eq:P-DL-CE' on page 3 undefined on input line 578.
+
+[3 <./AE_SysMod_5-eps-converted-to.pdf> <./AE_SysMod_6-eps-converted-to.pdf>]
+Overfull \hbox (1.52194pt too wide) detected at line 594
+[]
+ []
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 4 undefined on input line 642.
+
+
+LaTeX Warning: Citation `ssim-learning' on page 4 undefined on input line 687.
+
+Package epstopdf Info: Source file: <acc_ours_colluding_rev2_v2.eps>
+(epstopdf)                    date: 2023-08-05 22:28:56
+(epstopdf)                    size: 20665 bytes
+(epstopdf)             Output file: <acc_ours_colluding_rev2_v2-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2023-08-05 22:28:56
+(epstopdf)                    size: 8689 bytes
+(epstopdf)             Command: <repstopdf --outfile=acc_ours_colluding_rev2_v2
+-eps-converted-to.pdf acc_ours_colluding_rev2_v2.eps>
+(epstopdf)             \includegraphics on input line 758.
+Package epstopdf Info: Output file is already uptodate.
+<acc_ours_colluding_rev2_v2-eps-converted-to.pdf, id=116, 421.575pt x 316.18124
+pt>
+File: acc_ours_colluding_rev2_v2-eps-converted-to.pdf Graphic file (type pdf)
+<use acc_ours_colluding_rev2_v2-eps-converted-to.pdf>
+Package pdftex.def Info: acc_ours_colluding_rev2_v2-eps-converted-to.pdf  used 
+on input line 758.
+(pdftex.def)             Requested size: 216.81067pt x 144.5436pt.
+Package epstopdf Info: Source file: <acc_ours_Nak_and_awgn_colluding_rev_v2.eps
+>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 117647 bytes
+(epstopdf)             Output file: <acc_ours_Nak_and_awgn_colluding_rev_v2-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 73466 bytes
+(epstopdf)             Command: <repstopdf --outfile=acc_ours_Nak_and_awgn_coll
+uding_rev_v2-eps-converted-to.pdf acc_ours_Nak_and_awgn_colluding_rev_v2.eps>
+(epstopdf)             \includegraphics on input line 774.
+Package epstopdf Info: Output file is already uptodate.
+<acc_ours_Nak_and_awgn_colluding_rev_v2-eps-converted-to.pdf, id=118, 421.575pt
+ x 316.18124pt>
+File: acc_ours_Nak_and_awgn_colluding_rev_v2-eps-converted-to.pdf Graphic file 
+(type pdf)
+<use acc_ours_Nak_and_awgn_colluding_rev_v2-eps-converted-to.pdf>
+Package pdftex.def Info: acc_ours_Nak_and_awgn_colluding_rev_v2-eps-converted-t
+o.pdf  used on input line 774.
+(pdftex.def)             Requested size: 216.80865pt x 144.54294pt.
+
+LaTeX Warning: Citation `CIFARdataset' on page 4 undefined on input line 794.
+
+
+LaTeX Warning: Citation `adam' on page 4 undefined on input line 837.
+
+[4 <./acc_ours_colluding_rev2_v2-eps-converted-to.pdf> <./acc_ours_Nak_and_awgn
+_colluding_rev_v2-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:acc' on page 5 undefined on input line 845.
+
+
+LaTeX Warning: Reference `fig:acc_Nak' on page 5 undefined on input line 848.
+
+
+LaTeX Warning: Citation `ensemble' on page 5 undefined on input line 858.
+
+
+LaTeX Warning: Reference `fig:acc_Nak' on page 5 undefined on input line 871.
+
+Package epstopdf Info: Source file: <ablation_ssim_acc_3adv.eps>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 36880 bytes
+(epstopdf)             Output file: <ablation_ssim_acc_3adv-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 13886 bytes
+(epstopdf)             Command: <repstopdf --outfile=ablation_ssim_acc_3adv-eps
+-converted-to.pdf ablation_ssim_acc_3adv.eps>
+(epstopdf)             \includegraphics on input line 893.
+Package epstopdf Info: Output file is already uptodate.
+<ablation_ssim_acc_3adv-eps-converted-to.pdf, id=136, 421.575pt x 316.18124pt>
+File: ablation_ssim_acc_3adv-eps-converted-to.pdf Graphic file (type pdf)
+<use ablation_ssim_acc_3adv-eps-converted-to.pdf>
+Package pdftex.def Info: ablation_ssim_acc_3adv-eps-converted-to.pdf  used on i
+nput line 893.
+(pdftex.def)             Requested size: 216.81442pt x 158.99724pt.
+
+LaTeX Warning: Reference `fig: ssim_ablation_test' on page 5 undefined on input
+ line 908.
+
+
+LaTeX Warning: Citation `AE-Deniz' on page 5 undefined on input line 916.
+
+
+LaTeX Warning: Citation `Deniz-GDN' on page 5 undefined on input line 916.
+
+
+LaTeX Warning: Reference `fig: ssim_ablation_test' on page 5 undefined on input
+ line 922.
+
+Package epstopdf Info: Source file: <3d_subplot2.eps>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 113410 bytes
+(epstopdf)             Output file: <3d_subplot2-eps-converted-to.pdf>
+(epstopdf)                    date: 2023-08-05 22:28:55
+(epstopdf)                    size: 178878 bytes
+(epstopdf)             Command: <repstopdf --outfile=3d_subplot2-eps-converted-
+to.pdf 3d_subplot2.eps>
+(epstopdf)             \includegraphics on input line 938.
+Package epstopdf Info: Output file is already uptodate.
+<3d_subplot2-eps-converted-to.pdf, id=138, 421.575pt x 316.18124pt>
+File: 3d_subplot2-eps-converted-to.pdf Graphic file (type pdf)
+<use 3d_subplot2-eps-converted-to.pdf>
+Package pdftex.def Info: 3d_subplot2-eps-converted-to.pdf  used on input line 9
+38.
+(pdftex.def)             Requested size: 227.65353pt x 144.5421pt.
+
+LaTeX Warning: Reference `fig:3d_coeffs' on page 5 undefined on input line 950.
+
+
+
+LaTeX Warning: Reference `eq:distortion' on page 5 undefined on input line 955.
+
+
+
+LaTeX Warning: Reference `eq:L_AB-LE' on page 5 undefined on input line 955.
+
+
+LaTeX Warning: Reference `eq:distortion' on page 5 undefined on input line 957.
+
+
+
+LaTeX Warning: Reference `eq:P0' on page 5 undefined on input line 959.
+
+
+LaTeX Warning: Reference `eq:P-DL-CE' on page 5 undefined on input line 959.
+
+
+LaTeX Warning: Reference `eq:L_AB-LE' on page 5 undefined on input line 959.
+
+
+LaTeX Warning: Reference `fig:3d_coeffs' on page 5 undefined on input line 964.
+
+
+[5 <./ablation_ssim_acc_3adv-eps-converted-to.pdf>] [6 <./3d_subplot2-eps-conve
+rted-to.pdf>]
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+- LAST -
+Extra skip:8.92001pt
+Left:21.0pt/1.65195pt
+Right:12.0pt/1.73193pt
+Output:21.0pt
+[7]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02892/2308.02892_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 814 ({)
+### simple group (level 1) entered at line 648 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 8674 strings out of 478994
+ 136976 string characters out of 5858184
+ 469071 words of memory out of 5000000
+ 25954 multiletter control sequences out of 15000+600000
+ 463417 words of font info for 165 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 83i,16n,89p,771b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.02892/2308.02892_pdflatex.pdf (7 pages, 746600 
+bytes).
+PDF statistics:
+ 257 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,141 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./2308.00642
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/footmisc/footmisc.sty)
+
+Package amsthm Warning: Unknown theoremstyle `thmstyleone' on input line 13.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+(|extractbb --version))
+No file 2308.00642_xelatex.aux.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+
+LaTeX Warning: Citation `1' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `2' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `3' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `4' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `5' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `6' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `7' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `8' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `9' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `10' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `11' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `12' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `13' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `6' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `6' on page 1 undefined on input line 52.
+
+
+LaTeX Warning: Citation `6' on page 1 undefined on input line 61.
+
+[1]
+
+LaTeX Warning: Citation `5' on page 2 undefined on input line 70.
+
+
+LaTeX Warning: Citation `14' on page 2 undefined on input line 70.
+
+
+LaTeX Warning: Citation `5' on page 2 undefined on input line 70.
+
+
+LaTeX Warning: Citation `14' on page 2 undefined on input line 75.
+
+
+Overfull \hbox (37.80402pt too wide) in paragraph at lines 75--77
+\TU/lmr/bx/n/10 Theorem 3.1. \TU/lmr/m/it/10 ([[]]) Suppose $\OML/lmm/m/it/10 C
+$ \TU/lmr/m/it/10 is a cyclic code over $\OML/lmm/m/it/10 R$ \TU/lmr/m/it/10 an
+d $\OML/lmm/m/it/10 S \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 f[]\
+OT1/lmr/m/n/10 (\OML/lmm/m/it/10 z\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 ; f[]\OT1/l
+mr/m/n/10 (\OML/lmm/m/it/10 z\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 ; []  ; f[]\OT1/
+lmr/m/n/10 (\OML/lmm/m/it/10 z\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 g\OML/lmm/m/it/
+10 ;$
+
+LaTeX Warning: Citation `5' on page 2 undefined on input line 85.
+
+[2] [3] [4] [5] [6]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.00642/2308.00642_xelatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.00642/2308.00642_xelatex.pdf (6 pages).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.00642/2308.00642_xelatex.log.

@@ -1,0 +1,119 @@
+\section{Optimal SINR in Cellular Networks}\label{SINR-Chapter}
+
+
+\subsection{Problem Formulation}\label{SINR-Problem-Formulation}
+
+Our goal in this section is to optimize the average signal-to-interference-plus-noise ratio (SINR) across all users within the target region $Q$. Not only is this optimization performed over the cell partitioning $\bm{V}$ and BS vertical antenna tilts $\bm{\Theta}$, but also this is done over BS transmission power values $\bm{\rho}$. This is because, unlike the case with RSS performance function in Section \ref{RSS-Chapter}, the value of each BS transmission power plays a crucial role due to the presence of interference from neighboring cells. Using the definition of $\mathtt{RSS_{dBm}^{(n)}}$ in Eq. (\ref{RSS-dBm}), we define:
+\begin{equation}\label{eqn:SINR_dB}
+\mathtt{SINR^{(n)}_{dB}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) = 10 \log_{10} \frac{10^{\frac{1}{10}\mathtt{RSS^{(n)}_{dBm}} (\bm{q}; \theta_n, \rho_n)}}{\sum_{j\neq n}^{} 10^{\frac{1}{10}\mathtt{RSS^{(j)}_{dBm}} (\bm{q}; \theta_j, \rho_j)} + \sigma^2}  
+\end{equation}
+where $\sigma^2$ denotes the noise variance in linear units. The performance function, which is the SINR measured in dB and averaged over all network users, is given by:
+\begin{align}\label{SINR-objective}
+    \Phi_{\mathtt{SINR}}(\bm{V}, \mathbf{\Theta}, \bm{\rho}) &=  \sum_{n=1}^{N} \int_{V_n} \mathtt{SINR_{dB}^{(n)}}(\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q}) d\bm{q}, \\
+    \textrm{s.t. } \rho_n &\leq \rho_{\max} \qquad \forall n\in\{1,\cdots, N\}, \label{SINR-objective-constraint}
+\end{align}
+where the constraint in Eq. (\ref{SINR-objective-constraint}) comes from the fact that for any BS, say $n$, the transmission power $\rho_n$ measured in dBm cannot exceed $\rho_{\max}$. In what follows, we aim to optimize the performance function $\Phi_{\mathtt{SINR}}$ over the cell partitioning, BS vertical antenna tilts, and BS transmission powers.
+
+
+
+
+\subsection{Analytical Framework}\label{SINR-Analytical-Framework}
+
+Our approach to optimize the performance function $\Phi_{\mathtt{SINR}}$ over variables $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$ is to propose an alternating optimization algorithm that iteratively optimizes each variable while the other two are held fixed. This goal is carried out over the following three steps: (i) find the optimal cell partitioning $\bm{V}$ for a given BS vertical antenna tilt $\bm{\Theta}$ and transmission power $\bm{\rho}$; (ii) find the optimal antenna tilts $\bm{\Theta}$ for a given cell partitioning and BS transmission power $\bm{\rho}$; and (iii) find the optimal BS transmission power $\bm{\rho}$ for a given cell partitioning $\bm{V}$ and vertical antenna tilts $\bm{\Theta}$. The first step is accomplished in the following proposition. 
+\begin{Proposition}\label{optimal-V-SINR}
+For a given set of BS vertical antenna tilts $\bm{\Theta}$ and transmission power values $\bm{\rho}$, the optimal cell partitioning $\bm{V}^*(\bm{\Theta}, \bm{\rho}) = \big(V_1^*(\bm{\Theta}, \bm{\rho}), \cdots, V_N^*(\bm{\Theta}, \bm{\rho})\big)$ that maximizes the performance function $\Phi_{\mathtt{SINR}}$ is given by:
+\begin{multline}\label{optimal-cell-partitioning-SINR}
+    \!\!\! V_n^*(\bm{\Theta}, \bm{\rho}) \!=\! \big\{\bm{q} \in Q \mid \mathtt{RSS_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) \geq \mathtt{RSS_{dBm}^{(k)}}(\bm{q}; \theta_k, \rho_k), \\ \textrm{ for all } 1 \leq k \leq N \big\},
+\end{multline}
+for each $n \in \{1, \cdots, N\}$.
+\end{Proposition}
+The proof of Proposition \ref{optimal-V-SINR} is provided in Appendix \ref{Appendix_A}.
+
+
+For the second step, we aim to apply the gradient ascend optimization method to find the optimal $\bm{\Theta}$ for a given cell partitioning and BS transmission power. The following proposition provides the main ingredient needed for this process.
+\begin{Proposition}\label{gradient-equation-SINR}
+The derivative of Eq. (\ref{SINR-objective}) w.r.t. the BS vertical antenna tilt $\theta_n$ is given by:
+\begin{multline}\label{gradient-equation-SINR-equation}
+     \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V}, \bm{\Theta}, \bm{\rho})}{\partial \theta_n} =  \frac{24}{\theta^2_{\mathrm{3dB}}} \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_u} \!\!\!\!\!\!\!\!\!\!\!\! (\theta_{n,\bm{q}}-\theta_n) \lambda(\bm{q}) d\bm{q}  
+    \\ +  \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_G} \!\!\!\! (\theta_{n,\bm{q}}-\theta_n) \lambda(\bm{q}) d\bm{q} \Bigg\}  -\frac{24}{\theta^2_{\mathrm{3dB}}} \sum_{i\neq n}^{}  \Bigg\{ \\ \sum_{u=1}^{N_U} \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_u}  \frac{(\theta_{n,\bm{q}}-\theta_n) \cdot 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(n)}} (\bm{q}; \theta_n, \rho_n)}}{{\sum_{j\neq i}^{} 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(j)}} (\bm{q}; \theta_j, \rho_j)} + \sigma^2}} \lambda(\bm{q}) d\bm{q} 
+    \\+ \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_G}  \frac{(\theta_{n,\bm{q}}-\theta_n) \cdot 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(n)}} (\bm{q}; \theta_n, \rho_n)}}{{\sum_{j\neq i}^{} 10^{\frac{1}{10}\mathtt{RSS_{dBm}^{(j)}} (\bm{q}; \theta_j,\rho_j)} + \sigma^2}} \lambda(\bm{q}) d\bm{q} \Bigg\}.
+\end{multline}
+\end{Proposition}
+\textit{Proof. }Similar to the proof of Proposition \ref{rss-grad-eq}, it can be shown that the partial derivative in Eq. (\ref{gradient-equation-SINR-equation}) has two components and the second component is zero. This is because, according to Eq. (\ref{optimal-cell-partitioning-SINR-proof}), for any point $\bm{q}$ on the boundary of neighboring regions $V_n$ and $V_m$, we have $\mathtt{SINR_{dBm}^{(n)}}(\bm{q}; \theta_n, \rho_n) = \mathtt{SINR_{dBm}^{(m)}}(\bm{q}; \theta_m, \rho_m)$ and the unit outward normal vectors have opposite directions \cite{GuoJaf2016}. Thus:
+\begin{multline}\label{eqn:derivativePhi-SINR}
+    \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta}, \bm{\rho})}{\partial \theta_n} = 
+    \sum_{i=1}^{N} \int_{V_i(\mathbf{\Theta}, \bm{\rho})} \!\!\!\frac{\partial \mathtt{SINR_{dB}^{(i)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho})}{\partial \theta_n}  \lambda(\bm{q})d\bm{q} \\
+     =
+    \int_{V_n(\mathbf{\Theta}, \bm{\rho})} \frac{\partial}{\partial \theta_n} \mathtt{SINR_{dB}^{(n)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q})d\bm{q} 
+      \\ + \sum_{i\neq n}^{} \int_{V_i(\mathbf{\Theta}, \bm{\rho})} \frac{\partial}{\partial \theta_n} \mathtt{SINR_{dB}^{(i)}} (\bm{q}; \mathbf{\Theta}, \bm{\rho}) \lambda(\bm{q})d\bm{q}.
+\end{multline}
+Eq. (\ref{gradient-equation-SINR-equation}) is then derived via straightforward algebraic operations on Eq. (\ref{eqn:derivativePhi-SINR}) and using the definition of SINR in Eq. (\ref{eqn:SINR_dB}), which concludes the proof. $\hfill\blacksquare$
+
+
+Finally, for the third step, we optimize the BS transmission power $\bm{\rho}$ for a given cell partitioning $\bm{V}$ and vertical antenna tilts $\bm{\Theta}$. Similar to the previous step, our approach is to apply the gradient ascent algorithm. To this end, we need the gradient formula given below.
+\begin{Proposition}\label{sinr-power-allocation-gradient}
+The derivative of Eq. (\ref{SINR-objective}) w.r.t. the BS transmission power $\rho_n$ is given by:
+\begin{multline}\label{sinr-power-allocation-gradient-equation}
+     \frac{\partial \Phi_{\mathtt{SINR}}(\bm{V}, \bm{\Theta}, \bm{\rho})}{\partial \rho_n} =   \Bigg\{ \sum_{u=1}^{N_U} \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_u}   \lambda(\bm{q}) d\bm{q}  
+    \\+  \int_{V_n(\mathbf{\Theta}, \bm{\rho})\cap Q_G}  \lambda(\bm{q}) d\bm{q} \Bigg\}   - \sum_{i\neq n}^{}  \Bigg\{ \\ \sum_{u=1}^{N_U} \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_u} \!\!\!\!\!\!\!\!\! \!\!\!\!\frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n) \times \mathtt{SINR_{lin}^{(i)}}(\bm{q}; \bm{\Theta},\bm{\rho})}{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)} \lambda(\bm{q}) d\bm{q}
+    \\+ \int_{V_i(\mathbf{\Theta}, \bm{\rho})\cap Q_G} \!\!\!\!\!\!\!\!\!\!\!\!\! \frac{\mathtt{RSS_{lin}^{(n)}}(\bm{q};\theta_n,\rho_n) \times \mathtt{SINR_{lin}^{(i)}}(\bm{q}; \bm{\Theta},\bm{\rho})}{\mathtt{RSS_{lin}^{(i)}}(\bm{q};\theta_i,\rho_i)} \lambda(\bm{q}) d\bm{q} \Bigg\}.
+\end{multline}
+\end{Proposition}
+The proof of Proposition \ref{sinr-power-allocation-gradient} is provided in Appendix \ref{Appendix_B}.
+
+
+
+In the remaining of this section, we embed Propositions \ref{optimal-V-SINR}, \ref{gradient-equation-SINR}, and \ref{sinr-power-allocation-gradient} into an alternating optimization algorithm that maximizes the average perceived SINR across all network users.
+
+
+\subsection{Proposed Algorithm}\label{SINR-Algorithm}
+
+Propositions \ref{optimal-V-SINR}, \ref{gradient-equation-SINR}, and \ref{sinr-power-allocation-gradient} provide the main ingredients required for the three-step BS power allocation and vertical antenna tilt (BS-PA-VAT) optimization process presented in Algorithm \ref{BS_PA_VAT_Algorithm}. While BS vertical antenna tilts $\bm{\Theta}$ are optimized via the gradient ascent algorithm, as shown in Algorithm \ref{BS_PA_VAT_Algorithm}, the BS transmission powers $\bm{\rho}$ are optimized via the gradient projection method with the projection operator $P_{\bm{\Lambda}}(.)$ that projects the updated $\bm{\rho}$ onto the subspace $\bm{\Lambda}$. This is done to make sure that the range of all transmission power values remain in the feasible set and satisfy the constraint in Eq. (\ref{SINR-objective-constraint}).
+
+
+
+\begin{algorithm}[ht!]
+\SetAlgoLined
+\SetKwRepeat{Do}{do}{while}
+\KwResult{Optimal cell partitioning $\bm{V}^*$, BS antenna tilts $\bm{\Theta}^*$ and transmission power $\bm{\rho}^*$.}
+
+\textbf{Input:} Initial cell partitioning $\bm{V}$, BS vertical antenna tilts $\mathbf{\Theta}$ and transmission power $\bm{\rho}$, 
+maximum BS transmission power $\rho_{\max}$, learning rates $\eta_0, \eta'_0 \in (0,1)$, 
+convergence error thresholds $\epsilon_1, \epsilon_2, \epsilon_3 \in \mathbb{R}^+$, constant $\kappa \in  (0, 1)$\;
+
+
+\Do{$\frac{\Phi_{\mathtt{SINR}}^{\textrm{(new)}} - \Phi_{\mathtt{SINR}}^{\textrm{(old)}}}{\Phi_{\mathtt{SINR}}^{\textrm{(old)}}} \geq \epsilon_3$}
+{
+-- Calculate  $\Phi_{\mathtt{SINR}}^{\textrm{(old)}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+-- Update the cell $V_n$ according to Eq. (\ref{optimal-cell-partitioning-SINR}) for each $n \in \{1, \cdots, N\}$\;
+-- Set $\eta \gets \eta_0$\;
+\Do{$\frac{\Phi_{\textrm{e}} - \Phi_{\textrm{s}}}{\Phi_{\textrm{s}}} \geq \epsilon_1$}
+{
+-- Calculate  $\Phi_{\textrm{s}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta},\bm{\rho}\right)$\;
+-- Calculate $\frac{\partial \Phi_{\mathtt{SINR}}(\mathbf{V},\mathbf{\Theta},\bm{\rho})}{\partial \theta_n}$ according to Eq. (\ref{gradient-equation-SINR-equation}) for each $n \in \{1, \cdots, N\}$\;
+-- $\eta \gets \eta \times \kappa$\;
+-- $\mathbf{\Theta} \gets \mathbf{\Theta} + \eta \nabla_{\mathbf{\Theta}} \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta},\bm{\rho})$\;
+-- Calculate $\Phi_{\textrm{e}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+}
+-- Set $\eta \gets \eta'_0$\;
+\Do{$\frac{\Phi_{\textrm{e}} - \Phi_{\textrm{s}}}{\Phi_{\textrm{s}}} \geq \epsilon_2$}
+{
+-- Calculate  $\Phi_{\textrm{s}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+-- Calculate $\frac{\partial \Phi_{\mathtt{SINR}}(\mathbf{V},\mathbf{\Theta}, \bm{\rho})}{\partial \rho_n}$ according to Eq. (\ref{sinr-power-allocation-gradient-equation}) for each $n \in \{1, \cdots, N\}$\;
+-- $\eta \gets \eta \times \kappa$\;
+-- $\bm{\rho} \gets P_{\bm{\Lambda}}\big(\bm{\rho} + \eta \nabla_{\bm{\rho}} \Phi_{\mathtt{SINR}}(\bm{V},\mathbf{\Theta}, \bm{\rho})\big)$\;
+-- Calculate $\Phi_{\textrm{e}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+}
+-- Calculate  $\Phi_{\mathtt{SINR}}^{\textrm{(new)}} = \Phi_{\mathtt{SINR}}\left(\bm{V},\mathbf{\Theta}, \bm{\rho}\right)$\;
+}
+ \caption{BS power allocation and vertical antenna tilt optimization}
+ \label{BS_PA_VAT_Algorithm}
+\end{algorithm}
+
+
+
+\begin{Proposition}\label{BS-PA-VAT-convergence}
+    The BS-PA-VAT algorithm is an iterative improvement algorithm and converges.
+\end{Proposition}
+
+{\it Proof. } The BS-PA-VAT algorithm iteratively updates the parameters $\bm{V}$, $\bm{\Theta}$, and $\bm{\rho}$. Updating the cell partitioning $\bm{V}$ according to Eq. (\ref{optimal-cell-partitioning-SINR}) does not decrease the performance function $\Phi_{\mathtt{SINR}}$ because Proposition \ref{optimal-V-SINR} guarantees its optimality for a given $\bm{\Theta}$ and $\bm{\rho}$. A similar argument to the one presented in Proposition \ref{BS-VAT-convergence} suggests that updating $\bm{\Theta}$ and $\bm{\rho}$ using gradient ascent and gradient projection methods will lead to convergence and will not result in a decrease in the performance function. This indicates that Algorithm \ref{BS_PA_VAT_Algorithm} produces a sequence of performance function values that are non-decreasing and upper-bounded, as a result of the finite transmission power at each base station; thus, it converges. $\hfill\blacksquare$

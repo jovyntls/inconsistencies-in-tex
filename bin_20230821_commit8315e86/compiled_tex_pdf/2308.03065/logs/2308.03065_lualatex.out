@@ -1,0 +1,406 @@
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021) 
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+ L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+-- This is a 10 point document.
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/currfile/currfile.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/filehook/filehook.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/filehook/filehook-2020.sty)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/standalone/standalone.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/shellesc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/gincltex/gincltex.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/svn-prov/svn-prov.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/tc-pdftex.def))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/filemod/filemod-expmin.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ->\pdfobj 
+                                           reserveobjnum \edef \pgf@sys@pdf@...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e \pdflastobj 
+                                                  } \pdfobj reserveobjnum \e...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! You can't use `end-group character }' after \the.
+\pgf@sys@setuppdfresources@plain ... \pdflastobj }
+                                                   \pdfobj reserveobjnum \ed...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...obj } \pdfobj 
+                                                  reserveobjnum \edef \pgf@s...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...attern@objnum 
+                                                  {\the \pdflastobj } \pdfob...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e \pdflastobj 
+                                                  } \pdfobj reserveobjnum \e...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! You can't use `end-group character }' after \the.
+\pgf@sys@setuppdfresources@plain ... \pdflastobj }
+                                                   \pdfobj reserveobjnum \ed...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...obj } \pdfobj 
+                                                  reserveobjnum \edef \pgf@s...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...spaces@objnum 
+                                                  {\the \pdflastobj } \def \...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e \pdflastobj 
+                                                  } \def \pgf@sys@pdf@possib...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! You can't use `end-group character }' after \the.
+\pgf@sys@setuppdfresources@plain ... \pdflastobj }
+                                                   \def \pgf@sys@pdf@possibl...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ble@resources 
+                                                  {/ColorSpace \pgf@sys@pdf@...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...spaces@objnum 
+                                                  \space 0 R /Pattern \pgf@s...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...attern@objnum 
+                                                  \space 0 R /ExtGState \pgf...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...@extgs@objnum 
+                                                  \space 0 R } \let \pgf@sys...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...eck@resources 
+                                                  =\relax \def \pgf@sys@pdf@...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...pageresources 
+                                                  { { \edef \temp { \pgf@sys...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...{ \edef \temp 
+                                                  { \pgf@sys@pdf@possible@re...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ble@resources 
+                                                  } \expandafter \global \ex...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...dafter {\temp 
+                                                  } } } \pgf@sys@pdf@install...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+<recently read> \pdfpageresources 
+                  
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...pageresources 
+                                                  \expandafter \pgfutil@ever...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...diate \pdfobj 
+                                                  useobjnum \pgf@sys@pdf@ext...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...@extgs@objnum 
+                                                  {<<\pgf@sys@pgf@resource@l...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  >>}\immediate \pdfobj useo...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...diate \pdfobj 
+                                                  useobjnum \pgf@sys@pdf@pat...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...attern@objnum 
+                                                  {<<\pgf@sys@pgf@resource@l...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  >>}\immediate \pdfobj useo...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...diate \pdfobj 
+                                                  useobjnum \pgf@sys@pdf@col...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...spaces@objnum 
+                                                  {<<\pgf@sys@pgf@resource@l...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...t@colorspaces 
+                                                  >>}} \let \pgf@sys@pgf@res...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  =\pgfutil@empty \let \pgf@...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  =\pgfutil@empty \let \pgf@...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...t@colorspaces 
+                                                  =\pgfutil@empty \def \pgf@...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e@extgs@plain 
+                                                  ##1{\xdef \pgf@sys@pgf@res...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+1
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  {\pgf@sys@pgf@resource@lis...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  \space ##1}} \def \pgf@sys...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+1
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...atterns@plain 
+                                                  ##1{\xdef \pgf@sys@pgf@res...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+1
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  {\pgf@sys@pgf@resource@lis...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  \space ##1}} \def \pgf@sys...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+1
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...rspaces@plain 
+                                                  ##1{\xdef \pgf@sys@pgf@res...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+1
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...t@colorspaces 
+                                                  {\pgf@sys@pgf@resource@lis...
+
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...t@colorspaces 
+                                                  \space ##1}} 
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+1
+l.385 \pgfutil@setuppdfresources
+                               % possibly call the above
+! Undefined control sequence.
+\pgfutil@addpdfresource@colorspaces ...aces@plain 
+                                                  {#1}
+l.387 ...lorspaces{ /pgfprgb [/Pattern /DeviceRGB] }
+                                                  
+! Undefined control sequence.
+l.390     \pdfliteral
+                   {\csname\string\color@#1\endcsname}%
+)
+Runaway definition?
+->0 reserveobjnum \edef {0 reserveobjnum \edef {0 \def {/ColorSpace  0 \ETC.
+! File ended while scanning definition of \pgf@sys@pdf@extgs@objnum.
+<inserted text> 
+}
+l.1732 ...Driver file ``\pgfsysdriver'' not found.}}
+                                                  
+)
+Runaway definition?
+->0 reserveobjnum \edef {0 reserveobjnum \edef {0 \def {/ColorSpace  0 \ETC.
+! File ended while scanning definition of \pgf@sys@pdf@extgs@objnum.
+<inserted text> 
+}
+l.16 \input{pgfsys.code.tex}
+                          

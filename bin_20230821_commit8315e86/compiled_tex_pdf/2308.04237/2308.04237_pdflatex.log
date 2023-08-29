@@ -1,0 +1,1553 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.5)  20 AUG 2023 02:15
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**TBMA_FL_CP.tex
+(./TBMA_FL_CP.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count179
+\@IEEEtrantmpcountB=\count180
+\@IEEEtrantmpcountC=\count181
+\@IEEEtrantmptoksA=\toks15
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 12 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <22> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <22> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@IEEEsubequation=\count186
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count187
+\c@table=\count188
+\@IEEEeqnnumcols=\count189
+\@IEEEeqncolcnt=\count190
+\@IEEEsubeqnnumrollback=\count191
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count192
+\@IEEEquantizeboxA=\box47
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count193
+\@IEEEtranrubishbin=\box48
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen162
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen163
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen164
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks17
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks18
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks26
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count272
+\float@exts=\toks27
+\float@box=\box51
+\@float@everytoks=\toks28
+\@floatcapt=\box52
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks29
+\c@algorithm=\count273
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks30
+)
+\c@ALC@unique=\count274
+\c@ALC@line=\count275
+\c@ALC@rem=\count276
+\c@ALC@depth=\count277
+\ALC@tlm=\skip56
+\algorithmicindent=\skip57
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen173
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen174
+\subfiglabelskip=\skip61
+\c@subfigure=\count278
+\c@lofdepth=\count279
+\c@subtable=\count280
+\c@lotdepth=\count281
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count282
+\@cmidlb=\count283
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count284
+\@lastruleclass=\count285
+\@thisrulewidth=\dimen187
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/autobreak/autobreak.sty
+Package: autobreak 2017/02/23 v0.3 simple line breaking of long formulae
+\everybeforeautobreak=\toks31
+\everyafterautobreak=\toks32
+\@autobreak@alltoks=\toks33
+\@autobreak@linetoks=\toks34
+\@autobreak@lhswidth=\dimen188
+\@autobreak@rhswidth=\dimen189
+\@autobreak@maxlhswidth=\dimen190
+\@autobreak@realmaxlhswidth=\dimen191
+\@autobreak@maxrhswidth=\dimen192
+\c@@autobreak@eqnindex=\count286
+\c@@autobreak@subeqnindex=\count287
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count288
+\multirow@dima=\skip65
+\bigstrutjot=\dimen193
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip66
+\@affilsep=\skip67
+\c@Maxaffil=\count289
+\c@authors=\count290
+\c@affil=\count291
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup9
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen194
+\ar@mcellbox=\box53
+\extrarowheight=\dimen195
+\NC@list=\toks35
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box54
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen196
+\c@nlinenum=\count292
+\TeXr@lab=\toks36
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks37
+\SOUL@lasttoken=\toks38
+\SOUL@cmds=\toks39
+\SOUL@buffer=\toks40
+\SOUL@token=\toks41
+\SOUL@spaceskip=\skip70
+\SOUL@ttwidth=\dimen197
+\SOUL@uldp=\dimen198
+\SOUL@ulht=\dimen199
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen256
+\Hy@linkcounter=\count293
+\Hy@pagecounter=\count294
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count295
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count296
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen257
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count297
+\Field@Width=\dimen258
+\Fld@charsize=\dimen259
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count298
+\c@Item=\count299
+\c@Hfootnote=\count300
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count301
+\c@bookmark@seq@number=\count302
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip71
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+)
+\c@theorem=\count303
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count304
+\l__pdf_internal_box=\box55
+)
+No file 2308.04237_pdflatex.aux.
+\openout1 = `2308.04237_pdflatex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+-- Lines per column: 32 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count305
+\scratchdimen=\dimen260
+\scratchbox=\box56
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen261
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks43
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 35.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count311
+)
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
+\@outlinefile=\write3
+\openout3 = `2308.04237_pdflatex.out'.
+
+ [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `wan2021convergence' on page 2 undefined on input line 
+64.
+
+
+LaTeX Warning: Citation `xing2021federated' on page 2 undefined on input line 6
+4.
+
+
+LaTeX Warning: Citation `xing2020decentralized' on page 2 undefined on input li
+ne 64.
+
+
+LaTeX Warning: Citation `amiri2020machine' on page 2 undefined on input line 64
+.
+
+
+LaTeX Warning: Citation `caldas2018leaf' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `bonawitz2019towards' on page 2 undefined on input line
+ 64.
+
+<./figures/setting.pdf, id=12, 445.6088pt x 292.53392pt>
+File: ./figures/setting.pdf Graphic file (type pdf)
+<use ./figures/setting.pdf>
+Package pdftex.def Info: ./figures/setting.pdf  used on input line 69.
+(pdftex.def)             Requested size: 281.85587pt x 185.03831pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 72
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 7
+2.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+LaTeX Warning: Reference `coverage' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Reference `coverage' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Reference `coverage' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Reference `coverage' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Reference `Fig_setting' on page 2 undefined on input line 77.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 2 undefined on input line 79.
+
+[2]
+
+LaTeX Warning: Citation `FedCP-QQ' on page 3 undefined on input line 81.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 3 undefined on input line 81.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 3 undefined on input line 86.
+
+[3 <./figures/setting.pdf>]
+<./figures/histogram_illus_noi.pdf, id=60, 439.26309pt x 273.93341pt>
+File: ./figures/histogram_illus_noi.pdf Graphic file (type pdf)
+<use ./figures/histogram_illus_noi.pdf>
+Package pdftex.def Info: ./figures/histogram_illus_noi.pdf  used on input line 
+92.
+(pdftex.def)             Requested size: 281.85587pt x 175.77238pt.
+
+
+LaTeX Warning: Citation `Tong_TBMA' on page 4 undefined on input line 98.
+
+
+LaTeX Warning: Citation `Liu_TBMA' on page 4 undefined on input line 98.
+
+
+LaTeX Warning: Reference `histogram_illus' on page 4 undefined on input line 98
+.
+
+[4 <./figures/histogram_illus_noi.pdf>]
+
+LaTeX Warning: Reference `histogram_illus' on page 5 undefined on input line 10
+5.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 5 undefined on input line 111.
+
+
+LaTeX Warning: Reference `Federated_inference' on page 5 undefined on input lin
+e 111.
+
+
+LaTeX Warning: Citation `FedCP-Avg' on page 5 undefined on input line 111.
+
+
+LaTeX Warning: Citation `FedCP-Avg' on page 5 undefined on input line 111.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 5 undefined on input line 111.
+
+
+LaTeX Warning: Citation `lu2023federated' on page 5 undefined on input line 113
+.
+
+
+LaTeX Warning: Citation `luo2016quantiles' on page 5 undefined on input line 11
+3.
+
+
+LaTeX Warning: Citation `dunning2021t' on page 5 undefined on input line 113.
+
+
+LaTeX Warning: Citation `plassier2023conformal' on page 5 undefined on input li
+ne 114.
+
+
+LaTeX Warning: Citation `tibshirani2019conformal' on page 5 undefined on input 
+line 114.
+
+
+LaTeX Warning: Citation `plassier2023conformal' on page 5 undefined on input li
+ne 115.
+
+
+LaTeX Warning: Citation `plassier2023conformal' on page 5 undefined on input li
+ne 116.
+
+[5]
+
+LaTeX Warning: Citation `lu2023federated' on page 6 undefined on input line 118
+.
+
+
+LaTeX Warning: Citation `plassier2023conformal' on page 6 undefined on input li
+ne 118.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 6 undefined on input line 118.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 6 undefined on input line 118.
+
+
+LaTeX Warning: Citation `Tong_TBMA' on page 6 undefined on input line 122.
+
+
+LaTeX Warning: Citation `Liu_TBMA' on page 6 undefined on input line 122.
+
+
+LaTeX Warning: Citation `multi_cell_FRAN' on page 6 undefined on input line 122
+.
+
+
+LaTeX Warning: Citation `single_cell_codebook' on page 6 undefined on input lin
+e 122.
+
+
+LaTeX Warning: Citation `multi_cell_codebook' on page 6 undefined on input line
+ 122.
+
+
+LaTeX Warning: Citation `single_cell_codebook' on page 6 undefined on input lin
+e 122.
+
+
+LaTeX Warning: Citation `multi_cell_codebook' on page 6 undefined on input line
+ 122.
+
+
+LaTeX Warning: Citation `zhu2023information' on page 6 undefined on input line 
+122.
+
+
+LaTeX Warning: Citation `vovk2005algorithmic' on page 6 undefined on input line
+ 127.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 6 undefined on input line 127.
+
+[6]
+
+LaTeX Warning: Reference `setting' on page 7 undefined on input line 133.
+
+
+LaTeX Warning: Reference `background_CP' on page 7 undefined on input line 133.
+
+
+
+LaTeX Warning: Reference `digital_CP' on page 7 undefined on input line 133.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 7 undefined on input line 133.
+
+
+LaTeX Warning: Reference `WFCP' on page 7 undefined on input line 133.
+
+
+LaTeX Warning: Reference `experiment' on page 7 undefined on input line 133.
+
+
+LaTeX Warning: Reference `conclusion' on page 7 undefined on input line 133.
+
+
+LaTeX Warning: Citation `mcmahan2017communication' on page 7 undefined on input
+ line 137.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 7 undefined on input line 137.
+
+[7]
+
+LaTeX Warning: Citation `bai2021don' on page 8 undefined on input line 144.
+
+
+LaTeX Warning: Citation `guo2017calibration' on page 8 undefined on input line 
+144.
+
+
+LaTeX Warning: Citation `cohen2022calibrating' on page 8 undefined on input lin
+e 144.
+
+
+LaTeX Warning: Citation `vovk2005algorithmic' on page 8 undefined on input line
+ 146.
+
+
+LaTeX Warning: Reference `coverage' on page 8 undefined on input line 152.
+
+
+LaTeX Warning: Reference `coverage' on page 8 undefined on input line 154.
+
+[8]
+
+LaTeX Warning: Reference `eq:ineff' on page 9 undefined on input line 158.
+
+
+LaTeX Warning: Reference `coverage' on page 9 undefined on input line 158.
+
+
+LaTeX Warning: Reference `coverage' on page 9 undefined on input line 161.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 9 undefined on input line 161.
+
+
+LaTeX Warning: Reference `coverage' on page 9 undefined on input line 161.
+
+
+LaTeX Warning: Citation `FedCP-Avg' on page 9 undefined on input line 170.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 9 undefined on input line 170.
+
+
+LaTeX Warning: Citation `lu2023federated' on page 9 undefined on input line 170
+.
+
+
+LaTeX Warning: Citation `plassier2023conformal' on page 9 undefined on input li
+ne 170.
+
+[9]
+
+LaTeX Warning: Citation `amiri2020machine' on page 10 undefined on input line 1
+72.
+
+
+LaTeX Warning: Citation `liu2020privacy' on page 10 undefined on input line 172
+.
+
+
+LaTeX Warning: Citation `zhu2019broadband' on page 10 undefined on input line 1
+72.
+
+
+LaTeX Warning: Citation `amiri2020machine' on page 10 undefined on input line 1
+72.
+
+
+LaTeX Warning: Citation `yang2020federated' on page 10 undefined on input line 
+172.
+
+
+LaTeX Warning: Reference `WFCP' on page 10 undefined on input line 185.
+
+[10]
+
+LaTeX Warning: Citation `vovk2005algorithmic' on page 11 undefined on input lin
+e 195.
+
+
+LaTeX Warning: Citation `angelopoulos2021gentle' on page 11 undefined on input 
+line 195.
+
+
+LaTeX Warning: Citation `barber2021predictive' on page 11 undefined on input li
+ne 195.
+
+
+LaTeX Warning: Reference `coverage' on page 11 undefined on input line 195.
+
+
+LaTeX Warning: Reference `coverage' on page 11 undefined on input line 195.
+
+
+LaTeX Warning: Citation `romano2020classification' on page 11 undefined on inpu
+t line 205.
+
+
+LaTeX Warning: Citation `wang2022probabilistic' on page 11 undefined on input l
+ine 205.
+
+
+LaTeX Warning: Citation `teng2022predictive' on page 11 undefined on input line
+ 205.
+
+
+LaTeX Warning: Citation `chen2023spikecp' on page 11 undefined on input line 20
+5.
+
+
+LaTeX Warning: Reference `eq:NCbounds' on page 11 undefined on input line 209.
+
+
+LaTeX Warning: Reference `coverage' on page 11 undefined on input line 217.
+
+[11]
+
+LaTeX Warning: Reference `NC score' on page 12 undefined on input line 220.
+
+
+LaTeX Warning: Reference `org set predictor1' on page 12 undefined on input lin
+e 220.
+
+
+LaTeX Warning: Citation `barber2021predictive' on page 12 undefined on input li
+ne 225.
+
+
+LaTeX Warning: Reference `org set predictor1' on page 12 undefined on input lin
+e 237.
+
+
+LaTeX Warning: Reference `org set predictor' on page 12 undefined on input line
+ 241.
+
+
+LaTeX Warning: Reference `coverage' on page 12 undefined on input line 241.
+
+
+LaTeX Warning: Citation `vovk2005algorithmic' on page 12 undefined on input lin
+e 241.
+
+
+LaTeX Warning: Citation `lei2014distribution' on page 12 undefined on input lin
+e 241.
+
+
+LaTeX Warning: Reference `org set predictor' on page 12 undefined on input line
+ 246.
+
+[12]
+
+LaTeX Warning: Reference `eq:NCbounds' on page 13 undefined on input line 248.
+
+
+Overfull \hbox (11.24757pt too wide) in paragraph at lines 248--251
+\OT1/ptm/m/n/12 the NC score, by as-sump-tion ([]), is di-vided into $\OML/cmm/
+m/it/12 M$ \OT1/ptm/m/n/12 equal in-ter-vals $\OT1/cmr/m/n/12 [\OML/cmm/m/it/12
+ S[]; S[]\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+S[]; S[]\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; [] \OT1/cmr/m/n/12 (\OML/cmm/m/it/1
+2 S[]; S[]\OT1/cmr/m/n/12 ]$
+ []
+
+
+Overfull \hbox (2.90944pt too wide) in paragraph at lines 259--260
+[]\OT1/ptm/m/n/12 Suppose now that the server has ac-cess to the set of quan-ti
+zed NC scores $\OMS/cmsy/m/n/12 S[] \U/msa/m/n/12 , [][]$\OT1/ptm/m/n/12 .
+ []
+
+
+LaTeX Warning: Reference `coverage' on page 13 undefined on input line 265.
+
+
+LaTeX Warning: Reference `set_predictor_p' on page 13 undefined on input line 2
+68.
+
+
+LaTeX Warning: Reference `WFCP' on page 13 undefined on input line 268.
+
+[13]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
+73.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+
+LaTeX Warning: Reference `setting' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 14 undefined on input line 292.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 14 undefined on input line 295.
+
+[14]
+
+LaTeX Warning: Reference `coverage' on page 15 undefined on input line 313.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 15 undefined on input line 313.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 15 undefined on input line 317.
+
+
+LaTeX Warning: Reference `optimal_n_k' on page 15 undefined on input line 330.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 15 undefined on input line 330.
+
+
+LaTeX Warning: Reference `QQ estimator' on page 15 undefined on input line 336.
+
+
+
+LaTeX Warning: Reference `quantizer' on page 15 undefined on input line 336.
+
+[15]
+
+LaTeX Warning: Reference `subsec:protocols_tdma_tbma' on page 16 undefined on i
+nput line 338.
+
+
+LaTeX Warning: Citation `polyanskiy2010channel' on page 16 undefined on input l
+ine 338.
+
+
+LaTeX Warning: Reference `QQ estimator' on page 16 undefined on input line 351.
+
+
+
+LaTeX Warning: Reference `M_nk' on page 16 undefined on input line 351.
+
+
+LaTeX Warning: Reference `coverage' on page 16 undefined on input line 353.
+
+
+LaTeX Warning: Reference `eq:ineff' on page 16 undefined on input line 353.
+
+
+LaTeX Warning: Reference `received_signal' on page 16 undefined on input line 3
+56.
+
+
+LaTeX Warning: Reference `coverage' on page 16 undefined on input line 356.
+
+[16]
+
+LaTeX Warning: Reference `QQ estimator' on page 17 undefined on input line 359.
+
+
+
+LaTeX Warning: Reference `background_CP' on page 17 undefined on input line 359
+.
+
+
+LaTeX Warning: Reference `P_error' on page 17 undefined on input line 359.
+
+
+LaTeX Warning: Reference `coverage' on page 17 undefined on input line 366.
+
+
+LaTeX Warning: Reference `coverage' on page 17 undefined on input line 366.
+
+
+LaTeX Warning: Reference `quantizer' on page 17 undefined on input line 369.
+
+
+LaTeX Warning: Reference `quantile by distribution' on page 17 undefined on inp
+ut line 373.
+
+[17]
+
+LaTeX Warning: Reference `eq:boldp' on page 18 undefined on input line 383.
+
+
+LaTeX Warning: Reference `quantile by distribution' on page 18 undefined on inp
+ut line 387.
+
+
+LaTeX Warning: Reference `set_predictor_p' on page 18 undefined on input line 3
+87.
+
+
+LaTeX Warning: Reference `opt_M' on page 18 undefined on input line 391.
+
+[18]
+
+LaTeX Warning: Reference `eq:pk' on page 19 undefined on input line 397.
+
+
+LaTeX Warning: Reference `received_signal' on page 19 undefined on input line 3
+99.
+
+
+LaTeX Warning: Reference `eq:boldp' on page 19 undefined on input line 406.
+
+
+LaTeX Warning: Reference `received' on page 19 undefined on input line 406.
+
+
+LaTeX Warning: Reference `matched_filtering' on page 19 undefined on input line
+ 410.
+
+
+LaTeX Warning: Citation `renyi1961measures' on page 19 undefined on input line 
+418.
+
+
+LaTeX Warning: Reference `G_ineq' on page 19 undefined on input line 421.
+
+[19]
+
+LaTeX Warning: Reference `gamma' on page 20 undefined on input line 425.
+
+
+LaTeX Warning: Reference `matched_filtering' on page 20 undefined on input line
+ 425.
+
+
+LaTeX Warning: Reference `quantile by distribution' on page 20 undefined on inp
+ut line 432.
+
+
+LaTeX Warning: Reference `matched_filtering_2' on page 20 undefined on input li
+ne 434.
+
+
+LaTeX Warning: Reference `coverage' on page 20 undefined on input line 434.
+
+
+LaTeX Warning: Reference `eq:boldp' on page 20 undefined on input line 436.
+
+
+LaTeX Warning: Reference `matched_filtering_2' on page 20 undefined on input li
+ne 436.
+
+
+LaTeX Warning: Reference `matched_filtering_2' on page 20 undefined on input li
+ne 436.
+
+
+LaTeX Warning: Reference `p+' on page 20 undefined on input line 436.
+
+
+LaTeX Warning: Reference `quantile by distribution' on page 20 undefined on inp
+ut line 436.
+
+
+LaTeX Warning: Reference `p+' on page 20 undefined on input line 442.
+
+[20]
+
+LaTeX Warning: Citation `Tong_TBMA' on page 21 undefined on input line 447.
+
+
+LaTeX Warning: Reference `noisy_quantile' on page 21 undefined on input line 45
+4.
+
+
+LaTeX Warning: Reference `index' on page 21 undefined on input line 462.
+
+
+LaTeX Warning: Reference `index_quantile' on page 21 undefined on input line 46
+6.
+
+
+LaTeX Warning: Reference `set_predictor' on page 21 undefined on input line 469
+.
+
+
+LaTeX Warning: Reference `set_predictor_p' on page 21 undefined on input line 4
+69.
+
+
+LaTeX Warning: Reference `v' on page 21 undefined on input line 472.
+
+[21]
+
+LaTeX Warning: Reference `subsec:protocols_tdma_tbma' on page 22 undefined on i
+nput line 474.
+
+
+LaTeX Warning: Reference `P_eff_noi' on page 22 undefined on input line 474.
+
+
+LaTeX Warning: Reference `matched_filtering_2' on page 22 undefined on input li
+ne 478.
+
+
+LaTeX Warning: Reference `P_eff_noi' on page 22 undefined on input line 483.
+
+
+LaTeX Warning: Reference `set_predictor' on page 22 undefined on input line 492
+.
+
+
+LaTeX Warning: Reference `theorem1' on page 22 undefined on input line 498.
+
+
+LaTeX Warning: Reference `theorem_corr_quan' on page 22 undefined on input line
+ 500.
+
+
+LaTeX Warning: Reference `coverage' on page 22 undefined on input line 500.
+
+
+LaTeX Warning: Reference `P_eff_noi' on page 22 undefined on input line 500.
+
+
+LaTeX Warning: Reference `eff_SNR' on page 22 undefined on input line 500.
+
+[22]
+
+LaTeX Warning: Reference `corr_term' on page 23 undefined on input line 504.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 23 undefined on input line 508.
+
+
+LaTeX Warning: Reference `Digital FedCP-QQ' on page 23 undefined on input line 
+508.
+
+
+LaTeX Warning: Citation `angelopoulos2022private' on page 23 undefined on input
+ line 511.
+
+
+LaTeX Warning: Citation `he2016deep' on page 23 undefined on input line 513.
+
+
+LaTeX Warning: Citation `mcmahan2017communication' on page 23 undefined on inpu
+t line 513.
+
+
+LaTeX Warning: Reference `Fig_setting' on page 23 undefined on input line 513.
+
+[23]
+
+LaTeX Warning: Citation `liu2020privacy' on page 24 undefined on input line 515
+.
+
+
+LaTeX Warning: Citation `zhu2019broadband' on page 24 undefined on input line 5
+15.
+
+
+LaTeX Warning: Citation `amiri2020machine' on page 24 undefined on input line 5
+15.
+
+
+LaTeX Warning: Citation `yang2020federated' on page 24 undefined on input line 
+515.
+
+<./figures/cover_M.pdf, id=247, 506.81747pt x 394.33524pt>
+File: ./figures/cover_M.pdf Graphic file (type pdf)
+<use ./figures/cover_M.pdf>
+Package pdftex.def Info: ./figures/cover_M.pdf  used on input line 532.
+(pdftex.def)             Requested size: 211.38832pt x 164.4704pt.
+<./figures/ineff_M.pdf, id=248, 498.56665pt x 397.4358pt>
+File: ./figures/ineff_M.pdf Graphic file (type pdf)
+<use ./figures/ineff_M.pdf>
+Package pdftex.def Info: ./figures/ineff_M.pdf  used on input line 533.
+(pdftex.def)             Requested size: 211.38832pt x 168.5047pt.
+
+LaTeX Warning: Reference `opt_M' on page 24 undefined on input line 542.
+
+
+LaTeX Warning: Reference `noisy_quantile' on page 24 undefined on input line 54
+2.
+
+
+LaTeX Warning: Reference `performance_M' on page 24 undefined on input line 544
+.
+
+
+LaTeX Warning: Reference `theorem_corr_quan' on page 24 undefined on input line
+ 544.
+
+
+LaTeX Warning: Reference `coverage' on page 24 undefined on input line 544.
+
+
+LaTeX Warning: Reference `noisy_quantile' on page 24 undefined on input line 54
+4.
+
+
+LaTeX Warning: Reference `coverage' on page 24 undefined on input line 544.
+
+[24]
+<./figures/cover_T.pdf, id=256, 511.34238pt x 393.6888pt>
+File: ./figures/cover_T.pdf Graphic file (type pdf)
+<use ./figures/cover_T.pdf>
+Package pdftex.def Info: ./figures/cover_T.pdf  used on input line 550.
+(pdftex.def)             Requested size: 211.38832pt x 162.75305pt.
+<./figures/ineff_T.pdf, id=257, 502.53748pt x 395.09908pt>
+File: ./figures/ineff_T.pdf Graphic file (type pdf)
+<use ./figures/ineff_T.pdf>
+Package pdftex.def Info: ./figures/ineff_T.pdf  used on input line 551.
+(pdftex.def)             Requested size: 211.38832pt x 166.19368pt.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 25 undefined on input line 553.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 25 undefined on input line 553.
+
+
+LaTeX Warning: Reference `Digital FedCP-QQ' on page 25 undefined on input line 
+557.
+
+
+LaTeX Warning: Reference `performance_R' on page 25 undefined on input line 557
+.
+
+
+LaTeX Warning: Reference `P_error' on page 25 undefined on input line 557.
+
+
+LaTeX Warning: Reference `eff_SNR' on page 25 undefined on input line 557.
+
+
+LaTeX Warning: Reference `background_CP' on page 25 undefined on input line 557
+.
+
+[25 <./figures/cover_M.pdf> <./figures/ineff_M.pdf> <./figures/cover_T.pdf> <./
+figures/ineff_T.pdf>]
+<./figures/cover_SNR.pdf, id=322, 506.17105pt x 394.33524pt>
+File: ./figures/cover_SNR.pdf Graphic file (type pdf)
+<use ./figures/cover_SNR.pdf>
+Package pdftex.def Info: ./figures/cover_SNR.pdf  used on input line 562.
+(pdftex.def)             Requested size: 211.38832pt x 164.68701pt.
+<./figures/ineff_SNR.pdf, id=323, 497.76764pt x 395.62805pt>
+File: ./figures/ineff_SNR.pdf Graphic file (type pdf)
+<use ./figures/ineff_SNR.pdf>
+Package pdftex.def Info: ./figures/ineff_SNR.pdf  used on input line 563.
+(pdftex.def)             Requested size: 211.38832pt x 168.0099pt.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 26 undefined on input line 565.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 26 undefined on input line 565.
+
+
+LaTeX Warning: Reference `performance_SNR' on page 26 undefined on input line 5
+69.
+
+
+LaTeX Warning: Reference `eff_SNR' on page 26 undefined on input line 569.
+
+
+LaTeX Warning: Reference `corr_term' on page 26 undefined on input line 569.
+
+
+LaTeX Warning: Reference `P_error' on page 26 undefined on input line 569.
+
+<./figures/cover_K_fixNd.pdf, id=324, 506.81747pt x 395.62805pt>
+File: ./figures/cover_K_fixNd.pdf Graphic file (type pdf)
+<use ./figures/cover_K_fixNd.pdf>
+Package pdftex.def Info: ./figures/cover_K_fixNd.pdf  used on input line 574.
+(pdftex.def)             Requested size: 211.38832pt x 165.00961pt.
+<./figures/ineff_K_fixNd.pdf, id=325, 499.0605pt x 394.98166pt>
+File: ./figures/ineff_K_fixNd.pdf Graphic file (type pdf)
+<use ./figures/ineff_K_fixNd.pdf>
+Package pdftex.def Info: ./figures/ineff_K_fixNd.pdf  used on input line 575.
+(pdftex.def)             Requested size: 211.38832pt x 167.30748pt.
+
+LaTeX Warning: Citation `FedCP-QQ' on page 26 undefined on input line 577.
+
+
+LaTeX Warning: Citation `FedCP-QQ' on page 26 undefined on input line 577.
+
+
+LaTeX Warning: Reference `performance_K_fixNd' on page 26 undefined on input li
+ne 582.
+
+
+LaTeX Warning: Reference `P_error' on page 26 undefined on input line 582.
+
+[26 <./figures/cover_SNR.pdf> <./figures/ineff_SNR.pdf>]
+
+LaTeX Warning: Reference `corr_term' on page 27 undefined on input line 584.
+
+[27 <./figures/cover_K_fixNd.pdf> <./figures/ineff_K_fixNd.pdf>]
+
+LaTeX Warning: Citation `lu2023federated' on page 28 undefined on input line 59
+2.
+
+
+LaTeX Warning: Citation `plassier2023conformal' on page 28 undefined on input l
+ine 592.
+
+
+LaTeX Warning: Citation `liu2020privacy' on page 28 undefined on input line 592
+.
+
+
+LaTeX Warning: Reference `v' on page 28 undefined on input line 608.
+
+[28]
+
+LaTeX Warning: Reference `v' on page 29 undefined on input line 612.
+
+
+LaTeX Warning: Reference `pbag' on page 29 undefined on input line 617.
+
+
+LaTeX Warning: Reference `vbag' on page 29 undefined on input line 617.
+
+
+LaTeX Warning: Reference `cov_bound' on page 29 undefined on input line 617.
+
+
+LaTeX Warning: Reference `set_predictor' on page 29 undefined on input line 624
+.
+
+
+LaTeX Warning: Reference `vbag' on page 29 undefined on input line 624.
+
+
+LaTeX Warning: Citation `tibshirani2019conformal' on page 29 undefined on input
+ line 624.
+
+
+LaTeX Warning: Citation `tibshirani2019conformal' on page 29 undefined on input
+ line 628.
+
+[29]
+
+LaTeX Warning: Reference `index_quantile' on page 30 undefined on input line 63
+8.
+
+
+LaTeX Warning: Citation `wald2004sequential' on page 30 undefined on input line
+ 648.
+
+
+LaTeX Warning: Citation `wald2004sequential' on page 30 undefined on input line
+ 653.
+
+
+LaTeX Warning: Reference `LB' on page 30 undefined on input line 659.
+
+[30]
+
+LaTeX Warning: Reference `final' on page 31 undefined on input line 672.
+
+No file 2308.04237_pdflatex.bbl.
+[31]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.04237/2308.04237_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `2308.04237_pdflatex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `2308.04237_pdflatex.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3B4A54F4D578F2B2F0E210CE3C86D08A;6598.
+ ) 
+Here is how much of TeX's memory you used:
+ 13808 strings out of 478994
+ 216843 string characters out of 5858184
+ 545402 words of memory out of 5000000
+ 30890 multiletter control sequences out of 15000+600000
+ 455208 words of font info for 139 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 82i,19n,88p,1729b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2021/texmf-d
+ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.04237/2308.04237_pdflatex.pdf (31 pages, 660813
+ bytes).
+PDF statistics:
+ 546 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+

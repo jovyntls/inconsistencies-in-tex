@@ -1,0 +1,1797 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.5)  20 AUG 2023 02:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ms.tex
+(./ms.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count179
+\@IEEEtrantmpcountB=\count180
+\@IEEEtrantmpcountC=\count181
+\@IEEEtrantmptoksA=\toks15
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+** ATTENTION: Single column mode is not typically used with IEEE publications.
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@IEEEsubequation=\count186
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count187
+\c@table=\count188
+\@IEEEeqnnumcols=\count189
+\@IEEEeqncolcnt=\count190
+\@IEEEsubeqnnumrollback=\count191
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count192
+\@IEEEquantizeboxA=\box47
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count193
+\@IEEEtranrubishbin=\box48
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\c@ALC@unique=\count194
+\c@ALC@line=\count195
+\c@ALC@rem=\count196
+\c@ALC@depth=\count197
+\ALC@tlm=\skip50
+\algorithmicindent=\skip51
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box49
+\extrarowheight=\dimen163
+\NC@list=\toks18
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box50
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen164
+\captionmargin@=\dimen165
+\captionwidth=\dimen166
+\caption@tempdima=\dimen167
+\caption@indent=\dimen168
+\caption@parindent=\dimen169
+\caption@hangindent=\dimen170
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi  on input line 1139.
+)
+\c@KVtest=\count198
+\sf@farskip=\skip54
+\sf@captopadj=\dimen171
+\sf@capskip=\skip55
+\sf@nearskip=\skip56
+\c@subfigure=\count199
+\c@subfigure@save=\count266
+\c@lofdepth=\count267
+\c@subtable=\count268
+\c@subtable@save=\count269
+\c@lotdepth=\count270
+\sf@top=\skip57
+\sf@bottom=\skip58
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip sett
+ings
+\@dblbotnum=\count271
+\c@dblbotnumber=\count272
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks19
+\verbatim@line=\toks20
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen174
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip59
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen175
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen176
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count273
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count274
+\leftroot@=\count275
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count276
+\DOTSCASE@=\count277
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen177
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count278
+\c@MaxMatrixCols=\count279
+\dotsspace@=\muskip17
+\c@parentequation=\count280
+\dspbrk@lvl=\count281
+\tag@help=\toks22
+\row@=\count282
+\column@=\count283
+\maxfields@=\count284
+\andhelp@=\toks23
+\eqnshift@=\dimen178
+\alignsep@=\dimen179
+\tagshift@=\dimen180
+\tagwidth@=\dimen181
+\totwidth@=\dimen182
+\lineht@=\dimen183
+\@envbody=\toks24
+\multlinegap=\skip60
+\multlinetaggap=\skip61
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip62
+\multirow@cntb=\count285
+\multirow@dima=\skip63
+\bigstrutjot=\dimen184
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count286
+\rotFPtop=\skip64
+\rotFPbot=\skip65
+\rot@float@box=\box53
+\rot@mess@toks=\toks26
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
+\MT@toks=\toks27
+\MT@count=\count287
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen185
+LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
+\MT@listname@count=\count288
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip66
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks28
+\thm@bodyfont=\toks29
+\thm@headfont=\toks30
+\thm@notefont=\toks31
+\thm@headpunct=\toks32
+\thm@preskip=\skip67
+\thm@postskip=\skip68
+\thm@headsep=\skip69
+\dth@everypar=\toks33
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip70
+\enit@outerparindent=\dimen186
+\enit@toks=\toks34
+\enit@inbox=\box54
+\enit@count@id=\count289
+\enitdp@description=\count290
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/quoting/quoting.sty
+Package: quoting 2014/01/28 v0.1c Consolidated environment for displayed text
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count291
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+\quo@toppartop=\skip71
+)
+\c@theorem=\count292
+\c@lemma=\count293
+\c@remark=\count294
+\c@example=\count295
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2020/09/26 v1.10
+
+Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
+Package textpos Info: choosing support for LaTeX3 on input line 61.
+\TP@textbox=\box55
+\TP@holdbox=\box56
+\TPHorizModule=\dimen187
+\TPVertModule=\dimen188
+\TP@margin=\dimen189
+\TP@absmargin=\dimen190
+Grid set 16 x 16 = 38.39343pt x 49.68562pt
+\TPboxrulesize=\dimen191
+\TP@ox=\dimen192
+\TP@oy=\dimen193
+\TP@tbargs=\toks35
+TextBlockOrigin set to 0pt x 0pt
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count296
+\l__pdf_internal_box=\box57
+)
+
+LaTeX Warning: Unused global option(s):
+    [lettersize].
+
+No file 2308.04796_pdflatex.aux.
+\openout1 = `2308.04796_pdflatex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+-- Lines per column: 58 (exact).
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count297
+\scratchdimen=\dimen194
+\scratchbox=\box58
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen195
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \microtypecontext on input line 71.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 71.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
+2.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+LaTeX Warning: Citation `gerstner2014neuronal' on page 1 undefined on input lin
+e 137.
+
+
+LaTeX Warning: Citation `jang2019introduction' on page 1 undefined on input lin
+e 137.
+
+
+LaTeX Warning: Citation `shchur2021neural' on page 1 undefined on input line 13
+7.
+
+
+LaTeX Warning: Citation `david69' on page 1 undefined on input line 141.
+
+
+LaTeX Warning: Citation `guo08' on page 1 undefined on input line 141.
+
+
+LaTeX Warning: Citation `merhav021' on page 1 undefined on input line 141.
+
+
+LaTeX Warning: Citation `daley2003introduction' on page 1 undefined on input li
+ne 144.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 1 undefined on input 
+line 144.
+
+
+LaTeX Warning: Citation `devroye2013probabilistic' on page 1 undefined on input
+ line 146.
+
+
+LaTeX Warning: Citation `cholaquidis2017classification' on page 1 undefined on 
+input line 147.
+
+
+LaTeX Warning: Citation `rong2021error' on page 1 undefined on input line 147.
+
+
+LaTeX Warning: Citation `jang2019introduction' on page 1 undefined on input lin
+e 149.
+
+
+LaTeX Warning: Citation `devroye2013probabilistic' on page 1 undefined on input
+ line 153.
+
+
+LaTeX Warning: Citation `mazza2019rtbust' on page 1 undefined on input line 156
+.
+
+
+LaTeX Warning: Citation `fanaee2014event' on page 1 undefined on input line 156
+.
+
+
+LaTeX Warning: Reference `sec:02_bayes_rule' on page 1 undefined on input line 
+160.
+
+
+LaTeX Warning: Reference `sec:03_bayes_bounds' on page 1 undefined on input lin
+e 161.
+
+
+LaTeX Warning: Reference `sec:04_nonparametric' on page 1 undefined on input li
+ne 163.
+
+
+LaTeX Warning: Citation `greblicki1978asymptotically' on page 1 undefined on in
+put line 167.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 1 undefined on input 
+line 172.
+
+
+LaTeX Warning: Citation `diggle1988equivalence' on page 1 undefined on input li
+ne 178.
+
+
+LaTeX Warning: Citation `aalen1978nonparametric' on page 1 undefined on input l
+ine 182.
+
+
+LaTeX Warning: Reference `sec:05_simulations' on page 1 undefined on input line
+ 186.
+
+
+LaTeX Warning: Citation `pawlak2023asymptotically' on page 1 undefined on input
+ line 188.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 190
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 190
+.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 19
+0.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `devroye2013probabilistic' on page 2 undefined on input
+ line 223.
+
+
+LaTeX Warning: Reference `sec:06_conclusions' on page 2 undefined on input line
+ 224.
+
+
+LaTeX Warning: Citation `daley2003introduction' on page 2 undefined on input li
+ne 229.
+
+
+LaTeX Warning: Reference `eqn:2.1' on page 2 undefined on input line 238.
+
+
+LaTeX Warning: Reference `eqn:2.1' on page 2 undefined on input line 239.
+
+
+LaTeX Warning: Reference `eqn:2.2' on page 2 undefined on input line 256.
+
+
+LaTeX Warning: Reference `eqn:2.1' on page 2 undefined on input line 271.
+
+
+LaTeX Warning: Reference `eqn:2.1' on page 2 undefined on input line 276.
+
+
+LaTeX Warning: Reference `eqn:2.3' on page 2 undefined on input line 290.
+
+
+LaTeX Warning: Reference `eqn:2.3' on page 2 undefined on input line 291.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 2 undefined on input line 304.
+
+
+LaTeX Warning: Citation `gajardo2021cox' on page 2 undefined on input line 329.
+
+
+[2]
+
+LaTeX Warning: Reference `eqn:2.5' on page 3 undefined on input line 339.
+
+
+LaTeX Warning: Reference `eqn:2.5' on page 3 undefined on input line 341.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 3 undefined on input line 342.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 3 undefined on input line 356.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 3 undefined on input line 374.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 3 undefined on input line 374.
+
+
+LaTeX Warning: Reference `subsec:03_bayes_bounds/decision' on page 3 undefined 
+on input line 392.
+
+
+LaTeX Warning: Reference `subsec:03_bayes_bounds/risk' on page 3 undefined on i
+nput line 392.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 3 undefined on input line 403.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 3 undefined on input 
+line 405.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 3 undefined on input line 408.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 3 undefined on input line 409.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 3 undefined on input line 409.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 3 undefined on input line 410.
+
+
+LaTeX Warning: Reference `eqn:2.4a' on page 3 undefined on input line 410.
+
+
+LaTeX Warning: Reference `eqn:2.4a' on page 3 undefined on input line 411.
+
+
+LaTeX Warning: Reference `eqn:2.4b' on page 3 undefined on input line 420.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 3 undefined on input line 421.
+
+
+LaTeX Warning: Reference `eqn:2.9a' on page 3 undefined on input line 422.
+
+
+LaTeX Warning: Reference `sec:03_bayes_bounds' on page 3 undefined on input lin
+e 424.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 3 undefined on input line 435.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 3 undefined on input line 436.
+
+
+LaTeX Warning: Reference `eqn:2.9a' on page 3 undefined on input line 437.
+
+
+LaTeX Warning: Reference `eqn:2.4a' on page 3 undefined on input line 437.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 3 undefined on input line 438.
+
+[3]
+
+LaTeX Warning: Reference `eqn:2.4b' on page 4 undefined on input line 465.
+
+
+LaTeX Warning: Reference `eqn:3.1' on page 4 undefined on input line 467.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 4 undefined on input 
+line 470.
+
+
+LaTeX Warning: Reference `eqn:3.2' on page 4 undefined on input line 476.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 495.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 495.
+
+LaTeX Warning: Citation `birge1993rates' on page 4 undefined on input line 496.
+
+
+
+LaTeX Warning: Citation `van1995exponential' on page 4 undefined on input line 
+496.
+
+
+LaTeX Warning: Reference `eqn:3.2' on page 4 undefined on input line 500.
+
+
+LaTeX Warning: Reference `eqn:3.3' on page 4 undefined on input line 500.
+
+
+LaTeX Warning: Reference `eqn:3.3' on page 4 undefined on input line 501.
+
+
+LaTeX Warning: Reference `eqn:3.2' on page 4 undefined on input line 502.
+
+
+LaTeX Warning: Citation `ghosal2017fundamentals' on page 4 undefined on input l
+ine 503.
+
+
+LaTeX Warning: Reference `eqn:3.3' on page 4 undefined on input line 514.
+
+
+LaTeX Warning: Reference `eqn:3.3' on page 4 undefined on input line 519.
+
+
+LaTeX Warning: Reference `eqn:2.5' on page 4 undefined on input line 542.
+
+
+LaTeX Warning: Reference `lemma:1' on page 4 undefined on input line 543.
+
+
+LaTeX Warning: Reference `lemma:1' on page 4 undefined on input line 546.
+
+
+LaTeX Warning: Reference `lemma:1' on page 4 undefined on input line 547.
+
+
+LaTeX Warning: Reference `eqn:3.2' on page 4 undefined on input line 564.
+
+
+LaTeX Warning: Reference `eqn:3.1' on page 4 undefined on input line 571.
+
+[4]
+
+LaTeX Warning: Reference `lemma:2' on page 5 undefined on input line 598.
+
+
+LaTeX Warning: Reference `lemma:2' on page 5 undefined on input line 601.
+
+
+LaTeX Warning: Citation `ghosal2017fundamentals' on page 5 undefined on input l
+ine 603.
+
+
+LaTeX Warning: Reference `eqn:3.4' on page 5 undefined on input line 612.
+
+
+LaTeX Warning: Reference `eqn:3.8' on page 5 undefined on input line 621.
+
+
+LaTeX Warning: Reference `eqn:3.5' on page 5 undefined on input line 622.
+
+
+LaTeX Warning: Reference `eqn:3.6' on page 5 undefined on input line 638.
+
+
+LaTeX Warning: Reference `eqn:3.10' on page 5 undefined on input line 668.
+
+
+LaTeX Warning: Reference `eqn:3.5' on page 5 undefined on input line 672.
+
+
+LaTeX Warning: Reference `eqn:3.3a' on page 5 undefined on input line 673.
+
+
+LaTeX Warning: Reference `eqn:3.9' on page 5 undefined on input line 684.
+
+
+LaTeX Warning: Reference `lemma:3' on page 5 undefined on input line 684.
+
+
+LaTeX Warning: Reference `eqn:3.3a' on page 5 undefined on input line 705.
+
+[5]
+
+LaTeX Warning: Reference `eqn:3.11a' on page 6 undefined on input line 722.
+
+
+LaTeX Warning: Reference `eqn:3.12' on page 6 undefined on input line 722.
+
+
+LaTeX Warning: Reference `eqn:3.10' on page 6 undefined on input line 723.
+
+
+LaTeX Warning: Reference `eqn:3.12b' on page 6 undefined on input line 744.
+
+
+LaTeX Warning: Reference `eqn:3.10' on page 6 undefined on input line 745.
+
+
+LaTeX Warning: Reference `lemma:4' on page 6 undefined on input line 748.
+
+
+LaTeX Warning: Reference `eqn:3.12b' on page 6 undefined on input line 750.
+
+
+LaTeX Warning: Reference `eqn:3.10' on page 6 undefined on input line 757.
+
+
+LaTeX Warning: Reference `lemma:4' on page 6 undefined on input line 760.
+
+
+LaTeX Warning: Reference `lemma:4' on page 6 undefined on input line 779.
+
+
+LaTeX Warning: Reference `eqn:3.9a' on page 6 undefined on input line 780.
+
+
+LaTeX Warning: Reference `lemma:4' on page 6 undefined on input line 783.
+
+
+LaTeX Warning: Reference `lemma:4' on page 6 undefined on input line 796.
+
+
+LaTeX Warning: Reference `eqn:3.14' on page 6 undefined on input line 804.
+
+
+LaTeX Warning: Reference `eqn:3.12b' on page 6 undefined on input line 805.
+
+
+LaTeX Warning: Reference `theorem:1' on page 6 undefined on input line 807.
+
+
+LaTeX Warning: Reference `theorem:1' on page 6 undefined on input line 809.
+
+
+LaTeX Warning: Reference `eqn:3.9a' on page 6 undefined on input line 811.
+
+
+LaTeX Warning: Citation `le2021exponential' on page 6 undefined on input line 8
+13.
+
+
+LaTeX Warning: Citation `van1995exponential' on page 6 undefined on input line 
+813.
+
+
+LaTeX Warning: Citation `le2021exponential' on page 6 undefined on input line 8
+15.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 6 undefined on input line 818.
+
+[6]
+
+LaTeX Warning: Reference `lemma:5' on page 7 undefined on input line 837.
+
+
+LaTeX Warning: Reference `eqn:3.9a' on page 7 undefined on input line 838.
+
+
+LaTeX Warning: Reference `lemma:5' on page 7 undefined on input line 842.
+
+
+LaTeX Warning: Reference `eqn:a7' on page 7 undefined on input line 844.
+
+
+LaTeX Warning: Reference `lemma:5' on page 7 undefined on input line 845.
+
+
+LaTeX Warning: Reference `eqn:3.12b' on page 7 undefined on input line 852.
+
+
+LaTeX Warning: Reference `eqn:3.9a' on page 7 undefined on input line 856.
+
+
+LaTeX Warning: Reference `eqn:3.16' on page 7 undefined on input line 872.
+
+
+LaTeX Warning: Reference `eqn:3.17' on page 7 undefined on input line 874.
+
+
+LaTeX Warning: Reference `theorem:1' on page 7 undefined on input line 875.
+
+
+LaTeX Warning: Citation `vere1982estimation' on page 7 undefined on input line 
+880.
+
+
+LaTeX Warning: Reference `eqn:2.8' on page 7 undefined on input line 904.
+
+
+LaTeX Warning: Reference `subsec:03_bayes_bounds/decision' on page 7 undefined 
+on input line 906.
+
+
+LaTeX Warning: Reference `eqn:2.8' on page 7 undefined on input line 907.
+
+
+LaTeX Warning: Reference `eqn:3.1' on page 7 undefined on input line 911.
+
+
+LaTeX Warning: Reference `eqn:3.2' on page 7 undefined on input line 922.
+
+
+LaTeX Warning: Reference `theorem:1' on page 7 undefined on input line 934.
+
+
+LaTeX Warning: Reference `eqn:3.13' on page 7 undefined on input line 934.
+
+
+LaTeX Warning: Reference `theorem:3' on page 7 undefined on input line 952.
+
+
+LaTeX Warning: Reference `eqn:3.21' on page 7 undefined on input line 954.
+
+
+LaTeX Warning: Reference `eqn:3.2' on page 7 undefined on input line 956.
+
+
+LaTeX Warning: Reference `theorem:3' on page 7 undefined on input line 960.
+
+[7]
+
+LaTeX Warning: Reference `lemma:6' on page 8 undefined on input line 971.
+
+
+LaTeX Warning: Reference `eqn:3.21' on page 8 undefined on input line 972.
+
+
+LaTeX Warning: Reference `theorem:4' on page 8 undefined on input line 984.
+
+
+LaTeX Warning: Reference `theorem:4' on page 8 undefined on input line 989.
+
+
+LaTeX Warning: Reference `eqn:3.21' on page 8 undefined on input line 1003.
+
+
+LaTeX Warning: Reference `eqn:3.23' on page 8 undefined on input line 1003.
+
+
+LaTeX Warning: Reference `eqn:3.22' on page 8 undefined on input line 1004.
+
+
+LaTeX Warning: Reference `eqn:3.24' on page 8 undefined on input line 1005.
+
+
+LaTeX Warning: Reference `example:1' on page 8 undefined on input line 1010.
+
+
+LaTeX Warning: Reference `eqn:3.12c' on page 8 undefined on input line 1011.
+
+
+LaTeX Warning: Reference `eqn:3.12d' on page 8 undefined on input line 1011.
+
+
+LaTeX Warning: Reference `theorem:4' on page 8 undefined on input line 1012.
+
+
+LaTeX Warning: Citation `rong2021error' on page 8 undefined on input line 1036.
+
+
+
+LaTeX Warning: Citation `devroye2013probabilistic' on page 8 undefined on input
+ line 1048.
+
+
+LaTeX Warning: Reference `example:1' on page 8 undefined on input line 1051.
+
+
+LaTeX Warning: Reference `example:2' on page 8 undefined on input line 1051.
+
+
+LaTeX Warning: Reference `eqn:3.25a' on page 8 undefined on input line 1055.
+
+
+LaTeX Warning: Citation `aalen1978nonparametric' on page 8 undefined on input l
+ine 1067.
+
+
+LaTeX Warning: Reference `eqn:3.27' on page 8 undefined on input line 1077.
+
+
+LaTeX Warning: Reference `fig:03_bayes_bounds/risk/intensity' on page 8 undefin
+ed on input line 1094.
+
+<pawla1.pdf, id=42, 1368.45947pt x 448.13823pt>
+File: pawla1.pdf Graphic file (type pdf)
+<use pawla1.pdf>
+Package pdftex.def Info: pawla1.pdf  used on input line 1099.
+(pdftex.def)             Requested size: 258.0pt x 84.48386pt.
+[8]
+
+LaTeX Warning: Reference `fig:03_bayes_bounds/risk/simulations' on page 9 undef
+ined on input line 1110.
+
+
+LaTeX Warning: Reference `eqn:sim1' on page 9 undefined on input line 1112.
+
+
+LaTeX Warning: Reference `eqn:sim1' on page 9 undefined on input line 1120.
+
+<pawla2.pdf, id=46, 1457.04347pt x 713.5787pt>
+File: pawla2.pdf Graphic file (type pdf)
+<use pawla2.pdf>
+Package pdftex.def Info: pawla2.pdf  used on input line 1123.
+(pdftex.def)             Requested size: 258.0pt x 126.34807pt.
+
+LaTeX Warning: Reference `eqn:2.4' on page 9 undefined on input line 1140.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 9 undefined on input line 1141.
+
+
+LaTeX Warning: Reference `eqn:3.27' on page 9 undefined on input line 1145.
+
+
+LaTeX Warning: Reference `sec:03_bayes_bounds' on page 9 undefined on input lin
+e 1147.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 9 undefined on input line 1163.
+
+[9 <./pawla1.pdf> <./pawla2.pdf>]
+
+LaTeX Warning: Reference `eqn:4.1' on page 10 undefined on input line 1196.
+
+
+LaTeX Warning: Reference `eqn:4.2' on page 10 undefined on input line 1196.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 10 undefined on input line 1196.
+
+
+LaTeX Warning: Reference `subsec:04_nonparametric/kernel' on page 10 undefined 
+on input line 1216.
+
+
+LaTeX Warning: Citation `greblicki1978asymptotically' on page 10 undefined on i
+nput line 1222.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 10 undefined on input line 1224.
+
+
+LaTeX Warning: Reference `theorem:5' on page 10 undefined on input line 1247.
+
+
+LaTeX Warning: Reference `theorem:5' on page 10 undefined on input line 1252.
+
+
+LaTeX Warning: Reference `theorem:5' on page 10 undefined on input line 1254.
+
+
+LaTeX Warning: Reference `eqn:4.4' on page 10 undefined on input line 1274.
+
+
+LaTeX Warning: Reference `theorem:5' on page 10 undefined on input line 1274.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 10 undefined on input line 1275.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 10 undefined on input line 1276.
+
+
+LaTeX Warning: Reference `theorem:5' on page 10 undefined on input line 1277.
+
+
+LaTeX Warning: Reference `eqn:4.4' on page 10 undefined on input line 1282.
+
+
+LaTeX Warning: Reference `lemma:7' on page 10 undefined on input line 1290.
+
+
+LaTeX Warning: Reference `eqn:4.6' on page 10 undefined on input line 1291.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 10 undefined on input line 1293.
+
+
+LaTeX Warning: Reference `eqn:4.1' on page 10 undefined on input line 1296.
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 1303--1319
+[] \OT1/ptm/m/n/10 (+20) be the con-di-tional risk as-so-ci-ated with the rule 
+$[]$. Since
+ []
+
+
+LaTeX Warning: Reference `eqn:4.5' on page 10 undefined on input line 1330.
+
+
+LaTeX Warning: Reference `eqn:4.5' on page 10 undefined on input line 1338.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 10 undefined on input line 1342.
+
+
+LaTeX Warning: Reference `theorem:5' on page 10 undefined on input line 1343.
+
+[10]
+
+LaTeX Warning: Citation `andersen2012statistical' on page 11 undefined on input
+ line 1358.
+
+
+LaTeX Warning: Citation `diggle1988equivalence' on page 11 undefined on input l
+ine 1358.
+
+
+LaTeX Warning: Citation `wand1994kernel' on page 11 undefined on input line 136
+0.
+
+
+LaTeX Warning: Citation `grebpaw08' on page 11 undefined on input line 1360.
+
+
+LaTeX Warning: Reference `eqn:4.9' on page 11 undefined on input line 1385.
+
+
+LaTeX Warning: Reference `subsec:04_nonparametric/plug-in' on page 11 undefined
+ on input line 1391.
+
+
+LaTeX Warning: Reference `eqn:4.1' on page 11 undefined on input line 1405.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 11 undefined on input line 1406.
+
+
+LaTeX Warning: Reference `eqn:4.13' on page 11 undefined on input line 1408.
+
+
+LaTeX Warning: Reference `theorem:5' on page 11 undefined on input line 1410.
+
+
+LaTeX Warning: Reference `theorem:6' on page 11 undefined on input line 1410.
+
+
+LaTeX Warning: Reference `eqn:4.4' on page 11 undefined on input line 1412.
+
+
+LaTeX Warning: Reference `eqn:4.4' on page 11 undefined on input line 1414.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 11 undefined on input line 1425.
+
+
+LaTeX Warning: Reference `eqn:a6' on page 11 undefined on input line 1449.
+
+
+LaTeX Warning: Reference `eqn:a7' on page 11 undefined on input line 1449.
+
+[11]
+
+LaTeX Warning: Reference `eqn:4.9' on page 12 undefined on input line 1461.
+
+
+LaTeX Warning: Reference `eqn:4.11' on page 12 undefined on input line 1468.
+
+
+LaTeX Warning: Reference `eqn:4.11' on page 12 undefined on input line 1474.
+
+
+LaTeX Warning: Reference `eqn:4.12' on page 12 undefined on input line 1475.
+
+
+LaTeX Warning: Citation `wand1994kernel' on page 12 undefined on input line 149
+0.
+
+
+LaTeX Warning: Citation `grebpaw08' on page 12 undefined on input line 1490.
+
+
+LaTeX Warning: Citation `wand1994kernel' on page 12 undefined on input line 150
+6.
+
+
+LaTeX Warning: Citation `diggle1988equivalence' on page 12 undefined on input l
+ine 1506.
+
+
+LaTeX Warning: Citation `diggle1988equivalence' on page 12 undefined on input l
+ine 1511.
+
+
+LaTeX Warning: Citation `cattaneo2020simple' on page 12 undefined on input line
+ 1511.
+
+
+LaTeX Warning: Reference `eqn:4.13' on page 12 undefined on input line 1514.
+
+
+LaTeX Warning: Reference `eqn:4.17a' on page 12 undefined on input line 1545.
+
+
+LaTeX Warning: Citation `gine2002rates' on page 12 undefined on input line 1548
+.
+
+
+LaTeX Warning: Citation `masry1996multivariate' on page 12 undefined on input l
+ine 1548.
+
+
+LaTeX Warning: Reference `lemma:8' on page 12 undefined on input line 1549.
+
+
+LaTeX Warning: Reference `lemma:8' on page 12 undefined on input line 1550.
+
+
+LaTeX Warning: Reference `theorem:5' on page 12 undefined on input line 1551.
+
+
+LaTeX Warning: Reference `theorem:6' on page 12 undefined on input line 1551.
+
+
+LaTeX Warning: Reference `lemma:7' on page 12 undefined on input line 1556.
+
+
+LaTeX Warning: Reference `eqn:4.17a' on page 12 undefined on input line 1557.
+
+
+LaTeX Warning: Reference `theorem:7' on page 12 undefined on input line 1565.
+
+
+LaTeX Warning: Reference `eqn:4.14' on page 12 undefined on input line 1572.
+
+
+LaTeX Warning: Reference `eqn:4.15' on page 12 undefined on input line 1572.
+
+[12]
+
+LaTeX Warning: Reference `eqn:4.17a' on page 13 undefined on input line 1594.
+
+
+LaTeX Warning: Citation `audibert2007fast' on page 13 undefined on input line 1
+594.
+
+
+LaTeX Warning: Citation `diggle1988equivalence' on page 13 undefined on input l
+ine 1597.
+
+
+LaTeX Warning: Citation `wand1994kernel' on page 13 undefined on input line 159
+7.
+
+
+LaTeX Warning: Reference `eqn:4.10' on page 13 undefined on input line 1601.
+
+
+LaTeX Warning: Reference `eqn:4.10' on page 13 undefined on input line 1611.
+
+
+LaTeX Warning: Reference `eqn:4.19' on page 13 undefined on input line 1613.
+
+
+LaTeX Warning: Reference `eqn:sim1' on page 13 undefined on input line 1627.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 13 undefined on input line 1631.
+
+
+LaTeX Warning: Reference `eqn:4.1' on page 13 undefined on input line 1632.
+
+
+LaTeX Warning: Reference `eqn:4.10' on page 13 undefined on input line 1633.
+
+
+LaTeX Warning: Reference `eqn:4.19' on page 13 undefined on input line 1634.
+
+
+LaTeX Warning: Reference `eqn:sim1' on page 13 undefined on input line 1642.
+
+
+LaTeX Warning: Reference `fig:05_simulations/sims/time' on page 13 undefined on
+ input line 1645.
+
+
+LaTeX Warning: Reference `fig:03_bayes_bounds/risk/simulations' on page 13 unde
+fined on input line 1649.
+
+<pawla3.pdf, id=105, 1457.04347pt x 713.5787pt>
+File: pawla3.pdf Graphic file (type pdf)
+<use pawla3.pdf>
+Package pdftex.def Info: pawla3.pdf  used on input line 1657.
+(pdftex.def)             Requested size: 258.0pt x 126.34807pt.
+
+LaTeX Warning: Reference `fig:05_simulations/sims/bandwidth' on page 13 undefin
+ed on input line 1663.
+
+
+LaTeX Warning: Reference `fig:05_simulations/sims/examples' on page 13 undefine
+d on input line 1663.
+
+
+LaTeX Warning: Reference `fig:05_simulations/sims/bandwidth' on page 13 undefin
+ed on input line 1663.
+
+
+LaTeX Warning: Reference `fig:05_simulations/sims/examples' on page 13 undefine
+d on input line 1663.
+
+
+LaTeX Warning: Reference `fig:05_simulations/sims/bandwidth' on page 13 undefin
+ed on input line 1669.
+
+
+LaTeX Warning: Reference `fig:05_simulations/sims/bandwidth' on page 13 undefin
+ed on input line 1676.
+
+<pawla4.pdf, id=106, 1482.26833pt x 1359.31325pt>
+File: pawla4.pdf Graphic file (type pdf)
+<use pawla4.pdf>
+Package pdftex.def Info: pawla4.pdf  used on input line 1679.
+(pdftex.def)             Requested size: 258.0pt x 236.59741pt.
+
+LaTeX Warning: Reference `fig:05_simulations/sims/examples' on page 13 undefine
+d on input line 1693.
+
+<pawla5.pdf, id=107, 1457.04347pt x 863.82808pt>
+File: pawla5.pdf Graphic file (type pdf)
+<use pawla5.pdf>
+Package pdftex.def Info: pawla5.pdf  used on input line 1702.
+(pdftex.def)             Requested size: 258.0pt x 152.9516pt.
+
+LaTeX Warning: Reference `fig:05_simulations/sims/failure' on page 13 undefined
+ on input line 1722.
+
+
+LaTeX Warning: Reference `eqn:5.1' on page 13 undefined on input line 1731.
+
+[13] [14 <./pawla3.pdf> <./pawla4.pdf> <./pawla5.pdf>]
+<pawla6.pdf, id=199, 1457.04347pt x 713.5787pt>
+File: pawla6.pdf Graphic file (type pdf)
+<use pawla6.pdf>
+Package pdftex.def Info: pawla6.pdf  used on input line 1736.
+(pdftex.def)             Requested size: 258.0pt x 126.34807pt.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 15 undefined on input line 1761.
+
+
+LaTeX Warning: Citation `lima023' on page 15 undefined on input line 1763.
+
+
+LaTeX Warning: Citation `daley2003introduction' on page 15 undefined on input l
+ine 1764.
+
+
+LaTeX Warning: Reference `eqn:2.4' on page 15 undefined on input line 1770.
+
+
+LaTeX Warning: Reference `eqn:2.9' on page 15 undefined on input line 1791.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 15 undefined on input
+ line 1804.
+
+
+LaTeX Warning: Reference `eqn:a1' on page 15 undefined on input line 1816.
+
+[15 <./pawla6.pdf>]
+
+LaTeX Warning: Reference `eqn:a2' on page 16 undefined on input line 1834.
+
+
+LaTeX Warning: Reference `eqn:a5' on page 16 undefined on input line 1840.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 16 undefined on input
+ line 1841.
+
+
+LaTeX Warning: Citation `andersen2012statistical' on page 16 undefined on input
+ line 1856.
+
+
+LaTeX Warning: Reference `eqn:a7' on page 16 undefined on input line 1867.
+
+
+LaTeX Warning: Reference `lemma:1' on page 16 undefined on input line 1895.
+
+
+LaTeX Warning: Reference `eqn:3.3' on page 16 undefined on input line 1897.
+
+
+LaTeX Warning: Reference `eqn:b1' on page 16 undefined on input line 1908.
+
+
+LaTeX Warning: Reference `eqn:b3' on page 16 undefined on input line 1919.
+
+
+LaTeX Warning: Reference `eqn:b1' on page 16 undefined on input line 1920.
+
+[16]
+
+LaTeX Warning: Reference `lemma:1' on page 17 undefined on input line 1931.
+
+
+LaTeX Warning: Reference `eqn:b1' on page 17 undefined on input line 1941.
+
+
+LaTeX Warning: Reference `lemma:1' on page 17 undefined on input line 1941.
+
+
+LaTeX Warning: Reference `lemma:2' on page 17 undefined on input line 1944.
+
+
+LaTeX Warning: Reference `lemma:2' on page 17 undefined on input line 1945.
+
+
+LaTeX Warning: Reference `eqn:a7' on page 17 undefined on input line 1946.
+
+
+LaTeX Warning: Reference `lemma:5' on page 17 undefined on input line 1956.
+
+
+LaTeX Warning: Reference `eqn:3.15' on page 17 undefined on input line 1957.
+
+
+LaTeX Warning: Reference `lemma:5' on page 17 undefined on input line 1957.
+
+
+LaTeX Warning: Citation `le2021exponential' on page 17 undefined on input line 
+1958.
+
+
+LaTeX Warning: Reference `lemma:5' on page 17 undefined on input line 1959.
+
+
+LaTeX Warning: Reference `eqn:b2' on page 17 undefined on input line 1968.
+
+
+LaTeX Warning: Reference `eqn:b4' on page 17 undefined on input line 1973.
+
+
+LaTeX Warning: Reference `eqn:b4' on page 17 undefined on input line 1974.
+
+
+LaTeX Warning: Reference `eqn:3.15' on page 17 undefined on input line 1974.
+
+
+LaTeX Warning: Reference `theorem:3' on page 17 undefined on input line 1977.
+
+
+LaTeX Warning: Reference `eqn:3.21' on page 17 undefined on input line 1978.
+
+
+LaTeX Warning: Reference `eqn:2.8' on page 17 undefined on input line 1979.
+
+
+LaTeX Warning: Reference `eqn:3.19' on page 17 undefined on input line 1982.
+
+
+LaTeX Warning: Reference `eqn:b7' on page 17 undefined on input line 1999.
+
+
+LaTeX Warning: Reference `lemma:4' on page 17 undefined on input line 2025.
+
+
+LaTeX Warning: Reference `eqn:b6-2' on page 17 undefined on input line 2025.
+
+
+LaTeX Warning: Reference `eqn:b11' on page 17 undefined on input line 2039.
+
+
+LaTeX Warning: Reference `eqn:b11' on page 17 undefined on input line 2043.
+
+
+LaTeX Warning: Reference `theorem:3' on page 17 undefined on input line 2044.
+
+
+LaTeX Warning: Reference `theorem:4' on page 17 undefined on input line 2047.
+
+
+LaTeX Warning: Reference `eqn:b7' on page 17 undefined on input line 2050.
+
+
+LaTeX Warning: Reference `eqn:3.17' on page 17 undefined on input line 2051.
+
+
+LaTeX Warning: Reference `lemma:6' on page 17 undefined on input line 2051.
+
+
+LaTeX Warning: Reference `eqn:b7' on page 17 undefined on input line 2052.
+
+[17]
+
+LaTeX Warning: Reference `lemma:4' on page 18 undefined on input line 2067.
+
+
+LaTeX Warning: Reference `eqn:b6-1' on page 18 undefined on input line 2067.
+
+
+LaTeX Warning: Reference `eqn:b6-2' on page 18 undefined on input line 2067.
+
+
+LaTeX Warning: Reference `eqn:b12' on page 18 undefined on input line 2083.
+
+
+LaTeX Warning: Reference `theorem:4' on page 18 undefined on input line 2086.
+
+
+LaTeX Warning: Reference `theorem:5' on page 18 undefined on input line 2092.
+
+
+LaTeX Warning: Reference `theorem:5' on page 18 undefined on input line 2093.
+
+
+LaTeX Warning: Citation `greblicki1978asymptotically' on page 18 undefined on i
+nput line 2094.
+
+
+LaTeX Warning: Reference `eqn:4.6' on page 18 undefined on input line 2095.
+
+
+LaTeX Warning: Reference `eqn:4.7' on page 18 undefined on input line 2095.
+
+
+LaTeX Warning: Reference `eqn:c5' on page 18 undefined on input line 2136.
+
+
+LaTeX Warning: Reference `eqn:c6' on page 18 undefined on input line 2150.
+
+
+LaTeX Warning: Reference `eqn:c4' on page 18 undefined on input line 2165.
+
+
+LaTeX Warning: Reference `lemma:7' on page 18 undefined on input line 2176.
+
+
+LaTeX Warning: Citation `apostol1974mathematical' on page 18 undefined on input
+ line 2178.
+
+
+LaTeX Warning: Reference `eqn:2.6' on page 18 undefined on input line 2198.
+
+
+LaTeX Warning: Reference `eqn:4.3' on page 18 undefined on input line 2199.
+
+
+LaTeX Warning: Reference `eqn:2.4a' on page 18 undefined on input line 2200.
+
+[18]
+
+LaTeX Warning: Reference `eqn:c3' on page 19 undefined on input line 2229.
+
+
+LaTeX Warning: Reference `eqn:b1' on page 19 undefined on input line 2235.
+
+
+LaTeX Warning: Reference `eqn:4.4' on page 19 undefined on input line 2291.
+
+
+LaTeX Warning: Reference `eqn:c3' on page 19 undefined on input line 2291.
+
+
+LaTeX Warning: Reference `lemma:7' on page 19 undefined on input line 2292.
+
+
+LaTeX Warning: Reference `lemma:8' on page 19 undefined on input line 2298.
+
+
+LaTeX Warning: Reference `eqn:4.15' on page 19 undefined on input line 2317.
+
+
+LaTeX Warning: Reference `eqn:d2' on page 19 undefined on input line 2333.
+
+
+LaTeX Warning: Reference `eqn:d2' on page 19 undefined on input line 2340.
+
+[19]
+
+LaTeX Warning: Reference `eqn:4.14' on page 20 undefined on input line 2357.
+
+
+LaTeX Warning: Reference `eqn:4.11' on page 20 undefined on input line 2372.
+
+
+LaTeX Warning: Reference `eqn:d3' on page 20 undefined on input line 2383.
+
+
+LaTeX Warning: Reference `eqn:4.15' on page 20 undefined on input line 2384.
+
+
+LaTeX Warning: Reference `eqn:d3' on page 20 undefined on input line 2403.
+
+
+LaTeX Warning: Reference `eqn:4.14' on page 20 undefined on input line 2420.
+
+
+LaTeX Warning: Reference `eqn:4.11' on page 20 undefined on input line 2420.
+
+
+LaTeX Warning: Reference `eqn:4.12' on page 20 undefined on input line 2426.
+
+
+LaTeX Warning: Reference `eqn:d7' on page 20 undefined on input line 2436.
+
+
+LaTeX Warning: Reference `eqn:d1' on page 20 undefined on input line 2449.
+
+
+LaTeX Warning: Reference `lemma:8' on page 20 undefined on input line 2458.
+
+[20]
+<pawla.png, id=250, 450.9347pt x 561.59813pt>
+File: pawla.png Graphic file (type png)
+<use pawla.png>
+Package pdftex.def Info: pawla.png  used on input line 2647.
+(pdftex.def)             Requested size: 72.26799pt x 90.0032pt.
+File: pawla.png Graphic file (type png)
+<use pawla.png>
+Package pdftex.def Info: pawla.png  used on input line 2647.
+(pdftex.def)             Requested size: 72.26799pt x 90.0032pt.
+ [21 <./pawla.png>]
+<pabia.png, id=259, 484.05844pt x 594.72188pt>
+File: pabia.png Graphic file (type png)
+<use pabia.png>
+Package pdftex.def Info: pabia.png  used on input line 2665.
+(pdftex.def)             Requested size: 72.26587pt x 88.78699pt.
+File: pabia.png Graphic file (type png)
+<use pabia.png>
+Package pdftex.def Info: pabia.png  used on input line 2665.
+(pdftex.def)             Requested size: 72.26587pt x 88.78699pt.
+<rzepk.png, id=262, 450.9347pt x 560.8453pt>
+File: rzepk.png Graphic file (type png)
+<use rzepk.png>
+Package pdftex.def Info: rzepk.png  used on input line 2685.
+(pdftex.def)             Requested size: 72.26799pt x 89.88255pt.
+File: rzepk.png Graphic file (type png)
+<use rzepk.png>
+Package pdftex.def Info: rzepk.png  used on input line 2685.
+(pdftex.def)             Requested size: 72.26799pt x 89.88255pt.
+ [22 <./pabia.png> <./rzepk.png>]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.04796/2308.04796_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8611 strings out of 478994
+ 137522 string characters out of 5858184
+ 486179 words of memory out of 5000000
+ 25543 multiletter control sequences out of 15000+600000
+ 464658 words of font info for 353 fonts, out of 8000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 72i,20n,78p,693b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dis
+t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.04796/2308.04796_pdflatex.pdf (22 pages, 165021
+0 bytes).
+PDF statistics:
+ 352 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 60498 words of extra memory for PDF output out of 61914 (max. 10000000)
+

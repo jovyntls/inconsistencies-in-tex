@@ -1,0 +1,286 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+)
+** ATTENTION: Overriding command lockouts (line 10).
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/tc-pdftex.def))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
+Excluding comment 'comment') (./psfig.sty
+psfig/tex 1.10-dvips
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/steinmetz/steinmetz.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.cfg)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-pdftex.def)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file 2308.02673_pdflatex.aux.
+-- Lines per column: 56 (exact).
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 91.
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 95--97
+\OT1/ptm/b/n/9 urable in-tel-li-gent sur-face (RIS), dis-crete beam-form-ing fo
+r
+(./introduction.tex
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 4.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 9.
+
+) (./statements.tex
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 18.
+
+Excluding 'comment' comment.
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 52.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 54.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 74.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 74.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 100.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 100.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 104.
+
+
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 106.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 106.
+
+
+LaTeX Warning: Reference `tbl:compare2' on page 1 undefined on input line 107.
+
+
+LaTeX Warning: Reference `tbl:compare2' on page 1 undefined on input line 111.
+
+
+LaTeX Warning: Reference `tbl:compare2' on page 1 undefined on input line 113.
+
+
+LaTeX Warning: Reference `tbl:compare2' on page 1 undefined on input line 117.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 1 undefined on input line 119.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `eqn:absg' on page 2 undefined on input line 140.
+
+
+LaTeX Warning: Reference `eqn:lemma2' on page 2 undefined on input line 144.
+
+
+LaTeX Warning: Reference `tbl:compare2' on page 2 undefined on input line 147.
+
+
+LaTeX Warning: Reference `tbl:compare' on page 2 undefined on input line 149.
+
+
+LaTeX Warning: Citation `b1' on page 2 undefined on input line 152.
+
+
+LaTeX Warning: Citation `b1' on page 2 undefined on input line 158.
+
+
+LaTeX Warning: Citation `b1' on page 2 undefined on input line 161.
+
+
+LaTeX Warning: Citation `b1' on page 2 undefined on input line 167.
+
+[2]) (./algorithm.tex
+
+LaTeX Warning: Citation `b1' on page 3 undefined on input line 4.
+
+
+LaTeX Warning: Citation `b1' on page 3 undefined on input line 7.
+
+) (./results.tex
+
+LaTeX Warning: Citation `b1' on page 3 undefined on input line 6.
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 4--7
+\OT1/ptm/m/n/10 does not pro-vide an equiv-a-lency con-di-tion for find-ing
+Excluding 'comment' comment.
+
+LaTeX Warning: Citation `b1' on page 3 undefined on input line 28.
+
+
+LaTeX Warning: Reference `fig:SNRBoostK2' on page 3 undefined on input line 28.
+
+
+
+LaTeX Warning: Citation `b1' on page 3 undefined on input line 39.
+
+)
+No file 2308.02673_pdflatex.bbl.
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[3 <./Overall_K2_N_16_64_256-eps-converted-to.pdf>]
+(/Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_engines/bin/compile
+d_tex_pdf/2308.02673/2308.02673_pdflatex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2021/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.
+pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/t
+exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_tex_en
+gines/bin/compiled_tex_pdf/2308.02673/2308.02673_pdflatex.pdf (3 pages, 355449 
+bytes).
+Transcript written on /Users/jovyntan/Desktop/work/fyp/exploration/diff_test_te
+x_engines/bin/compiled_tex_pdf/2308.02673/2308.02673_pdflatex.log.

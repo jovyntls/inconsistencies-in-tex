@@ -1,0 +1,64 @@
+\begin{figure}[t]
+\definecolor{myblue}{RGB}{80,80,160}
+\definecolor{mygreen}{RGB}{80,160,80}
+\centering
+\captionsetup{justification=centering}
+%\resizebox{0.65\linewidth}{!}{
+\resizebox{0.65\linewidth}{!}{
+
+\begin{tikzpicture}[thick,
+  every node/.style={draw,circle},
+  fsnode/.style={fill=myblue},
+  ssnode/.style={fill=mygreen},
+  every fit/.style={ellipse,draw,inner sep=-2pt,text width=2cm},
+  ->,shorten >= 3pt,shorten <= 3pt
+]
+% the vertices of U
+\begin{scope}[start chain=going below,node distance=7mm]
+\foreach \i in {1,2,...,5}
+{
+  \pgfmathtruncatemacro{\j}{\i - 1}
+  \node[fsnode,on chain] (f\i) [label=left: $c_{\j}$] {};
+}
+\end{scope}
+
+% the vertices of V
+\begin{scope}[xshift=4cm,start chain=going below,node distance=7mm]
+\foreach \i in {6,7,...,10}
+{ 
+  \pgfmathtruncatemacro{\j}{\i - 6}
+  \node[ssnode,on chain] (s\i) [label=right: $b_{\j}$] {};
+}
+\end{scope}
+
+% the set U
+\node [myblue,fit=(f1) (f5),label=above:$\mathcal{C}$] {};
+%\node [myblue,fit=(f1) (f6),label=below:$\textrm{Unknowns}$] {};
+% the set V
+\node [mygreen,fit=(s6) (s10),label=above:$\mathcal{B}$] {};
+%\node [mygreen,fit=(s7) (s10),label=below:$\textrm{Symbols}$] {};
+
+
+% the edges
+\draw[-] (s6) -- (f1);
+\draw[-] (s7) -- (f1);
+\draw[-] (s8) -- (f1);
+\draw[-] (s6) -- (f2);
+\draw[-] (s7) -- (f2);
+\draw[-] (s9) -- (f2);
+\draw[-] (s6) -- (f3);
+\draw[-] (s9) -- (f3);
+\draw[-] (s10) -- (f3);
+\draw[-] (s7) -- (f4);
+\draw[-] (s8) -- (f4);
+\draw[-] (s10) -- (f4);
+\draw[-] (s8) -- (f5);
+\draw[-] (s9) -- (f5);
+\draw[-] (s10) -- (f5);
+
+
+\end{tikzpicture}
+}
+\caption{\small A bipartite graph $\calG = \calC \cup \calB$ with $|\calC| = |\calB| = 5$ where the set of equations is $\calC$ and the set of unknowns is $\calB$. Here, $\omega_A = 3$.}
+\label{fig:hall_bipartite}
+\end{figure} 

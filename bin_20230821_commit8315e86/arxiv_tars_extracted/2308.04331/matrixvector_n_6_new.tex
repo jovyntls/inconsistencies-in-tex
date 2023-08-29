@@ -1,0 +1,40 @@
+\begin{figure}[t]
+\centering
+\definecolor{mycolor6}{rgb}{0.92941,0.69412,0.12549}%
+
+%\captionsetup{justification=centering}
+%\resizebox{0.99\linewidth}{!}{
+\resizebox{0.99\linewidth}{!}{
+\begin{tikzpicture}[auto, thick, node distance=2cm, >=triangle 45]
+
+\draw
+
+    node [sum, minimum size = 0.8cm, fill=blue!30] (blk1) {$W0$}
+    node [sum, minimum size = 0.8cm,fill=blue!30,right = 1 cm of blk1] (blk2) {$W1$}
+    node [sum, minimum size = 0.8cm,fill=blue!30,right = 1 cm of blk2] (blk3) {$W2$}
+    node [sum, minimum size = 0.8cm,fill=blue!30,right = 1 cm of blk3] (blk4) {$W3$}
+    node [sum, minimum size = 0.8cm,fill=blue!30,right = 1 cm of blk4] (blk5) {$W4$}
+    node [sum, minimum size = 0.8cm,fill=blue!30,right = 1 cm of blk5] (blk6) {$W5$}
+    
+    node [block, fill=green!30, minimum width = 4.8em, below = 0.5 cm of blk1] (blk11) {$\left\lbrace\bfA_0, \bfA_1 \right\rbrace$}
+    node [block, fill=green!30, minimum width = 4.8em, below = 0.5 cm of blk2] (blk21) {$\left\lbrace\bfA_1, \bfA_2 \right\rbrace$}
+    node [block, fill=green!30, minimum width = 4.8em, below = 0.5 cm of blk3] (blk31) {$\left\lbrace\bfA_2, \bfA_3 \right\rbrace$}
+    node [block, fill=green!30, minimum width = 4.8em, below = 0.5 cm of blk4] (blk41) {$\left\lbrace\bfA_3, \bfA_0 \right\rbrace$}
+    node [block, fill=green!30, minimum width = 4.8em, below = 0.5 cm of blk5] (blk51) {$\left\lbrace\bfA_0, \bfA_2\right\rbrace$}
+    node [block, fill=green!30, minimum width = 4.8em, below = 0.5 cm of blk6] (blk61) {$\left\lbrace\bfA_1, \bfA_3 \right\rbrace$}
+        
+;
+\draw[->](blk1) -- node{} (blk11);
+\draw[->](blk2) -- node{} (blk21);
+\draw[->](blk3) -- node{} (blk31);
+\draw[->](blk4) -- node{} (blk41);
+\draw[->](blk5) -- node{} (blk51);
+\draw[->](blk6) -- node{} (blk61);
+
+
+\end{tikzpicture}
+}
+\caption{\small Submatrix allocation for a system with $n = 6$, $s = 2$ and $\gamma_A = \frac{1}{4}$ according to Alg. \ref{Alg:New_matvec}. Here, the weight of every coded submatrix is $\omega_A = \Bigl\lceil\frac{k_A(s+1)}{k_A + s}\Bigr\rceil = 2$. Any $\{\bfA_i, \bfA_j\}$ indicates a random linear combination of $\bfA_i$ and $\bfA_j$.}
+\label{matvec6_new}
+\end{figure} 
+

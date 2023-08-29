@@ -1,0 +1,20 @@
+\section{Outlook: Applications in Wireless Communications}
+\label{sc:applications}
+The applications of \glspl{RIS} in wireless networks have been extensively discussed in the literature~\cite{liu2021reconfigurable}. The existing work on \glspl{RIS} can be divided into three categories, namely, \gls{RIS} for communication, \gls{RIS} for localization and sensing, and \gls{RIS} for privacy and security. In the following, we elaborate on the potential of \gls{NLC} in each category. 
+
+\textbf{RIS for communication.} The majority of literature focuses on leveraging \glspl{RIS} to enhance various aspects of communications systems, including capacity~\cite{bRISSR}, energy efficiency~\cite{bRISEE}, and fairness~\cite{bRISUF}. The use-cases for these studies vary from the traditional cellular network to vehicular~\cite{liu2020machine}, aerial~\cite{chen2022reconfigurable}, and industrial~\cite{dhok2021non} use-cases. 
+
+The advantages of continuous phase-shift tunability in \gls{NLC} are two-fold: $(i)$ they do not have the typical performance losses from discrete phase shift selection, which is particularly important in MIMO systems, and $(ii)$ optimizing the \gls{RIS} configuration is less complex with \glspl{NLC}, since phases are optimized as continuous variables, as opposed to discrete variables. 
+
+Given the limitation in response time, \gls{NLC} is not suitable for applications with high mobility. For example, a user at a \SI{50}{\meter} distance from a \gls{RIS} projecting a beamwidth of 5$^\circ$ can move \SI{2.18}{\meter} (perpendicular to the boresight) without stepping out of the beam's coverage. Assuming that the user moves at \SI{72}{\kilo\meter/\hour}, with \gls{NLC} phase shifters with a tuning time of \SI{10}{\milli\second}, we need to repeat the beam refinement procedure at every 10 frames in 5G systems. This limitation can be addressed through algorithmic as well as system design choices, such as using multiple \glspl{RIS} or leveraging proactive and progressive beamsteering based on user's trajectory. 
+
+\textbf{RIS for localization and sensing.} This is another interesting application area of \glspl{RIS} which is relatively under-explored. For localization, \glspl{RIS} are used as virtual anchors whose location is known~\cite{emenonye2022fundamentals}. Similarly, \glspl{RIS} can enhance sensing by controlling the multi-path signals for better illumination of the target~\cite{hu2020reconfigurable}. In both cases, the discrete nature of \gls{RIS} phase configuration is considered a limitation \cite{keykhosravi2021multi}, which \glspl{NLC} can alleviate. For accurate location and sensing, the \gls{RIS} should have a \gls{LOS} link to the target, which essentially requires a dense deployment. The cost-effective nature of \glspl{NLC} plays an important role in this regard. 
+
+\textbf{RIS for security.} The steering and phase manipulation capability of \glspl{RIS} is particularly interesting for physical layer security, where the \gls{RIS} can direct interference in the form of out-of-phase reflections of the signal towards the eavesdropper, hence, increasing the secrecy rate of the communication. Here, discrete phase shifts not only reduce the effectiveness of the scheme against eavesdropping, but also an eavesdropper with the knowledge of the discrete states might be able to reverse the impact of \gls{RIS}. Hence, \glspl{NLC} are again more effective in enhancing physical layer security. 
+
+% \begin{itemize}
+%     \item RIS for communication. The  (blockages, reducing BS density)
+%     \item RIS for localization and sensing (higher density, less issue with occlusions, esp at higher frequencies)
+%     \item RIS for privacy and security (Controlling the environment, avoiding jammers from directions that signal is not intended to come or privacy?) or physical layer security by sending noise towards non-receiver direction.
+
+% \end{itemize}
