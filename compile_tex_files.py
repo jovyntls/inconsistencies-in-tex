@@ -58,7 +58,7 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
     return rets
 
 def should_skip_compile(tex_file):
-    with open(tex_file) as f:
+    with open(tex_file, errors='ignore') as f:
         return '{IEEEtran}' in f.read()
 
 def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER):

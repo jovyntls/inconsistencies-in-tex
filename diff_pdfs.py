@@ -32,7 +32,7 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS, LOG
             pdfs_equal = diff_engines(engine1, engine2)
             RESULTS.at[arxiv_id, f'{engine1}<>{engine2}'] = pdfs_equal
         except KeyError:
-            LOGGER.log(Log_level.WARN, f'compare_engine_outputs: [{arxiv_id}] no compile result found for {engine1}<>{engine2}')
+            LOGGER.log(Log_level.DEBUG, f'compare_engine_outputs: [{arxiv_id}] no compile result found for {engine1}<>{engine2}')
     return RESULTS
 
 def main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS, LOGGER):
