@@ -1,7 +1,7 @@
 import subprocess
 import os
 import shutil
-from utils.logger import Log_level
+from utils.logger import LOGGER
 
 def unzip_with_tar(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
     # create a folder for the output
@@ -27,21 +27,21 @@ def unzip_with_gunzip(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
         if os.path.exists(output_folder): os.removedirs(output_folder)
     return completed_proc
 
-def log_proc_result(proc, name, desc, LOGGER):
+def log_proc_result(proc, name, desc):
     ret = proc.returncode
-    if ret == 0: LOGGER.log(Log_level.DEBUG, f'{name}: success\t{desc}')
-    else: LOGGER.log(Log_level.DEBUG, f'[{name}] ret={ret}\t{desc}') 
+    if ret == 0: LOGGER.debug(f'{name}: success\t{desc}')
+    else: LOGGER.debug(f'[{name}] ret={ret}\t{desc}') 
 
-def main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER, LOGGER):
+def main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER):
     failed_extractions = []
     success_extractions = []
-    LOGGER.log(Log_level.INFO, f'extracting files...')
+    LOGGER.info(f'extracting files...')
     for _, _, files in os.walk(DOWNLOAD_FOLDER):
         for filename in files:
             try:
                 # try tar, then gunzip
                 proc_tar = unzip_with_tar(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER)
-                log_proc_result(proc_tar, 'tar unzip', filename, LOGGER)
+                log_proc_result(proc_tar, 'tar unzip', filename)
                 proc_tar.check_returncode()
                 success_extractions.append(filename)
                 continue
@@ -49,13 +49,13 @@ def main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER, LOGGER):
                 pass
             try:
                 proc_gunzip = unzip_with_gunzip(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER)
-                log_proc_result(proc_gunzip, 'gunzip', filename, LOGGER)
+                log_proc_result(proc_gunzip, 'gunzip', filename)
                 proc_gunzip.check_returncode()
                 success_extractions.append(filename)
                 continue
             except subprocess.CalledProcessError:
                 # log failed extractions
                 failed_extractions.append(filename)
-                LOGGER.log(Log_level.WARN, f'extraction failed: {filename}')
-    LOGGER.log(Log_level.INFO, f'{len(success_extractions)} files extracted. \t{len(failed_extractions)} failures: {failed_extractions}')
+                LOGGER.warning(f'extraction failed: {filename}')
+    LOGGER.info(f'{len(success_extractions)} files extracted. \t{len(failed_extractions)} failures: {failed_extractions}')
 

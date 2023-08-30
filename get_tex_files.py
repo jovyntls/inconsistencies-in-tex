@@ -1,21 +1,21 @@
 import requests
 from lxml import html
 import os
-from utils.logger import Log_level
+from utils.logger import LOGGER
 from config import TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH
 
 """Send a get request and ensure RESPONSE=200"""
-def get_request(url, LOGGER):
+def get_request(url):
     response = requests.get(url)
     if response.status_code != 200:
         # Print the response content (JSON, XML, HTML, etc.)
         raise RuntimeError("[get_request]: http response not 200")
-    LOGGER.log(Log_level.DEBUG, f"get_request: (success) {url}")
+    LOGGER.debug(f"get_request: (success) {url}")
     return response
 
 """Get the content from a URL using xpath"""
-def get_content_from_page(url, xpath, LOGGER):
-    response = get_request(url, LOGGER)
+def get_content_from_page(url, xpath):
+    response = get_request(url)
     html_source = html.fromstring(response.content)
     try: 
         return html_source.xpath(xpath)[0]
@@ -38,19 +38,19 @@ def list_item_to_download_links(list_item):
     arxiv_id = arxiv_id_raw[6:]
     return arxiv_id, ARXIV_BASE_URL + '/e-print/' + arxiv_id
 
-def download_from_url_and_save(download_url, folder, filename, LOGGER):
+def download_from_url_and_save(download_url, folder, filename):
     def save_file_to_folder(folder, file_content, filename):
         file_path = os.path.join(folder, filename)
         with open(file_path, 'wb') as file:
             file.write(file_content)
-            LOGGER.log(Log_level.DEBUG, f"file written: {file_path}")
-    response = get_request(download_url, LOGGER)
+            LOGGER.debug(f"file written: {file_path}")
+    response = get_request(download_url)
     save_file_to_folder(folder, response.content, filename)
 
-def main(DOWNLOAD_FOLDER, LOGGER):
+def main(DOWNLOAD_FOLDER):
     # get the links to download
-    list_of_papers = get_content_from_page(TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH, LOGGER)
-    LOGGER.log(Log_level.INFO, f'starting download:\n\tfrom {TEX_FILE_DOWNLOAD_URL}\n\tto {DOWNLOAD_FOLDER}')
+    list_of_papers = get_content_from_page(TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH)
+    LOGGER.info(f'starting download:\n\tfrom {TEX_FILE_DOWNLOAD_URL}\n\tto {DOWNLOAD_FOLDER}')
     download_links = {}
     for list_item in list_of_papers:
         res = list_item_to_download_links(list_item)
@@ -60,10 +60,10 @@ def main(DOWNLOAD_FOLDER, LOGGER):
 
     # download and save
     for arxiv_id, link in download_links.items():
-        download_from_url_and_save(link, DOWNLOAD_FOLDER, arxiv_id, LOGGER)
+        download_from_url_and_save(link, DOWNLOAD_FOLDER, arxiv_id)
 
-    LOGGER.log(Log_level.INFO, f'downloaded: {len(download_links)} papers')
+    LOGGER.info(f'downloaded: {len(download_links)} papers')
     arxiv_ids = list(download_links.keys())
-    LOGGER.log(Log_level.DEBUG, arxiv_ids)
+    LOGGER.debug(arxiv_ids)
 
     return arxiv_ids

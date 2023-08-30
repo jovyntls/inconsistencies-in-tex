@@ -1,18 +1,32 @@
-from enum import Enum
+import logging
+import os
+from datetime import datetime
 
-class Log_level(Enum):
-    DEBUG = 1
-    INFO = 2
-    WARN = 3
-    ERROR = 4
-    NONE = 5
+def init(logs_folder):
+    # Configure the logging settings
+    log_format = '%(asctime)s [%(levelname)s] %(message)s'
+    current_time = datetime.now().strftime('%Y%m%d_%H:%M:%S')
+    log_filename = os.path.join(logs_folder, f'{current_time}.log')
 
-class Logger:
-    def __init__(self, log_level):
-        self.log_level = log_level
+    # Create a logger
+    logger = logging.getLogger('diff_test_tex_engines')
+    logger.setLevel(logging.DEBUG)
 
-    def log(self, log_level, message):
-        def should_log(log_level):
-            return log_level.value - self.log_level.value >= 0
-        if should_log(log_level): print(message)
+    # Create a console handler and set the level to INFO
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    # Create a file handler and set the level to DEBUG
+    file_handler = logging.FileHandler(log_filename)
+    file_handler.setLevel(logging.DEBUG)
+
+    # Create a formatter and set it for the handlers
+    formatter = logging.Formatter(log_format)
+    console_handler.setFormatter(formatter)
+    file_handler.setFormatter(formatter)
+
+    # Add the handlers to the logger
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
+
+LOGGER = logging.getLogger('diff_test_tex_engines')
 

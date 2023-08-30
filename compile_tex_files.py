@@ -1,6 +1,5 @@
-from utils.logger import Log_level
 from utils import tex_engine_utils
-
+from utils.logger import LOGGER
 import os
 import subprocess
 import re
@@ -33,7 +32,7 @@ def create_output_and_log_dirs(COMPILED_FOLDER, arxiv_id):
     os.makedirs(logs_folder, exist_ok=False)
     return output_folder, logs_folder
 
-def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder, LOGGER):
+def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder):
     # run all tex engines
     COMPILE_TEX_COMMANDS = tex_engine_utils.get_compile_tex_commands(arxiv_id, output_folder)
     rets = {}
@@ -45,24 +44,24 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
                 cmd = run_command + [tex_file]
                 # first compile
                 proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
-                LOGGER.log(Log_level.DEBUG, f'compile_tex (1): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                LOGGER.debug(f'compile_tex (1): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
                 if proc.returncode == 0:
                     # second compile
                     proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
-                    LOGGER.log(Log_level.DEBUG, f'compile_tex (2): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                    LOGGER.debug(f'compile_tex (2): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
                 rets[tex_engine] = proc.returncode
                 # log if the compile failed
-                if proc.returncode != 0: LOGGER.log(Log_level.WARN, f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                if proc.returncode != 0: LOGGER.warning(f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
         except subprocess.TimeoutExpired:
-            LOGGER.log(Log_level.ERROR, f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
+            LOGGER.error(f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets
 
 def should_skip_compile(tex_file):
     with open(tex_file, errors='ignore') as f:
         return '{IEEEtran}' in f.read()
 
-def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER):
-    LOGGER.log(Log_level.INFO, f'compiling tex files...')
+def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
+    LOGGER.info(f'compiling tex files...')
     skipped_files = []
     results_to_concat = []
     for arxiv_id in os.listdir(EXTRACTED_FOLDER):
@@ -72,23 +71,23 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER):
         for root, _, files in os.walk(folder_path):
             tex_file = find_entrypoint_file(files)
             if tex_file is None: 
-                LOGGER.log(Log_level.WARN, f'could not find entrypoint tex file: [{arxiv_id}]')
+                LOGGER.warning(f'could not find entrypoint tex file: [{arxiv_id}]')
                 continue
-            LOGGER.log(Log_level.DEBUG, f'found latex file: [{arxiv_id}] {tex_file}')
+            LOGGER.debug(f'found latex file: [{arxiv_id}] {tex_file}')
             # skip compiles for IEEEtran files as they have known diffs
             if should_skip_compile(os.path.join(root, tex_file)): 
                 skipped_files.append(f'{arxiv_id}/{tex_file}')
-                LOGGER.log(Log_level.DEBUG, f'skipping file: [{arxiv_id}] uses IEEE {tex_file}')
+                LOGGER.debug(f'skipping file: [{arxiv_id}] uses IEEE {tex_file}')
                 break
             # run the tex engines
-            rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, output_folder, LOGGER)
+            rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, output_folder)
             # convert to a new df row
             rets['arxiv_id'] = arxiv_id
             rets['entrypoint'] = tex_file
             results_to_concat.append(rets)
             break
     RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(results_to_concat, index='arxiv_id')])
-    LOGGER.log(Log_level.INFO, f'compiled: {len(RESULTS.index)} papers.\tskipped: {len(skipped_files)} papers.')
-    LOGGER.log(Log_level.DEBUG, f'skipped {len(skipped_files)} papers: {skipped_files}')
-    LOGGER.log(Log_level.DEBUG, RESULTS)
+    LOGGER.info(f'compiled: {len(RESULTS.index)} papers.\tskipped: {len(skipped_files)} papers.')
+    LOGGER.debug(f'skipped {len(skipped_files)} papers: {skipped_files}')
+    LOGGER.debug(RESULTS)
     return RESULTS
