@@ -11,7 +11,7 @@ def unzip_with_tar(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
     filepath = os.path.join(DOWNLOAD_FOLDER, filename)
     completed_proc = subprocess.run(['tar', '-xf', filepath, '-C', output_folder])
     if completed_proc.returncode != 0:
-        if os.path.exists(output_folder): os.removedirs(output_folder)
+        if os.path.exists(output_folder): shutil.rmtree(output_folder)
     return completed_proc
 
 def unzip_with_gunzip(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
@@ -38,6 +38,7 @@ def main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER):
     LOGGER.info(f'extracting files...')
     for _, _, files in os.walk(DOWNLOAD_FOLDER):
         for filename in files:
+            LOGGER.debug(f'attempting extraction: {filename}')
             try:
                 # try tar, then gunzip
                 proc_tar = unzip_with_tar(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER)

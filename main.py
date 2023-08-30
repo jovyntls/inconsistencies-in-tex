@@ -7,6 +7,7 @@ import get_tex_files
 import extract_compressed_sources
 import compile_tex_files
 import diff_pdfs
+import diff_pdfs_orange_blue
 
 # set up logging
 os.makedirs(LOGS_FOLDER, exist_ok=True)
@@ -20,7 +21,7 @@ os.makedirs(COMPILED_FOLDER, exist_ok=True)
 os.makedirs(DIFFS_FOLDER, exist_ok=True)
 
 # set up result dataframe
-results_column_names = [ 'arxiv_id', 'entrypoint' ] + tex_engine_utils.TEX_ENGINES + [f'{e1}<>{e2}' for e1, e2 in tex_engine_utils.DIFF_ENGINE_PAIRS]
+results_column_names = [ 'arxiv_id', 'entrypoint' ] + tex_engine_utils.TEX_ENGINES + [f'{e1[:-5]}<>{e2[:-5]}' for e1, e2 in tex_engine_utils.DIFF_ENGINE_PAIRS]
 RESULTS = pd.DataFrame(columns=results_column_names)
 RESULTS = RESULTS.set_index('arxiv_id')
 
@@ -30,6 +31,7 @@ get_tex_files.main(DOWNLOAD_FOLDER)
 extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
+RESULTS = diff_pdfs_orange_blue.main(RESULTS)
 
 LOGGER.info('results:\n' + RESULTS.to_string())
 
