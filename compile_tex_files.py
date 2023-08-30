@@ -57,8 +57,13 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
             LOGGER.log(Log_level.ERROR, f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets
 
+def should_skip_compile(tex_file):
+    with open(tex_file) as f:
+        return '{IEEEtran}' in f.read()
+
 def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER):
     LOGGER.log(Log_level.INFO, f'compiling tex files...')
+    skipped_files = []
     results_to_concat = []
     for arxiv_id in os.listdir(EXTRACTED_FOLDER):
         folder_path = os.path.join(EXTRACTED_FOLDER, arxiv_id)
@@ -70,6 +75,11 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER):
                 LOGGER.log(Log_level.WARN, f'could not find entrypoint tex file: [{arxiv_id}]')
                 continue
             LOGGER.log(Log_level.DEBUG, f'found latex file: [{arxiv_id}] {tex_file}')
+            # skip compiles for IEEEtran files as they have known diffs
+            if should_skip_compile(os.path.join(root, tex_file)): 
+                skipped_files.append(f'{arxiv_id}/{tex_file}')
+                LOGGER.log(Log_level.DEBUG, f'skipping file: [{arxiv_id}] uses IEEE {tex_file}')
+                break
             # run the tex engines
             rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, output_folder, LOGGER)
             # convert to a new df row
@@ -78,6 +88,7 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER):
             results_to_concat.append(rets)
             break
     RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(results_to_concat, index='arxiv_id')])
-    LOGGER.log(Log_level.INFO, f'compiled {len(RESULTS.index)} papers')
+    LOGGER.log(Log_level.INFO, f'compiled: {len(RESULTS.index)} papers.\tskipped: {len(skipped_files)} papers.')
+    LOGGER.log(Log_level.DEBUG, f'skipped {len(skipped_files)} papers: {skipped_files}')
     LOGGER.log(Log_level.DEBUG, RESULTS)
     return RESULTS

@@ -31,5 +31,5 @@ extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER, LOGGER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS, LOGGER)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS, LOGGER)
 
-pd.display(RESULTS)
+print(RESULTS.to_string())
 
