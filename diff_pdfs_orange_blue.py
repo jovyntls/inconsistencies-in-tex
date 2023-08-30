@@ -48,11 +48,15 @@ def run_opencv_analysis(pdf_diff_file, RESULTS):
     RESULTS.at[arxiv_id, f'{e1[:-5]}<>{e2[:-5]}_B_max'] = max_blue
     RESULTS.at[arxiv_id, f'{e1[:-5]}<>{e2[:-5]}_O_max'] = max_orange
     LOGGER.debug(f'compare_blue_orange: compared {pdf_diff_file}: {max_blue=},\t{max_orange=}')
-    return RESULTS
 
 def main(RESULTS):
     LOGGER.info(f'comparing blue/orange amounts...')
     for pdf_diff_file in os.listdir(DIFFS_FOLDER):
-        RESULTS = run_opencv_analysis(pdf_diff_file, RESULTS)
-    return RESULTS.sort_values(by=['xe<>lua_B_max', 'xe<>pdf_B_max'], ascending=False)
+        run_opencv_analysis(pdf_diff_file, RESULTS)
+    if 'xe<>lua_B_max' in RESULTS.columns:
+        return RESULTS.sort_values(by=['xe<>lua_B_max'], ascending=False)
+    elif 'xe<>pdf_B_max' in RESULTS.columns:
+        return RESULTS.sort_values(by=['xe<>pdf_B_max'], ascending=False)
+    else:
+        return RESULTS
 

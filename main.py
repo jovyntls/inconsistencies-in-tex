@@ -33,5 +33,6 @@ RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
 RESULTS = diff_pdfs_orange_blue.main(RESULTS)
 
+LOGGER.debug('results as csv:\n' + RESULTS.to_csv())
 LOGGER.info('results:\n' + RESULTS.to_string())
 

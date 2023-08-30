@@ -77,7 +77,7 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
             # skip compiles for IEEEtran files as they have known diffs
             if should_skip_compile(os.path.join(root, tex_file)): 
                 skipped_files.append(f'{arxiv_id}/{tex_file}')
-                LOGGER.debug(f'skipping file: [{arxiv_id}] uses IEEE {tex_file}')
+                LOGGER.debug(f'skipping file: [{arxiv_id}] {tex_file} uses IEEEtran')
                 break
             # run the tex engines
             rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, output_folder)

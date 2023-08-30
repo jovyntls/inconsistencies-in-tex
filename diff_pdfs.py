@@ -24,13 +24,13 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
     for engine1, engine2 in tex_engine_utils.DIFF_ENGINE_PAIRS:
         # only diff PDFs if both engines compiled successfully
         try:
-            engine1_ret, engine2_ret = RESULTS.at[arxiv_id, engine1[:-5]], RESULTS.at[arxiv_id, engine2[:-5]]
+            engine1_ret, engine2_ret = RESULTS.at[arxiv_id, engine1], RESULTS.at[arxiv_id, engine2]
             if engine1_ret != 0 or engine2_ret != 0:
                 LOGGER.debug(f'compare_engine_outputs: [{arxiv_id}] skipping diff-pdf for {engine1}<>{engine2} due to compile failures')
                 continue
             # diff the PDFs
             pdfs_equal = diff_engines(engine1, engine2)
-            RESULTS.at[arxiv_id, f'{engine1}<>{engine2}'] = pdfs_equal
+            RESULTS.at[arxiv_id, f'{engine1[:-5]}<>{engine2[:-5]}'] = pdfs_equal
         except KeyError:
             LOGGER.debug(f'compare_engine_outputs: [{arxiv_id}] no compile result found for {engine1}<>{engine2}')
     return RESULTS
@@ -40,4 +40,5 @@ def main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
     for arxiv_id in os.listdir(COMPILED_FOLDER):
         # compare the output pdfs
         RESULTS = compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
+    LOGGER.debug('intermediate results:\n' + RESULTS.to_string())
     return RESULTS
