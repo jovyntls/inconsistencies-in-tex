@@ -2,6 +2,7 @@ import requests
 from lxml import html
 import os
 from utils.logger import Log_level
+from config import TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH
 
 """Send a get request and ensure RESPONSE=200"""
 def get_request(url, LOGGER):
@@ -46,11 +47,10 @@ def download_from_url_and_save(download_url, folder, filename, LOGGER):
     response = get_request(download_url, LOGGER)
     save_file_to_folder(folder, response.content, filename)
 
-def main(num_files, DOWNLOAD_FOLDER, LOGGER):
+def main(DOWNLOAD_FOLDER, LOGGER):
     # get the links to download
-    url = 'https://arxiv.org/list/cs.IT/2308?skip=0&show=' + str(num_files)
-    list_of_papers = get_content_from_page(url, '//*[@id="dlpage"]/dl', LOGGER)
-    LOGGER.log(Log_level.INFO, f'starting download:\n\tfrom {url}\n\tto {DOWNLOAD_FOLDER}')
+    list_of_papers = get_content_from_page(TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH, LOGGER)
+    LOGGER.log(Log_level.INFO, f'starting download:\n\tfrom {TEX_FILE_DOWNLOAD_URL}\n\tto {DOWNLOAD_FOLDER}')
     download_links = {}
     for list_item in list_of_papers:
         res = list_item_to_download_links(list_item)

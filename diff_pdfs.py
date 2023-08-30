@@ -1,5 +1,6 @@
 from utils.logger import Log_level
 from utils import tex_engine_utils
+from config import PIXEL_TOLERANCE
 import os
 import subprocess
 
@@ -13,7 +14,7 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS, LOG
     # returns bool of whether they match
     def diff_engines(e1, e2):
         try:
-            subprocess.run(get_diff_command(e1, e2), check=True)
+            subprocess.run(get_diff_command(e1, e2, PIXEL_TOLERANCE), check=True)
             LOGGER.log(Log_level.DEBUG, f"[{arxiv_id}] no diffs for [{e1}] <> [{e2}]")
             return True
         except subprocess.CalledProcessError as e:
