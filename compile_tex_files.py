@@ -14,7 +14,7 @@ def find_entrypoint_file(files):
     # 1. match any entrypoint
     ENTRYPOINTS = { 'main.tex', 'manuscript.tex', 'mainnew.tex' }
     # 2. try these
-    ENTRYPOINT_REGEXES =[ r'main.*\.tex$', r'.+\.tex$' ]
+    ENTRYPOINT_REGEXES =[ r'main.*\.tex$', r'.+\.tex$', f'.*arxiv.*\.tex$', r'.*paper.*\.tex$', '.*final.*\.tex$',  '.*2023.*\.tex$' ]
 
     exact_matches = ENTRYPOINTS.intersection(files)
     if len(exact_matches) > 0:
