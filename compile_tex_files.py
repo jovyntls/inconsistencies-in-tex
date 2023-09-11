@@ -14,13 +14,28 @@ def find_entrypoint_file(files):
     # 1. match any entrypoint
     ENTRYPOINTS = { 'main.tex', 'manuscript.tex', 'mainnew.tex' }
     # 2. try these
-    ENTRYPOINT_REGEXES =[ r'main.*\.tex$', r'.+\.tex$', f'.*arxiv.*\.tex$', r'.*paper.*\.tex$', '.*final.*\.tex$',  '.*2023.*\.tex$' ]
+    ENTRYPOINT_REGEXES = [ r'main.*\.tex$', r'.*arxiv.*\.tex$', r'.*paper.*\.tex$', r'.*final.*\.tex$',  r'.*2023.*\.tex$', r'.*\.tex$' ]
+    # 3. use any reasonable .tex file
+    FILE_BLACKLIST = ['math_commands.tex', 'commands.tex', 'macros.tex']
+    FILE_BLACKLIST_REGEX = [r'.*shorthands.*\.tex$', r'.*math_commands.*\.tex$', r'.*macros.*\.tex$', r'.*preamble.*\.tex$', r'.*declarations.*\.tex$']
+    FILE_BLACKLIST_REGEX = [re.compile(s) for s in FILE_BLACKLIST_REGEX]
 
     exact_matches = ENTRYPOINTS.intersection(files)
     if len(exact_matches) > 0:
         return list(exact_matches)[0]
+    # remove blacklisted files
+    ok_files = []
+    for file in files:
+        if file in FILE_BLACKLIST: continue
+        should_blacklist = False
+        for pattern in FILE_BLACKLIST_REGEX:
+            if pattern.search(file): 
+                should_blacklist = True
+                break
+        if not should_blacklist: ok_files.append(file)
+    # look for a reasonable file
     for pattern in ENTRYPOINT_REGEXES:
-        for file in files:
+        for file in ok_files:
             match = re.search(pattern, file, re.IGNORECASE)
             if match: return file
     return None
@@ -42,13 +57,9 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
             stderr_file = os.path.join(logs_folder, f'{arxiv_id}_{tex_engine}.err')
             with open(stdout_file, 'w') as stdout, open(stderr_file, 'w') as stderr:
                 cmd = run_command + [tex_file]
-                # first compile
+                # compile
                 proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
                 LOGGER.debug(f'compile_tex (1): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
-                if proc.returncode == 0:
-                    # second compile
-                    proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
-                    LOGGER.debug(f'compile_tex (2): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
                 rets[tex_engine] = proc.returncode
                 # log if the compile failed
                 if proc.returncode != 0: LOGGER.warning(f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')

@@ -5,23 +5,26 @@ DIFF_ENGINE_PAIRS = [(TEX_ENGINES[-1], engine) for engine in TEX_ENGINES[:-1]]
 def get_compile_tex_commands(arxiv_id, output_folder):
     COMPILE_TEX_COMMANDS = {
         'pdflatex': [
-            'pdflatex',
-            '-interaction=nonstopmode',
+            'latexmk',
+            '-pdf',
             '-output-format=pdf',
+            '-interaction=nonstopmode',
             f'-jobname={arxiv_id}_pdflatex',
             f'-output-directory={output_folder}'
         ], 
         'lualatex': [
             'lualatex',
-            '--interaction=nonstopmode',
-            '--output-format=pdf',
-            f'--jobname={arxiv_id}_lualatex',
-            f'--output-directory={output_folder}'
+            '-lualatex',
+            '-output-format=pdf',
+            '-interaction=nonstopmode',
+            f'-jobname={arxiv_id}_lualatex',
+            f'-output-directory={output_folder}'
         ],
         'xelatex': [
             'xelatex',
-            '-interaction=nonstopmode',
+            '-xelatex',
             '-output-format=pdf',
+            '-interaction=nonstopmode',
             f'-jobname={arxiv_id}_xelatex',
             f'-output-directory={output_folder}'
         ]
