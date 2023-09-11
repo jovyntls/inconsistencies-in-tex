@@ -8,9 +8,11 @@ EXTRACTED_FOLDER = os.path.join(PROJECT_ROOT, 'bin/arxiv_tars_extracted')
 COMPILED_FOLDER = os.path.join(PROJECT_ROOT, 'bin/compiled_tex_pdf')
 DIFFS_FOLDER = os.path.join(PROJECT_ROOT, 'bin/diff_pdfs')
 
-
-NUM_ATTEMPTS = 50
-TEX_FILE_DOWNLOAD_URL = 'https://arxiv.org/list/cs.IT/2308?skip=0&show=' + str(NUM_ATTEMPTS)
+YEAR_AND_MONTH = '2306'
+NUM_ATTEMPTS = 5
 TEX_FILE_DOWNLOAD_XPATH = '//*[@id="dlpage"]/dl'
+
+SHOULD_SKIP_COMPILE = False
+SKIP_COMPILE_FOR = ['{IEEEtran}']
 
 PIXEL_TOLERANCE = 2000

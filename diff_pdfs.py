@@ -26,8 +26,7 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
         try:
             engine1_ret, engine2_ret = RESULTS.at[arxiv_id, engine1], RESULTS.at[arxiv_id, engine2]
             if engine1_ret != 0 or engine2_ret != 0:
-                LOGGER.debug(f'compare_engine_outputs: [{arxiv_id}] skipping diff-pdf for {engine1}<>{engine2} due to compile failures')
-                continue
+                LOGGER.debug(f'compare_engine_outputs: [{arxiv_id}] {engine1}<>{engine2} had compile failures, but attempting to diff anyway')
             # diff the PDFs
             pdfs_equal = diff_engines(engine1, engine2)
             RESULTS.at[arxiv_id, f'{engine1[:-5]}<>{engine2[:-5]}'] = pdfs_equal

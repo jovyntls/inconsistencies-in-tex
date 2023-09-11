@@ -1,5 +1,7 @@
 from utils import tex_engine_utils
 from utils.logger import LOGGER
+from config import SHOULD_SKIP_COMPILE, SKIP_COMPILE_FOR
+from constants.engine_primitives import PDFTEX_PRIMITIVES, PDFTEX_CHECK
 import os
 import subprocess
 import re
@@ -67,12 +69,52 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
             LOGGER.error(f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets
 
-def should_skip_compile(tex_file):
+"""Identify the documentclass of a file. Returns (documentclass, params)"""
+DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[.*\])?{(?P<docclass>.+)}')
+def get_documentclass(file):
+    with open(file, errors='ignore') as f:
+        file_content = f.read()
+        result = DOCUMENTCLASS_REGEX.search(file_content)
+        if result == None: return None, None
+        return result.group('docclass'), result.group('params')
+
+"""Skip compiles for files containing keywords specified in config.py"""
+def should_skip_compile(tex_file, arxiv_id):
+    # if the skip compile flag is off, don't skip
+    if SHOULD_SKIP_COMPILE == False: return False
+    # else, check if the file should be skipped
     with open(tex_file, errors='ignore') as f:
-        return '{IEEEtran}' in f.read()
+        file_content = f.read()
+        for keyword in SKIP_COMPILE_FOR:
+            if keyword in file_content: 
+                LOGGER.debug(f'skipping file: [{arxiv_id}] {tex_file} uses {keyword}')
+                return True
+    return False
+
+"""Remove engine-specific commands"""
+def process_file(file):
+    LOGGER.debug(f'processing files for engine-specific primitives...')
+    lines = []
+    lines_removed = []
+    with open(file, 'r') as fp:
+        lines = fp.readlines()
+    with open(file, 'w') as fp:
+        for line in lines:
+            if PDFTEX_CHECK not in line: fp.write(line)  # quick optimisation to avoid iterating
+            else:
+                should_keep_line = True
+                for primitive in PDFTEX_PRIMITIVES:
+                    if primitive in line: 
+                        should_keep_line = False
+                        lines_removed.append(line)
+                        break
+                if should_keep_line: fp.write(line)
+    if len(lines_removed) == 0: LOGGER.debug(f'process_file: no lines removed for {file}')
+    else: LOGGER.debug(f'process_file: removed for {file}: {lines_removed}')
+    return
 
 def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
-    LOGGER.info(f'compiling tex files...')
+    LOGGER.info('compiling tex files...')
     skipped_files = []
     results_to_concat = []
     for arxiv_id in os.listdir(EXTRACTED_FOLDER):
@@ -85,16 +127,22 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
                 LOGGER.warning(f'could not find entrypoint tex file: [{arxiv_id}]')
                 continue
             LOGGER.debug(f'found latex file: [{arxiv_id}] {tex_file}')
-            # skip compiles for IEEEtran files as they have known diffs
-            if should_skip_compile(os.path.join(root, tex_file)): 
+            # skip compiles for some files 
+            file_path = os.path.join(root, tex_file)
+            if should_skip_compile(file_path, arxiv_id): 
                 skipped_files.append(f'{arxiv_id}/{tex_file}')
-                LOGGER.debug(f'skipping file: [{arxiv_id}] {tex_file} uses IEEEtran')
                 break
+            # get documentclass
+            docclass = get_documentclass(file_path)
+            # make the file engine-agnostic
+            process_file(file_path)
             # run the tex engines
             rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, output_folder)
             # convert to a new df row
             rets['arxiv_id'] = arxiv_id
             rets['entrypoint'] = tex_file
+            rets['documentclass'] = docclass[0]
+            rets['docclass_params'] = docclass[1]
             results_to_concat.append(rets)
             break
     RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(results_to_concat, index='arxiv_id')])

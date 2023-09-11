@@ -2,7 +2,13 @@ import requests
 from lxml import html
 import os
 from utils.logger import LOGGER
-from config import TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH
+from config import TEX_FILE_DOWNLOAD_XPATH, NUM_ATTEMPTS, YEAR_AND_MONTH
+from constants.arxiv_taxonomies import SUBJECTS
+
+"""Get the URL to download for each arxiv taxonomy (subject)"""
+def build_download_url(subject):
+    url = f'https://arxiv.org/list/{subject}/{YEAR_AND_MONTH}?skip=0&show={str(NUM_ATTEMPTS)}'
+    return url
 
 """Send a get request and ensure RESPONSE=200"""
 def get_request(url):
@@ -48,15 +54,18 @@ def download_from_url_and_save(download_url, folder, filename):
     save_file_to_folder(folder, response.content, filename)
 
 def main(DOWNLOAD_FOLDER):
-    # get the links to download
-    list_of_papers = get_content_from_page(TEX_FILE_DOWNLOAD_URL, TEX_FILE_DOWNLOAD_XPATH)
-    LOGGER.info(f'starting download:\n\tfrom {TEX_FILE_DOWNLOAD_URL}\n\tto {DOWNLOAD_FOLDER}')
     download_links = {}
-    for list_item in list_of_papers:
-        res = list_item_to_download_links(list_item)
-        if res != None:
-            arxiv_id, download_url = res
-            download_links[arxiv_id] = download_url
+    subjects = SUBJECTS.keys()
+    for subject in subjects:
+        # get the links to download
+        url = build_download_url(subject)
+        list_of_papers = get_content_from_page(url, TEX_FILE_DOWNLOAD_XPATH)
+        LOGGER.info(f'starting download:\n\tfrom {url}\n\tto {DOWNLOAD_FOLDER}')
+        for list_item in list_of_papers:
+            res = list_item_to_download_links(list_item)
+            if res != None:
+                arxiv_id, download_url = res
+                download_links[arxiv_id] = download_url
 
     # download and save
     for arxiv_id, link in download_links.items():
