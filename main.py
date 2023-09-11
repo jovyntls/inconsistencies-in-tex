@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from datetime import datetime
 
 from utils import tex_engine_utils, logger
 from config import LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, TEX_FILE_DOWNLOAD_URL, PIXEL_TOLERANCE
@@ -10,8 +11,9 @@ import diff_pdfs
 import diff_pdfs_orange_blue
 
 # set up logging
+current_time = datetime.now().strftime('%Y%m%d_%H:%M:%S')
 os.makedirs(LOGS_FOLDER, exist_ok=True)
-logger.init(LOGS_FOLDER)
+logger.init(LOGS_FOLDER, current_time)
 LOGGER = logger.LOGGER
 
 # create dirs
@@ -31,8 +33,10 @@ get_tex_files.main(DOWNLOAD_FOLDER)
 extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
-RESULTS = diff_pdfs_orange_blue.main(RESULTS)
+# RESULTS = diff_pdfs_orange_blue.main(RESULTS)
 
 LOGGER.debug('results as csv:\n' + RESULTS.to_csv())
 LOGGER.info('results:\n' + RESULTS.to_string())
+RESULTS.to_csv(os.path.join(LOGS_FOLDER, f'{current_time}_results.csv'))
+
 

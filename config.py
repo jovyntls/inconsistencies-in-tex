@@ -1,6 +1,6 @@
 import os
 
-PROJECT_ROOT = os.path.join(os.path.expanduser("~"), "Desktop", "work", "fyp", "exploration", "diff_test_tex_engines")
+PROJECT_ROOT = os.path.join(os.path.expanduser("~"), "Desktop", "work", "fyp", "diff_test_tex_engines")
 LOGS_FOLDER = os.path.join(PROJECT_ROOT, 'logs')
 
 DOWNLOAD_FOLDER = os.path.join(PROJECT_ROOT, 'bin/arxiv_tars')

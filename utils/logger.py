@@ -1,12 +1,10 @@
 import logging
 import os
-from datetime import datetime
 
-def init(logs_folder):
+def init(logs_folder, timestamp):
     # Configure the logging settings
     log_format = '%(asctime)s [%(levelname)s] %(message)s'
-    current_time = datetime.now().strftime('%Y%m%d_%H:%M:%S')
-    log_filename = os.path.join(logs_folder, f'{current_time}.log')
+    log_filename = os.path.join(logs_folder, f'{timestamp}.log')
 
     # Create a logger
     logger = logging.getLogger('diff_test_tex_engines')
