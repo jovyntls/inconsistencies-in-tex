@@ -24,25 +24,37 @@ def get_content_from_page(url, xpath):
     response = get_request(url)
     html_source = html.fromstring(response.content)
     try: 
-        return html_source.xpath(xpath)[0]
+        res = html_source.xpath(xpath)
+        if len(res) == 0: 
+            LOGGER.debug(f'no papers found for {url=}')
+            return []
+        else: return res[0]
     except Exception as e:
         print(e)
         raise RuntimeError("failed at [get_content_from_html]")
 
 """[for arxiv] process a HTML element to get the papers"""
-def list_item_to_download_links(list_item):
+def list_of_papers_to_download_links(element_list):
     ARXIV_BASE_URL = 'https://arxiv.org'
-    if list_item.tag != 'dt':
-        # we only care about <dt></dt>
-        return
-    a_hrefs = list_item.findall(".//a[@href]")
-    arxiv_id_raw, other_elem = a_hrefs[0].text_content(), a_hrefs[-1]
-    # validate or throw error
-    is_valid =  arxiv_id_raw.startswith("arXiv:") and other_elem.text_content() == 'other' 
-    if not is_valid:
-        return
-    arxiv_id = arxiv_id_raw[6:]
-    return arxiv_id, ARXIV_BASE_URL + '/e-print/' + arxiv_id
+    # we only care about <dt></dt>
+    list_of_papers = [item for item in element_list if item.tag == 'dt']
+    download_links = {}
+    for list_item in list_of_papers:
+        a_hrefs = list_item.findall(".//a[@href]")
+        arxiv_id_raw, other_elem = a_hrefs[0].text_content(), a_hrefs[-1]
+        # validate or throw error
+        is_valid =  arxiv_id_raw.startswith("arXiv:") and other_elem.text_content() == 'other' 
+        if not is_valid: continue
+        arxiv_id = arxiv_id_raw[6:]
+        url = ARXIV_BASE_URL + '/e-print/' + arxiv_id
+        download_links[arxiv_id] = url
+        LOGGER.debug(f'collected link: {arxiv_id=} {url=}')
+        if len(download_links) == NUM_ATTEMPTS: break
+    return download_links
+
+def get_download_links(url, TEX_FILE_DOWNLOAD_XPATH):
+        elem_list_of_papers = get_content_from_page(url, TEX_FILE_DOWNLOAD_XPATH)
+        return list_of_papers_to_download_links(elem_list_of_papers)
 
 def download_from_url_and_save(download_url, folder, filename):
     def save_file_to_folder(folder, file_content, filename):
@@ -56,21 +68,21 @@ def download_from_url_and_save(download_url, folder, filename):
 def main(DOWNLOAD_FOLDER):
     download_links = {}
     subjects = SUBJECTS.keys()
+
+    # get the links to download
+    LOGGER.info('collecting urls for papers...')
     for subject in subjects:
-        # get the links to download
         url = build_download_url(subject)
-        list_of_papers = get_content_from_page(url, TEX_FILE_DOWNLOAD_XPATH)
-        LOGGER.info(f'starting download:\n\tfrom {url}\n\tto {DOWNLOAD_FOLDER}')
-        for list_item in list_of_papers:
-            res = list_item_to_download_links(list_item)
-            if res != None:
-                arxiv_id, download_url = res
-                download_links[arxiv_id] = download_url
+        LOGGER.debug(f'getting papers: from {url}')
+        subject_download_links = get_download_links(url, TEX_FILE_DOWNLOAD_XPATH)
+        download_links.update(subject_download_links)
+    LOGGER.info(f'collected {len(download_links)} urls for papers in {len(subjects)} subjects')
 
     # download and save
+    LOGGER.info(f'starting downloads...')
     for arxiv_id, link in download_links.items():
+        LOGGER.debug(f'starting download:\n\tfrom {link}\n\tto {DOWNLOAD_FOLDER}')
         download_from_url_and_save(link, DOWNLOAD_FOLDER, arxiv_id)
-
     LOGGER.info(f'downloaded: {len(download_links)} papers')
     arxiv_ids = list(download_links.keys())
     LOGGER.debug(arxiv_ids)

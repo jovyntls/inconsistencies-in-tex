@@ -29,8 +29,8 @@ RESULTS = RESULTS.set_index('arxiv_id')
 
 # run pipeline
 LOGGER.info(f'running pipeline with params: {NUM_ATTEMPTS=}, {YEAR_AND_MONTH=}, {PIXEL_TOLERANCE=}, {SHOULD_SKIP_COMPILE=}, {SKIP_COMPILE_FOR=}')
-# get_tex_files.main(DOWNLOAD_FOLDER)
-# extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
+get_tex_files.main(DOWNLOAD_FOLDER)
+extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
 # RESULTS = diff_pdfs_orange_blue.main(RESULTS)

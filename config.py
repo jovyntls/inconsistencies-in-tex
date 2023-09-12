@@ -9,7 +9,7 @@ COMPILED_FOLDER = os.path.join(PROJECT_ROOT, 'bin/compiled_tex_pdf')
 DIFFS_FOLDER = os.path.join(PROJECT_ROOT, 'bin/diff_pdfs')
 
 YEAR_AND_MONTH = '2306'
-NUM_ATTEMPTS = 5
+NUM_ATTEMPTS = 3
 TEX_FILE_DOWNLOAD_XPATH = '//*[@id="dlpage"]/dl'
 
 SHOULD_SKIP_COMPILE = False
