@@ -1,6 +1,6 @@
 from utils import tex_engine_utils
 from utils.logger import LOGGER
-from config import PIXEL_TOLERANCE
+from config import LOGS_FOLDER, PIXEL_TOLERANCE
 import os
 import subprocess
 
@@ -22,7 +22,6 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
             return False
 
     for engine1, engine2 in tex_engine_utils.DIFF_ENGINE_PAIRS:
-        # only diff PDFs if both engines compiled successfully
         try:
             engine1_ret, engine2_ret = RESULTS.at[arxiv_id, engine1], RESULTS.at[arxiv_id, engine2]
             if engine1_ret != 0 or engine2_ret != 0:
@@ -40,4 +39,5 @@ def main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
         # compare the output pdfs
         RESULTS = compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
     LOGGER.debug('intermediate results:\n' + RESULTS.to_string())
+    RESULTS.to_csv(os.path.join(LOGS_FOLDER, f'{current_time}_intermediate_results.csv'))
     return RESULTS
