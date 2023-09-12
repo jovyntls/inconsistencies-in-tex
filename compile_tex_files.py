@@ -70,13 +70,15 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
     return rets
 
 """Identify the documentclass of a file. Returns (documentclass, params)"""
-DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[.*\])?{(?P<docclass>.+)}')
+DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[(?:.*?\n?)*?\])?{(?P<docclass>.+)}')
 def get_documentclass(file):
     with open(file, errors='ignore') as f:
         file_content = f.read()
         result = DOCUMENTCLASS_REGEX.search(file_content)
         if result == None: return None, None
-        return result.group('docclass'), result.group('params')
+        if result.group('docclass') == None or result.group('params') == None: return result.group('docclass'), result.group('params')
+        params_cleaned = filter(lambda s: s[0] != '%', [s.strip() for s in result.group('params').split('\n')])
+        return result.group('docclass'), ''.join(params_cleaned)
 
 """Skip compiles for files containing keywords specified in config.py"""
 def should_skip_compile(tex_file, arxiv_id):
