@@ -96,9 +96,9 @@ def process_file(file):
     LOGGER.debug(f'processing files for engine-specific primitives...')
     lines = []
     lines_removed = []
-    with open(file, 'r') as fp:
+    with open(file, 'r', errors='ignore') as fp:
         lines = fp.readlines()
-    with open(file, 'w') as fp:
+    with open(file, 'w', errors='ignore') as fp:
         for line in lines:
             if PDFTEX_CHECK not in line: fp.write(line)  # quick optimisation to avoid iterating
             else:

@@ -52,7 +52,7 @@ def list_of_papers_to_download_links(element_list):
         if len(download_links) == NUM_ATTEMPTS: break
     return download_links
 
-def get_download_links(url, TEX_FILE_DOWNLOAD_XPATH):
+def get_download_links(url):
         elem_list_of_papers = get_content_from_page(url, TEX_FILE_DOWNLOAD_XPATH)
         return list_of_papers_to_download_links(elem_list_of_papers)
 
@@ -74,7 +74,7 @@ def main(DOWNLOAD_FOLDER):
     for subject in subjects:
         url = build_download_url(subject)
         LOGGER.debug(f'getting papers: from {url}')
-        subject_download_links = get_download_links(url, TEX_FILE_DOWNLOAD_XPATH)
+        subject_download_links = get_download_links(url)
         download_links.update(subject_download_links)
     LOGGER.info(f'collected {len(download_links)} urls for papers in {len(subjects)} subjects')
 
