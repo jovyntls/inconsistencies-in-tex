@@ -19,7 +19,7 @@ def find_entrypoint_file(files):
     ENTRYPOINT_REGEXES = [ r'main.*\.tex$', r'.*arxiv.*\.tex$', r'.*paper.*\.tex$', r'.*final.*\.tex$',  r'.*2023.*\.tex$', r'.*\.tex$' ]
     # 3. use any reasonable .tex file
     FILE_BLACKLIST = ['math_commands.tex', 'commands.tex', 'macros.tex']
-    FILE_BLACKLIST_REGEX = [r'.*shorthands.*\.tex$', r'.*math_commands.*\.tex$', r'.*macros.*\.tex$', r'.*preamble.*\.tex$', r'.*declarations.*\.tex$']
+    FILE_BLACKLIST_REGEX = [r'.*shorthands.*\.tex$', r'.*math_commands.*\.tex$', r'.*macros.*\.tex$', r'.*preamble.*\.tex$', r'.*declarations.*\.tex$', r'.*notation.*\.tex$']
     FILE_BLACKLIST_REGEX = [re.compile(s) for s in FILE_BLACKLIST_REGEX]
 
     exact_matches = ENTRYPOINTS.intersection(files)
@@ -70,7 +70,7 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
     return rets
 
 """Identify the documentclass of a file. Returns (documentclass, params)"""
-DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[(?:.*?\n?)*?\])?{(?P<docclass>.+)}')
+DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[(?:.*?\n?)*?\])?\s*?{(?P<docclass>.+)}')
 def get_documentclass(file):
     with open(file, errors='ignore') as f:
         file_content = f.read()

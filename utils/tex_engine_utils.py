@@ -13,7 +13,7 @@ def get_compile_tex_commands(arxiv_id, output_folder):
             f'-output-directory={output_folder}'
         ], 
         'lualatex': [
-            'lualatex',
+            'latexmk',
             '-lualatex',
             '-output-format=pdf',
             '-interaction=nonstopmode',
@@ -21,7 +21,7 @@ def get_compile_tex_commands(arxiv_id, output_folder):
             f'-output-directory={output_folder}'
         ],
         'xelatex': [
-            'xelatex',
+            'latexmk',
             '-xelatex',
             '-output-format=pdf',
             '-interaction=nonstopmode',
