@@ -7,7 +7,6 @@ def get_compile_tex_commands(arxiv_id, output_folder):
         'pdflatex': [
             'latexmk',
             '-pdf',
-            '-output-format=pdf',
             '-interaction=nonstopmode',
             f'-jobname={arxiv_id}_pdflatex',
             f'-output-directory={output_folder}'
@@ -15,7 +14,6 @@ def get_compile_tex_commands(arxiv_id, output_folder):
         'lualatex': [
             'latexmk',
             '-lualatex',
-            '-output-format=pdf',
             '-interaction=nonstopmode',
             f'-jobname={arxiv_id}_lualatex',
             f'-output-directory={output_folder}'
@@ -23,7 +21,6 @@ def get_compile_tex_commands(arxiv_id, output_folder):
         'xelatex': [
             'latexmk',
             '-xelatex',
-            '-output-format=pdf',
             '-interaction=nonstopmode',
             f'-jobname={arxiv_id}_xelatex',
             f'-output-directory={output_folder}'

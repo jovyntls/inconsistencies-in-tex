@@ -11,7 +11,7 @@ import diff_pdfs
 import diff_pdfs_orange_blue
 
 # set up logging
-current_time = datetime.now().strftime('%Y%m%d_%H:%M:%S')
+current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
 os.makedirs(LOGS_FOLDER, exist_ok=True)
 logger.init(LOGS_FOLDER, current_time)
 LOGGER = logger.LOGGER
