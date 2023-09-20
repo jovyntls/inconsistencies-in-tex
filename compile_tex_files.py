@@ -7,40 +7,64 @@ import subprocess
 import re
 import pandas as pd
 
-def find_entrypoint_file(files):
+"""Identify the documentclass of a file. Returns (documentclass, params)"""
+DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[(?:.*?\n?)*?\])?\s*?{(?P<docclass>.+)}')
+def get_documentclass(file_path):
+    with open(file_path, errors='ignore') as f:
+        file_content = f.read()
+        result = DOCUMENTCLASS_REGEX.search(file_content)
+        if result == None: return None, None
+        if result.group('docclass') == None or result.group('params') == None: return result.group('docclass'), result.group('params')
+        params_cleaned = filter(lambda s: s[0] != '%', [s.strip() for s in result.group('params').split('\n')])
+        return result.group('docclass'), ''.join(params_cleaned)
+
+"""Find the entrypoint tex file for compilation"""
+def find_entrypoint_file(files, root):
+    def return_file_with_docclass(file):
+        if file == None: return None, None, None
+        file_path = os.path.join(root, file)
+        docclass, params = get_documentclass(file_path)
+        return file, docclass, params
+
     # 0. check if it is a single uncompressed tex file
     for file in files:
         # ideally check len(files)==1, but not always true since aux files will be there if code is rerun
         if re.search(r'\d{4}\.\d+', file) is not None:
-            return file
+            return return_file_with_docclass(file)
     # 1. match any entrypoint
-    ENTRYPOINTS = { 'main.tex', 'manuscript.tex', 'mainnew.tex' }
-    # 2. try these
-    ENTRYPOINT_REGEXES = [ r'main.*\.tex$', r'.*arxiv.*\.tex$', r'.*paper.*\.tex$', r'.*final.*\.tex$',  r'.*2023.*\.tex$', r'.*\.tex$' ]
-    # 3. use any reasonable .tex file
-    FILE_BLACKLIST = ['math_commands.tex', 'commands.tex', 'macros.tex']
+    ENTRYPOINT_EXACT_MATCH = { 'main.tex', 'manuscript.tex', 'mainnew.tex' }
+    # 2. eliminate non-tex files and blacklisted files
+    TEX_FILE_EXTENSION = 'tex'
+    FILE_BLACKLIST_EXACT = ['math_commands.tex', 'commands.tex', 'macros.tex']
     FILE_BLACKLIST_REGEX = [r'.*shorthands.*\.tex$', r'.*math_commands.*\.tex$', r'.*macros.*\.tex$', r'.*preamble.*\.tex$', r'.*declarations.*\.tex$', r'.*notation.*\.tex$']
-    FILE_BLACKLIST_REGEX = [re.compile(s) for s in FILE_BLACKLIST_REGEX]
+    FILE_BLACKLIST_REGEX = [re.compile(s, re.IGNORECASE) for s in FILE_BLACKLIST_REGEX]
+    # 3. fuzzy match these, followed by any file ending in tex
+    ENTRYPOINT_REGEXES = [ r'main.*\.tex$', r'.*arxiv.*\.tex$', r'.*paper.*\.tex$', r'.*final.*\.tex$',  r'.*2023.*\.tex$', r'.*\.tex$' ]
+    ENTRYPOINT_REGEXES  = [re.compile(s, re.IGNORECASE) for s in ENTRYPOINT_REGEXES]
 
-    exact_matches = ENTRYPOINTS.intersection(files)
+    # 1. exact match for any entrypoint
+    exact_matches = ENTRYPOINT_EXACT_MATCH.intersection(files)
     if len(exact_matches) > 0:
-        return list(exact_matches)[0]
-    # remove blacklisted files
+        file = list(exact_matches)[0]
+        return return_file_with_docclass(file)
+    # 2. eliminate blacklisted files and non-tex files
     ok_files = []
     for file in files:
-        if file in FILE_BLACKLIST: continue
-        should_blacklist = False
+        if not file.endswith(TEX_FILE_EXTENSION): continue
+        if file in FILE_BLACKLIST_EXACT: continue
         for pattern in FILE_BLACKLIST_REGEX:
-            if pattern.search(file): 
-                should_blacklist = True
-                break
-        if not should_blacklist: ok_files.append(file)
-    # look for a reasonable file
+            if pattern.search(file): break
+        else: ok_files.append(file)
+    # 3. look for a reasonable file that has a documentclass
     for pattern in ENTRYPOINT_REGEXES:
         for file in ok_files:
-            match = re.search(pattern, file, re.IGNORECASE)
-            if match: return file
-    return None
+            match = pattern.search(file)
+            if not match: continue
+            # a valid entrypoint should have a documentclass
+            file, docclass, params = return_file_with_docclass(file)
+            if docclass == None: continue
+            return file, docclass, params
+    return return_file_with_docclass(None)
 
 def create_output_and_log_dirs(COMPILED_FOLDER, arxiv_id):
     output_folder = os.path.join(COMPILED_FOLDER, arxiv_id)
@@ -69,17 +93,6 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
             LOGGER.error(f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets
 
-"""Identify the documentclass of a file. Returns (documentclass, params)"""
-DOCUMENTCLASS_REGEX = re.compile(r'(?:^|\n)\s*\\documentclass(?P<params>\[(?:.*?\n?)*?\])?\s*?{(?P<docclass>.+)}')
-def get_documentclass(file):
-    with open(file, errors='ignore') as f:
-        file_content = f.read()
-        result = DOCUMENTCLASS_REGEX.search(file_content)
-        if result == None: return None, None
-        if result.group('docclass') == None or result.group('params') == None: return result.group('docclass'), result.group('params')
-        params_cleaned = filter(lambda s: s[0] != '%', [s.strip() for s in result.group('params').split('\n')])
-        return result.group('docclass'), ''.join(params_cleaned)
-
 """Skip compiles for files containing keywords specified in config.py"""
 def should_skip_compile(tex_file, arxiv_id):
     # if the skip compile flag is off, don't skip
@@ -94,7 +107,7 @@ def should_skip_compile(tex_file, arxiv_id):
     return False
 
 """Remove engine-specific commands"""
-def process_file(file):
+def process_file(file, arxiv_id):
     LOGGER.debug(f'processing files for engine-specific primitives...')
     lines = []
     lines_removed = []
@@ -111,8 +124,8 @@ def process_file(file):
                         lines_removed.append(line)
                         break
                 if should_keep_line: fp.write(line)
-    if len(lines_removed) == 0: LOGGER.debug(f'process_file: no lines removed for {file}')
-    else: LOGGER.debug(f'process_file: removed for {file}: {lines_removed}')
+    if len(lines_removed) == 0: LOGGER.debug(f'process engine primitives: no lines removed for {arxiv_id}')
+    else: LOGGER.debug(f'process engine primitives: removed {len(lines_removed)} for {arxiv_id}. {lines_removed}')
     return
 
 def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
@@ -124,7 +137,7 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
         output_folder, logs_folder = create_output_and_log_dirs(COMPILED_FOLDER, arxiv_id)
         # try to find a tex file
         for root, _, files in os.walk(folder_path):
-            tex_file = find_entrypoint_file(files)
+            tex_file, docclass, docclass_params = find_entrypoint_file(files, root)
             if tex_file is None: 
                 LOGGER.warning(f'could not find entrypoint tex file: [{arxiv_id}]')
                 continue
@@ -134,17 +147,15 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
             if should_skip_compile(file_path, arxiv_id): 
                 skipped_files.append(f'{arxiv_id}/{tex_file}')
                 break
-            # get documentclass
-            docclass = get_documentclass(file_path)
             # make the file engine-agnostic
-            process_file(file_path)
+            process_file(file_path, arxiv_id)
             # run the tex engines
             rets = run_tex_engines(root, tex_file, logs_folder, arxiv_id, output_folder)
             # convert to a new df row
             rets['arxiv_id'] = arxiv_id
             rets['entrypoint'] = tex_file
-            rets['documentclass'] = docclass[0]
-            rets['docclass_params'] = docclass[1]
+            rets['documentclass'] = docclass
+            rets['docclass_params'] = docclass_params
             results_to_concat.append(rets)
             break
     RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(results_to_concat, index='arxiv_id')])
