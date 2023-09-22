@@ -3,6 +3,7 @@ import pandas as pd
 import subprocess
 from typing import Dict, Any
 from datetime import datetime
+from tqdm import tqdm
 
 ENGINES = ['pdf', 'xe', 'lua']
 COMPARISON = [ ('xe', 'pdf'), ('xe', 'lua') ]
@@ -26,12 +27,13 @@ def count_pdf_pages(pdf_path):
 def main(COMPILED_FOLDER, LOGS_FOLDER):
     dirs = os.listdir(COMPILED_FOLDER)
     results = []
-    for arxiv_id in dirs:
+    for arxiv_id in tqdm(dirs):
         compiled_pdfs_dir = os.path.join(COMPILED_FOLDER, arxiv_id)
         row : Dict[str, Any] = { 'arxiv_id': arxiv_id }
         for engine in ENGINES:
             pdf_path = os.path.join(compiled_pdfs_dir, f'{arxiv_id}_{engine}latex.pdf')
-            row[f'{engine}latex_pages'] = count_pdf_pages(pdf_path)
+            num_pages = count_pdf_pages(pdf_path)
+            if num_pages is not None: row[f'{engine}latex_pages'] = num_pages
         for e1, e2 in COMPARISON:
             col1, col2 = f'{e1}latex_pages', f'{e2}latex_pages'
             if col1 in row and col2 in row:
