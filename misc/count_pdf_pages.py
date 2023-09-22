@@ -4,6 +4,8 @@ import subprocess
 from typing import Dict, Any
 from datetime import datetime
 from tqdm import tqdm
+from misc.utils import ENGINES, COMPARISON, init_df_with_cols
+from config import COMPILED_FOLDER, LOGS_FOLDER
 
 ENGINES = ['pdf', 'xe', 'lua']
 COMPARISON = [ ('xe', 'pdf'), ('xe', 'lua') ]
@@ -11,9 +13,7 @@ COMPARISON = [ ('xe', 'pdf'), ('xe', 'lua') ]
 def init_df():
     # set up dataframe
     results_column_names = [ 'arxiv_id', 'pdflatex_pages', 'xelatex_pages', 'lualatex_pages', 'diff_xepdf', 'diff_xelua' ]
-    df = pd.DataFrame(columns=results_column_names)
-    df = df.set_index('arxiv_id')
-    return df
+    return init_df_with_cols(results_column_names, 'arxiv_id')
 
 def count_pdf_pages(pdf_path):
     try:
@@ -24,7 +24,7 @@ def count_pdf_pages(pdf_path):
     except:
         return None
 
-def main(COMPILED_FOLDER, LOGS_FOLDER):
+def main(should_save=True):
     dirs = os.listdir(COMPILED_FOLDER)
     results = []
     for arxiv_id in tqdm(dirs):
@@ -44,5 +44,6 @@ def main(COMPILED_FOLDER, LOGS_FOLDER):
     print(df)
     print(df.to_csv())
     # save results to a csv
-    current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
-    df.to_csv(os.path.join(LOGS_FOLDER, f'num_pages_{current_time}.csv'))
+    if should_save:
+        current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
+        df.to_csv(os.path.join(LOGS_FOLDER, f'num_pages_{current_time}.csv'))
