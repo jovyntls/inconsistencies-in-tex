@@ -92,6 +92,43 @@ def analyse_edit_opts_results(edit_ops_results):
         RESULTS[cmp_engines] = grouped
     return RESULTS
 
+def characterise_common_edit_op(action, old_c, new_c):
+    # spaces
+    if old_c.strip() == new_c.strip() == '': return 'whitespace'
+    # (un)capitalisation: upper->lower, lower->upper
+    if action == 'replace' and old_c.lower() == new_c.lower():
+        if old_c == old_c.lower(): return 'lower-upper'
+        else: return 'upper-lower'
+    return None
+
+def clean_edit_ops_results(edit_ops_results):
+    def find_corresponding_delete_index(char, deletions_df):
+        matching_indexes = deletions_df.index[deletions_df['from'] == char]
+        if len(matching_indexes) == 0: return None
+        assert len(matching_indexes) == 1
+        return matching_indexes[0]
+
+    summary = { 'whitespace': 0, 'lower-upper': 0, 'upper-lower': 0, 'movements': 0 }
+    indexes_to_keep = []
+    # create a new df without the common trivial edit ops
+    for index, row in edit_ops_results.iterrows():
+        type_of_edit_op = characterise_common_edit_op(row['action'], row['from'], row['to'])
+        if type_of_edit_op is not None: summary[type_of_edit_op] += 1
+        else: indexes_to_keep.append(index)
+    cleaned_results = edit_ops_results.loc[indexes_to_keep]
+    # remove simple movements from the new df
+    insertions, deletions = cleaned_results[cleaned_results['action'] == 'insert'], cleaned_results[cleaned_results['action'] == 'delete']
+    for index, row in insertions.iterrows():
+        corresponding_delete_index = find_corresponding_delete_index(row['to'], deletions)
+        if corresponding_delete_index is None: continue
+        delete_count = cleaned_results.loc[corresponding_delete_index, 'count']
+        num_movements = min(row['count'], delete_count)
+        cleaned_results.loc[index, 'count'] -= num_movements
+        cleaned_results.loc[corresponding_delete_index, 'count'] -= num_movements
+        summary['movements'] += num_movements
+    cleaned_results = cleaned_results.loc[cleaned_results['count'] > 0]
+    return cleaned_results, summary
+
 # </ edit_op helpers > --------------------------------------------------------
 
 # < runners > -----------------------------------------------------------------
@@ -105,8 +142,18 @@ def compute_edit_ops(pdf_texts):
         return df.sort_values(by=['count'], ascending=False)
     RESULTS = {}
     for e1, e2 in utils.COMPARISON:
+        if e1 not in pdf_texts or e2 not in pdf_texts: continue
         RESULTS[f'{e1}{e2}'] = compute_edit_ops_for_engine(e1, e2)
     return RESULTS
+
+def compute_cleaned_edit_ops(edit_ops_results):
+    cleaned_results = {}
+    summary = {}
+    for e1, e2 in utils.COMPARISON:
+        cmp = f'{e1}{e2}'
+        if cmp not in edit_ops_results: continue
+        cleaned_results[cmp], summary[cmp] = clean_edit_ops_results(edit_ops_results[cmp])
+    return cleaned_results, summary
 
 def compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, df):
     RESULTS = []
@@ -119,9 +166,6 @@ def compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, df):
     return df
 
 def compute_image_comparison_metrics(pdf_images, df):
-    # pdf_images: { engine -> [[imgs], [imgs]] }
-    # img_counts: { engine -> [count, count] }
-    # imgs_with_pagenum: { engine -> [(img, pg), (img, pg), (img, pg)] }
     # compute the counts
     num_imgs = { engine: sum([len(imgs_in_pg) for imgs_in_pg in imgs]) for engine, imgs in pdf_images.items() }
     img_placements = { engine: [] for engine in pdf_images.keys() }
@@ -132,6 +176,7 @@ def compute_image_comparison_metrics(pdf_images, df):
     img_placements_comparison_row = { 'comparison': 'img_placements' }
     num_imgs_comparison_row = { 'comparison': 'num_images' }
     for e1, e2 in utils.COMPARISON:
+        if e1 not in pdf_images or e2 not in pdf_images: continue
         col = f'{e1}{e2}'
         img_placements_comparison_row[col] = 0 if img_placements[e1] == img_placements[e2] else 1
         num_imgs_comparison_row[col] = 0 if num_imgs[e1] == num_imgs[e2] else 1
@@ -184,16 +229,30 @@ def main(user_input):
 
     edit_ops_results = compute_edit_ops(pdf_texts)
     analysed_edit_opts_results = analyse_edit_opts_results(edit_ops_results)
+    cleaned_results, summary = compute_cleaned_edit_ops(edit_ops_results)
 
     RESULTS = utils.init_df_with_cols([DF_COMPARISON_INDEX, 'xepdf', 'xelua'], DF_COMPARISON_INDEX)
     RESULTS = compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, RESULTS)
     RESULTS = compute_image_comparison_metrics(pdf_images, RESULTS)
     RESULTS = compute_edit_ops_metrics(edit_ops_results, RESULTS)
 
-    for cmp_engines, res in edit_ops_results.items():
-        print(f'\n{cmp_engines} [{res.shape[0]} rows]')
-        print(res.head(15))
-        print('\n', analysed_edit_opts_results[cmp_engines])
+    for e1, e2 in utils.COMPARISON:
+        cmp = f'{e1}{e2}'
+        print(f'\n————— {cmp}', '—'*30)
+        if not cmp in edit_ops_results:
+            if e1 not in pdf_texts: print(e1, 'not found')
+            if e2 not in pdf_texts: print(e2, 'not found')
+            continue
+        if edit_ops_results[cmp].shape[0] == 0: continue
+        print(f'\n>> edit ops [{cmp}] [{edit_ops_results[cmp].shape[0]} rows]:')
+        print(analysed_edit_opts_results[cmp])
+        print('___')
+        print(edit_ops_results[cmp].head(15))
+        print(f'\n>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:')
+        print(cleaned_results[cmp])
+        print(summary[cmp])
+    print('\n' + '—'*42 + '\n')
+
     print(RESULTS)
 
 
