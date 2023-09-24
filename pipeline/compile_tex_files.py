@@ -1,5 +1,5 @@
 from utils import tex_engine_utils
-from utils.logger import LOGGER
+from utils.logger import PIPELINE_LOGGER as LOGGER
 from config import SHOULD_SKIP_COMPILE, SKIP_COMPILE_FOR
 from constants.engine_primitives import PDFTEX_PRIMITIVES, PDFTEX_CHECK
 import os

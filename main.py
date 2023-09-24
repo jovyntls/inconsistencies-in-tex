@@ -9,8 +9,8 @@ from pipeline import get_tex_files, extract_compressed_sources, compile_tex_file
 # set up logging
 current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
 os.makedirs(LOGS_FOLDER, exist_ok=True)
-logger.init(LOGS_FOLDER, current_time)
-LOGGER = logger.LOGGER
+logger.init_for_pipeline(LOGS_FOLDER, current_time)
+LOGGER = logger.PIPELINE_LOGGER
 
 # create dirs
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)

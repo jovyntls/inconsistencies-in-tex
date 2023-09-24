@@ -1,6 +1,6 @@
 from utils import tex_engine_utils
-from utils.logger import LOGGER
-from config import LOGS_FOLDER, PIXEL_TOLERANCE
+from utils.logger import PIPELINE_LOGGER as LOGGER
+from config import PIXEL_TOLERANCE
 import os
 import subprocess
 

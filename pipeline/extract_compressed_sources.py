@@ -1,7 +1,7 @@
 import subprocess
 import os
 import shutil
-from utils.logger import LOGGER
+from utils.logger import PIPELINE_LOGGER as LOGGER
 
 def unzip_with_tar(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
     # create a folder for the output

@@ -1,7 +1,7 @@
 import requests
 from lxml import html
 import os
-from utils.logger import LOGGER
+from utils.logger import PIPELINE_LOGGER as LOGGER
 from config import TEX_FILE_DOWNLOAD_XPATH, NUM_ATTEMPTS, YEAR_AND_MONTH
 from constants.arxiv_subjects import SUBJECTS
 
