@@ -205,6 +205,21 @@ def compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, df):
     df = pd.concat([df, pd.DataFrame.from_records(RESULTS, index=DF_COMPARISON_INDEX)])
     return df
 
+def compute_levenshtein_cleaned(cleaned_results, df):
+    levenshtein_cleaned_row = { cmp: cleaned_edit_ops['count'].sum() for cmp, cleaned_edit_ops in cleaned_results.items() }
+    levenshtein_cleaned_normalised_row = {}
+    for cmp, cleaned_count in levenshtein_cleaned_row.items():
+        try: 
+            levenshtein_value = df.loc['levenshtein', cmp]
+            levenshtein_normalised_value = df.loc['levenshtein_normalised', cmp]
+            levenshtein_cleaned_normalised_row[cmp] = cleaned_count/levenshtein_value * levenshtein_normalised_value
+        except KeyError:
+            continue
+    levenshtein_cleaned_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned'
+    levenshtein_cleaned_normalised_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned_normalised'
+    df = pd.concat([df, pd.DataFrame.from_records([levenshtein_cleaned_row, levenshtein_cleaned_normalised_row], index=DF_COMPARISON_INDEX)])
+    return df
+
 def compute_image_comparison_metrics(pdf_images, df):
     # compute the counts
     num_imgs = { engine: sum([len(imgs_in_pg) for imgs_in_pg in imgs]) for engine, imgs in pdf_images.items() }
@@ -277,6 +292,7 @@ def main(arxiv_id):
 
     RESULTS = helpers.init_df_with_cols([DF_COMPARISON_INDEX, 'xepdf', 'xelua'], DF_COMPARISON_INDEX)
     RESULTS = compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, RESULTS)
+    RESULTS = compute_levenshtein_cleaned(cleaned_results, RESULTS)
     RESULTS = compute_image_comparison_metrics(pdf_images, RESULTS)
     RESULTS = compute_edit_ops_metrics(edit_ops_results, RESULTS)
 
@@ -290,12 +306,13 @@ def main(arxiv_id):
         if edit_ops_results[cmp].shape[0] == 0: 
             LOGGER.debug('\nno text diffs found')
             continue
-        LOGGER.debug(f'>> edit ops [{cmp}] [{edit_ops_results[cmp].shape[0]} rows]:\n' + analysed_edit_opts_results[cmp].to_string())
+        LOGGER.debug(f'>> edit ops [{cmp}] [{edit_ops_results[cmp].shape[0]} rows]: summary\n' + analysed_edit_opts_results[cmp].to_string())
         LOGGER.debug(f'raw edit ops:\n' + edit_ops_results[cmp].head(15).to_string())
-        LOGGER.debug(f'>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:\n' + cleaned_results[cmp].to_string())
+        LOGGER.debug(f'>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:\n' + cleaned_results[cmp].head(20).to_string())
         LOGGER.debug(summary[cmp])
 
     LOGGER.debug('comparison summary:\n' + RESULTS.to_string())
     LOGGER.debug(pad_with_char(f' completed {arxiv_id}', '='))
+    return RESULTS
 
 

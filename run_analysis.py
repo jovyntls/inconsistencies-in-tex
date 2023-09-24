@@ -3,12 +3,14 @@ import logging
 import os
 from datetime import datetime
 from tqdm import tqdm
+import pandas as pd
 
 from utils import logger
 from config import YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER
 from analysis import count_pdf_pages, compare_text_similarity
 
 COMPARE_ALL = 'COMPARE_ALL'
+LOGGER = logger.ANALYSIS_LOGGER
 
 def run(args):
     current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -26,9 +28,17 @@ def run(args):
 
         if is_compare_all:
             dirs = os.listdir(COMPILED_FOLDER)
+            rows = []
             for arxiv_id in tqdm(dirs):
-                compare_text_similarity.main(arxiv_id)
-            logger.ANALYSIS_LOGGER.info(f'logfile timestamp: {current_time}')
+                result = compare_text_similarity.main(arxiv_id)
+                xelua_result = { f'xelua_{key}': val for key,val in result['xelua'].to_dict().items() }
+                xepdf_result = { f'xepdf_{key}': val for key,val in result['xepdf'].to_dict().items() }
+                result_as_row = { 'arxiv_id': arxiv_id } | xelua_result | xepdf_result
+                rows.append(result_as_row)
+            LOGGER.info(f'logfile timestamp: {current_time}')
+            RESULTS_SUMMARY = pd.DataFrame.from_records(rows, index='arxiv_id')
+            LOGGER.debug('full results summary:\n' + RESULTS_SUMMARY.to_string())
+            RESULTS_SUMMARY.to_csv(os.path.join(LOGS_FOLDER, f'{current_time}_analysis_results.csv'))
         else:
             arxiv_id = f'{YEAR_AND_MONTH}.{args.compare}'
             compare_text_similarity.main(arxiv_id)
