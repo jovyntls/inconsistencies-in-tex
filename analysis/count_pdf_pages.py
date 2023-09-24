@@ -4,7 +4,7 @@ import subprocess
 from typing import Dict, Any
 from datetime import datetime
 from tqdm import tqdm
-from misc.utils import ENGINES, COMPARISON, init_df_with_cols
+from analysis.helpers import ENGINES, COMPARISON, init_df_with_cols
 from config import COMPILED_FOLDER, LOGS_FOLDER
 
 ENGINES = ['pdf', 'xe', 'lua']

@@ -4,11 +4,7 @@ from datetime import datetime
 
 from utils import tex_engine_utils, logger
 from config import LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, YEAR_AND_MONTH, SHOULD_SKIP_COMPILE, SKIP_COMPILE_FOR, PIXEL_TOLERANCE
-import get_tex_files
-import extract_compressed_sources
-import compile_tex_files
-import diff_pdfs
-import diff_pdfs_orange_blue
+from pipeline import get_tex_files, extract_compressed_sources, compile_tex_files, diff_pdfs
 
 # set up logging
 current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -33,7 +29,6 @@ get_tex_files.main(DOWNLOAD_FOLDER)
 extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
-# RESULTS = diff_pdfs_orange_blue.main(RESULTS)
 
 LOGGER.debug('results as csv:\n' + RESULTS.to_csv())
 LOGGER.info('results:\n' + RESULTS.to_string())

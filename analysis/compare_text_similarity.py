@@ -2,8 +2,9 @@ import os
 import fitz  # imports the pymupdf library
 import Levenshtein
 import pandas as pd
-import misc.utils as utils
-import misc.text_transformer as Ttr
+import analysis.helpers as helpers
+from analysis.helpers import ENGINES, COMPARISON
+import analysis.text_transformer as Ttr
 from config import COMPILED_FOLDER, YEAR_AND_MONTH
 
 DF_COMPARISON_INDEX = 'comparison'
@@ -23,7 +24,7 @@ def extract_pages_and_images_from_pdfs(COMPILED_FOLDER, arxiv_id):
     compiled_pdfs_dir = os.path.join(COMPILED_FOLDER, arxiv_id)
     pdf_texts = {}
     pdf_images = {}
-    for engine in utils.ENGINES:
+    for engine in ENGINES:
         pdf_path = os.path.join(compiled_pdfs_dir, f'{arxiv_id}_{engine}latex.pdf')
         pages, images = extract_pages_from_pdf(pdf_path)
         if pages != None: pdf_texts[engine] = pages
@@ -56,7 +57,7 @@ def process_image_info(img_info):
 
 def compare_texts_with_method(pdf_texts, compare_f):
     result = {}
-    for e1, e2 in utils.COMPARISON:
+    for e1, e2 in COMPARISON:
         if e1 not in pdf_texts or e2 not in pdf_texts: continue
         text1, text2 = pdf_texts[e1], pdf_texts[e2]
         result[f'{e1}{e2}'] = compare_f(text1, text2)
@@ -178,7 +179,7 @@ def compute_edit_ops(pdf_texts):
         df = pd.DataFrame(data, columns =[ 'action', 'from', 'to', 'count' ])
         return df.sort_values(by=['count'], ascending=False)
     RESULTS = {}
-    for e1, e2 in utils.COMPARISON:
+    for e1, e2 in COMPARISON:
         if e1 not in pdf_texts or e2 not in pdf_texts: continue
         RESULTS[f'{e1}{e2}'] = compute_edit_ops_for_engine(e1, e2)
     return RESULTS
@@ -186,7 +187,7 @@ def compute_edit_ops(pdf_texts):
 def compute_cleaned_edit_ops(edit_ops_results):
     cleaned_results = {}
     summary = {}
-    for e1, e2 in utils.COMPARISON:
+    for e1, e2 in COMPARISON:
         cmp = f'{e1}{e2}'
         if cmp not in edit_ops_results: continue
         cleaned_results[cmp], summary[cmp] = clean_edit_ops_results(edit_ops_results[cmp])
@@ -216,7 +217,7 @@ def compute_image_comparison_metrics(pdf_images, df):
     img_placements_comparison_row = { 'comparison': 'img_placements' }
     num_imgs_comparison_row = { 'comparison': 'num_images' }
     img_info_comparison_row = { 'comparison': 'img_info' }
-    for e1, e2 in utils.COMPARISON:
+    for e1, e2 in COMPARISON:
         if e1 not in pdf_images or e2 not in pdf_images: continue
         col = f'{e1}{e2}'
         img_placements_comparison_row[col] = 0 if img_placements[e1] == img_placements[e2] else 1
@@ -258,7 +259,7 @@ def extract_pdf_text_to_save_file(arxiv_id, transformer=DEFAULT_TRANSFORMER):
     # save to file
     for engine, text in pdf_texts.items():
 
-        utils.save_to_file(text, f'{arxiv_id}_{engine}_pdftext.txt')
+        helpers.save_to_file(text, f'{arxiv_id}_{engine}_pdftext.txt')
     return
 
 def main(user_input):
@@ -272,12 +273,12 @@ def main(user_input):
     analysed_edit_opts_results = analyse_edit_opts_results(edit_ops_results)
     cleaned_results, summary = compute_cleaned_edit_ops(edit_ops_results)
 
-    RESULTS = utils.init_df_with_cols([DF_COMPARISON_INDEX, 'xepdf', 'xelua'], DF_COMPARISON_INDEX)
+    RESULTS = helpers.init_df_with_cols([DF_COMPARISON_INDEX, 'xepdf', 'xelua'], DF_COMPARISON_INDEX)
     RESULTS = compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, RESULTS)
     RESULTS = compute_image_comparison_metrics(pdf_images, RESULTS)
     RESULTS = compute_edit_ops_metrics(edit_ops_results, RESULTS)
 
-    for e1, e2 in utils.COMPARISON:
+    for e1, e2 in COMPARISON:
         cmp = f'{e1}{e2}'
         print(f'\n————— {cmp}', '—'*30)
         if not cmp in edit_ops_results:

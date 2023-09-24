@@ -1,4 +1,3 @@
-
 class TextTransformer:
     # pre-/post-transformations: applied before/after joining pages
     def __init__(self, pre_transformations, page_break_delimiter, post_transformations):

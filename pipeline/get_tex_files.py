@@ -3,9 +3,9 @@ from lxml import html
 import os
 from utils.logger import LOGGER
 from config import TEX_FILE_DOWNLOAD_XPATH, NUM_ATTEMPTS, YEAR_AND_MONTH
-from constants.arxiv_taxonomies import SUBJECTS
+from constants.arxiv_subjects import SUBJECTS
 
-"""Get the URL to download for each arxiv taxonomy (subject)"""
+"""Get the URL to download for each arxiv category (subject)"""
 def build_download_url(subject):
     url = f'https://arxiv.org/list/{subject}/{YEAR_AND_MONTH}?skip=0&show={str(NUM_ATTEMPTS)}'
     return url
@@ -68,6 +68,7 @@ def download_from_url_and_save(download_url, folder, filename):
 def main(DOWNLOAD_FOLDER):
     download_links = {}
     subjects = SUBJECTS.keys()
+    subjects = ['cs.CL', 'cs.AI']
 
     # get the links to download
     LOGGER.info('collecting urls for papers...')
