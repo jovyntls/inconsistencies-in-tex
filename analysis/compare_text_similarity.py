@@ -76,25 +76,31 @@ def normalise(f):
 
 def cmp_with_threshold(v1, v2, threshold=0.01):
     denom = min(v1, v2)
-    if denom == 0 and max(v1, v2) != 0: return False
+    if denom == 0: return max(v1, v2) == 0
     diff = abs(v1 - v2)
     return diff/denom < threshold
 
 def cmp_img_info(info1, info2):
     pos_identical = cmp_with_threshold(info1['pos'][0], info2['pos'][0]) and cmp_with_threshold(info1['pos'][1], info2['pos'][1])
-    if not pos_identical: return False
-    ar_identical = cmp_with_threshold(info1['aspect_ratio'], info2['aspect_ratio'])
-    if not ar_identical: return False
-    width_identical = cmp_with_threshold(info1['width'], info2['width'])
-    if not width_identical: return False
-    height_identical = cmp_with_threshold(info1['height'], info2['height'])
-    if not height_identical: return False
+    if not pos_identical: 
+        LOGGER.debug(f'diffs in comparing img: [pos_identical]\n\t{info1}\n\t{info2}')
+        return False
+    cmp_attributes = [ 'aspect_ratio', 'width', 'height' ]
+    for attrib in cmp_attributes:
+        identical = cmp_with_threshold(info1[attrib], info2[attrib])
+        if not identical: 
+            LOGGER.debug(f'diffs in comparing img: [{attrib}]\t{info1[attrib]}\t{info2[attrib]}\n\t{info1}\n\t{info2}')
+            return False
     return True
 
 def compare_all_img_infos(l1, l2):
-    if len(l1) != len(l2): return False
+    if len(l1) != len(l2): 
+        LOGGER.debug(f'different number of images: {len(l1)}, {len(l2)}')
+        return False
     for img_id in l1.keys():
-        if img_id not in l2: return False
+        if img_id not in l2: 
+            LOGGER.debug(f'missing image_id: {img_id=}')
+            return False
         if not cmp_img_info(l1[img_id], l2[img_id]): return False
     return True
 
