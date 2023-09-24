@@ -47,7 +47,7 @@ def process_image_info(img_info):
     info = {
         'img_id': img_info['digest'],
         'pos': (x1, y1),
-        'aspect_ratio': width/height,
+        'aspect_ratio': 0 if height == 0 else width/height,
         'width': width,
         'height': height
     }
@@ -69,14 +69,16 @@ def normalise(f):
     def compare(text1, text2):
         score = f(text1, text2)
         max_length = max(len(text1), len(text2))
+        if max_length == 0: return 1
         normalised_score = 1 - (score / max_length)
         return normalised_score
     return compare
 
 def cmp_with_threshold(v1, v2, threshold=0.01):
-    val1, val2 = min(v1, v2), max(v1, v2)
-    diff = val2 - val1
-    return diff/val1 < threshold
+    denom = min(v1, v2)
+    if denom == 0 and max(v1, v2) != 0: return False
+    diff = abs(v1 - v2)
+    return diff/denom < threshold
 
 def cmp_img_info(info1, info2):
     pos_identical = cmp_with_threshold(info1['pos'][0], info2['pos'][0]) and cmp_with_threshold(info1['pos'][1], info2['pos'][1])
@@ -211,6 +213,7 @@ def compute_levenshtein_cleaned(cleaned_results, df):
     for cmp, cleaned_count in levenshtein_cleaned_row.items():
         try: 
             levenshtein_value = df.loc['levenshtein', cmp]
+            if levenshtein_value == 0: continue
             levenshtein_normalised_value = df.loc['levenshtein_normalised', cmp]
             levenshtein_cleaned_normalised_row[cmp] = cleaned_count/levenshtein_value * levenshtein_normalised_value
         except KeyError:
