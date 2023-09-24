@@ -17,6 +17,6 @@ def save_to_file(string, filename):
     file_path = os.path.join(MISC_BIN_FOLDER, filename)
     with open(file_path, 'w') as file:
         file.write(string)
-    print(f"saved to file [{filename}] in {SUBDIR}")
+    print(f"saved file [{filename}] in {SUBDIR}")
 
 

@@ -2,10 +2,11 @@ import os
 import fitz  # imports the pymupdf library
 import Levenshtein
 import pandas as pd
+
+from config import COMPILED_FOLDER, YEAR_AND_MONTH
 import analysis.helpers as helpers
 from analysis.helpers import ENGINES, COMPARISON
 import analysis.text_transformer as Ttr
-from config import COMPILED_FOLDER, YEAR_AND_MONTH
 
 DF_COMPARISON_INDEX = 'comparison'
 
@@ -266,8 +267,6 @@ def extract_pdf_text_to_save_file(arxiv_id, transformer=DEFAULT_TRANSFORMER):
     return
 
 def main(user_input):
-    # user_input = input('arxiv_id: ').strip()
-    # if len(user_input) != 5: return print('invalid input')
     arxiv_id = f'{YEAR_AND_MONTH}.{user_input}'
 
     pdf_texts, pdf_images = get_text_and_images_from_pdf(arxiv_id, transformer=DEFAULT_TRANSFORMER)
@@ -301,5 +300,6 @@ def main(user_input):
     print('\n' + '—'*42 + '\n')
 
     print(RESULTS)
+    print()
 
 
