@@ -255,11 +255,14 @@ COMPARE_METHODS = {
 DEFAULT_TRANSFORMER = Ttr.transformer_ignore_hyphenbreak_pagebreak_linebreak
 
 def extract_pdf_text_to_save_file(arxiv_id, transformer=DEFAULT_TRANSFORMER):
-    pdf_texts, _ = get_text_and_images_from_pdf(f'{YEAR_AND_MONTH}.{arxiv_id}', transformer)
+    pdf_texts, pdf_images = get_text_and_images_from_pdf(f'{YEAR_AND_MONTH}.{arxiv_id}', transformer)
     # save to file
     for engine, text in pdf_texts.items():
-
         helpers.save_to_file(text, f'{arxiv_id}_{engine}_pdftext.txt')
+    for engine, image_info_nested_list in pdf_images.items():
+        img_info_flatlist = [item for row in image_info_nested_list for item in row]
+        img_infos_as_text = '\n'.join([ f"{img_info['digest']}  {img_info}" for img_info in img_info_flatlist ])
+        helpers.save_to_file(img_infos_as_text, f'{arxiv_id}_{engine}_pdfimages.txt')
     return
 
 def main(user_input):
