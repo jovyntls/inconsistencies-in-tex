@@ -3,7 +3,8 @@ import fitz  # imports the pymupdf library
 import Levenshtein
 import pandas as pd
 
-from config import COMPILED_FOLDER, YEAR_AND_MONTH
+from config import COMPILED_FOLDER
+from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
 import analysis.helpers as helpers
 from analysis.helpers import ENGINES, COMPARISON
 import analysis.text_transformer as Ttr
@@ -256,7 +257,7 @@ COMPARE_METHODS = {
 DEFAULT_TRANSFORMER = Ttr.transformer_ignore_hyphenbreak_pagebreak_linebreak
 
 def extract_pdf_text_to_save_file(arxiv_id, transformer=DEFAULT_TRANSFORMER):
-    pdf_texts, pdf_images = get_text_and_images_from_pdf(f'{YEAR_AND_MONTH}.{arxiv_id}', transformer)
+    pdf_texts, pdf_images = get_text_and_images_from_pdf(arxiv_id, transformer)
     # save to file
     for engine, text in pdf_texts.items():
         helpers.save_to_file(text, f'{arxiv_id}_{engine}_pdftext.txt')
@@ -266,9 +267,8 @@ def extract_pdf_text_to_save_file(arxiv_id, transformer=DEFAULT_TRANSFORMER):
         helpers.save_to_file(img_infos_as_text, f'{arxiv_id}_{engine}_pdfimages.txt')
     return
 
-def main(user_input):
-    arxiv_id = f'{YEAR_AND_MONTH}.{user_input}'
-
+def main(arxiv_id):
+    LOGGER.debug(pad_with_char(f'[{arxiv_id}]: running comparison', '='))
     pdf_texts, pdf_images = get_text_and_images_from_pdf(arxiv_id, transformer=DEFAULT_TRANSFORMER)
 
     edit_ops_results = compute_edit_ops(pdf_texts)
@@ -282,24 +282,20 @@ def main(user_input):
 
     for e1, e2 in COMPARISON:
         cmp = f'{e1}{e2}'
-        print(f'\n————— {cmp}', '—'*30)
+        LOGGER.debug(pad_with_char(cmp, '-'))
         if not cmp in edit_ops_results:
-            if e1 not in pdf_texts: print(e1, 'not found')
-            if e2 not in pdf_texts: print(e2, 'not found')
+            if e1 not in pdf_texts: LOGGER.debug(f'{e1} not found')
+            if e2 not in pdf_texts: LOGGER.debug(f'{e2} not found')
             continue
         if edit_ops_results[cmp].shape[0] == 0: 
-            print('\nno text diffs found')
+            LOGGER.debug('\nno text diffs found')
             continue
-        print(f'\n>> edit ops [{cmp}] [{edit_ops_results[cmp].shape[0]} rows]:')
-        print(analysed_edit_opts_results[cmp])
-        print('___')
-        print(edit_ops_results[cmp].head(15))
-        print(f'\n>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:')
-        print(cleaned_results[cmp])
-        print(summary[cmp])
-    print('\n' + '—'*42 + '\n')
+        LOGGER.debug(f'>> edit ops [{cmp}] [{edit_ops_results[cmp].shape[0]} rows]:\n' + analysed_edit_opts_results[cmp].to_string())
+        LOGGER.debug(f'raw edit ops:\n' + edit_ops_results[cmp].head(15).to_string())
+        LOGGER.debug(f'>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:\n' + cleaned_results[cmp].to_string())
+        LOGGER.debug(summary[cmp])
 
-    print(RESULTS)
-    print()
+    LOGGER.debug('comparison summary:\n' + RESULTS.to_string())
+    LOGGER.debug(pad_with_char(f' completed {arxiv_id}', '='))
 
 
