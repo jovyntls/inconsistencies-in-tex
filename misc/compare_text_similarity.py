@@ -14,7 +14,7 @@ def extract_pages_from_pdf(pdf_path):
     try:
         doc = fitz.open(pdf_path)
         pages = [page.get_text() for page in doc]
-        images = [page.get_images() for page in doc]
+        images = [page.get_image_info(hashes=True) for page in doc]
         return pages, images
     except:
         return None, None
@@ -37,6 +37,19 @@ def process_pages_to_string(engine_to_pages, transformer):
         pdf_texts[engine] = transformer.process(pages)
     return pdf_texts
 
+def process_image_info(img_info):
+    # get top-left corner position, dimensions, size
+    x1, y1, x2, y2 = img_info['bbox']
+    width, height = x2-x1, y2-y1
+    info = {
+        'img_id': img_info['digest'],
+        'pos': (x1, y1),
+        'aspect_ratio': width/height,
+        'width': width,
+        'height': height
+    }
+    return info
+
 # </ PDF to string helpers > --------------------------------------------------
 
 # < text comparison helpers > -------------------------------------------------
@@ -56,6 +69,30 @@ def normalise(f):
         normalised_score = 1 - (score / max_length)
         return normalised_score
     return compare
+
+def cmp_with_threshold(v1, v2, threshold=0.01):
+    val1, val2 = min(v1, v2), max(v1, v2)
+    diff = val2 - val1
+    return diff/val1 < threshold
+
+def cmp_img_info(info1, info2):
+    pos_identical = cmp_with_threshold(info1['pos'][0], info2['pos'][0]) and cmp_with_threshold(info1['pos'][1], info2['pos'][1])
+    if not pos_identical: return False
+    ar_identical = cmp_with_threshold(info1['aspect_ratio'], info2['aspect_ratio'])
+    if not ar_identical: return False
+    width_identical = cmp_with_threshold(info1['width'], info2['width'])
+    if not width_identical: return False
+    height_identical = cmp_with_threshold(info1['height'], info2['height'])
+    if not height_identical: return False
+    return True
+
+def compare_all_img_infos(l1, l2):
+    if len(l1) != len(l2): return False
+    for img_id in l1.keys():
+        if img_id not in l2: return False
+        if not cmp_img_info(l1[img_id], l2[img_id]): return False
+    return True
+
 
 # </ text comparion helpers > -------------------------------------------------
 
@@ -169,18 +206,23 @@ def compute_image_comparison_metrics(pdf_images, df):
     # compute the counts
     num_imgs = { engine: sum([len(imgs_in_pg) for imgs_in_pg in imgs]) for engine, imgs in pdf_images.items() }
     img_placements = { engine: [] for engine in pdf_images.keys() }
+    img_infos = {}
     for engine, imgs_by_page in pdf_images.items():
+        img_info_flatlist = [item for row in pdf_images[engine] for item in row]
+        img_infos[engine] = { img_info['digest']: process_image_info(img_info) for img_info in img_info_flatlist }
         for page_index, imgs_in_page in enumerate(imgs_by_page):
-            img_placements[engine] += [ (page_index + 1, img) for img in imgs_in_page ]
+            img_placements[engine] += [ (page_index + 1, img['digest']) for img in imgs_in_page ]
     # compute the comparisons
     img_placements_comparison_row = { 'comparison': 'img_placements' }
     num_imgs_comparison_row = { 'comparison': 'num_images' }
+    img_info_comparison_row = { 'comparison': 'img_info' }
     for e1, e2 in utils.COMPARISON:
         if e1 not in pdf_images or e2 not in pdf_images: continue
         col = f'{e1}{e2}'
         img_placements_comparison_row[col] = 0 if img_placements[e1] == img_placements[e2] else 1
         num_imgs_comparison_row[col] = 0 if num_imgs[e1] == num_imgs[e2] else 1
-    rows = [num_imgs_comparison_row, img_placements_comparison_row]
+        img_info_comparison_row[col] = 0 if compare_all_img_infos(img_infos[e1], img_infos[e2]) else 1
+    rows = [num_imgs_comparison_row, img_placements_comparison_row, img_info_comparison_row]
     df = pd.concat([df, pd.DataFrame.from_records(rows, index=DF_COMPARISON_INDEX)])
     return df
 
@@ -224,7 +266,6 @@ def main(user_input):
     # if len(user_input) != 5: return print('invalid input')
     arxiv_id = f'{YEAR_AND_MONTH}.{user_input}'
 
-    # TODO: size of images
     pdf_texts, pdf_images = get_text_and_images_from_pdf(arxiv_id, transformer=DEFAULT_TRANSFORMER)
 
     edit_ops_results = compute_edit_ops(pdf_texts)
@@ -243,7 +284,9 @@ def main(user_input):
             if e1 not in pdf_texts: print(e1, 'not found')
             if e2 not in pdf_texts: print(e2, 'not found')
             continue
-        if edit_ops_results[cmp].shape[0] == 0: continue
+        if edit_ops_results[cmp].shape[0] == 0: 
+            print('\nno text diffs found')
+            continue
         print(f'\n>> edit ops [{cmp}] [{edit_ops_results[cmp].shape[0]} rows]:')
         print(analysed_edit_opts_results[cmp])
         print('___')
