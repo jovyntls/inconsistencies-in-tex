@@ -29,13 +29,14 @@ python main.py
 
 Provided as a CLI tool to compare the compiled PDFs from the pipeline (`bin/compiled_tex_pdf/`).
 
-* Compare text and image similarity between PDFs (for the year/month specified in `config.py`)
-    * e.g. for arXiv ID {YEAR_AND_MONTH}/00002: `python3 misc_runner.py -compare 00002`
+* Compare text and image similarity between PDFs 
+    * For all compiled PDFs: `python3 run_analysis.py -compare`
+    * For a single arXiv ID (e.g. {YEAR_AND_MONTH}/00002): `python3 run_analysis.py -compare 00002`
     * To save the extracted text and images (all processed) to a .txt file:
-        * `python3 misc_runner.py -compare 00002 -save`
+        * `python3 run_analysis.py -compare 00002 -save`
 * Count the number of pages in _all_ PDFs
-    * `python3 misc_runner.py -count`
-    * To save the results to a CSV file: `python3 misc_runner.py -count -save`
+    * `python3 run_analysis.py -count`
+    * To save the results to a CSV file: `python3 run_analysis.py -count -save`
 * Help text: `--help`
 
 ---
