@@ -214,7 +214,7 @@ def compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, df):
     df = pd.concat([df, pd.DataFrame.from_records(RESULTS, index=DF_COMPARISON_INDEX)])
     return df
 
-def compute_levenshtein_cleaned(cleaned_results, df):
+def compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, edit_summary, df):
     levenshtein_cleaned_row = { cmp: cleaned_edit_ops['count'].sum() for cmp, cleaned_edit_ops in cleaned_results.items() }
     levenshtein_cleaned_normalised_row = {}
     for cmp, cleaned_count in levenshtein_cleaned_row.items():
@@ -222,12 +222,19 @@ def compute_levenshtein_cleaned(cleaned_results, df):
             levenshtein_value = df.loc['levenshtein', cmp]
             if levenshtein_value == 0: continue
             levenshtein_normalised_value = df.loc['levenshtein_normalised', cmp]
-            levenshtein_cleaned_normalised_row[cmp] = cleaned_count/levenshtein_value * levenshtein_normalised_value
+            levenshtein_cleaned_normalised_row[cmp] = (1-cleaned_count/levenshtein_value * (1-levenshtein_normalised_value))
         except KeyError:
             continue
     levenshtein_cleaned_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned'
     levenshtein_cleaned_normalised_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned_normalised'
-    df = pd.concat([df, pd.DataFrame.from_records([levenshtein_cleaned_row, levenshtein_cleaned_normalised_row], index=DF_COMPARISON_INDEX)])
+    # add summary edit ops
+    summary_attribs = { 'op_uppercase': 'lower-upper', 'op_lowercase': 'upper-lower', 'op_movement': 'movements', 'op_whitespace': 'whitespace' }
+    summary_rows = []
+    for cmp_name, attrib_name in summary_attribs.items():
+        row = { f'{e1}{e2}' : edit_summary[f'{e1}{e2}'][attrib_name] for e1,e2 in COMPARISON if f'{e1}{e2}' in edit_summary }
+        row[DF_COMPARISON_INDEX] = cmp_name
+        summary_rows.append(row)
+    df = pd.concat([df, pd.DataFrame.from_records([levenshtein_cleaned_row, levenshtein_cleaned_normalised_row] + summary_rows, index=DF_COMPARISON_INDEX)])
     return df
 
 def compute_image_comparison_metrics(pdf_images, df):
@@ -247,8 +254,15 @@ def compute_image_comparison_metrics(pdf_images, df):
     for e1, e2 in COMPARISON:
         if e1 not in pdf_images or e2 not in pdf_images: continue
         col = f'{e1}{e2}'
-        img_placements_comparison_row[col] = 0 if img_placements[e1] == img_placements[e2] else 1
-        num_imgs_comparison_row[col] = 0 if num_imgs[e1] == num_imgs[e2] else 1
+        img_placements_comparison_row[col] = 0 
+        if img_placements[e1] != img_placements[e2]:
+            img_placements_comparison_row[col] = 1
+            s1, s2 = set(img_placements[e1]), set(img_placements[e2])
+            LOGGER.debug(f'img_placements not equal:\n\t{(s1 - s2) | (s2 - s1)}')
+        num_imgs_comparison_row[col] = 0 
+        if num_imgs[e1] != num_imgs[e2]:
+            num_imgs_comparison_row[col] = 1 
+            LOGGER.debug(f'num_imgs not equal: \n\t{num_imgs[e1]}\n\t{num_imgs[e2]}')
         img_info_comparison_row[col] = 0 if compare_all_img_infos(img_infos[e1], img_infos[e2]) else 1
     rows = [num_imgs_comparison_row, img_placements_comparison_row, img_info_comparison_row]
     df = pd.concat([df, pd.DataFrame.from_records(rows, index=DF_COMPARISON_INDEX)])
@@ -274,7 +288,7 @@ def get_text_and_images_from_pdf(arxiv_id, transformer):
 COMPARE_METHODS = {
     'levenshtein': Levenshtein.distance,
     'hamming': Levenshtein.hamming,
-    'ratio': Levenshtein.ratio,
+    'levenshtein_ratio': Levenshtein.ratio,
     'levenshtein_normalised': normalise(Levenshtein.distance),
     'hamming_normalised': normalise(Levenshtein.hamming),
 }
@@ -302,7 +316,7 @@ def main(arxiv_id):
 
     RESULTS = helpers.init_df_with_cols([DF_COMPARISON_INDEX, 'xepdf', 'xelua'], DF_COMPARISON_INDEX)
     RESULTS = compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, RESULTS)
-    RESULTS = compute_levenshtein_cleaned(cleaned_results, RESULTS)
+    RESULTS = compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, summary, RESULTS)
     RESULTS = compute_image_comparison_metrics(pdf_images, RESULTS)
     RESULTS = compute_edit_ops_metrics(edit_ops_results, RESULTS)
 
