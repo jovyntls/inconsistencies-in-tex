@@ -2,6 +2,7 @@ import os
 import fitz  # imports the pymupdf library
 import Levenshtein
 import pandas as pd
+from typing import Dict, Any
 
 from config import COMPILED_FOLDER
 from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
@@ -240,9 +241,9 @@ def compute_image_comparison_metrics(pdf_images, df):
         for page_index, imgs_in_page in enumerate(imgs_by_page):
             img_placements[engine] += [ (page_index + 1, img['digest']) for img in imgs_in_page ]
     # compute the comparisons
-    img_placements_comparison_row = { 'comparison': 'img_placements' }
-    num_imgs_comparison_row = { 'comparison': 'num_images' }
-    img_info_comparison_row = { 'comparison': 'img_info' }
+    img_placements_comparison_row : Dict[str, Any] = { 'comparison': 'img_placements' }
+    num_imgs_comparison_row : Dict[str, Any] = { 'comparison': 'num_images' }
+    img_info_comparison_row : Dict[str, Any] = { 'comparison': 'img_info' }
     for e1, e2 in COMPARISON:
         if e1 not in pdf_images or e2 not in pdf_images: continue
         col = f'{e1}{e2}'
@@ -254,7 +255,7 @@ def compute_image_comparison_metrics(pdf_images, df):
     return df
 
 def compute_edit_ops_metrics(edit_ops_results, results_df):
-    row = { 'comparison': 'insert_minus_delete' }
+    row : Dict[str, Any] = { 'comparison': 'insert_minus_delete' }
     for cmp_engines, df in edit_ops_results.items():
         grouped = df.groupby('action', as_index=True)['count'].sum()
         insertions = 0 if 'insert' not in grouped.index else grouped.at['insert']

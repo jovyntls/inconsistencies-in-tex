@@ -27,16 +27,19 @@ python main.py
 
 ### Analysis
 
-Provided as a CLI tool to compare the compiled PDFs from the pipeline (`bin/compiled_tex_pdf/`).
+Provided as a CLI tool to compare one or all compiled PDFs from the pipeline. 
+The PDFs are read from the {COMPILED_FOLDER} and {YEAR_AND_MONTH} variables in `config.py`
 
 * Compare text and image similarity between PDFs 
-    * For all compiled PDFs: `python3 run_analysis.py -compare`
-    * For a single arXiv ID (e.g. {YEAR_AND_MONTH}/00002): `python3 run_analysis.py -compare 00002`
-    * To save the extracted text and images (all processed) to a .txt file:
-        * `python3 run_analysis.py -compare 00002 -save`
+    * `python3 run_analysis.py -compare` for all compiled PDFs
+    * `python3 run_analysis.py -compare 00002` for the arXiv ID {YEAR_AND_MONTH}/00002
+        * `python3 run_analysis.py -compare 00002 -save` will also save the extracted text and images (all processed) to a .txt file
 * Count the number of pages in _all_ PDFs
-    * `python3 run_analysis.py -count`
-    * To save the results to a CSV file: `python3 run_analysis.py -count -save`
+    * `python3 run_analysis.py -count-pages`
+    * `python3 run_analysis.py -count-pages -save` to save the results to a CSV file
+* Count the number of compiled PDFs in for each engine
+    * `python3 run_analysis.py -count-compiled`
+    * `python3 run_analysis.py -count-compiled -save` to save the results to a CSV file
 * Help text: `--help`
 
 ---
