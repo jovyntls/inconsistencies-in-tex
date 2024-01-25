@@ -144,6 +144,8 @@ def analyse_edit_opts_results(edit_ops_results):
 def characterise_common_edit_op(action, old_c, new_c):
     # spaces
     if old_c.strip() == new_c.strip() == '': return 'whitespace'
+    # ellipses
+    if action == 'replace' and old_c == '…' and new_c == '.': return 'ellipses'
     # (un)capitalisation: upper->lower, lower->upper
     if action == 'replace' and old_c.lower() == new_c.lower():
         if old_c == old_c.lower(): return 'lower-upper'
@@ -157,7 +159,7 @@ def clean_edit_ops_results(edit_ops_results):
         assert len(matching_indexes) == 1
         return matching_indexes[0]
 
-    summary = { 'whitespace': 0, 'lower-upper': 0, 'upper-lower': 0, 'movements': 0 }
+    summary = { 'whitespace': 0, 'lower-upper': 0, 'upper-lower': 0, 'movements': 0, 'ellipses': 0 }
     indexes_to_keep = []
     # create a new df without the common trivial edit ops
     for index, row in edit_ops_results.iterrows():
@@ -201,7 +203,8 @@ def compute_cleaned_edit_ops(edit_ops_results):
     for e1, e2 in COMPARISON:
         cmp = f'{e1}{e2}'
         if cmp not in edit_ops_results: continue
-        cleaned_results[cmp], summary[cmp] = clean_edit_ops_results(edit_ops_results[cmp])
+        cleaned_ops, summary[cmp] = clean_edit_ops_results(edit_ops_results[cmp])
+        cleaned_results[cmp] = cleaned_ops.sort_values(by=['count'], ascending=False)
     return cleaned_results, summary
 
 def compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, df):
@@ -220,7 +223,9 @@ def compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, edit_summa
     for cmp, cleaned_count in levenshtein_cleaned_row.items():
         try: 
             levenshtein_value = df.loc['levenshtein', cmp]
-            if levenshtein_value == 0: continue
+            if levenshtein_value == 0: 
+                levenshtein_cleaned_normalised_row[cmp] = 1
+                continue
             levenshtein_normalised_value = df.loc['levenshtein_normalised', cmp]
             levenshtein_cleaned_normalised_row[cmp] = (1-cleaned_count/levenshtein_value * (1-levenshtein_normalised_value))
         except KeyError:
@@ -228,7 +233,7 @@ def compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, edit_summa
     levenshtein_cleaned_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned'
     levenshtein_cleaned_normalised_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned_normalised'
     # add summary edit ops
-    summary_attribs = { 'op_uppercase': 'lower-upper', 'op_lowercase': 'upper-lower', 'op_movement': 'movements', 'op_whitespace': 'whitespace' }
+    summary_attribs = { 'op_uppercase': 'lower-upper', 'op_lowercase': 'upper-lower', 'op_movement': 'movements', 'op_whitespace': 'whitespace', 'op_ellipses': 'ellipses' }
     summary_rows = []
     for cmp_name, attrib_name in summary_attribs.items():
         row = { f'{e1}{e2}' : edit_summary[f'{e1}{e2}'][attrib_name] for e1,e2 in COMPARISON if f'{e1}{e2}' in edit_summary }
