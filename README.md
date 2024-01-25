@@ -42,6 +42,19 @@ The PDFs are read from the {COMPILED_FOLDER} and {YEAR_AND_MONTH} variables in `
     * `python3 run_analysis.py -count-compiled -save` to save the results to a CSV file
 * Help text: `--help`
 
+### Comparison Pipeline
+
+This directory implements similarity comparison on PDF files through the following steps:
+
+1. Convert the PDF to an image
+1. Run the image comparison algorithm(s) on equivalent images.
+
+The PDFs are read from {SOURCE_PDF_FOLDER} and converted to images in {CONVERTED_IMG_FOLDER}.
+
+* Run the comparison pipeline:
+    * `python3 run_img_comparison.py -id 00002` for the arXiv ID {YEAR_AND_MONTH}/00002
+    * `python3 run_img_comparison.py`
+
 ---
 
 To ignore config changes:

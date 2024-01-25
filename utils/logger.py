@@ -3,6 +3,7 @@ import os
 
 PIPELINE_LOGGER_ID = 'pipeline'
 ANALYSIS_LOGGER_ID = 'analysis'
+COMPARISON_LOGGER_ID = 'imgcompare'
 
 FORMATTER = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
 
@@ -35,4 +36,5 @@ def pad_with_char(string, char):
 
 PIPELINE_LOGGER = logging.getLogger(PIPELINE_LOGGER_ID)
 ANALYSIS_LOGGER = logging.getLogger(ANALYSIS_LOGGER_ID)
+COMPARISON_LOGGER = logging.getLogger(COMPARISON_LOGGER_ID)
 
