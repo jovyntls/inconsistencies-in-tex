@@ -19,7 +19,7 @@ def convert_and_save(identifier, pdf_filepath, save_dir):
     for pagenum in pages_to_convert:
         page = doc.load_page(pagenum)
         save_destination = os.path.join(save_dir, f'{identifier}_pg{pagenum+1}.jpeg')
-        page.get_pixmap().save(save_destination)
+        page.get_pixmap(dpi=150).save(save_destination)
     doc.close()
 
 def main(arxiv_id):  # arxiv_id including YYMM
