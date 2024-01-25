@@ -14,7 +14,8 @@ LOGGER = logger.ANALYSIS_LOGGER
 
 def run_compare_one(arxiv_id_suffix, should_save, current_time):
     # don't log to a file if running for only one
-    logger.init_for_analysis(LOGS_FOLDER, current_time, has_file_handler=False, console_log_level=logging.DEBUG)
+    logger.init_logger(logger.ANALYSIS_LOGGER_ID, LOGS_FOLDER, current_time,
+                       console_log_level=logging.DEBUG, has_file_handler=False)
 
     arxiv_id = f'{YEAR_AND_MONTH}.{arxiv_id_suffix}'
     compare_text_similarity.main(arxiv_id)
@@ -22,7 +23,8 @@ def run_compare_one(arxiv_id_suffix, should_save, current_time):
         compare_text_similarity.extract_pdf_text_to_save_file(arxiv_id)
 
 def run_compare_all(current_time):
-    logger.init_for_analysis(LOGS_FOLDER, current_time, has_file_handler=True, console_log_level=logging.INFO)
+    logger.init_logger(logger.ANALYSIS_LOGGER_ID, LOGS_FOLDER, current_time,
+                       console_log_level=logging.INFO, has_file_handler=True)
     dirs = os.listdir(COMPILED_FOLDER)
     rows = []
     for arxiv_id in tqdm(dirs):
@@ -42,7 +44,8 @@ def run(args):
     os.makedirs(LOGS_FOLDER, exist_ok=True)
     # set up logger depending on what the command is
     if args.count_pages:
-        logger.init_for_analysis(LOGS_FOLDER, current_time, has_file_handler=False)
+        logger.init_logger(logger.ANALYSIS_LOGGER_ID, LOGS_FOLDER, current_time,
+                           console_log_level=logging.INFO, has_file_handler=False)
         count_pdf_pages.main(should_save=args.save)
         return
     if args.compare is not None:
