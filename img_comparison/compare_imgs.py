@@ -35,7 +35,7 @@ def compare_with_score_calculation(img1, img2, cmp_method):
     # img1=cv2.imread(img1,4)
     # img2=cv2.imread(img2,4)
     kps1, des1 = cmp_algo.detectAndCompute(img1,None)
-    kps2, des2 = cmp_algo.detectAndCompute(img2,None)
+    _, des2 = cmp_algo.detectAndCompute(img2,None)
     # BFMatcher with default params
     bf = cv2.BFMatcher()
     matches = bf.knnMatch(des1,des2, k=2)
@@ -53,14 +53,15 @@ def run_img_comparisons(imgpath1, imgpath2, algorithms=list(CMP_ALGORITHMS.keys(
     scores = {}
     for algo in algorithms:
         score = get_similarity_score(i1, i2, algo)
-        scores[algo] = score  # TODO: use df instead of array
+        LOGGER.debug(f'{algo}: {score} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)}')
+        scores[algo] = score
     return scores
 
 def main(arxiv_id):  # arxiv_id including YYMM
     img_subdir = os.path.join(CONVERTED_IMG_FOLDER, arxiv_id)
     if not os.path.exists(img_subdir):
         LOGGER.debug(f'{img_subdir} not found - skipping')
-        return
+        return {}
     images_in_dir = os.listdir(img_subdir)
     # split the images into comparison groups
     cmp_groups = {}
@@ -70,13 +71,18 @@ def main(arxiv_id):  # arxiv_id including YYMM
         if pg not in cmp_groups: cmp_groups[pg] = {}
         cmp_groups[pg][engine] = img_filename_with_ext
     # perform comparisons
+    RESULT = {}
+    CMP_BASELINE = 'xelatex'
     for pg, cmp_grp_members in cmp_groups.items():
+        result_for_page = {}
         # comparisons within one group
-        CMP_BASELINE = 'xelatex'
         if len(cmp_grp_members) < 2 or CMP_BASELINE not in cmp_grp_members: continue
         baseline_img = os.path.join(img_subdir, cmp_grp_members.pop(CMP_BASELINE))
         for engine, img_filename in cmp_grp_members.items():
             img_filepath = os.path.join(img_subdir, img_filename)
-            result = run_img_comparisons(baseline_img, img_filepath)
-            print(pg, engine, result)
+            engine_result = run_img_comparisons(baseline_img, img_filepath)
+            for cmp_algo, value in engine_result.items():
+                result_for_page[f'{CMP_BASELINE[:-5]}{engine[:-5]}_{cmp_algo}'] = value
+        RESULT[pg] = result_for_page
+    return RESULT
 

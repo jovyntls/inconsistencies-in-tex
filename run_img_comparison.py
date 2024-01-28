@@ -11,32 +11,41 @@ from img_comparison import convert_pdf_to_img, compare_imgs
 
 LOGGER = logger.COMPARISON_LOGGER
 
-def run_compare_all(current_time):
-    logger.init_logger(logger.COMPARISON_LOGGER_ID, LOGS_FOLDER, current_time,
-                       console_log_level=logging.INFO, has_file_handler=True)
+def convert_for_all():
+    LOGGER.info('converting PDFs to image...')
+    for arxiv_id in tqdm(['2306.00002', '2306.00003']):
+    # for arxiv_id in tqdm(os.listdir(COMPILED_FOLDER)):
+        convert_pdf_to_img.main(arxiv_id)
+
+def compare_for_all():
     dirs = os.listdir(COMPILED_FOLDER)
+    dirs = ['2306.00002', '2306.00003']
     rows = []
+    LOGGER.info('running image comparisons...')
     for arxiv_id in tqdm(dirs):
-        result = convert_pdf_to_img.main(arxiv_id)
-        # xelua_result = { f'xelua_{key}': val for key,val in result['xelua'].to_dict().items() }
-        # xepdf_result = { f'xepdf_{key}': val for key,val in result['xepdf'].to_dict().items() }
-        # result_as_row = { 'arxiv_id': arxiv_id } | xelua_result | xepdf_result
-        # rows.append(result_as_row)
-    LOGGER.info(f'logfile timestamp: {current_time}')
-    # RESULTS_SUMMARY = pd.DataFrame.from_records(rows, index='arxiv_id')
-    # LOGGER.debug('full results summary:\n' + RESULTS_SUMMARY.to_string())
-    # RESULTS_SUMMARY.to_csv(os.path.join(LOGS_FOLDER, f'{current_time}_imgcompare_results.csv'))
+        result = compare_imgs.main(arxiv_id)
+        for page, page_results in result.items():
+            page_results['identifier'] = f'{arxiv_id}_{page}'
+            rows.append(page_results)
+    RESULTS_SUMMARY = pd.DataFrame.from_records(rows, index='identifier')
+    LOGGER.debug('full results summary:\n' + RESULTS_SUMMARY.to_string())
+    return RESULTS_SUMMARY
 
 
 def run(run_for_id, do_convert, do_compare):
     current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
     os.makedirs(LOGS_FOLDER, exist_ok=True)
-    if run_for_id is None: run_compare_all(current_time)
+    if run_for_id is None: 
+        logger.init_logger(logger.COMPARISON_LOGGER_ID, LOGS_FOLDER, current_time,
+                           console_log_level=logging.INFO, has_file_handler=True)
+        LOGGER.info(f'logfile timestamp: {current_time}')
+        if do_convert: convert_for_all()
+        if do_compare: 
+            results = compare_for_all()
+            results.to_csv(os.path.join(LOGS_FOLDER, f'{current_time}_imgcompare.csv'))
     else: 
-        # don't log to a file if running for only one
         logger.init_logger(logger.COMPARISON_LOGGER_ID, LOGS_FOLDER, current_time,
                            console_log_level=logging.DEBUG, has_file_handler=False)
-
         arxiv_id = f'{YEAR_AND_MONTH}.{run_for_id}'
         if do_convert: convert_pdf_to_img.main(arxiv_id)
         if do_compare: compare_imgs.main(arxiv_id)
