@@ -5,7 +5,11 @@ from utils.logger import COMPARISON_LOGGER as LOGGER
 from utils.tex_engine_utils import TEX_ENGINES
 
 def convert_and_save(identifier, pdf_filepath, save_dir):
-    doc = fitz.open(pdf_filepath)
+    try:
+        doc = fitz.open(pdf_filepath)
+    except Exception as err:
+        LOGGER.warn(f'skipping convert due to error opening file {pdf_filepath}:\n{err}')
+        return
     # convert images to jpeg and save
     num_pgs = len(doc)
     pages_to_convert = []

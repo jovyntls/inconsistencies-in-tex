@@ -13,13 +13,11 @@ LOGGER = logger.COMPARISON_LOGGER
 
 def convert_for_all():
     LOGGER.info('converting PDFs to image...')
-    for arxiv_id in tqdm(['2306.00002', '2306.00003']):
-    # for arxiv_id in tqdm(os.listdir(COMPILED_FOLDER)):
+    for arxiv_id in tqdm(os.listdir(COMPILED_FOLDER)):
         convert_pdf_to_img.main(arxiv_id)
 
 def compare_for_all():
     dirs = os.listdir(COMPILED_FOLDER)
-    dirs = ['2306.00002', '2306.00003']
     rows = []
     LOGGER.info('running image comparisons...')
     for arxiv_id in tqdm(dirs):
