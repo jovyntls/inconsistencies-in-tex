@@ -35,12 +35,20 @@ def compare_with_score_calculation(img1, img2, cmp_method):
     # img1=cv2.imread(img1,4)
     # img2=cv2.imread(img2,4)
     kps1, des1 = cmp_algo.detectAndCompute(img1,None)
-    _, des2 = cmp_algo.detectAndCompute(img2,None)
+    kps2, des2 = cmp_algo.detectAndCompute(img2,None)
+    num_kps1, num_kps2 = len(kps1), len(kps2)
     # BFMatcher with default params
     bf = cv2.BFMatcher()
     matches = bf.knnMatch(des1,des2, k=2)
     similarity_count = sum([ m.distance < ALGO_RATIOS[cmp_method] * n.distance for m,n in matches ])
-    return similarity_count/len(kps1)
+    if num_kps1 == 0 and num_kps2 == 0:
+        if len(matches) == 0: return 1
+        LOGGER.warn(f'no keypoints found for both images but matches were found')
+        return -1
+    elif num_kps1 == 0 or num_kps2 == 0:
+        return similarity_count/max(num_kps1, num_kps2)
+    else:
+        return similarity_count/min(num_kps1, num_kps2)
 
 def get_similarity_score(img1, img2, algorithm='SSIM'):
     assert(algorithm in CMP_ALGORITHMS)
@@ -59,7 +67,7 @@ def run_img_comparisons(imgpath1, imgpath2, algorithms=list(CMP_ALGORITHMS.keys(
 
 def main(arxiv_id):  # arxiv_id including YYMM
     img_subdir = os.path.join(CONVERTED_IMG_FOLDER, arxiv_id)
-    if not os.path.exists(img_subdir):
+    if not os.path.exists(img_subdir) or not os.path.isdir(img_subdir):
         LOGGER.debug(f'{img_subdir} not found - skipping')
         return {}
     images_in_dir = os.listdir(img_subdir)
