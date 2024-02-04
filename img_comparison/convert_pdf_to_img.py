@@ -17,7 +17,7 @@ def convert_and_save(identifier, pdf_filepath, save_dir):
         pages_to_convert = list(range(num_pgs))
     else:
         first_n_pgs = list(range(CONVERT_FIRST_N_PAGES))
-        last_n_pgs = list(range(num_pgs-1-CONVERT_LAST_N_PAGES, num_pgs-1))
+        last_n_pgs = list(range(num_pgs-CONVERT_LAST_N_PAGES, num_pgs))
         pages_to_convert = first_n_pgs + last_n_pgs
     LOGGER.debug(f'converting pages for {identifier}: {pages_to_convert} ...')
     for pagenum in pages_to_convert:

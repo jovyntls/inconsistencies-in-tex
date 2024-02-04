@@ -62,6 +62,9 @@ def run_img_comparisons(imgpath1, imgpath2, algorithms=list(CMP_ALGORITHMS.keys(
     for algo in algorithms:
         score = get_similarity_score(i1, i2, algo)
         LOGGER.debug(f'{algo}: {score} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)}')
+        if score > 1: 
+            LOGGER.warn(f'similarity score = {score} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)} \t(setting to 0)')
+            score = 0
         scores[algo] = score
     return scores
 
