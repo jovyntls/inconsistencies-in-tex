@@ -6,7 +6,7 @@ import ssim.ssimlib as pyssim
 from config import CONVERTED_IMG_FOLDER
 from utils.logger import COMPARISON_LOGGER as LOGGER
 
-SIM_IMAGE_SIZE = (400, 640)  # TODO get the actual dimensions and move this to config maybe?
+SIM_IMAGE_SIZE = (1295, 1000)  # height*width. roughly a4 paper dimensions
 
 # comparison algos
 CMP_ALGORITHMS = {
@@ -28,8 +28,8 @@ def compare_with_score_calculation(img1, img2, cmp_method):
         'ORB': cv2.ORB_create(),
         'SIFT': cv2.SIFT_create()
     }
-    ALGO_RATIOS = { 'ORB': 0.7, 'SIFT': 0.7 }
-    assert(cmp_method in ALGOS and cmp_method in CMP_ALGO_THRESHOLDS)
+    ALGO_NORM_METHODS = { 'ORB': cv2.NORM_HAMMING, 'SIFT': cv2.NORM_L1 }
+    assert(cmp_method in ALGOS and cmp_method in CMP_ALGO_THRESHOLDS and cmp_method in ALGO_NORM_METHODS)
     # Read imgs and compare
     cmp_algo = ALGOS[cmp_method]
     # img1=cv2.imread(img1,4)
@@ -37,10 +37,12 @@ def compare_with_score_calculation(img1, img2, cmp_method):
     kps1, des1 = cmp_algo.detectAndCompute(img1,None)
     kps2, des2 = cmp_algo.detectAndCompute(img2,None)
     num_kps1, num_kps2 = len(kps1), len(kps2)
-    # BFMatcher with default params
-    bf = cv2.BFMatcher()
-    matches = bf.knnMatch(des1,des2, k=2)
-    similarity_count = sum([ m.distance < ALGO_RATIOS[cmp_method] * n.distance for m,n in matches ])
+    # initialise BFMatcher
+    bf = cv2.BFMatcher(normType=ALGO_NORM_METHODS[cmp_method], crossCheck=True)
+    # matches = bf.knnMatch(des1,des2, k=2)
+    # similarity_count = sum([ m.distance < ALGO_RATIOS[cmp_method] * n.distance for m,n in matches ])
+    matches = bf.match(des1,des2)
+    similarity_count = len(matches)
     if num_kps1 == 0 and num_kps2 == 0:
         if len(matches) == 0: return 1
         LOGGER.warn(f'no keypoints found for both images but matches were found')
