@@ -80,9 +80,9 @@ def main(arxiv_id):  # arxiv_id including YYMM
     cmp_groups = {}
     for img_filename_with_ext in images_in_dir:
         img_filename = os.path.splitext(img_filename_with_ext)[0]
-        _, engine, pg = img_filename.split('_')
-        if pg not in cmp_groups: cmp_groups[pg] = {}
-        cmp_groups[pg][engine] = img_filename_with_ext
+        _, engine, pg, pg_identifier = img_filename.split('_')
+        if pg_identifier not in cmp_groups: cmp_groups[pg_identifier] = {}
+        cmp_groups[pg_identifier][engine] = img_filename_with_ext
     # perform comparisons
     RESULT = {}
     CMP_BASELINE = 'xelatex'

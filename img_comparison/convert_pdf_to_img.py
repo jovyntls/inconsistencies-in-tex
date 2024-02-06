@@ -14,16 +14,16 @@ def convert_and_save(identifier, pdf_filepath, save_dir):
     num_pgs = len(doc)
     pages_to_convert = []
     if num_pgs < CONVERT_FIRST_N_PAGES + CONVERT_LAST_N_PAGES:
-        pages_to_convert = list(range(num_pgs))
+        pages_to_convert = [(i, i+1) for i in range(num_pgs)]
     else:
-        first_n_pgs = list(range(CONVERT_FIRST_N_PAGES))
-        last_n_pgs = list(range(num_pgs-CONVERT_LAST_N_PAGES, num_pgs))
+        first_n_pgs = [(i, i+1) for i in range(CONVERT_FIRST_N_PAGES)]
+        last_n_pgs = [(i, idx-CONVERT_LAST_N_PAGES) for idx, i in enumerate(range(num_pgs-CONVERT_LAST_N_PAGES, num_pgs))]
         pages_to_convert = first_n_pgs + last_n_pgs
     LOGGER.debug(f'converting pages for {identifier}: {pages_to_convert} ...')
-    for pagenum in pages_to_convert:
+    for pagenum, page_cmp_id in pages_to_convert:
         page = doc.load_page(pagenum)
-        save_destination = os.path.join(save_dir, f'{identifier}_pg{pagenum+1}.jpeg')
-        page.get_pixmap(dpi=150).save(save_destination)
+        save_destination = os.path.join(save_dir, f'{identifier}_pg{pagenum+1}_cmp{page_cmp_id}.jpeg')
+        page.get_pixmap(dpi=200).save(save_destination)
     doc.close()
 
 def main(arxiv_id):  # arxiv_id including YYMM
