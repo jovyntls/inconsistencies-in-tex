@@ -18,6 +18,7 @@ class TextTransformer:
 
 # common transforms ======================================================================
 HYPHEN_BREAKS_TO_LINE_BREAK = ('-\n', '\n')  # check behaviour when used with line breaks
+IGNORE_HYPHENS = ('-', '')
 # for whitespace
 LINE_BREAKS_TO_SPACES = ('\n', ' ')
 IGNORE_SPACES = (' ', '')
