@@ -1,12 +1,12 @@
 from collections import namedtuple
-from typing import Counter, Dict, List
+from typing import Any, Counter, Dict, List, Set
 from analysis import compare_text_similarity
 from analysis.helpers import COMPARISON, init_df_with_cols
 from analysis.text_transformer import COMMON_ACCENTS, IGNORE_HYPHENS, TextTransformer
-from text_based_comparison.extract import ImageInfo, PdfContent
+from text_based_comparison.extract import FontInformation, ImageInfo
 from utils.logger import COMPARISON_LOGGER as LOGGER, pad_with_char
 
-THRESHOLD = 0.01
+THRESHOLD = 0.01  # percentage difference allowed in image dimensions
 
 def text_transformation(text: str):
     text = TextTransformer.apply_transform(text, [IGNORE_HYPHENS])
@@ -42,11 +42,11 @@ def text_comparison(pdf_texts: Dict[str, str]):
     LOGGER.debug('comparison summary:\n' + RESULTS.to_string())
     return RESULTS
 
-ImgCmpResult = namedtuple('ImgCmpResult', ['correct_order', 'num_missing_images', 'num_diff_size_imgs'])
+ImgCmpResult = namedtuple('ImgCmpResult', ['img_correct_order', 'img_num_missing', 'img_num_diff_size'])
 def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
     # check order
-    ordered_binaries1 = [img.image for img in imgs1]
-    ordered_binaries2 = [img.image for img in imgs2]
+    ordered_binaries1 = [img.digest for img in imgs1]
+    ordered_binaries2 = [img.digest for img in imgs2]
     is_correct_order = ordered_binaries1 == ordered_binaries2
     # check missing images
     img_counts1 = Counter(ordered_binaries1)
@@ -59,11 +59,11 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
     img1_to_dims = {}
     diff_sized_imgs = []
     for img_info in imgs1:
-        img, dim = img_info.image, img_info.dimensions
+        img, dim = img_info.digest, img_info.dimensions
         if img not in img1_to_dims: img1_to_dims[img] = []
         img1_to_dims[img].append(dim)
     for img_info in reversed(imgs2):
-        img, dim2 = img_info.image, img_info.dimensions
+        img, dim2 = img_info.digest, img_info.dimensions
         if img not in img1_to_dims: continue
         w1, h1 = img1_to_dims[img].pop()
         w2, h2 = dim2
@@ -74,5 +74,24 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
         pass
     return ImgCmpResult(is_correct_order, sum(missing_images.values()), len(diff_sized_imgs))
 
-def main(arxiv_id):
-    text_cmp_results = text_comparison(pdf_infos)
+def run_img_comparison(pdf_imgs: Dict[str, List[ImageInfo]]):
+    # result_rows_as_dict = { fieldname: { xepdf: 0, xelua: 1 } }
+    result_rows_as_dict = { field: {} for field in ImgCmpResult._fields }
+    for e1, e2 in COMPARISON:
+        if e1 not in pdf_imgs or e2 not in pdf_imgs: continue
+        col = f'{e1}{e2}'
+        cmp_result = image_comparison(pdf_imgs[e1], pdf_imgs[e2])
+        for fieldname in cmp_result._fields:
+            result_rows_as_dict[fieldname][col] = getattr(cmp_result, fieldname)
+    result_rows = [ field_result | { 'comparison': fieldname } for fieldname, field_result in result_rows_as_dict.items() ]
+    return result_rows
+
+def run_font_comparison(pdf_fonts: Dict[str, Set[FontInformation]]):
+    num_fonts: Dict[str, Any] = { 'comparison': 'fonts_num' }
+    for e1, e2 in COMPARISON: 
+        if e1 not in pdf_fonts or e2 not in pdf_fonts: continue
+        col = f'{e1}{e2}'
+        print(len(pdf_fonts[e1]), len(pdf_fonts[e2]))
+        num_fonts[col] = abs(len(pdf_fonts[e1]) - len(pdf_fonts[e2]))
+    return [ num_fonts ]
+

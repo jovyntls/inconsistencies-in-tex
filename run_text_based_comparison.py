@@ -19,16 +19,23 @@ def compare_for_one(arxiv_id, should_save):
         pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{arxiv_id}_{engine}.pdf')
         if not os.path.isfile(pdf_filepath): continue
         pdf_infos[engine] = extract.get_text_fonts_images(pdf_filepath)
-    # pdf_infos: { pdflatex: ..., xelatex: ... }
-    # pdf_texts: { pdf: ..., xe: ... }
-    pdf_texts = { k[:-5]: compare.text_transformation(content.text) for k, content in pdf_infos.items() }
 
+    # pdf_infos: { pdflatex: ..., xelatex: ... }
+    # pdf_texts, pdf_imgs: { pdf: ..., xe: ... }
+    pdf_texts = { k[:-5]: compare.text_transformation(content.text) for k, content in pdf_infos.items() }
+    pdf_imgs = { k[:-5]: content.images for k, content in pdf_infos.items() }
+    pdf_fonts = { k[:-5]: content.fonts for k, content in pdf_infos.items() }
+    for b in pdf_fonts.values(): print(b)
     # save if needed
     if should_save:
         for engine, text in pdf_texts.items():
             with open(f'text_{engine}.txt', 'w') as file: file.write(text)
 
-    text_cmp_results = compare.text_comparison(pdf_texts)
+    RESULTS = compare.text_comparison(pdf_texts)
+    img_cmp_results = compare.run_img_comparison(pdf_imgs)
+    font_cmp_results = compare.run_font_comparison(pdf_fonts)
+    RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(img_cmp_results + font_cmp_results, index='comparison')])
+    print(RESULTS)
     return pdf_infos
 
 def compare_for_all():

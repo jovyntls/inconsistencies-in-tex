@@ -12,7 +12,7 @@ class FontInformation(NamedTuple):
     size: float
 
 class ImageInfo(NamedTuple):
-    image: str
+    digest: str
     dimensions: tuple[int, int]
 
 class PdfContent(NamedTuple):
@@ -27,14 +27,11 @@ def get_text_fonts_images(pdf_path: str):
     for page_num in range(pdf_document.page_count):
         page = pdf_document[page_num]
         full_text.append(page.get_text("text", flags=TEXT_EXTRACTION_FLAGS).replace(' ', '\n'))
+        images += [ImageInfo( imginfo['digest'], (imginfo['width'], imginfo['height']) ) for imginfo in page.get_image_info(hashes=True)]
         blocks = page.get_text("dict", sort=True, flags=TEXT_EXTRACTION_FLAGS)['blocks']
         # block structure: https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png
         for block in blocks:
-            # image block
-            if block['type'] == 1:  
-                images.append(ImageInfo( block['image'], (block['width'], block['height']) ))
-                continue
-            # text block
+            if block['type'] == 1: continue  # image block
             for line in block['lines']:
                 for span in line['spans']:
                     font_information = FontInformation(span['font'], span['flags'], span['color'], span['size'])
