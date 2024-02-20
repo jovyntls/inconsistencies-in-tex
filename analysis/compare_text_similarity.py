@@ -4,6 +4,8 @@ import Levenshtein
 import pandas as pd
 from typing import Dict, Any
 
+from pandas.core.api import DataFrame
+
 from config import COMPILED_FOLDER
 from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
 import analysis.helpers as helpers
@@ -75,11 +77,9 @@ def normalise(f):
         return normalised_score
     return compare
 
-def cmp_with_threshold(v1, v2, threshold=0.01):
-    denom = min(v1, v2)
-    if denom == 0: return max(v1, v2) == 0
+def cmp_with_threshold(v1, v2, threshold=5):
     diff = abs(v1 - v2)
-    return diff/denom < threshold
+    return diff < threshold
 
 def cmp_img_info(info1, info2):
     pos_identical = cmp_with_threshold(info1['pos'][0], info2['pos'][0]) and cmp_with_threshold(info1['pos'][1], info2['pos'][1])
@@ -144,23 +144,21 @@ def analyse_edit_opts_results(edit_ops_results):
 def characterise_common_edit_op(action, old_c, new_c):
     # spaces
     if old_c.strip() == new_c.strip() == '': return 'whitespace'
-    # ellipses
-    if action == 'replace' and old_c == '…' and new_c == '.': return 'ellipses'
     # (un)capitalisation: upper->lower, lower->upper
     if action == 'replace' and old_c.lower() == new_c.lower():
         if old_c == old_c.lower(): return 'lower-upper'
         else: return 'upper-lower'
     return None
 
-# clean out changes in whitespace, upper/lower case, simple movements
 def clean_edit_ops_results(edit_ops_results):
+    """clean out changes in whitespace, upper/lower case, simple movements"""
     def find_corresponding_delete_index(char, deletions_df):
         matching_indexes = deletions_df.index[deletions_df['from'] == char]
         if len(matching_indexes) == 0: return None
         assert len(matching_indexes) == 1
         return matching_indexes[0]
 
-    summary = { 'whitespace': 0, 'lower-upper': 0, 'upper-lower': 0, 'movements': 0, 'ellipses': 0 }
+    summary = { 'whitespace': 0, 'lower-upper': 0, 'upper-lower': 0, 'movements': 0 }
     indexes_to_keep = []
     # create a new df without the common trivial edit ops
     for index, row in edit_ops_results.iterrows():
@@ -186,11 +184,12 @@ def clean_edit_ops_results(edit_ops_results):
 # < runners > -----------------------------------------------------------------
 
 def compute_edit_ops(pdf_texts):
+    """Compute Levenshtein edit ops (insert/delete/replace)"""
     def compute_edit_ops_for_engine(e1, e2):
         edit_ops = get_edit_ops(pdf_texts[e1], pdf_texts[e2])
         collated_ops = collate_edit_ops(edit_ops)
         data = [ ( *op, counts ) for op, counts in collated_ops.items() ]
-        df = pd.DataFrame(data, columns =[ 'action', 'from', 'to', 'count' ])
+        df = pd.DataFrame(data, columns=['action', 'from', 'to', 'count'])
         return df.sort_values(by=['count'], ascending=False)
     RESULTS = {}
     for e1, e2 in COMPARISON:
@@ -199,8 +198,9 @@ def compute_edit_ops(pdf_texts):
     return RESULTS
 
 def compute_cleaned_edit_ops(edit_ops_results):
-    cleaned_results = {}
-    summary = {}
+    """For all engines, filter out changes in whitespace, upper/lower case, simple movements"""
+    cleaned_results: Dict[str, DataFrame] = {}
+    summary: Dict[str, Dict[str, int]] = {}
     for e1, e2 in COMPARISON:
         cmp = f'{e1}{e2}'
         if cmp not in edit_ops_results: continue
@@ -234,7 +234,7 @@ def compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, edit_summa
     levenshtein_cleaned_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned'
     levenshtein_cleaned_normalised_row[DF_COMPARISON_INDEX] = 'levenshtein_cleaned_normalised'
     # add summary edit ops
-    summary_attribs = { 'op_uppercase': 'lower-upper', 'op_lowercase': 'upper-lower', 'op_movement': 'movements', 'op_whitespace': 'whitespace', 'op_ellipses': 'ellipses' }
+    summary_attribs = { 'op_uppercase': 'lower-upper', 'op_lowercase': 'upper-lower', 'op_movement': 'movements', 'op_whitespace': 'whitespace' }
     summary_rows = []
     for cmp_name, attrib_name in summary_attribs.items():
         row = { f'{e1}{e2}' : edit_summary[f'{e1}{e2}'][attrib_name] for e1,e2 in COMPARISON if f'{e1}{e2}' in edit_summary }
