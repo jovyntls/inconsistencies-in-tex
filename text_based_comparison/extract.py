@@ -38,7 +38,7 @@ def get_text_fonts_images(pdf_path: str):
                 continue
             for line in block['lines']:
                 for span in line['spans']:
-                    font_information = FontInformation(span['font'], span['flags'], span['color'], span['size'])
+                    font_information = FontInformation(span['font'], span['flags'], span['color'], round(span['size'], 1))
                     fonts_used.add(font_information)
                     debug_content.append( (font_information, span['text']) )
                     if font_information not in text_with_formatting: text_with_formatting[font_information] = []
