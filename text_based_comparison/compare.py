@@ -4,7 +4,7 @@ from analysis import compare_text_similarity
 from analysis.helpers import COMPARISON, init_df_with_cols
 from analysis.text_transformer import COMMON_ACCENTS, IGNORE_HYPHENS, TextTransformer
 from text_based_comparison.extract import FontInformation, ImageInfo
-from utils.logger import COMPARISON_LOGGER as LOGGER, pad_with_char
+from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
 
 THRESHOLD = 0.01  # percentage difference allowed in image dimensions
 
@@ -39,7 +39,7 @@ def text_comparison(pdf_texts: Dict[str, str]):
         LOGGER.debug(f'>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:\n' + cleaned_results[cmp].head(20).to_string())
         LOGGER.debug(summary[cmp])
 
-    LOGGER.debug('comparison summary:\n' + RESULTS.to_string())
+    LOGGER.debug('text comparison summary:\n' + RESULTS.to_string())
     return RESULTS
 
 ImgCmpResult = namedtuple('ImgCmpResult', ['img_correct_order', 'img_num_missing', 'img_num_diff_size'])
@@ -53,7 +53,7 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
     img_counts2 = Counter(ordered_binaries2)
     missing_images = (img_counts1 - img_counts2) | (img_counts2 - img_counts1)
     if len(missing_images) > 0: 
-        # TODO log
+        LOGGER.debug('found {len(missing_images)} missing images')
         pass 
     # check image sizes
     img1_to_dims = {}
@@ -70,7 +70,7 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
         min_w, max_w, min_h, max_h = min(w1, w2), max(w1, w2), min(h1, h2), max(h1, h2)
         if max_w/min_w > 1+THRESHOLD or max_h/min_h > 1+THRESHOLD: diff_sized_imgs.append(img)
     if len(diff_sized_imgs) > 0:
-        # TODO: log diff_sized_imgs
+        LOGGER.debug('found {len(diff_sized_imgs)} different-sized images')
         pass
     return ImgCmpResult(is_correct_order, sum(missing_images.values()), len(diff_sized_imgs))
 
@@ -91,7 +91,6 @@ def run_font_comparison(pdf_fonts: Dict[str, Set[FontInformation]]):
     for e1, e2 in COMPARISON: 
         if e1 not in pdf_fonts or e2 not in pdf_fonts: continue
         col = f'{e1}{e2}'
-        print(len(pdf_fonts[e1]), len(pdf_fonts[e2]))
         num_fonts[col] = abs(len(pdf_fonts[e1]) - len(pdf_fonts[e2]))
-    return [ num_fonts ]
+    return [num_fonts]
 

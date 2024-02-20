@@ -152,6 +152,7 @@ def characterise_common_edit_op(action, old_c, new_c):
         else: return 'upper-lower'
     return None
 
+# clean out changes in whitespace, upper/lower case, simple movements
 def clean_edit_ops_results(edit_ops_results):
     def find_corresponding_delete_index(char, deletions_df):
         matching_indexes = deletions_df.index[deletions_df['from'] == char]
