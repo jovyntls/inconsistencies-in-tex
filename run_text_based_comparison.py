@@ -8,11 +8,11 @@ import pandas as pd
 
 from utils import logger, tex_engine_utils
 from config import YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER
-from text_based_comparison import extract, compare
+from text_based_comparison import extract, compare_text, compare_img, compare_font
 
 # only include these in the final result summary (not applicable to single arxiv_id run)
-TEXT_COMPARE_METRICS = ['levenshtein', 'levenshtein_normalised', 'levenshtein_cleaned', 'levenshtein_cleaned_normalised', 
-                        'op_uppercase', 'op_lowercase', 'insert_minus_delete', 'img_correct_order', 'img_num_missing', 
+TEXT_COMPARE_METRICS = ['levenshtein_cleaned', 'levenshtein_cleaned_normalised', 'op_uppercase', 
+                        'op_lowercase', 'insert_minus_delete', 'img_correct_order', 'img_num_missing', 
                         'img_num_diff_size', 'fonts_num']
 
 LOGGER = logger.ANALYSIS_LOGGER
@@ -26,19 +26,19 @@ def compare_for_one(arxiv_id, should_save, should_save_debug):
         pdf_infos[engine], debug_content = extract.get_text_fonts_images(pdf_filepath)
         # save if needed
         if should_save_debug:
-            with open(f'text_{engine}.txt', 'w') as file: file.write('\n'.join([ str(x) for x in debug_content ]))
-        elif should_save:
+            with open(f'debug_text_{engine}.txt', 'w') as file: file.write('\n'.join([ str(x) for x in debug_content ]))
+        if should_save:
             with open(f'text_{engine}.txt', 'w') as file: file.write(pdf_infos[engine].text)
 
     # pdf_infos: { pdflatex: ..., xelatex: ... }
     # pdf_texts, pdf_imgs: { pdf: ..., xe: ... }
-    pdf_texts = { k[:-5]: compare.text_transformation(content.text) for k, content in pdf_infos.items() }
+    pdf_texts = { k[:-5]: compare_text.text_transformation(content.text) for k, content in pdf_infos.items() }
     pdf_imgs = { k[:-5]: content.images for k, content in pdf_infos.items() }
     pdf_fonts = { k[:-5]: content.fonts for k, content in pdf_infos.items() }
 
-    RESULTS = compare.text_comparison(pdf_texts)
-    img_cmp_results = compare.run_img_comparison(pdf_imgs)
-    font_cmp_results = compare.run_font_comparison(pdf_fonts)
+    RESULTS = compare_text.text_comparison(pdf_texts)
+    img_cmp_results = compare_img.run_img_comparison(pdf_imgs)
+    font_cmp_results = compare_font.run_font_comparison(pdf_fonts)
     RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(img_cmp_results + font_cmp_results, index='comparison')])
     return RESULTS
 
