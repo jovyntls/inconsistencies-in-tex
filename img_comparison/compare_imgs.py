@@ -10,28 +10,26 @@ SIM_IMAGE_SIZE = (1295, 1000)  # height*width. roughly a4 paper dimensions
 
 # comparison algos
 CMP_ALGORITHMS = {
-    'SSIM': structural_similarity,
-    'CWSSIM': lambda i1,i2: pyssim.SSIM(Image.fromarray(i1)).cw_ssim_value(Image.fromarray(i2)),
+    'SSIM': lambda i1,i2: { 'SSIM': structural_similarity(i1,i2) },
+    'CWSSIM': lambda i1,i2: { 'CWSSIM': pyssim.SSIM(Image.fromarray(i1)).cw_ssim_value(Image.fromarray(i2)) },
     'ORB': lambda i1,i2: compare_with_score_calculation(i1, i2, 'ORB'),
     'SIFT': lambda i1,i2: compare_with_score_calculation(i1, i2, 'SIFT'),
-    'SIFTMAX': lambda i1,i2: compare_with_score_calculation(i1, i2, 'SIFT')
 }
 CMP_ALGO_THRESHOLDS = {
     'SSIM': 0.7,
     'CWSSIM': 0.7,
     'ORB': 0.7,
     'SIFT': 0.7,
-    'SIFTMAX': 0.7
 }
 assert(CMP_ALGORITHMS.keys() == CMP_ALGO_THRESHOLDS.keys())
 
 def compare_with_score_calculation(img1, img2, cmp_method):
+    result = {}
     ALGOS = {
-        'ORB': cv2.ORB_create(),
-        'SIFT': cv2.SIFT_create(),
-        'SIFTMAX': cv2.SIFT_create()
+        'ORB': cv2.ORB_create(nfeatures=1000),
+        'SIFT': cv2.SIFT_create(nfeatures=1000),
     }
-    ALGO_NORM_METHODS = { 'ORB': cv2.NORM_HAMMING, 'SIFT': cv2.NORM_L1, 'SIFTMAX': cv2.NORM_L1 }
+    ALGO_NORM_METHODS = { 'ORB': cv2.NORM_HAMMING, 'SIFT': cv2.NORM_L1 }
     assert(cmp_method in ALGOS and cmp_method in CMP_ALGO_THRESHOLDS and cmp_method in ALGO_NORM_METHODS)
     # Read imgs and compare
     cmp_algo = ALGOS[cmp_method]
@@ -44,16 +42,24 @@ def compare_with_score_calculation(img1, img2, cmp_method):
     # similarity_count = sum([ m.distance < ALGO_RATIOS[cmp_method] * n.distance for m,n in matches ])
     matches = bf.match(des1,des2)
     similarity_count = len(matches)
+    result[f'{cmp_method}_minkps'], result[f'{cmp_method}_maxkps'] = min(num_kps1, num_kps2), max(num_kps1, num_kps2)
     if num_kps1 == 0 and num_kps2 == 0:
-        if len(matches) == 0: return 1
-        LOGGER.warn(f'no keypoints found for both images but matches were found')
-        return -1
-    elif num_kps1 == 0 or num_kps2 == 0 or cmp_method == 'SIFTMAX':
-        return similarity_count/max(num_kps1, num_kps2)
+        if len(matches) == 0:
+            result[cmp_method] = 1
+            result[f'{cmp_method}_MAX'] = 1
+        else:
+            LOGGER.warn(f'no keypoints found for both images but matches were found')
+            result[cmp_method] = -1
+            result[f'{cmp_method}_MAX'] = -1
     else:
-        return similarity_count/min(num_kps1, num_kps2)
+        result[f'{cmp_method}_MAX'] = similarity_count/max(num_kps1, num_kps2)
+        if num_kps1 == 0 or num_kps2 == 0:
+            result[cmp_method] = similarity_count/max(num_kps1, num_kps2)
+        else:
+            result[cmp_method] = similarity_count/min(num_kps1, num_kps2)
+    return result
 
-def get_similarity_score(img1, img2, algorithm='SSIM'):
+def get_similarity_scores(img1, img2, algorithm='SSIM'):
     assert(algorithm in CMP_ALGORITHMS)
     cmp_method = CMP_ALGORITHMS[algorithm]
     return cmp_method(img1, img2)
@@ -63,12 +69,10 @@ def run_img_comparisons(imgpath1, imgpath2, algorithms=list(CMP_ALGORITHMS.keys(
     i2 = cv2.resize(cv2.imread(imgpath2, cv2.IMREAD_GRAYSCALE), SIM_IMAGE_SIZE)
     scores = {}
     for algo in algorithms:
-        score = get_similarity_score(i1, i2, algo)
-        LOGGER.debug(f'{algo}: {score} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)}')
-        if score > 1: 
-            LOGGER.warn(f'similarity score = {score} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)} \t(setting to 0)')
-            score = 0
-        scores[algo] = score
+        scores = get_similarity_scores(i1, i2, algo)
+        for score_name, score_value in scores.items():
+            LOGGER.debug(f'{score_name}: {score_value} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)}')
+            scores[score_name] = score_value
     return scores
 
 def main(arxiv_id, algos):  # arxiv_id including YYMM
