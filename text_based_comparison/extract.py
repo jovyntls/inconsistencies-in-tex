@@ -28,7 +28,6 @@ def get_text_fonts_images(pdf_path: str):
     full_text, text_with_formatting, fonts_used, images = [], {}, set(), []
     for page_num in range(pdf_document.page_count):
         page = pdf_document[page_num]
-        full_text.append(page.get_text("text", flags=TEXT_EXTRACTION_FLAGS).replace(' ', '\n'))
         images += [ImageInfo( imginfo['digest'], (imginfo['width'], imginfo['height']) ) for imginfo in page.get_image_info(hashes=True)]
         blocks = page.get_text("dict", sort=True, flags=TEXT_EXTRACTION_FLAGS)['blocks']
         # block structure: https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png
@@ -43,5 +42,6 @@ def get_text_fonts_images(pdf_path: str):
                     debug_content.append( (font_information, span['text']) )
                     if font_information not in text_with_formatting: text_with_formatting[font_information] = []
                     text_with_formatting[font_information].append(span['text'])
+                    full_text.append(span['text'].replace(' ', '\n'))
     pdf_document.close()
     return PdfContent('\n'.join(full_text), text_with_formatting, fonts_used, images), debug_content
