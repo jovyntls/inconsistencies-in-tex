@@ -2,7 +2,7 @@ import os
 import fitz  # imports the pymupdf library
 import Levenshtein
 import pandas as pd
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 from pandas.core.api import DataFrame
 
@@ -134,6 +134,39 @@ def collate_edit_ops(edit_ops):
         collated[op_index] += 1
     return collated
 
+def group_edit_ops(edit_ops):
+    def new_edit_group():
+        return { 'insert': [], 'delete': [], 'replace': [] }
+    def add_to_edit_group(grp, action, src, dest):
+        match action:
+            case 'insert': grp[action].append(dest)
+            case 'delete': grp[action].append(src)
+            case 'replace': grp[action].append((src, dest))
+        return
+    src_edits_grouped, dest_edits_grouped = {}, {}
+    src_curr_loc, dest_curr_loc = (-100,-100), (-100,-100)
+    src_curr_group, dest_curr_group = new_edit_group(), new_edit_group()
+    # count the edit locations for debugging purposes
+    for action, src_idx, dest_idx, src_char, dest_char in edit_ops:
+        # src part
+        if src_idx == src_curr_loc[-1]: 
+            src_curr_loc = (src_curr_loc[0], src_idx+1)
+        else: 
+            src_edits_grouped[src_curr_loc] = src_curr_group
+            src_curr_loc, src_curr_group  = (src_idx, src_idx+1), new_edit_group()
+        add_to_edit_group(src_curr_group, action, src_char, dest_char)
+        # dest part
+        if dest_idx == dest_curr_loc[-1]: 
+            dest_curr_loc = (dest_curr_loc[0], dest_idx+1)
+        else: 
+            dest_edits_grouped[dest_curr_loc] = dest_curr_group
+            dest_curr_loc, dest_curr_group  = (dest_idx, dest_idx+1), new_edit_group()
+        add_to_edit_group(dest_curr_group, action, src_char, dest_char)
+    src_edits_grouped[src_curr_loc], dest_edits_grouped[dest_curr_loc] = src_curr_group, dest_curr_group
+    src_edits_grouped.pop((-100,-100))
+    dest_edits_grouped.pop((-100,-100))
+    return src_edits_grouped, dest_edits_grouped
+
 def analyse_edit_opts_results(edit_ops_results):
     RESULTS = {}
     for cmp_engines, df in edit_ops_results.items():
@@ -194,8 +227,17 @@ def compute_edit_ops(pdf_texts):
     RESULTS = {}
     for e1, e2 in COMPARISON:
         if e1 not in pdf_texts or e2 not in pdf_texts: continue
-        RESULTS[f'{e1}{e2}'] = compute_edit_ops_for_engine(e1, e2)
+        RESULTS[f'{e1}{e2}']  = compute_edit_ops_for_engine(e1, e2)
     return RESULTS
+
+def compute_debug_edit_ops(pdf_texts):
+    EDIT_OPS_DEBUG = {}
+    for e1, e2 in COMPARISON:
+        if e1 not in pdf_texts or e2 not in pdf_texts: continue
+        edit_ops = get_edit_ops(pdf_texts[e1], pdf_texts[e2])
+        debug_ops_e1, debug_ops_e2 = group_edit_ops(edit_ops)
+        EDIT_OPS_DEBUG[f'{e1}{e2}'] = { f'{e1}': debug_ops_e1, f'{e2}': debug_ops_e2 }
+    return EDIT_OPS_DEBUG
 
 def compute_cleaned_edit_ops(edit_ops_results):
     """For all engines, filter out changes in whitespace, upper/lower case, simple movements"""
