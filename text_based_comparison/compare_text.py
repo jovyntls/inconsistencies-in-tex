@@ -12,7 +12,7 @@ def text_transformation(text: str):
     return text
 
 def find_different_chars(edit_ops: Dict[str, DataFrame]):
-    different_chars = {}
+    different_chars: Dict[str, Dict[str, int]] = {}
     for cmp, edit_ops_df in edit_ops.items():
         char_counts = {}
         for _, row in edit_ops_df.iterrows():
@@ -35,7 +35,6 @@ def text_comparison(pdf_texts: Dict[str, str]):
     RESULTS = compare_text_similarity.compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, summary, RESULTS)
     RESULTS = compare_text_similarity.compute_edit_ops_metrics(edit_ops_results, RESULTS)
     different_chars = find_different_chars(edit_ops_results)
-    for k, v in different_chars.items(): print(k, '\n', v)
 
     for e1, e2 in COMPARISON:
         cmp = f'{e1}{e2}'
@@ -47,9 +46,11 @@ def text_comparison(pdf_texts: Dict[str, str]):
         if edit_ops_results[cmp].shape[0] == 0: 
             LOGGER.debug('\nno text diffs found')
             continue
-        LOGGER.debug(f'raw edit ops:\n' + edit_ops_results[cmp].head(15).to_string())
         LOGGER.debug(f'>> cleaned edit ops [{cmp}] [{cleaned_results[cmp].shape[0]} rows]:\n' + cleaned_results[cmp].head(20).to_string())
         LOGGER.debug(summary[cmp])
+        # print the diff chars
+        sorted_counts = sorted(different_chars[cmp].items(), key=lambda x: -abs(x[1]))
+        LOGGER.debug('>> different characters:\n' + '\t'.join([ f'|  {k}: {v} ' for k, v in sorted_counts ]))
 
     LOGGER.debug('text comparison summary:\n' + RESULTS.to_string())
     return RESULTS

@@ -189,7 +189,7 @@ def compute_edit_ops(pdf_texts):
         edit_ops = get_edit_ops(pdf_texts[e1], pdf_texts[e2])
         collated_ops = collate_edit_ops(edit_ops)
         data = [ ( *op, counts ) for op, counts in collated_ops.items() ]
-        df = pd.DataFrame(data, columns=['action', 'from', 'to', 'count'])
+        df = pd.DataFrame(data, columns=pd.Index(['action', 'from', 'to', 'count']))
         return df.sort_values(by=['count'], ascending=False)
     RESULTS = {}
     for e1, e2 in COMPARISON:

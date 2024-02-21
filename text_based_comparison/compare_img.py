@@ -18,7 +18,7 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
     img_counts2 = Counter(ordered_binaries2)
     missing_images = (img_counts1 - img_counts2) | (img_counts2 - img_counts1)
     if len(missing_images) > 0: 
-        LOGGER.debug('found {len(missing_images)} missing images')
+        LOGGER.debug(f'found {len(missing_images)} missing images')
         pass 
     # check image sizes
     img1_to_dims = {}
