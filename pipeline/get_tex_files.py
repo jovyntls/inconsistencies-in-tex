@@ -53,8 +53,8 @@ def list_of_papers_to_download_links(element_list):
     return download_links
 
 def get_download_links(url):
-        elem_list_of_papers = get_content_from_page(url, TEX_FILE_DOWNLOAD_XPATH)
-        return list_of_papers_to_download_links(elem_list_of_papers)
+    elem_list_of_papers = get_content_from_page(url, TEX_FILE_DOWNLOAD_XPATH)
+    return list_of_papers_to_download_links(elem_list_of_papers)
 
 def download_from_url_and_save(download_url, folder, filename):
     def save_file_to_folder(folder, file_content, filename):
@@ -65,10 +65,9 @@ def download_from_url_and_save(download_url, folder, filename):
     response = get_request(download_url)
     save_file_to_folder(folder, response.content, filename)
 
-def main(DOWNLOAD_FOLDER):
+def get_download_links_by_subject():
     download_links = {}
     subjects = SUBJECTS.keys()
-    subjects = ['cs.CL', 'cs.AI']
 
     # get the links to download
     LOGGER.info('collecting urls for papers...')
@@ -78,6 +77,15 @@ def main(DOWNLOAD_FOLDER):
         subject_download_links = get_download_links(url)
         download_links.update(subject_download_links)
     LOGGER.info(f'collected {len(download_links)} urls for papers in {len(subjects)} subjects')
+    return download_links
+
+def main(DOWNLOAD_FOLDER, download_by_arxiv_ids):
+    # collect links
+    download_links = {}
+    if len(download_by_arxiv_ids) == 0:
+        download_links = get_download_links_by_subject()
+    else:
+        download_links = { arxiv_id: f'https://arxiv.org/e-print/{arxiv_id}' for arxiv_id in download_by_arxiv_ids }
 
     # download and save
     LOGGER.info(f'starting downloads...')

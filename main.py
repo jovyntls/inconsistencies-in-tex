@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 from utils import tex_engine_utils, logger
-from config import LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, YEAR_AND_MONTH, SHOULD_SKIP_COMPILE, SKIP_COMPILE_FOR, PIXEL_TOLERANCE
+from config import LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, YEAR_AND_MONTH, SHOULD_SKIP_COMPILE, SKIP_COMPILE_FOR, PIXEL_TOLERANCE, DOWNLOAD_BY_ARXIV_IDS
 from pipeline import get_tex_files, extract_compressed_sources, compile_tex_files, diff_pdfs
 
 # set up logging
@@ -26,8 +26,8 @@ RESULTS = pd.DataFrame(columns=results_column_names)
 RESULTS = RESULTS.set_index('arxiv_id')
 
 # run pipeline
-LOGGER.info(f'running pipeline with params: {NUM_ATTEMPTS=}, {YEAR_AND_MONTH=}, {PIXEL_TOLERANCE=}, {SHOULD_SKIP_COMPILE=}, {SKIP_COMPILE_FOR=}')
-get_tex_files.main(DOWNLOAD_FOLDER)
+LOGGER.info(f'running pipeline with params: {NUM_ATTEMPTS=}, {YEAR_AND_MONTH=}, {PIXEL_TOLERANCE=}, {SHOULD_SKIP_COMPILE=}, {SKIP_COMPILE_FOR=}, {DOWNLOAD_BY_ARXIV_IDS=}')
+get_tex_files.main(DOWNLOAD_FOLDER, download_by_arxiv_ids=DOWNLOAD_BY_ARXIV_IDS)
 extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
 RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)

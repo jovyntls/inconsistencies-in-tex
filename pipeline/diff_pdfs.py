@@ -9,7 +9,7 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
         def output_filename(engine, arxiv_id):
             return os.path.join(os.path.join(COMPILED_FOLDER, arxiv_id), f'{arxiv_id}_{engine}.pdf')
         diff_output = os.path.join(DIFFS_FOLDER, f'diff_{arxiv_id}_{e1}_{e2}.pdf')
-        return ['diff-pdf', f'--output-diff={diff_output}', '-smg', '--dpi=100', f'--per-page-pixel-tolerance={PIXEL_TOLERANCE}', output_filename(e1, arxiv_id), output_filename(e2, arxiv_id)] 
+        return ['diff-pdf', f'--output-diff={diff_output}', '-smg', '--dpi=300', f'--per-page-pixel-tolerance={PIXEL_TOLERANCE}', output_filename(e1, arxiv_id), output_filename(e2, arxiv_id)] 
 
     # returns bool of whether they match
     def diff_engines(e1, e2):
