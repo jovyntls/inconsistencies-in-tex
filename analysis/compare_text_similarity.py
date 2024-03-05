@@ -149,14 +149,14 @@ def group_edit_ops(edit_ops):
     # count the edit locations for debugging purposes
     for action, src_idx, dest_idx, src_char, dest_char in edit_ops:
         # src part
-        if src_idx == src_curr_loc[-1]: 
+        if src_idx <= src_curr_loc[-1]: 
             src_curr_loc = (src_curr_loc[0], src_idx+1)
         else: 
             src_edits_grouped[src_curr_loc] = src_curr_group
             src_curr_loc, src_curr_group  = (src_idx, src_idx+1), new_edit_group()
         add_to_edit_group(src_curr_group, action, src_char, dest_char)
         # dest part
-        if dest_idx == dest_curr_loc[-1]: 
+        if dest_idx <= dest_curr_loc[-1]: 
             dest_curr_loc = (dest_curr_loc[0], dest_idx+1)
         else: 
             dest_edits_grouped[dest_curr_loc] = dest_curr_group

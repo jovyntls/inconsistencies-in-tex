@@ -7,7 +7,7 @@ from tqdm import tqdm
 import pandas as pd
 
 from utils import logger, tex_engine_utils
-from config import YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER
+from config import YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER, DOWNLOAD_BY_ARXIV_IDS
 from text_based_comparison import extract, compare_text, compare_img, compare_font
 
 # only include these in the final result summary (not applicable to single arxiv_id run)
@@ -51,6 +51,7 @@ def compare_for_all(is_debug_run):
     rows = []
     LOGGER.info('running text/format/image comparisons...')
     dirs = os.listdir(COMPILED_FOLDER)[:20] if is_debug_run else os.listdir(COMPILED_FOLDER)
+    # dirs = DOWNLOAD_BY_ARXIV_IDS
     for arxiv_id in tqdm(dirs):
         result = compare_for_one(arxiv_id, False, False, False)  # don't print debug information
         xelua_result = { f'xelua_{key}': val for key,val in result['xelua'].to_dict().items() if key in TEXT_COMPARE_METRICS }
