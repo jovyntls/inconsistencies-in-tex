@@ -2,3 +2,4 @@ __pycache__
 bin
 logs
 .DS_Store
+version_cmp/docker_bin
