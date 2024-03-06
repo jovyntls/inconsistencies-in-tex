@@ -5,6 +5,7 @@ imageio==2.33.1
 kiwisolver==1.4.5
 lazy_loader==0.3
 Levenshtein==0.23.0
+lxml==5.1.0
 matplotlib==3.8.2
 networkx==3.2.1
 numpy==1.26.3
@@ -22,6 +23,7 @@ python-dateutil==2.8.2
 python-Levenshtein==0.23.0
 pytz==2023.3.post1
 rapidfuzz==3.6.1
+requests==2.31.0
 scikit-image==0.22.0
 scipy==1.11.4
 setuptools==68.2.2
