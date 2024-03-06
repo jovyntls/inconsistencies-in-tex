@@ -41,12 +41,12 @@ def compile_tex_to_pdf(texlive_version, root, tex_file, logs_folder, arxiv_id, o
 def run(texlive_version):
     results = {}
     for arxiv_id in tqdm(os.listdir(EXTRACTED_FOLDER)):
-        # create the subdirs for output
+        # create the subdirs for output, if it doesn't exist
         compile_output_folder = os.path.join(VERSION_COMPILED_FOLDER, arxiv_id)
         compile_logs_folder = os.path.join(compile_output_folder, 'logs')
-        if not os.path.isdir(compile_output_folder):
-            os.makedirs(compile_output_folder, exist_ok=False)
-            os.makedirs(compile_logs_folder, exist_ok=False)
+        os.makedirs(compile_output_folder, exist_ok=True)
+        os.makedirs(compile_logs_folder, exist_ok=True)
+        # run compilation
         for root, _, files in os.walk(os.path.join(EXTRACTED_FOLDER, arxiv_id)):
             tex_file, _, _ = find_entrypoint_file(files, root)
             if tex_file is None: continue
