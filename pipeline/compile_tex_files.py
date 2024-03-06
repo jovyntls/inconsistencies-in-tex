@@ -1,6 +1,5 @@
 from utils import tex_engine_utils
 from utils.logger import PIPELINE_LOGGER as LOGGER
-from config import SHOULD_SKIP_COMPILE, SKIP_COMPILE_FOR
 from constants.engine_primitives import PDFTEX_PRIMITIVES, PDFTEX_CHECK
 import os
 import subprocess
@@ -93,19 +92,6 @@ def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder
             LOGGER.error(f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets
 
-"""Skip compiles for files containing keywords specified in config.py"""
-def should_skip_compile(tex_file, arxiv_id):
-    # if the skip compile flag is off, don't skip
-    if SHOULD_SKIP_COMPILE == False: return False
-    # else, check if the file should be skipped
-    with open(tex_file, errors='ignore') as f:
-        file_content = f.read()
-        for keyword in SKIP_COMPILE_FOR:
-            if keyword in file_content: 
-                LOGGER.debug(f'skipping file: [{arxiv_id}] {tex_file} uses {keyword}')
-                return True
-    return False
-
 """Remove engine-specific commands"""
 def process_file(file, arxiv_id):
     LOGGER.debug(f'processing files for engine-specific primitives...')
@@ -130,7 +116,6 @@ def process_file(file, arxiv_id):
 
 def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
     LOGGER.info('compiling tex files...')
-    skipped_files = []
     results_to_concat = []
     for arxiv_id in os.listdir(EXTRACTED_FOLDER):
         folder_path = os.path.join(EXTRACTED_FOLDER, arxiv_id)
@@ -144,9 +129,6 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
             LOGGER.debug(f'found latex file: [{arxiv_id}] {tex_file}')
             # skip compiles for some files 
             file_path = os.path.join(root, tex_file)
-            if should_skip_compile(file_path, arxiv_id): 
-                skipped_files.append(f'{arxiv_id}/{tex_file}')
-                break
             # make the file engine-agnostic
             process_file(file_path, arxiv_id)
             # run the tex engines
@@ -159,7 +141,6 @@ def main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS):
             results_to_concat.append(rets)
             break
     RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(results_to_concat, index='arxiv_id')])
-    LOGGER.info(f'compiled: {len(RESULTS.index)} papers.\tskipped: {len(skipped_files)} papers.')
-    LOGGER.debug(f'skipped {len(skipped_files)} papers: {skipped_files}')
+    LOGGER.info(f'compiled {len(RESULTS.index)} papers.')
     LOGGER.debug(RESULTS)
     return RESULTS
