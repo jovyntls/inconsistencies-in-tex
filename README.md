@@ -55,6 +55,24 @@ The PDFs are read from {SOURCE_PDF_FOLDER} and converted to images in {CONVERTED
     * `python3 run_img_comparison.py -id 00002` for the arXiv ID {YEAR_AND_MONTH}/00002
     * `python3 run_img_comparison.py`
 
+### Text-based comparison
+
+This directory implements comparison based on extracting data from the PDF using PyMuPDF.
+This includes text, fonts, and images.
+
+* Run text-based comparison
+    * `python3 run_text_based_comparison.py` for all PDFs in the compiled bin folder, or the IDs specified in {DOWNLOAD_BY_ARXIV_IDS}
+    * `python3 run_text_based_comparison.py -id 01234` for the specified arXiv ID {YEAR_AND_MONTH}/01234
+* Additional flags
+    * `-debug` will add debug information
+    * `-save` will save the extracted information to a .txt file
+
+### Others
+
+* Highlight the differences between two PDFs
+    * `python3 run_diff_highlight.py -id 01308 -pg 1 3 5` for the arXiv ID {YEAR_AND_MONTH}/1308 on pages 1,3,5
+
+
 ---
 
 To ignore config changes:
