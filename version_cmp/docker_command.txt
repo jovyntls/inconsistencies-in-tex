@@ -5,4 +5,4 @@ docker build -t tex2022 -f ./version_cmp/tl2022.Dockerfile .
 docker run -ti -v /Users/jovyntan/Desktop/work/fyp/diff_test_tex_engines/version_cmp/docker_bin:/diff_test_tex_engines/docker_bin --name v2022 tex2022
 
 run command:
-python3 only_compile.py -ver 2022
+python3 compile_only.py -ver 2022

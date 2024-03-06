@@ -3,7 +3,6 @@ import argparse
 import subprocess
 import csv
 from tqdm import tqdm
-from utils.tex_engine_utils import get_compile_tex_commands
 from pipeline.compile_tex_files import find_entrypoint_file
 
 # these depend on the dockerfile
@@ -29,7 +28,7 @@ def checkpaths(texlive_version):
     os.makedirs(COMPILE_RESULTS_FOLDER, exist_ok=True)
 
 def compile_tex_to_pdf(texlive_version, root, tex_file, logs_folder, arxiv_id, output_folder):
-    compile_command = get_compile_tex_commands(arxiv_id, output_folder)['pdflatex'] + [tex_file]
+    compile_command = [ 'latexmk', '-pdf', '-interaction=nonstopmode', f'-jobname={arxiv_id}_tl{texlive_version}', f'-output-directory={output_folder}', tex_file ]
     try:
         stdout_file = os.path.join(logs_folder, f'{arxiv_id}_tl{texlive_version}.out')
         stderr_file = os.path.join(logs_folder, f'{arxiv_id}_tl{texlive_version}.err')
