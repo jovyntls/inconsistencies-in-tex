@@ -10,6 +10,7 @@ import img_comparison.compare_text as text_cmp
 from utils import logger
 from config import YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER
 from img_comparison import convert_pdf_to_img, compare_imgs
+from utils.tex_engine_utils import DIFF_ENGINE_PAIRS
 
 LOGGER = logger.COMPARISON_LOGGER
 
@@ -31,6 +32,18 @@ def compare_for_all(algos):
     LOGGER.debug('full results summary:\n' + RESULTS_SUMMARY.to_string())
     return RESULTS_SUMMARY
 
+def pretty_print_results(results_df, arxiv_id):
+    LOGGER.info(f'text comparison results for {arxiv_id=}:')
+    col_keys = [ f'{e1}{e2}' for e1, e2 in DIFF_ENGINE_PAIRS ]
+    replacements = [ ('normalised', 'norm'), ('hamming', 'HM'), ('levenshtein', 'LV') ] + [ (col+'_', '') for col in col_keys ]
+    for col_key in col_keys:
+        cmp_data = pd.DataFrame()
+        for colname in results_df.columns:
+            if col_key not in colname: continue
+            new_colname = colname
+            for before, after in replacements: new_colname = new_colname.replace(before, after)
+            cmp_data[new_colname] = results_df[colname]
+        LOGGER.info(f'{col_key}:\n{cmp_data}')
 
 def run(run_for_id, do_convert, do_compare, do_text):
     current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -57,20 +70,7 @@ def run(run_for_id, do_convert, do_compare, do_text):
         if do_text: 
             result = text_cmp.run_text_cmp(arxiv_id)
             results_as_df = pd.DataFrame.from_records(result, index='identifier')
-            # print nicely
-            xelua_data, xepdf_data = pd.DataFrame(), pd.DataFrame()
-            replacements = [ ('xelua_', ''), ('xepdf_', ''), ('normalised', 'norm'), ('hamming', 'HM'), ('levenshtein', 'LV') ]
-            for colname in results_as_df.columns:
-                if 'xelua' not in colname: continue
-                new_colname = colname
-                for before, after in replacements: new_colname = new_colname.replace(before, after)
-                xelua_data[new_colname] = results_as_df[colname]
-            for colname in results_as_df.columns:
-                if 'xepdf' not in colname: continue
-                new_colname = colname
-                for before, after in replacements: new_colname = new_colname.replace(before, after)
-                xepdf_data[new_colname] = results_as_df[colname]
-            LOGGER.info(f'text comparison results for {arxiv_id}:\nxelua:\n{xelua_data}\nxepdf:\n{xepdf_data}')
+            pretty_print_results(results_as_df, arxiv_id)
 
 if __name__ == '__main__':
     # set up CLI args

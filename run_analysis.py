@@ -8,6 +8,7 @@ import pandas as pd
 from utils import logger
 from config import YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER
 from analysis import count_pdf_pages, compare_text_similarity, count_compiled_pdfs
+from utils.tex_engine_utils import DIFF_ENGINE_PAIRS
 
 COMPARE_ALL = 'COMPARE_ALL'
 LOGGER = logger.ANALYSIS_LOGGER
@@ -29,9 +30,10 @@ def run_compare_all(current_time):
     rows = []
     for arxiv_id in tqdm(dirs):
         result = compare_text_similarity.main(arxiv_id)
-        xelua_result = { f'xelua_{key}': val for key,val in result['xelua'].to_dict().items() }
-        xepdf_result = { f'xepdf_{key}': val for key,val in result['xepdf'].to_dict().items() }
-        result_as_row = { 'arxiv_id': arxiv_id } | xelua_result | xepdf_result
+        result_as_row = { 'arxiv_id': arxiv_id }
+        for e1, e2 in DIFF_ENGINE_PAIRS:
+            res = { f'{e1}{e2}_{key}': val for key,val in result[f'{e1}{e2}'].to_dict().items() }
+            result_as_row = result_as_row | res
         rows.append(result_as_row)
     LOGGER.info(f'logfile timestamp: {current_time}')
     RESULTS_SUMMARY = pd.DataFrame.from_records(rows, index='arxiv_id')

@@ -49,14 +49,15 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
 
 def compare_for_all(is_debug_run):
     rows = []
-    LOGGER.info('running text/format/image comparisons...')
+    LOGGER.info(f'running text/format/image comparisons ({is_debug_run=})...')
     dirs = os.listdir(COMPILED_FOLDER)[:20] if is_debug_run else os.listdir(COMPILED_FOLDER)
     # dirs = DOWNLOAD_BY_ARXIV_IDS
     for arxiv_id in tqdm(dirs):
         result = compare_for_one(arxiv_id, False, False, False)  # don't print debug information
-        xelua_result = { f'xelua_{key}': val for key,val in result['xelua'].to_dict().items() if key in TEXT_COMPARE_METRICS }
-        xepdf_result = { f'xepdf_{key}': val for key,val in result['xepdf'].to_dict().items() if key in TEXT_COMPARE_METRICS }
-        result_as_row = { 'arxiv_id': arxiv_id } | xelua_result | xepdf_result
+        result_as_row = { 'arxiv_id': arxiv_id }
+        for e1, e2 in tex_engine_utils.DIFF_ENGINE_PAIRS:
+            res = { f'{e1}{e2}_{key}': val for key,val in result[f'{e1}{e2}'].to_dict().items() }
+            result_as_row = result_as_row | res
         rows.append(result_as_row)
     RESULTS_SUMMARY = pd.DataFrame.from_records(rows, index='arxiv_id')
     return RESULTS_SUMMARY
