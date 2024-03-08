@@ -2,9 +2,6 @@ import pandas as pd
 import os
 from config import PROJECT_ROOT
 
-ENGINES = ['pdf', 'xe', 'lua']
-COMPARISON = [ ('xe', 'pdf'), ('xe', 'lua') ]
-
 def init_df_with_cols(cols, index):
     df = pd.DataFrame(columns=cols)
     if index != None: df = df.set_index(index)

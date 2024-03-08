@@ -4,11 +4,9 @@ import subprocess
 from typing import Dict, Any
 from datetime import datetime
 from tqdm import tqdm
-from analysis.helpers import ENGINES, init_df_with_cols
+from analysis.helpers import init_df_with_cols
 from config import EXTRACTED_FOLDER, COMPILED_FOLDER, LOGS_FOLDER
-
-ENGINES = ['pdf', 'xe', 'lua']
-COMPARISON = [ ('xe', 'pdf'), ('xe', 'lua') ]
+from utils.tex_engine_utils import TEX_ENGINES as ENGINES, get_engine_name
 
 def init_df():
     # set up dataframe
@@ -31,7 +29,7 @@ def main(should_save=True):
         compiled_pdfs_dir = os.path.join(COMPILED_FOLDER, arxiv_id)
         row : Dict[str, Any] = { 'arxiv_id': arxiv_id }
         for engine in ENGINES:
-            pdf_path = os.path.join(compiled_pdfs_dir, f'{arxiv_id}_{engine}latex.pdf')
+            pdf_path = os.path.join(compiled_pdfs_dir, f'{arxiv_id}_{get_engine_name(engine)}.pdf')
             row[engine] = os.path.exists(pdf_path)
         results.append(row)
     df = init_df()

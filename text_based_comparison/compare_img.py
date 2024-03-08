@@ -2,8 +2,8 @@ from collections import namedtuple, Counter
 from typing import Dict, List
 
 from utils.logger import ANALYSIS_LOGGER as LOGGER
-from analysis.helpers import COMPARISON
 from text_based_comparison.extract import ImageInfo
+from utils.tex_engine_utils import DIFF_ENGINE_PAIRS
 
 THRESHOLD = 0.01  # percentage difference allowed in image dimensions
 
@@ -42,7 +42,7 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
 def run_img_comparison(pdf_imgs: Dict[str, List[ImageInfo]]):
     # result_rows_as_dict = { fieldname: { xepdf: 0, xelua: 1 } }
     result_rows_as_dict = { field: {} for field in ImgCmpResult._fields }
-    for e1, e2 in COMPARISON:
+    for e1, e2 in DIFF_ENGINE_PAIRS:
         if e1 not in pdf_imgs or e2 not in pdf_imgs: continue
         col = f'{e1}{e2}'
         cmp_result = image_comparison(pdf_imgs[e1], pdf_imgs[e2])

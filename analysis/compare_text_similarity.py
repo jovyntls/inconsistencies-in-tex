@@ -2,15 +2,15 @@ import os
 import fitz  # imports the pymupdf library
 import Levenshtein
 import pandas as pd
-from typing import Dict, Any, List
+from typing import Dict, Any
 
 from pandas.core.api import DataFrame
 
 from config import COMPILED_FOLDER
 from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
 import analysis.helpers as helpers
-from analysis.helpers import ENGINES, COMPARISON
 import analysis.text_transformer as Ttr
+from utils.tex_engine_utils import get_engine_name, TEX_ENGINES as ENGINES, DIFF_ENGINE_PAIRS as COMPARISON
 
 DF_COMPARISON_INDEX = 'comparison'
 
@@ -30,7 +30,7 @@ def extract_pages_and_images_from_pdfs(COMPILED_FOLDER, arxiv_id):
     pdf_texts = {}
     pdf_images = {}
     for engine in ENGINES:
-        pdf_path = os.path.join(compiled_pdfs_dir, f'{arxiv_id}_{engine}latex.pdf')
+        pdf_path = os.path.join(compiled_pdfs_dir, f'{arxiv_id}_{get_engine_name(engine)}.pdf')
         pages, images = extract_pages_from_pdf(pdf_path)
         if pages != None: pdf_texts[engine] = pages
         if images != None: pdf_images[engine] = images
@@ -362,7 +362,7 @@ def main(arxiv_id):
     analysed_edit_opts_results = analyse_edit_opts_results(edit_ops_results)
     cleaned_results, summary = compute_cleaned_edit_ops(edit_ops_results)
 
-    RESULTS = helpers.init_df_with_cols([DF_COMPARISON_INDEX, 'xepdf', 'xelua'], DF_COMPARISON_INDEX)
+    RESULTS = helpers.init_df_with_cols([DF_COMPARISON_INDEX] + [f'{e1}{e2}' for e1, e2 in COMPARISON], DF_COMPARISON_INDEX)
     RESULTS = compute_text_comparison_metrics(COMPARE_METHODS, pdf_texts, RESULTS)
     RESULTS = compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, summary, RESULTS)
     RESULTS = compute_image_comparison_metrics(pdf_images, RESULTS)

@@ -1,4 +1,4 @@
-from utils import tex_engine_utils
+from utils.tex_engine_utils import get_compile_tex_commands, get_engine_name
 from utils.logger import PIPELINE_LOGGER as LOGGER
 from constants.engine_primitives import PDFTEX_PRIMITIVES, PDFTEX_CHECK
 import os
@@ -74,20 +74,21 @@ def create_output_and_log_dirs(COMPILED_FOLDER, arxiv_id):
 
 def run_tex_engines(project_root, tex_file, logs_folder, arxiv_id, output_folder):
     # run all tex engines
-    COMPILE_TEX_COMMANDS = tex_engine_utils.get_compile_tex_commands(arxiv_id, output_folder)
+    COMPILE_TEX_COMMANDS = get_compile_tex_commands(arxiv_id, output_folder)
     rets = {}
     for tex_engine, run_command in COMPILE_TEX_COMMANDS.items():
         try:
-            stdout_file = os.path.join(logs_folder, f'{arxiv_id}_{tex_engine}.out')
-            stderr_file = os.path.join(logs_folder, f'{arxiv_id}_{tex_engine}.err')
+            engine_name = get_engine_name(tex_engine)
+            stdout_file = os.path.join(logs_folder, f'{arxiv_id}_{engine_name}.out')
+            stderr_file = os.path.join(logs_folder, f'{arxiv_id}_{engine_name}.err')
             with open(stdout_file, 'w') as stdout, open(stderr_file, 'w') as stderr:
                 cmd = run_command + [tex_file]
                 # compile
                 proc = subprocess.run(cmd, timeout=60, stdout=stdout, stderr=stderr, cwd=project_root)
-                LOGGER.debug(f'compile_tex (1): ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                LOGGER.debug(f'compile_tex (1): ret={proc.returncode} for {arxiv_id} [{engine_name}]')
                 rets[tex_engine] = proc.returncode
                 # log if the compile failed
-                if proc.returncode != 0: LOGGER.warning(f'compile_tex: ret={proc.returncode} for {arxiv_id} [{tex_engine}]')
+                if proc.returncode != 0: LOGGER.warning(f'compile_tex: ret={proc.returncode} for {arxiv_id} [{engine_name}]')
         except subprocess.TimeoutExpired:
             LOGGER.error(f"compile_tex: timed out for {arxiv_id} [{tex_engine}]")
     return rets

@@ -7,7 +7,7 @@ from img_comparison.convert_pdf_to_img import get_pages_to_convert
 from utils.logger import COMPARISON_LOGGER as LOGGER
 import analysis.text_transformer as Ttr
 from config import COMPILED_FOLDER
-from utils.tex_engine_utils import TEX_ENGINES
+from utils.tex_engine_utils import DIFF_ENGINE_PAIRS, TEX_ENGINES, get_engine_name
 
 DEFAULT_TRANSFORMER = Ttr.transformer_ignore_hyphenbreak_pagebreak_linebreak
 
@@ -20,8 +20,7 @@ def get_text_from_page(pdf_doc, page_num):
 def collect_text_to_compare(arxiv_id):
     texts = {}
     for engine in TEX_ENGINES:
-        identifier = f'{arxiv_id}_{engine}'
-        pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{identifier}.pdf')
+        pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{arxiv_id}_{get_engine_name(engine)}.pdf')
         if not os.path.exists(pdf_filepath):
             LOGGER.debug(f'{pdf_filepath} not found - skipping')
             continue
@@ -34,7 +33,7 @@ def collect_text_to_compare(arxiv_id):
         for page_num, cmp_idx in pages_to_compare:
             page_text = get_text_from_page(doc, page_num)
             if cmp_idx not in texts: texts[cmp_idx] = {}
-            texts[cmp_idx][engine[:-5]] = page_text
+            texts[cmp_idx][engine] = page_text
     return texts
 
 # @param [cmp_group] is a dictionary of engine -> text
@@ -43,7 +42,7 @@ def run_cross_engine_comparison(cmp_group, identifier):
     edit_ops_results = compute_edit_ops(cmp_group)
     cleaned_results, summary = compute_cleaned_edit_ops(edit_ops_results)
 
-    results = pd.DataFrame(columns=[identifier, 'xepdf', 'xelua']).set_index(identifier)
+    results = pd.DataFrame(columns=[identifier] + [f'{e1}{e2}' for e1, e2 in DIFF_ENGINE_PAIRS]).set_index(identifier)
     results = compute_text_comparison_metrics(COMPARE_METHODS, cmp_group, results)
     results = compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, summary, results)
     results = compute_edit_ops_metrics(edit_ops_results, results)
@@ -51,9 +50,10 @@ def run_cross_engine_comparison(cmp_group, identifier):
 
 # convert the result of a single comparison (one page across different engines) to a row
 def convert_cmp_result_to_row(result, identifier):
-    xelua_result = { f'xelua_{key}': val for key,val in result['xelua'].to_dict().items() }
-    xepdf_result = { f'xepdf_{key}': val for key,val in result['xepdf'].to_dict().items() }
-    result_as_row = { 'identifier': identifier } | xelua_result | xepdf_result
+    result_as_row = { 'identifier': identifier }
+    for e1, e2 in DIFF_ENGINE_PAIRS:
+        res = { f'{e1}{e2}_{key}': val for key,val in result[f'{e1}{e2}'].to_dict().items() }
+        result_as_row = result_as_row | res
     return result_as_row
 
 # run text comparison for a single arxiv id

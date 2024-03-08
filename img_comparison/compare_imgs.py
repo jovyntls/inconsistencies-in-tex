@@ -5,6 +5,7 @@ from skimage.metrics import structural_similarity
 import ssim.ssimlib as pyssim
 from config import CONVERTED_IMG_FOLDER
 from utils.logger import COMPARISON_LOGGER as LOGGER
+from utils.tex_engine_utils import TEX_ENGINES
 
 SIM_IMAGE_SIZE = (1295, 1000)  # height*width. roughly a4 paper dimensions
 
@@ -90,6 +91,7 @@ def main(arxiv_id, algos):  # arxiv_id including YYMM
         cmp_groups[pg_identifier][engine] = img_filename_with_ext
     # perform comparisons
     RESULT = {}
+    assert('xe' in TEX_ENGINES)  # only for inter-engine
     CMP_BASELINE = 'xelatex'
     for pg, cmp_grp_members in cmp_groups.items():
         result_for_page = {}

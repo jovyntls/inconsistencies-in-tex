@@ -2,7 +2,7 @@ import os
 import fitz
 from config import COMPILED_FOLDER, CONVERTED_IMG_FOLDER, CONVERT_FIRST_N_PAGES, CONVERT_LAST_N_PAGES
 from utils.logger import COMPARISON_LOGGER as LOGGER
-from utils.tex_engine_utils import TEX_ENGINES
+from utils.tex_engine_utils import TEX_ENGINES, get_engine_name
 
 # returns a list of (page accessor index, page comparison index)
 # e.g. [ (0,1), (1,2), (2,3), (18,-3), (19,-2), (20,-1) ]
@@ -39,7 +39,7 @@ def main(arxiv_id):  # arxiv_id including YYMM
     else: os.makedirs(img_subdir, exist_ok=False)
     # perform conversion for each engine
     for engine in TEX_ENGINES:
-        identifier = f'{arxiv_id}_{engine}'
+        identifier = f'{arxiv_id}_{get_engine_name(engine)}'
         pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{identifier}.pdf')
         if not os.path.exists(pdf_filepath):
             LOGGER.debug(f'{pdf_filepath} not found - skipping')

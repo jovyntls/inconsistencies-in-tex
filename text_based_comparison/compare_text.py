@@ -2,9 +2,10 @@ from typing import Any, Dict
 
 import pandas as pd
 from analysis import compare_text_similarity
-from analysis.helpers import COMPARISON, init_df_with_cols
+from analysis.helpers import init_df_with_cols
 from analysis.text_transformer import COMMON_ACCENTS, IGNORE_HYPHENS, TextTransformer
 from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
+from utils.tex_engine_utils import DIFF_ENGINE_PAIRS
 
 def text_transformation(text: str):
     text = TextTransformer.apply_transform(text, [IGNORE_HYPHENS])
@@ -35,7 +36,7 @@ def text_comparison(pdf_texts: Dict[str, str], with_debug_info=False):
     cleaned_results, summary = compare_text_similarity.compute_cleaned_edit_ops(edit_ops_results)
     different_chars, different_chars_summary_rows = find_different_chars(edit_ops_results)
 
-    RESULTS = init_df_with_cols(['comparison', 'xepdf', 'xelua'], 'comparison')
+    RESULTS = init_df_with_cols(['comparison'] + [f'{e1}{e2}' for e1, e2 in DIFF_ENGINE_PAIRS], 'comparison')
     RESULTS = compare_text_similarity.compute_text_comparison_metrics(compare_text_similarity.COMPARE_METHODS, pdf_texts, RESULTS)
     RESULTS = compare_text_similarity.compute_levenshtein_cleaned_and_edit_ops_summary(cleaned_results, summary, RESULTS)
     RESULTS = compare_text_similarity.compute_edit_ops_metrics(edit_ops_results, RESULTS)
@@ -43,7 +44,7 @@ def text_comparison(pdf_texts: Dict[str, str], with_debug_info=False):
     
     grouped_edit_ops = compare_text_similarity.compute_debug_edit_ops(pdf_texts) if with_debug_info else None
 
-    for e1, e2 in COMPARISON:
+    for e1, e2 in DIFF_ENGINE_PAIRS:
         cmp = f'{e1}{e2}'
         LOGGER.debug(pad_with_char(cmp, '-'))
         if not cmp in edit_ops_results:

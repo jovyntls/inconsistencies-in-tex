@@ -32,9 +32,9 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
 
     # pdf_infos: { pdflatex: ..., xelatex: ... }
     # pdf_texts, pdf_imgs: { pdf: ..., xe: ... }
-    pdf_texts = { k[:-5]: compare_text.text_transformation(content.text) for k, content in pdf_infos.items() }
-    pdf_imgs = { k[:-5]: content.images for k, content in pdf_infos.items() }
-    pdf_fonts = { k[:-5]: content.fonts for k, content in pdf_infos.items() }
+    pdf_texts = { k: compare_text.text_transformation(content.text) for k, content in pdf_infos.items() }
+    pdf_imgs = { k: content.images for k, content in pdf_infos.items() }
+    pdf_fonts = { k: content.fonts for k, content in pdf_infos.items() }
 
     RESULTS, edit_ops_debug_result = compare_text.text_comparison(pdf_texts, with_debug_info=should_save_editops)
     img_cmp_results = compare_img.run_img_comparison(pdf_imgs)
