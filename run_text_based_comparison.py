@@ -13,7 +13,7 @@ from text_based_comparison import extract, compare_text, compare_img, compare_fo
 # only include these in the final result summary (not applicable to single arxiv_id run)
 TEXT_COMPARE_METRICS = ['levenshtein_cleaned', 'op_uppercase', 'op_lowercase', 
                         'img_correct_order', 'img_num_missing', 'img_num_diff_size', 
-                        'fonts_num', 'chars_diff_nett', 'chars_diff_uniq']
+                        'fonts_num', 'chars_diff_nett', 'chars_diff_uniq', 'num_pages']
 
 LOGGER = logger.ANALYSIS_LOGGER
 
@@ -21,7 +21,7 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
     LOGGER.debug(f'{arxiv_id=}')
     pdf_infos = {}
     for engine in tex_engine_utils.TEX_ENGINES:
-        pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{arxiv_id}_{engine}.pdf')
+        pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{arxiv_id}_{tex_engine_utils.get_engine_name(engine)}.pdf')
         if not os.path.isfile(pdf_filepath): continue
         pdf_infos[engine], debug_content = extract.get_text_fonts_images(pdf_filepath)
         # save if needed
@@ -30,8 +30,6 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
         if should_save:
             with open(f'debug_log/text_{engine}.txt', 'w') as file: file.write(pdf_infos[engine].text)
 
-    # pdf_infos: { pdflatex: ..., xelatex: ... }
-    # pdf_texts, pdf_imgs: { pdf: ..., xe: ... }
     pdf_texts = { k: compare_text.text_transformation(content.text) for k, content in pdf_infos.items() }
     pdf_imgs = { k: content.images for k, content in pdf_infos.items() }
     pdf_fonts = { k: content.fonts for k, content in pdf_infos.items() }
@@ -39,7 +37,8 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
     RESULTS, edit_ops_debug_result = compare_text.text_comparison(pdf_texts, with_debug_info=should_save_editops)
     img_cmp_results = compare_img.run_img_comparison(pdf_imgs)
     font_cmp_results = compare_font.run_font_comparison(pdf_fonts)
-    RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(img_cmp_results + font_cmp_results, index='comparison')])
+    num_pgs_results = compare_text.num_pages_comparison(pdf_infos)
+    RESULTS = pd.concat([RESULTS, pd.DataFrame.from_records(img_cmp_results + font_cmp_results + num_pgs_results, index='comparison')])
 
     if should_save_editops and edit_ops_debug_result is not None:
         for cmp, engine_to_editops in edit_ops_debug_result.items():
@@ -50,8 +49,8 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
 def compare_for_all(is_debug_run):
     rows = []
     LOGGER.info(f'running text/format/image comparisons ({is_debug_run=})...')
-    dirs = os.listdir(COMPILED_FOLDER)[:20] if is_debug_run else os.listdir(COMPILED_FOLDER)
-    # dirs = DOWNLOAD_BY_ARXIV_IDS
+    dirs = os.listdir(COMPILED_FOLDER)[:5] if is_debug_run else os.listdir(COMPILED_FOLDER)
+    if len(DOWNLOAD_BY_ARXIV_IDS) != 0: dirs = DOWNLOAD_BY_ARXIV_IDS
     for arxiv_id in tqdm(dirs):
         result = compare_for_one(arxiv_id, False, False, False)  # don't print debug information
         result_as_row = { 'arxiv_id': arxiv_id }

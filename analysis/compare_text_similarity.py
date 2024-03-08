@@ -119,12 +119,16 @@ def transform_op(edit_op, s1, s2):
             return (action, src_index, dest_index, s1[src_index], '')
         case 'replace':
             return (action, src_index, dest_index, s1[src_index], s2[dest_index])
+        case 'equal':
+            return None
         case _:
-            print(f'unknown op: {action}')
+            LOGGER.warn(f'unknown op: {action}')
+            return None
 
 def get_edit_ops(text1, text2):
     ops = Levenshtein.editops(text1, text2)
-    return [transform_op(op, text1, text2) for op in ops]
+    transformed_ops = [transform_op(op, text1, text2) for op in ops]
+    return [x for x in transformed_ops if x is not None]
 
 def collate_edit_ops(edit_ops):
     collated = {}

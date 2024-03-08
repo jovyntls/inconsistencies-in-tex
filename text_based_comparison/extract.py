@@ -21,11 +21,12 @@ class PdfContent(NamedTuple):
     text_with_formatting: Dict[str, str]
     fonts: Set[FontInformation]
     images: List[ImageInfo]
+    num_pages: int
 
 def get_text_fonts_images(pdf_path: str):
     pdf_document = fitz.Document(pdf_path)
     debug_content = []
-    full_text, text_with_formatting, fonts_used, images = [], {}, set(), []
+    full_text, text_with_formatting, fonts_used, images, num_pages = [], {}, set(), [], pdf_document.page_count
     for page_num in range(pdf_document.page_count):
         page = pdf_document[page_num]
         images += [ImageInfo( imginfo['digest'], (imginfo['width'], imginfo['height']) ) for imginfo in page.get_image_info(hashes=True)]
@@ -44,4 +45,4 @@ def get_text_fonts_images(pdf_path: str):
                     text_with_formatting[font_information].append(span['text'])
                     full_text.append(span['text'].replace(' ', '\n'))
     pdf_document.close()
-    return PdfContent('\n'.join(full_text), text_with_formatting, fonts_used, images), debug_content
+    return PdfContent('\n'.join(full_text), text_with_formatting, fonts_used, images, num_pages), debug_content

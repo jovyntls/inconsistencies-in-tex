@@ -4,6 +4,7 @@ import pandas as pd
 from analysis import compare_text_similarity
 from analysis.helpers import init_df_with_cols
 from analysis.text_transformer import COMMON_ACCENTS, IGNORE_HYPHENS, TextTransformer
+from text_based_comparison.extract import PdfContent
 from utils.logger import ANALYSIS_LOGGER as LOGGER, pad_with_char
 from utils.tex_engine_utils import DIFF_ENGINE_PAIRS
 
@@ -61,4 +62,12 @@ def text_comparison(pdf_texts: Dict[str, str], with_debug_info=False):
 
     LOGGER.debug('text comparison summary:\n' + RESULTS.to_string())
     return RESULTS, grouped_edit_ops
+
+def num_pages_comparison(pdf_infos: Dict[str, PdfContent]):
+    num_pages: Dict[str, Any] = { 'comparison': 'num_pages' }
+    for e1, e2 in DIFF_ENGINE_PAIRS: 
+        if e1 not in pdf_infos or e2 not in pdf_infos: continue
+        col = f'{e1}{e2}'
+        num_pages[col] = pdf_infos[e1].num_pages - pdf_infos[e2].num_pages
+    return [num_pages]
 
