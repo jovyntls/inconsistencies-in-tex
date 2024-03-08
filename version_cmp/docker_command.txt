@@ -1,8 +1,8 @@
 TO RUN FROM ROOT:
 
-docker stop v2021 && docker rm v2021
-docker build -t tex2021 -f ./version_cmp/tl2021.Dockerfile .
-docker run -ti -v /Users/jovyntan/Desktop/work/fyp/diff_test_tex_engines/version_cmp/docker_bin:/diff_test_tex_engines/docker_bin --name v2021 tex2021
+docker stop v2023 && docker rm v2023
+docker build -t tex2023 -f ./version_cmp/tl2023.Dockerfile .
+docker run -ti -v /Users/jovyntan/Desktop/work/fyp/diff_test_tex_engines/version_cmp/docker_bin:/diff_test_tex_engines/docker_bin --name v2023 tex2023
 
 run command:
-python3 compile_only.py -ver 2021
+python3 compile_only.py -ver 2023
