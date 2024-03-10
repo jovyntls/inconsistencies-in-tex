@@ -29,11 +29,14 @@ def image_comparison(imgs1: List[ImageInfo], imgs2: List[ImageInfo]):
         img1_to_dims[img].append(dim)
     for img_info in reversed(imgs2):
         img, dim2 = img_info.digest, img_info.dimensions
-        if img not in img1_to_dims: continue
+        if img not in img1_to_dims or len(img1_to_dims[img]) == 0: continue
         w1, h1 = img1_to_dims[img].pop()
         w2, h2 = dim2
         min_w, max_w, min_h, max_h = min(w1, w2), max(w1, w2), min(h1, h2), max(h1, h2)
-        if max_w/min_w > 1+THRESHOLD or max_h/min_h > 1+THRESHOLD: diff_sized_imgs.append(img)
+        if min_w == 0 and max_w != 0: diff_sized_imgs.append(img)
+        elif min_w > 0 and max_w/min_w > 1+THRESHOLD: diff_sized_imgs.append(img)
+        elif min_h == 0 and max_h != 0: diff_sized_imgs.append(img)
+        elif min_h > 0 and max_h/min_h > 1+THRESHOLD: diff_sized_imgs.append(img)
     if len(diff_sized_imgs) > 0:
         LOGGER.debug('found {len(diff_sized_imgs)} different-sized images')
         pass

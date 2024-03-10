@@ -35,7 +35,7 @@ def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
 
 def main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
     LOGGER.info(f'diffing output pdfs...')
-    for arxiv_id in os.listdir(COMPILED_FOLDER):
+    for arxiv_id in tqdm(os.listdir(COMPILED_FOLDER)):
         # compare the output pdfs
         RESULTS = compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
     return RESULTS
