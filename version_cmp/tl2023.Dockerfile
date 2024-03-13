@@ -18,6 +18,7 @@ COPY bin/arxiv_tars_extracted /diff_test_tex_engines/bin/tex_sources
 
 # files needed to run compile_only.py
 COPY compile_only.py .
+COPY compile_only_2.py .
 COPY pipeline/compile_tex_files.py pipeline/compile_tex_files.py
 COPY utils utils
 COPY constants constants
