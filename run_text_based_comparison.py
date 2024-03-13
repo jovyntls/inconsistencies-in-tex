@@ -13,7 +13,7 @@ from text_based_comparison import extract, compare_text, compare_img, compare_fo
 # only include these in the final result summary (not applicable to single arxiv_id run)
 TEXT_COMPARE_METRICS = ['levenshtein_cleaned', 'op_uppercase', 'op_lowercase', 
                         'img_correct_order', 'img_num_missing', 'img_num_diff_size', 
-                        'fonts_num', 'chars_diff_nett', 'chars_diff_uniq', 'num_pages']
+                        'fonts_num', 'fonts_uniq', 'chars_diff_nett', 'chars_diff_uniq', 'num_pages']
 
 LOGGER = logger.ANALYSIS_LOGGER
 
