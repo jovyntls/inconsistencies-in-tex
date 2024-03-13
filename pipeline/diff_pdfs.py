@@ -3,6 +3,7 @@ from utils.logger import PIPELINE_LOGGER as LOGGER
 from config import PIXEL_TOLERANCE
 import os
 import subprocess
+from tqdm import tqdm
 
 def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, DIFFS_FOLDER, RESULTS):
     def get_diff_command(e1, e2):
