@@ -1,5 +1,5 @@
 """
-run latexmk twice
+use the -e '$bibtex_fudge=1;' option, and only for 2020
 """
 import os
 import time
@@ -12,8 +12,8 @@ from pipeline.compile_tex_files import find_entrypoint_file
 # these depend on the dockerfile
 DOCKER_PROJECT_ROOT = '/diff_test_tex_engines'
 EXTRACTED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'bin', 'tex_sources')
-VERSION_COMPILED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'version_compiled_pdf')
-COMPILE_RESULTS_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'compile_results')
+VERSION_COMPILED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'version_compiled_pdf_2020')
+COMPILE_RESULTS_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'compile_results_2020')
 
 def checkpaths(texlive_version):
     if not os.path.isdir(EXTRACTED_FOLDER): 
@@ -32,7 +32,7 @@ def checkpaths(texlive_version):
     os.makedirs(COMPILE_RESULTS_FOLDER, exist_ok=True)
 
 def compile_tex_to_pdf(texlive_version, root, tex_file, logs_folder, arxiv_id, output_folder):
-    compile_command = [ 'latexmk', '-pdf', '-interaction=nonstopmode', f'-jobname={arxiv_id}_tl{texlive_version}', f'-output-directory={output_folder}', tex_file ]
+    compile_command = [ 'latexmk', '-pdf', '-e', '$bibtex_fudge=1;', '-interaction=nonstopmode', f'-jobname={arxiv_id}_tl{texlive_version}', f'-output-directory={output_folder}', tex_file ]
     latexmk_run_1, latexmk_run_2  = -1, -1
     try:
         stdout_file = os.path.join(logs_folder, f'{arxiv_id}_tl{texlive_version}.out')

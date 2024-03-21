@@ -6,6 +6,8 @@ _Automated differential testing on TeX engines (pdfTeX, XeTeX, LuaTeX)_
 
 1. `pip install` the required packages (`requirements.txt`); Python 3.9 required
 1. Edit the parameters in `config.py`, minimally the `PROJECT_ROOT`
+1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare pdf/xe/lualatex or different versions of texlive
+
 
 ## Running scripts
 
