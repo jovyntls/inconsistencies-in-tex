@@ -70,8 +70,8 @@ def run_img_comparisons(imgpath1, imgpath2, algorithms=list(CMP_ALGORITHMS.keys(
     i2 = cv2.resize(cv2.imread(imgpath2, cv2.IMREAD_GRAYSCALE), SIM_IMAGE_SIZE)
     scores = {}
     for algo in algorithms:
-        scores = get_similarity_scores(i1, i2, algo)
-        for score_name, score_value in scores.items():
+        algo_scores = get_similarity_scores(i1, i2, algo)
+        for score_name, score_value in algo_scores.items():
             LOGGER.debug(f'{score_name}: {score_value} for {os.path.basename(imgpath1)}<>{os.path.basename(imgpath2)}')
             scores[score_name] = score_value
     return scores
