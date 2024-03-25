@@ -11,6 +11,7 @@ from utils.tex_engine_utils import DIFF_ENGINE_PAIRS
 def text_transformation(text: str):
     text = TextTransformer.apply_transform(text, [IGNORE_HYPHENS])
     text = TextTransformer.apply_transform(text, COMMON_ACCENTS)
+    text = TextTransformer.apply_transform(text, [ ('ϕ', ''), ('φ', '') ])
     return text
 
 def find_different_chars(edit_ops: Dict[str, pd.DataFrame]):
