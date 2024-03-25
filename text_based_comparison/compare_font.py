@@ -14,7 +14,9 @@ def run_font_comparison(pdf_fonts: Dict[str, Set[FontInformation]]):
         num_fonts[col] = abs(len(e1_fonts) - len(e2_fonts))
         num_diff_fonts = len((e1_fonts - e2_fonts) | (e2_fonts - e1_fonts))
         if num_diff_fonts > 0:
-            LOGGER.debug(f'found {num_diff_fonts} different fonts:\n{e1}:\t{",".join([str(s) for s in e1_fonts-e2_fonts])}\n{e2}:\t{",".join([str(s) for s in e2_fonts-e1_fonts])}')
+            difffonts1 = "\n\t".join([str(s) for s in e1_fonts-e2_fonts])
+            difffonts2 = "\n\t".join([str(s) for s in e2_fonts-e1_fonts])
+            LOGGER.debug(f'found {num_diff_fonts} different fonts:\n{e1}:\n\t{difffonts1}\n{e2}:\n\t{difffonts2}')
         uniq_fonts[col] = num_diff_fonts
     return [num_fonts, uniq_fonts]
 
