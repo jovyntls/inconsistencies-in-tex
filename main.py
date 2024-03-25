@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 from utils import tex_engine_utils, logger
-from config import LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, YEAR_AND_MONTH, PIXEL_TOLERANCE, DOWNLOAD_BY_ARXIV_IDS
+from config import COMPILED_FOLDER_2020, LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, YEAR_AND_MONTH, PIXEL_TOLERANCE, DOWNLOAD_BY_ARXIV_IDS
 from pipeline import get_tex_files, extract_compressed_sources, compile_tex_files, diff_pdfs
 
 # set up logging
@@ -30,7 +30,7 @@ LOGGER.info(f'running pipeline with params: {NUM_ATTEMPTS=}, {YEAR_AND_MONTH=}, 
 get_tex_files.main(DOWNLOAD_FOLDER, download_by_arxiv_ids=DOWNLOAD_BY_ARXIV_IDS)
 extract_compressed_sources.main(DOWNLOAD_FOLDER, EXTRACTED_FOLDER)
 RESULTS = compile_tex_files.main(EXTRACTED_FOLDER, COMPILED_FOLDER, RESULTS)
-RESULTS = diff_pdfs.main(COMPILED_FOLDER, DIFFS_FOLDER, RESULTS)
+RESULTS = diff_pdfs.main(COMPILED_FOLDER, COMPILED_FOLDER_2020, DIFFS_FOLDER, RESULTS)
 
 LOGGER.debug('results as csv:\n' + RESULTS.to_csv())
 LOGGER.info('results:\n' + RESULTS.to_string())
