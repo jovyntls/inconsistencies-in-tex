@@ -29,7 +29,12 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
         if should_save_debug:
             with open(f'debug_log/debug_text_{engine}.txt', 'w') as file: file.write('\n'.join([ str(x) for x in debug_content ]))
         if should_save:
-            with open(f'debug_log/text_{engine}.txt', 'w') as file: file.write(pdf_infos[engine].text)
+            try:
+                with open(f'debug_log/text_{engine}.txt', 'w') as file: file.write(pdf_infos[engine].text)
+            except UnicodeEncodeError as e:
+                with open(f'debug_log/text_{engine}.txt', 'w') as file:
+                    file.write(pdf_infos[engine].text.encode('utf-16','replace').decode('utf-16'))
+                    LOGGER.warn(f'[{arxiv_id}] substituted characters due to UnicodeEncodeError')
 
     pdf_texts = { k: compare_text.text_transformation(content.text) for k, content in pdf_infos.items() }
     pdf_imgs = { k: content.images for k, content in pdf_infos.items() }
@@ -82,6 +87,7 @@ def run(run_for_id, should_save, debug_mode):
         while len(run_for_id) < 5: run_for_id = '0' + run_for_id
         arxiv_id = f'{YEAR_AND_MONTH}.{run_for_id}'
         RESULT = compare_for_one(arxiv_id, should_save, debug_mode, debug_mode)
+        RESULT.drop(['levenshtein_cleaned_normalised', 'hamming', 'levenshtein', 'levenshtein_ratio', 'levenshtein_normalised', 'hamming_normalised'], inplace=True)
         LOGGER.info(f'[arxiv_id={arxiv_id}] RESULT:\n' + RESULT.to_string())
 
 if __name__ == '__main__':
