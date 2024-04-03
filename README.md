@@ -8,6 +8,7 @@ _Automated differential testing pipeline for TeX engines and TeX Live distributi
 1. Edit the parameters in `config.py`, minimally the `PROJECT_ROOT`
 1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare PDFTeX/XeTeX/LuaTeX or different versions of TeX Live
 
+Dockerfiles with different TeX Live distributions can be found in `version_cmp/`.
 
 ## Running scripts
 
