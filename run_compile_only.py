@@ -1,5 +1,5 @@
 """
-run latexmk twice
+use the -e '$bibtex_fudge=1;' option, and only for 2020
 """
 import os
 import time
@@ -12,8 +12,11 @@ from pipeline.compile_tex_files import find_entrypoint_file
 # these depend on the dockerfile
 DOCKER_PROJECT_ROOT = '/diff_test_tex_engines'
 EXTRACTED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'bin', 'tex_sources')
-VERSION_COMPILED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'version_compiled_pdf')
-COMPILE_RESULTS_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'compile_results')
+VERSION_COMPILED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'version_compiled_pdf_2020')
+COMPILE_RESULTS_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'compile_results_2020')
+
+LATEXMK_COMPILE_CMD_BASE  = [ 'latexmk', '-pdf', '-interaction=nonstopmode' ]
+LATEXMK_COMPILE_FLAG = [ '-e', '$bibtex_fudge=1;' ] 
 
 def checkpaths(texlive_version):
     if not os.path.isdir(EXTRACTED_FOLDER): 
@@ -31,8 +34,9 @@ def checkpaths(texlive_version):
         raise Exception(f'results file already exists: {results_file}')
     os.makedirs(COMPILE_RESULTS_FOLDER, exist_ok=True)
 
-def compile_tex_to_pdf(texlive_version, root, tex_file, logs_folder, arxiv_id, output_folder):
-    compile_command = [ 'latexmk', '-pdf', '-interaction=nonstopmode', f'-jobname={arxiv_id}_tl{texlive_version}', f'-output-directory={output_folder}', tex_file ]
+def compile_tex_to_pdf(texlive_version, with_flag, root, tex_file, logs_folder, arxiv_id, output_folder):
+    compile_command = LATEXMK_COMPILE_CMD_BASE + LATEXMK_COMPILE_FLAG if with_flag else LATEXMK_COMPILE_CMD_BASE
+    compile_command += [ f'-jobname={arxiv_id}_tl{texlive_version}', f'-output-directory={output_folder}', tex_file ]
     latexmk_run_1, latexmk_run_2  = -1, -1
     try:
         stdout_file = os.path.join(logs_folder, f'{arxiv_id}_tl{texlive_version}.out')
@@ -48,7 +52,7 @@ def compile_tex_to_pdf(texlive_version, root, tex_file, logs_folder, arxiv_id, o
     except subprocess.TimeoutExpired:
         return 'TIMED_OUT', latexmk_run_1, latexmk_run_2
 
-def run(texlive_version):
+def run(texlive_version, with_flag):
     results = {}
     a_results_csv_filepath = os.path.join(COMPILE_RESULTS_FOLDER, f'a_results_{tl_version}.csv')
     with open(a_results_csv_filepath,'a') as f:
@@ -64,7 +68,7 @@ def run(texlive_version):
                 tex_file, docclass, _ = find_entrypoint_file(files, root)
                 if tex_file is None: continue
                 # if entrypoint is identified, begin compilation
-                ret = compile_tex_to_pdf(texlive_version, root, tex_file, compile_logs_folder, arxiv_id, compile_output_folder)
+                ret = compile_tex_to_pdf(texlive_version, with_flag, root, tex_file, compile_logs_folder, arxiv_id, compile_output_folder)
                 results[arxiv_id] = (ret[0], docclass, ret[1], ret[2])
                 break
             else:
@@ -84,10 +88,12 @@ def save_results(results, texlive_version):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run text-based comparison (text, formatting, images)')
     parser.add_argument('-ver', required=True, help="texlive version for labelling")
-    tl_version = parser.parse_args().ver
+    parser.add_argument('-flags', action='store_true', help="add the $bibtex_fudge=1; flag to compilation (for tl2020)")
+    tl_version, with_flag = parser.parse_args().ver, parser.parse_args().flags
 
     checkpaths(tl_version)
-    results = run(tl_version)
+    results = run(tl_version, with_flag)
     save_results(results, tl_version)
+
 
 
