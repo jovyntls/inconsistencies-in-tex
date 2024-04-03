@@ -12,13 +12,12 @@ from pipeline.compile_tex_files import find_entrypoint_file
 # these depend on the dockerfile
 DOCKER_PROJECT_ROOT = '/diff_test_tex_engines'
 EXTRACTED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'bin', 'tex_sources')
-VERSION_COMPILED_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'version_compiled_pdf_2020')
-COMPILE_RESULTS_FOLDER = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2', 'compile_results_2020')
+DOCKER_BIN = os.path.join(DOCKER_PROJECT_ROOT, 'docker_bin_2')
 
 LATEXMK_COMPILE_CMD_BASE  = [ 'latexmk', '-pdf', '-interaction=nonstopmode' ]
 LATEXMK_COMPILE_FLAG = [ '-e', '$bibtex_fudge=1;' ] 
 
-def checkpaths(texlive_version):
+def checkpaths(texlive_version, VERSION_COMPILED_FOLDER, COMPILE_RESULTS_FOLDER):
     if not os.path.isdir(EXTRACTED_FOLDER): 
         raise Exception(f'could not find {EXTRACTED_FOLDER=}')
     print(f'found {len(os.listdir(EXTRACTED_FOLDER))} items in {EXTRACTED_FOLDER=}')
@@ -52,7 +51,7 @@ def compile_tex_to_pdf(texlive_version, with_flag, root, tex_file, logs_folder, 
     except subprocess.TimeoutExpired:
         return 'TIMED_OUT', latexmk_run_1, latexmk_run_2
 
-def run(texlive_version, with_flag):
+def run(texlive_version, with_flag, VERSION_COMPILED_FOLDER, COMPILE_RESULTS_FOLDER):
     results = {}
     a_results_csv_filepath = os.path.join(COMPILE_RESULTS_FOLDER, f'a_results_{tl_version}.csv')
     with open(a_results_csv_filepath,'a') as f:
@@ -77,7 +76,7 @@ def run(texlive_version, with_flag):
             f.flush()  # save immediately
     return results
 
-def save_results(results, texlive_version):
+def save_results(results, texlive_version, COMPILE_RESULTS_FOLDER):
     results_csv_filepath = os.path.join(COMPILE_RESULTS_FOLDER, f'results_{texlive_version}.csv')
     with open(results_csv_filepath, 'w') as csv_file:  
         writer = csv.writer(csv_file)
@@ -91,9 +90,12 @@ if __name__ == '__main__':
     parser.add_argument('-flags', action='store_true', help="add the $bibtex_fudge=1; flag to compilation (for tl2020)")
     tl_version, with_flag = parser.parse_args().ver, parser.parse_args().flags
 
-    checkpaths(tl_version)
-    results = run(tl_version, with_flag)
-    save_results(results, tl_version)
+    VERSION_COMPILED_FOLDER = os.path.join(DOCKER_BIN, 'version_compiled_pdf_2020' if with_flag else 'version_compiled_pdf')
+    COMPILE_RESULTS_FOLDER = os.path.join(DOCKER_BIN, 'compile_results_2020' if with_flag else 'compile_results')
+
+    checkpaths(tl_version, VERSION_COMPILED_FOLDER, COMPILE_RESULTS_FOLDER)
+    results = run(tl_version, with_flag, VERSION_COMPILED_FOLDER, COMPILE_RESULTS_FOLDER)
+    save_results(results, tl_version, COMPILE_RESULTS_FOLDER)
 
 
 
