@@ -1,12 +1,12 @@
-# Differential testing TeX engines
+# Differential testing TeX software
 
-_Automated differential testing on TeX engines (pdfTeX, XeTeX, LuaTeX)_
+_Automated differential testing pipeline for TeX engines and TeX Live distributions_
 
 ## Setting up
 
 1. `pip install` the required packages (`requirements.txt`); Python 3.9 required
 1. Edit the parameters in `config.py`, minimally the `PROJECT_ROOT`
-1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare pdf/xe/lualatex or different versions of texlive
+1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare PDFTeX/XeTeX/LuaTeX or different versions of TeX Live
 
 
 ## Running scripts
@@ -15,7 +15,7 @@ All scripts should run from the project root.
 
 ### Pipeline
 
-This is the main pipeline (end to end) for differential testing.
+This is the main automated pipeline (end to end) for identifying inconsistencies.
 
 To run:
 
@@ -34,7 +34,7 @@ The PDFs are read from the {COMPILED_FOLDER} and {YEAR_AND_MONTH} variables in `
 
 * Compare text and image similarity between PDFs 
     * `python3 run_analysis.py -compare` for all compiled PDFs
-    * `python3 run_analysis.py -compare 00002` for the arXiv ID {YEAR_AND_MONTH}/00002
+    * `python3 run_analysis.py -compare 00002` for the arXiv ID {YEAR_AND_MONTH}.00002
         * `python3 run_analysis.py -compare 00002 -save` will also save the extracted text and images (all processed) to a .txt file
 * Count the number of pages in _all_ PDFs
     * `python3 run_analysis.py -count-pages`
@@ -54,7 +54,7 @@ This directory implements similarity comparison on PDF files through the followi
 The PDFs are read from {SOURCE_PDF_FOLDER} and converted to images in {CONVERTED_IMG_FOLDER}.
 
 * Run the comparison pipeline:
-    * `python3 run_img_comparison.py -id 00002` for the arXiv ID {YEAR_AND_MONTH}/00002
+    * `python3 run_img_comparison.py -id 00002` for the arXiv ID {YEAR_AND_MONTH}.00002
     * `python3 run_img_comparison.py`
 
 ### Text-based comparison
@@ -64,7 +64,7 @@ This includes text, fonts, and images.
 
 * Run text-based comparison
     * `python3 run_text_based_comparison.py` for all PDFs in the compiled bin folder, or the IDs specified in {DOWNLOAD_BY_ARXIV_IDS}
-    * `python3 run_text_based_comparison.py -id 01234` for the specified arXiv ID {YEAR_AND_MONTH}/01234
+    * `python3 run_text_based_comparison.py -id 01234` for the specified arXiv ID {YEAR_AND_MONTH}.01234
 * Additional flags
     * `-debug` will add debug information
     * `-save` will save the extracted information to a .txt file
@@ -72,7 +72,12 @@ This includes text, fonts, and images.
 ### Others
 
 * Highlight the differences between two PDFs
-    * `python3 run_diff_highlight.py -id 01308 -pg 1 3 5` for the arXiv ID {YEAR_AND_MONTH}/1308 on pages 1,3,5
+    * `python3 run_diff_highlight.py -id 01308 -pg 1 3 5` for the arXiv ID {YEAR_AND_MONTH}.01308 on pages 1,3,5
+* Count and compare number of runs of `latexmk`
+    * `python3 count_latexmk_runs.py`
+* Run compilation only
+    * `python3 run_compile_only.py -ver 2023` to run compilation for TL2023 (to be run inside a docker containing with TL2023)
+    * `python3 run_compile_only.py -ver 2020 -flags` to run compilation with additional compile flags (for TL2020)
 
 
 ---
