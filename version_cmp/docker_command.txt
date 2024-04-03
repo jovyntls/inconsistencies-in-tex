@@ -7,11 +7,12 @@ RUN CONTAINER
 docker stop run2023 && docker rm run2023
 docker run -ti -v /Users/jovyntan/Desktop/work/fyp/diff_test_tex_engines/version_cmp/docker_bin_2:/diff_test_tex_engines/docker_bin_2 --name run2023 tex2023
 
-PATCH
+PATCH (IF NEEDED)
 docker cp compile_only_2.py run2023:/diff_test_tex_engines/compile_only_2.py
+python3 compile_only_2.py -ver 2023
 
 RUN SCRIPT
-python3 compile_only_2.py -ver 2023
+python3 run_compile_only.py -ver 2023
 
 START/STOP
 docker start run2023 && docker exec -it run2023 /bin/bash
