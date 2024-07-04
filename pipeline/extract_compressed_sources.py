@@ -24,7 +24,7 @@ def unzip_with_gunzip(DOWNLOAD_FOLDER, filename, EXTRACTED_FOLDER):
     # attempt unzip
     completed_proc = subprocess.run(['gunzip', output_filepath])
     if completed_proc.returncode != 0:
-        if os.path.exists(output_folder): os.removedirs(output_folder)
+        if os.path.exists(output_folder): shutil.rmtree(output_folder)
     return completed_proc
 
 def log_proc_result(proc, name, desc):
