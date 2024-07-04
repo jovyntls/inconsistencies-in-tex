@@ -1,4 +1,4 @@
-FROM texlive/texlive:latest
+FROM texlive/texlive:TL2023-historic
 
 RUN set -xe \
     && apt-get update \
