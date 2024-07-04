@@ -7,7 +7,9 @@ from constants.arxiv_subjects import SUBJECTS
 
 """Get the URL to download for each arxiv category (subject)"""
 def build_download_url(subject):
-    url = f'https://arxiv.org/list/{subject}/{YEAR_AND_MONTH}?skip=0&show={str(NUM_ATTEMPTS)}'
+    yyyy = '20' + YEAR_AND_MONTH[:2]
+    mm = YEAR_AND_MONTH[-2:]
+    url = f'https://arxiv.org/list/{subject}/{yyyy}-{mm}?skip=0&show={str(NUM_ATTEMPTS)}'
     return url
 
 """Send a get request and ensure RESPONSE=200"""
@@ -41,9 +43,9 @@ def list_of_papers_to_download_links(element_list):
     download_links = {}
     for list_item in list_of_papers:
         a_hrefs = list_item.findall(".//a[@href]")
-        arxiv_id_raw, other_elem = a_hrefs[0].text_content(), a_hrefs[-1]
+        arxiv_id_raw, other_elem = a_hrefs[0].text_content().strip(), a_hrefs[-1].text_content().strip()
         # validate or throw error
-        is_valid =  arxiv_id_raw.startswith("arXiv:") and other_elem.text_content() == 'other' 
+        is_valid =  arxiv_id_raw.startswith("arXiv:") and other_elem == 'other' 
         if not is_valid: continue
         arxiv_id = arxiv_id_raw[6:]
         url = ARXIV_BASE_URL + '/e-print/' + arxiv_id
