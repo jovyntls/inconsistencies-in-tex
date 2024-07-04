@@ -2,11 +2,18 @@
 
 _Automated differential testing pipeline for TeX engines and TeX Live distributions_
 
-## Setting up
+## Getting Started
 
-1. `pip install` the required packages (`requirements.txt`); Python 3.9 required
+### Requirements
+
+* Python 3.9
+* [diff-pdf](https://github.com/vslavik/diff-pdf)
+* A Python environment with the required packages (`pip install -r requirements.txt`)
+
+### Set up
+
 1. Edit the parameters in `config.py`, minimally the `PROJECT_ROOT`
-1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare PDFTeX/XeTeX/LuaTeX or different versions of TeX Live
+1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare PDFTeX/XeTeX/LuaTeX or different versions of TeX Live. _Either_ lines 1-3 _or_ lines 5-7 should be commented out.
 
 Dockerfiles with different TeX Live distributions can be found in `version_cmp/`.
 
