@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 from utils import tex_engine_utils, logger
-from config import COMPILED_FOLDER_2020, LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, YEAR_AND_MONTH, PIXEL_TOLERANCE, DOWNLOAD_BY_ARXIV_IDS
+from config import COMPILED_FOLDER_2020, LOGS_FOLDER, DOWNLOAD_FOLDER, EXTRACTED_FOLDER, COMPILED_FOLDER, DIFFS_FOLDER, NUM_ATTEMPTS, PROJECT_BIN, YEAR_AND_MONTH, PIXEL_TOLERANCE, DOWNLOAD_BY_ARXIV_IDS
 from pipeline import get_tex_files, extract_compressed_sources, compile_tex_files, diff_pdfs
 
 # set up logging
@@ -13,6 +13,8 @@ os.makedirs(LOGS_FOLDER, exist_ok=True)
 logger.init_logger(logger.PIPELINE_LOGGER_ID, LOGS_FOLDER, current_time,
                    console_log_level=logging.INFO, has_file_handler=True)
 LOGGER = logger.PIPELINE_LOGGER
+LOGGER.info(f'{LOGS_FOLDER=}')
+LOGGER.info(f'{PROJECT_BIN=}')
 
 # create dirs
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
