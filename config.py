@@ -4,6 +4,8 @@ PROJECT_ROOT = os.path.join(os.path.expanduser("~"), "Desktop", "work", "fyp", "
 LOGS_FOLDER = os.path.join(PROJECT_ROOT, 'logs')
 PROJECT_BIN = os.path.join(PROJECT_ROOT, 'bin_tmp')
 
+CMP_TYPE = 'ENGINE' # or 'VERSION'
+
 DOWNLOAD_FOLDER = os.path.join(PROJECT_BIN, 'arxiv_tars')
 EXTRACTED_FOLDER = os.path.join(PROJECT_BIN, 'arxiv_tars_extracted')
 COMPILED_FOLDER = os.path.join(PROJECT_BIN, 'compiled_tex_pdf')

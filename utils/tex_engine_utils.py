@@ -1,10 +1,8 @@
-TEX_ENGINES = ['pdf', 'lua', 'xe']
-DIFF_ENGINE_PAIRS = [ ('xe', 'pdf'), ('xe', 'lua') ]
-TEX_ENGINES_NAMES = { 'pdf': 'pdflatex', 'lua': 'lualatex', 'xe': 'xelatex'}
+from config import CMP_TYPE
 
-# TEX_ENGINES = ['20', '21', '22', '23']
-# DIFF_ENGINE_PAIRS = [('20', '21'), ('21', '22'), ('22', '23'), ('20', '23')]
-# TEX_ENGINES_NAMES = {'20': 'tl2020', '21': 'tl2021', '22': 'tl2022', '23': 'tl2023'}
+TEX_ENGINES = ['pdf', 'lua', 'xe'] if CMP_TYPE == 'ENGINE' else ['20', '21', '22', '23']
+DIFF_ENGINE_PAIRS = [ ('xe', 'pdf'), ('xe', 'lua') ] if CMP_TYPE == 'ENGINE' else [('20', '21'), ('21', '22'), ('22', '23'), ('20', '23')]
+TEX_ENGINES_NAMES = { 'pdf': 'pdflatex', 'lua': 'lualatex', 'xe': 'xelatex'} if CMP_TYPE == 'ENGINE' else {'20': 'tl2020', '21': 'tl2021', '22': 'tl2022', '23': 'tl2023'}
 
 def get_engine_name(engine):
     return TEX_ENGINES_NAMES[engine]

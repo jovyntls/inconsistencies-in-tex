@@ -13,7 +13,7 @@ _Automated differential testing pipeline for TeX engines and TeX Live distributi
 ### Set up
 
 1. Edit the parameters in `config.py`, minimally the `PROJECT_ROOT`
-1. Edit `TEX_ENGINES`, `DIFF_ENGINE_PAIRS`, and `TEX_ENGINES_NAMES` in `utils/tex_engine_utils.py` depending on whether the run is to compare PDFTeX/XeTeX/LuaTeX or different versions of TeX Live. _Either_ lines 1-3 _or_ lines 5-7 should be commented out.
+1. By default, comparison is performed between TeX engines. To compare between versions instead, set `CMP_TYPE = 'VERSION'` in `config.py`.
 
 Dockerfiles with different TeX Live distributions can be found in `version_cmp/`.
 
