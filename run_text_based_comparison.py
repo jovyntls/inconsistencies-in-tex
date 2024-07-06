@@ -7,7 +7,7 @@ from tqdm import tqdm
 import pandas as pd
 
 from utils import logger, tex_engine_utils
-from config import COMPILED_FOLDER_2020, YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER, DOWNLOAD_BY_ARXIV_IDS
+from config import COMPILED_FOLDER_2020, USE_TL2020_DIR, YEAR_AND_MONTH, LOGS_FOLDER, COMPILED_FOLDER, DOWNLOAD_BY_ARXIV_IDS
 from text_based_comparison import extract, compare_text, compare_img, compare_font
 
 # only include these in the final result summary (not applicable to single arxiv_id run)
@@ -22,7 +22,7 @@ def compare_for_one(arxiv_id, should_save, should_save_debug, should_save_editop
     pdf_infos = {}
     for engine in tex_engine_utils.TEX_ENGINES:
         pdf_filepath = os.path.join(COMPILED_FOLDER, arxiv_id, f'{arxiv_id}_{tex_engine_utils.get_engine_name(engine)}.pdf')
-        if engine == '20': pdf_filepath = os.path.join(COMPILED_FOLDER_2020, arxiv_id, f'{arxiv_id}_{tex_engine_utils.get_engine_name(engine)}.pdf')
+        if USE_TL2020_DIR and engine == '20': pdf_filepath = os.path.join(COMPILED_FOLDER_2020, arxiv_id, f'{arxiv_id}_{tex_engine_utils.get_engine_name(engine)}.pdf')
         if not os.path.isfile(pdf_filepath): continue
         pdf_infos[engine], debug_content = extract.get_text_fonts_images(pdf_filepath)
         # save if needed

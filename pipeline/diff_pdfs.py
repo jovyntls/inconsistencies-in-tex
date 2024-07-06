@@ -1,6 +1,6 @@
 from utils.tex_engine_utils import get_engine_name, DIFF_ENGINE_PAIRS
 from utils.logger import PIPELINE_LOGGER as LOGGER
-from config import PIXEL_TOLERANCE
+from config import PIXEL_TOLERANCE, USE_TL2020_DIR
 import os
 import subprocess
 from tqdm import tqdm
@@ -8,7 +8,7 @@ from tqdm import tqdm
 def compare_engine_outputs(arxiv_id, COMPILED_FOLDER, COMPILED_FOLDER_2020, DIFFS_FOLDER, RESULTS):
     def get_diff_command(e1, e2):
         def output_filename(engine, arxiv_id):
-            if engine == '20': 
+            if USE_TL2020_DIR and engine == '20': 
                 return os.path.join(os.path.join(COMPILED_FOLDER_2020, arxiv_id), f'{arxiv_id}_{get_engine_name(engine)}.pdf')
             return os.path.join(os.path.join(COMPILED_FOLDER, arxiv_id), f'{arxiv_id}_{get_engine_name(engine)}.pdf')
         diff_output = os.path.join(DIFFS_FOLDER, f'diff_{arxiv_id}_{e1}_{e2}.pdf')
